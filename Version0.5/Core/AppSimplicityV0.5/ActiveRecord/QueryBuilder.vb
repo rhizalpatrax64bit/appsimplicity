@@ -160,7 +160,9 @@ Namespace ActiveRecord
         End Sub
 
         Public Function Perform() As DataAccess.DataCommand
+            Dim lCommand As New DataAccess.DataCommand(Me.Schema.DataService.Provider)
             'TODO: Llenar esto
+            Return lCommand
         End Function
 
 #Region "Logic Operators"
