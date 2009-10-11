@@ -9,6 +9,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicityV0.5", "Core\A
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicityUnitTests", "Tests\AppSimplicityUnitTests\AppSimplicityUnitTests.vbproj", "{F24B2B22-BE72-4B37-941A-D506CA09CEB6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{7D8E1977-CA7C-4474-A1ED-658B832547DB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DBDummyTests", "Data\DBDummyTests\DBDummyTests.vbproj", "{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,12 @@ Global
 		{F24B2B22-BE72-4B37-941A-D506CA09CEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F24B2B22-BE72-4B37-941A-D506CA09CEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F24B2B22-BE72-4B37-941A-D506CA09CEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6A996CE7-9604-4BA4-995F-86638F08DB2A} = {2D8413A5-F0DA-41DC-9044-CAC4524F67EF}
 		{F24B2B22-BE72-4B37-941A-D506CA09CEB6} = {8017E283-D108-4D0D-B47C-34AFF8E7EF3D}
+		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7} = {7D8E1977-CA7C-4474-A1ED-658B832547DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = .
