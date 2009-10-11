@@ -36,8 +36,20 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.8.4.19, Culture=neutral, PublicKeyToken=c551e179877da246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.0.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.60.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +61,45 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActiveRecord\AbstractList.vb" />
+    <Compile Include="ActiveRecord\ActiveHelper.vb" />
+    <Compile Include="ActiveRecord\ActiveRecord.vb" />
+    <Compile Include="ActiveRecord\DataValue.vb" />
+    <Compile Include="ActiveRecord\ForeignDependency.vb" />
+    <Compile Include="ActiveRecord\QueryBuilder.vb" />
+    <Compile Include="ActiveRecord\Schema.vb" />
+    <Compile Include="ActiveRecord\SchemaColumn.vb" />
+    <Compile Include="ActiveRecord\SchemaFactory.vb" />
+    <Compile Include="DataAccess\DataProviders\Implemented\DataExchange.Designer.vb" />
+    <Compile Include="DataAccess\DataProviders\Implemented\DataExchange1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataExchange.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\DataProviders\Implemented\MySQLProvider.vb" />
+    <Compile Include="DataAccess\DataProviders\Implemented\OleDBProvider.vb" />
+    <Compile Include="DataAccess\DataProviders\Implemented\OracleProvider.vb" />
+    <Compile Include="DataAccess\DataProviders\Implemented\RemoteDataProvider.vb" />
+    <Compile Include="DataAccess\DataProviders\Implemented\SQLite.vb" />
+    <Compile Include="DataAccess\DataProviders\Implemented\SQLServerProvider.vb" />
+    <Compile Include="DataAccess\DataProviders\Provider.vb" />
+    <Compile Include="DataAccess\DataProviders\ProviderFactory.vb" />
+    <Compile Include="DataAccess\DataProviders_\DataProvider.vb" />
+    <Compile Include="DataAccess\DataProviders_\MSAccessProvider.vb" />
+    <Compile Include="DataAccess\DataProviders_\MySQLProvider.vb" />
+    <Compile Include="DataAccess\DataProviders_\OracleProvider.vb" />
+    <Compile Include="DataAccess\DataProviders_\ProviderBase.vb" />
+    <Compile Include="DataAccess\DataProviders_\RemoteDALProvider.vb" />
+    <Compile Include="DataAccess\DataProviders_\SQLiteProvider.vb" />
+    <Compile Include="DataAccess\DataProviders_\SQLServerProvider.vb" />
+    <Compile Include="DataAccess\Data\DataCommand.vb" />
+    <Compile Include="DataAccess\Data\DataParameter.vb" />
+    <Compile Include="DataAccess\Data\DataService.vb" />
+    <Compile Include="DataAccess\Data\DataSource.vb" />
+    <Compile Include="DataAccess\DialectProviders\DialectBase.vb" />
+    <Compile Include="DataAccess\DialectProviders\DialectFactory.vb" />
+    <Compile Include="DataAccess\DialectProviders\SqlServerDialect.vb" />
+    <Compile Include="Localization\LocalizableMessages.Designer.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -64,16 +115,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Security\Encryption.vb" />
+    <Compile Include="Security\PasswordGenerator.vb" />
+    <Compile Include="Utilities\ExcelStrings.Designer.vb" />
+    <Compile Include="Utilities\ExcelUtilities.vb" />
+    <Compile Include="Utilities\General.vb" />
+    <Compile Include="Utilities\LogInterface.vb" />
+    <Compile Include="Utilities\Serialization.vb" />
+    <Compile Include="Utilities\StringValidations.vb" />
+    <Compile Include="Utilities\Web.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Localization\LocalizableMessages.es.resx" />
+    <EmbeddedResource Include="Localization\LocalizableMessages.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\ExcelStrings.resx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataAccess\DataProviders\Implemented\DataExchange.xsc">
+      <DependentUpon>DataExchange.xsd</DependentUpon>
+    </None>
+    <None Include="DataAccess\DataProviders\Implemented\DataExchange.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataExchange1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataAccess\DataProviders\Implemented\DataExchange.xss">
+      <DependentUpon>DataExchange.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -83,6 +157,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Info\Info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
