@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F24B2B22-BE72-4B37-941A-D506CA09CEB6}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -37,7 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +51,10 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Dummy\Base\Customer.vb" />
+    <Compile Include="App_Code\Dummy\Base\Dummy.vb" />
+    <Compile Include="App_Code\Dummy\Base\Dummy_SPs.vb" />
+    <Compile Include="App_Code\Dummy\Custom\Customer.vb" />
     <Compile Include="Class1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -84,6 +90,15 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Dummy\SQL\DUMMY.SQL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\AppSimplicityV0.5\AppSimplicityV0.5.vbproj">
+      <Project>{6A996CE7-9604-4BA4-995F-86638F08DB2A}</Project>
+      <Name>AppSimplicityV0.5</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
