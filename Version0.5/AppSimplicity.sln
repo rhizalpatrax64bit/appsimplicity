@@ -13,7 +13,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{7D8E1977-C
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DBDummyTests", "Data\DBDummyTests\DBDummyTests.vbproj", "{E2BF64CB-533E-4109-87E7-6B3E905F0CB7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{07ECC7C3-DBC0-4303-9BFC-9213266C7001}"
+	ProjectSection(SolutionItems) = preProject
+		References\Ionic.Zip.Reduced.dll = References\Ionic.Zip.Reduced.dll
+		References\MySql.Data.dll = References\MySql.Data.dll
+		References\System.Data.SQLite.dll = References\System.Data.SQLite.dll
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -40,6 +51,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6A996CE7-9604-4BA4-995F-86638F08DB2A} = {2D8413A5-F0DA-41DC-9044-CAC4524F67EF}
 		{F24B2B22-BE72-4B37-941A-D506CA09CEB6} = {8017E283-D108-4D0D-B47C-34AFF8E7EF3D}
+		{07ECC7C3-DBC0-4303-9BFC-9213266C7001} = {8017E283-D108-4D0D-B47C-34AFF8E7EF3D}
 		{E2BF64CB-533E-4109-87E7-6B3E905F0CB7} = {7D8E1977-CA7C-4474-A1ED-658B832547DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
