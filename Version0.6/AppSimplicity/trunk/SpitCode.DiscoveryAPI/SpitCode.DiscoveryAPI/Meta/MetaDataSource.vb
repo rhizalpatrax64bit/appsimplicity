@@ -1,5 +1,14 @@
 ﻿Public Class MetaDataSource
 
+    Private _Tables As List(Of MetaTable)
+    Public ReadOnly Property Tables() As List(Of MetaTable)
+        Get
+            If _Tables Is Nothing Then
+
+            End If
+            Return _Tables
+        End Get
+    End Property
 
     ''' <summary>
     ''' Fetchs a project given the connection 
@@ -7,9 +16,9 @@
     ''' <param name="pConnectionStringName"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function FetchDataSource(ByVal pConnectionStringName As String) As MetaProject
+    Public Shared Function FetchDataSource(ByVal pConnectionStringName As String) As MetaDataSource
         Dim lDS As AppSimplicity.DataAccess.DataSource
-        Dim lProject As MetaProject = Nothing
+        Dim lDataSource As MetaDataSource = Nothing
         lDS = AppSimplicity.DataAccess.DataSource.GetDataSourceFromConfigFile(pConnectionStringName)
 
         If Not (lDS Is Nothing) Then
