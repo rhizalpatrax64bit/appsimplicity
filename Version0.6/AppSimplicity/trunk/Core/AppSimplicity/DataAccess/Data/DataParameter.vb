@@ -1,4 +1,5 @@
 ﻿Namespace DataAccess
+
     Public Class DataParameter
         Private _Name As String
         Public ReadOnly Property Name() As String
