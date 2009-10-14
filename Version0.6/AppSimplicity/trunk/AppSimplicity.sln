@@ -22,6 +22,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscoveryAPI", "DiscoveryAP
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpitCode.DiscoveryAPI", "SpitCode.DiscoveryAPI\SpitCode.DiscoveryAPI\SpitCode.DiscoveryAPI.vbproj", "{FB9F4752-8678-440D-96EE-330EC240D2B5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{B95823BB-D4A5-4E48-8626-42B73EBEF363}"
+	ProjectSection(SolutionItems) = preProject
+		TODOs.txt = TODOs.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
