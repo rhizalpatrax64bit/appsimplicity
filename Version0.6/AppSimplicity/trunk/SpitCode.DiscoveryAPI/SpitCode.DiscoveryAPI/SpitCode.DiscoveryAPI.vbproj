@@ -51,6 +51,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MetaPersistence\MetaPersister.vb" />
     <Compile Include="Meta\MetaColumn.vb" />
     <Compile Include="Meta\MetaDataSource.vb" />
     <Compile Include="Meta\MetaProject.vb" />
