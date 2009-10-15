@@ -27,11 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{B95823BB
 		TODOs.txt = TODOs.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Program", "Program", "{2226841C-1E90-4CB3-8B00-8963B63BFFA6}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpitCode", "SpitCode.DiscoveryAPI\SpitCode.Program\SpitCode\SpitCode.vbproj", "{98FC7703-DC83-456A-AFDA-960B8CDBBA9C}"
+EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -49,6 +49,10 @@ Global
 		{FB9F4752-8678-440D-96EE-330EC240D2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB9F4752-8678-440D-96EE-330EC240D2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB9F4752-8678-440D-96EE-330EC240D2B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FC7703-DC83-456A-AFDA-960B8CDBBA9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FC7703-DC83-456A-AFDA-960B8CDBBA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FC7703-DC83-456A-AFDA-960B8CDBBA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FC7703-DC83-456A-AFDA-960B8CDBBA9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +61,12 @@ Global
 		{6DA8D16C-9DB4-4E9C-847D-9862FBD29EFA} = {43B8F4BB-E947-43EE-B380-554AC13D9DB0}
 		{D1C418E9-99E2-4859-B2F3-B1260CBD8384} = {47B0FA4C-A471-48CB-B8F2-54CD79CD3156}
 		{1BBFC994-D67E-4746-A70A-709E61E5493A} = {D0983035-1415-45AC-9DFD-B0DF0C294849}
+		{2226841C-1E90-4CB3-8B00-8963B63BFFA6} = {D0983035-1415-45AC-9DFD-B0DF0C294849}
 		{FB9F4752-8678-440D-96EE-330EC240D2B5} = {1BBFC994-D67E-4746-A70A-709E61E5493A}
+		{98FC7703-DC83-456A-AFDA-960B8CDBBA9C} = {2226841C-1E90-4CB3-8B00-8963B63BFFA6}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
