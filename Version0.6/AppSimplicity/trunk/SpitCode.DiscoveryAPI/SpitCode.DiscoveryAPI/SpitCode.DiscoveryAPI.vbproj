@@ -73,9 +73,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Providers\DiscoveryProvider.vb" />
-    <Compile Include="Providers\Implemented\MetaSQLServerProvider.vb" />
-    <Compile Include="Providers\MetaProviderFactory.vb" />
+    <Compile Include="MetaProviders\DiscoveryProvider.vb" />
+    <Compile Include="MetaProviders\Implemented\MetaSQLServerProvider.vb" />
+    <Compile Include="MetaProviders\MetaProviderFactory.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
