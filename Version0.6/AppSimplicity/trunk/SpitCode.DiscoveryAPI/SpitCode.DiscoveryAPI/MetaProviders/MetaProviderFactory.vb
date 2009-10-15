@@ -12,6 +12,9 @@
                 Case AppSimplicity.DataAccess.DataSource.ProviderTypes.Oracle
 
                 Case AppSimplicity.DataAccess.DataSource.ProviderTypes.Oracle10g
+
+                Case AppSimplicity.DataAccess.DataSource.ProviderTypes.OleDB
+
             End Select
 
             Return Nothing
