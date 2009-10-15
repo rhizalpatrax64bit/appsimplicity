@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("AppSimplicity")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyDescription("ORM .Net Framework")> 
+<Assembly: AssemblyCompany("Vertigo Multimedia")> 
 <Assembly: AssemblyProduct("AppSimplicity")> 
 <Assembly: AssemblyCopyright("Copyright ©  2009")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTrademark("Javier Pitalua Cobos. Vertigo Multimedia 2009")> 
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("0.6.*")> 
+<Assembly: AssemblyFileVersion("0.6.*")> 
