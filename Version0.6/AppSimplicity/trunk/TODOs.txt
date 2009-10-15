@@ -1,0 +1,3 @@
+-Write Discovery Api.
+-Implement POCO feature (find out this)
+-Use providers for discovery
