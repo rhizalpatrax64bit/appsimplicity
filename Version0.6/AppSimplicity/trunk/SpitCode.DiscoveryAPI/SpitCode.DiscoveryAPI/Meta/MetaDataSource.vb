@@ -22,10 +22,10 @@
         lDS = AppSimplicity.DataAccess.DataSource.GetDataSourceFromConfigFile(pConnectionStringName)
 
         If Not (lDS Is Nothing) Then
-            lProject = New MetaProject(lDS)
+            'lProject = New MetaProject(lDS)
         End If
 
-        Return lProject
+        'Return lProject
     End Function
 
 End Class
