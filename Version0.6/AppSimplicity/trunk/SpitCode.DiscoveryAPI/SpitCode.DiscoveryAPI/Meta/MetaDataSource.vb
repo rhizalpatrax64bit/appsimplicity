@@ -1,5 +1,26 @@
 ﻿Public Class MetaDataSource
 
+    Public Enum DataSourceStatus
+        Connected
+        NotConnected
+    End Enum
+
+    Private _MetaProvider As Providers.DiscoveryProvider
+    Public ReadOnly Property Meta() As Providers.DiscoveryProvider
+        Get
+            If _MetaProvider Is Nothing Then
+                _MetaProvider = Providers.MetaProviderFactory.GetInstance(Me._DataSource)
+            End If
+            Return _MetaProvider
+        End Get
+    End Property
+
+    Private _DataSource As AppSimplicity.DataAccess.DataSource
+
+    Public Sub New(ByVal pDataSource As AppSimplicity.DataAccess.DataSource)
+        _DataSource = pDataSource
+    End Sub
+
     Private _Tables As List(Of MetaTable)
     Public ReadOnly Property Tables() As List(Of MetaTable)
         Get

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FB9F4752-8678-440D-96EE-330EC240D2B5}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -75,6 +75,7 @@
     </Compile>
     <Compile Include="Providers\DiscoveryProvider.vb" />
     <Compile Include="Providers\Implemented\MetaSQLServerProvider.vb" />
+    <Compile Include="Providers\MetaProviderFactory.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
