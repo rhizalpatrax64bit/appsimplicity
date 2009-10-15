@@ -5,11 +5,11 @@
         NotConnected
     End Enum
 
-    Private _MetaProvider As Providers.DiscoveryProvider
-    Public ReadOnly Property Meta() As Providers.DiscoveryProvider
+    Private _MetaProvider As MetaProviders.DiscoveryProvider
+    Public ReadOnly Property Meta() As MetaProviders.DiscoveryProvider
         Get
             If _MetaProvider Is Nothing Then
-                _MetaProvider = Providers.MetaProviderFactory.GetInstance(Me._DataSource)
+                _MetaProvider = MetaProviders.MetaProviderFactory.GetInstance(Me._DataSource)
             End If
             Return _MetaProvider
         End Get
