@@ -31,7 +31,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Program", "Program", "{2226
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpitCode", "SpitCode.DiscoveryAPI\SpitCode.Program\SpitCode\SpitCode.vbproj", "{98FC7703-DC83-456A-AFDA-960B8CDBBA9C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateAPI", "TemplateAPI", "{52DE8DC8-0CE0-45E7-A485-92AF7725B7C8}"
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -62,11 +68,8 @@ Global
 		{D1C418E9-99E2-4859-B2F3-B1260CBD8384} = {47B0FA4C-A471-48CB-B8F2-54CD79CD3156}
 		{1BBFC994-D67E-4746-A70A-709E61E5493A} = {D0983035-1415-45AC-9DFD-B0DF0C294849}
 		{2226841C-1E90-4CB3-8B00-8963B63BFFA6} = {D0983035-1415-45AC-9DFD-B0DF0C294849}
+		{52DE8DC8-0CE0-45E7-A485-92AF7725B7C8} = {D0983035-1415-45AC-9DFD-B0DF0C294849}
 		{FB9F4752-8678-440D-96EE-330EC240D2B5} = {1BBFC994-D67E-4746-A70A-709E61E5493A}
 		{98FC7703-DC83-456A-AFDA-960B8CDBBA9C} = {2226841C-1E90-4CB3-8B00-8963B63BFFA6}
-	EndGlobalSection
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
