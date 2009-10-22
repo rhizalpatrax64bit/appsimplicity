@@ -4,7 +4,7 @@
         Public Shared Function GetInstance(ByVal pDataSource As AppSimplicity.DataAccess.DataSource) As MetaProviders.DiscoveryProvider
             Select Case (pDataSource.ProviderType)
                 Case AppSimplicity.DataAccess.DataSource.ProviderTypes.SQLServer
-
+                    Return New MetaSQLServerProvider(pDataSource)
                 Case AppSimplicity.DataAccess.DataSource.ProviderTypes.MySQL
 
                 Case AppSimplicity.DataAccess.DataSource.ProviderTypes.SQLite
