@@ -279,21 +279,34 @@ Namespace DataAccess.Providers
                                       Get_WHERE_Statement(pQuery), _
                                       GetOrderByStatement(pQuery))
 
-
-            'TODO: agregar el orderby recursivo
-
             Return lResult
         End Function
 
 #Region "ORDER BY"
+
+        Private Sub RecursiveFillOrderByList(ByVal pParentQuery As ActiveRecord.Query.QueryBuilder, ByVal pOrderByList As List(Of ActiveRecord.Query.OrderBy))
+            For Each lOrderByStatement As ActiveRecord.Query.OrderBy In pParentQuery.OrderByList
+                pOrderByList.Add(lOrderByStatement)
+            Next
+
+            For Each lKey As String In pParentQuery.Joins.Keys
+                RecursiveFillOrderByList(pParentQuery.Joins(lKey).ForeignQuery, pOrderByList)
+            Next
+        End Sub
+
         Public Overridable Function GetOrderByStatement(ByVal pQuery As ActiveRecord.Query.QueryBuilder) As String
             Dim lReturnValue As String = String.Empty
 
-            If (pQuery.OrderByList.Count > 0) Then
+            Dim lOrderByList As New List(Of ActiveRecord.Query.OrderBy)
+
+            RecursiveFillOrderByList(pQuery, lOrderByList)
+
+            If (lOrderByList.Count > 0) Then
                 Dim lSB As New StringBuilder
 
                 Dim First As Boolean = True
-                For Each lOrder As ActiveRecord.Query.OrderBy In pQuery.OrderByList
+
+                For Each lOrder As ActiveRecord.Query.OrderBy In lOrderByList
 
                     If (First) Then
                         lSB.AppendFormat("{0} {1}", Me.GetQualifiedColumnName(lOrder.Column), GetOrderByDirection(lOrder))
@@ -301,6 +314,7 @@ Namespace DataAccess.Providers
                     Else
                         lSB.AppendFormat(",{0} {1}", Me.GetQualifiedColumnName(lOrder.Column), GetOrderByDirection(lOrder))
                     End If
+
                 Next
 
                 lReturnValue = String.Format("ORDER BY {0}", lSB.ToString)
