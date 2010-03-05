@@ -1,6 +1,0 @@
-﻿1. How to setup connection strings:
-
-<add  
-	name="ASPNETAppServices" 
-	connectionString="Server=COR0023KR5H1\JPITALUA76;Database=ASPNETAppServices;User ID=sisadmin;Password=Invercap2008;Trusted_Connection=False;"
-	providerName="SQLServer" />
