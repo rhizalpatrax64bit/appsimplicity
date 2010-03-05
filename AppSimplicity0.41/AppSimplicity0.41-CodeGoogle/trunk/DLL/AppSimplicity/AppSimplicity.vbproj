@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74DA0659-AD47-4E13-B645-F027267D9C6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AppSimplicity</RootNamespace>
+    <AssemblyName>AppSimplicity</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AppSimplicity.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AppSimplicity.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip.Reduced, Version=1.8.4.19, Culture=neutral, PublicKeyToken=c551e179877da246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External References\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External References\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\External References\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveRecord\DataValue.vb" />
+    <Compile Include="ActiveRecord\IActiveRecord.vb" />
+    <Compile Include="ActiveRecord\IEntityRecord.vb" />
+    <Compile Include="ActiveRecord\Query\Comparison.vb" />
+    <Compile Include="ActiveRecord\Query\ComparisonConditions.vb" />
+    <Compile Include="ActiveRecord\Query\Join.vb" />
+    <Compile Include="ActiveRecord\Query\OrderBy.vb" />
+    <Compile Include="ActiveRecord\Query\QueryBuilder.vb" />
+    <Compile Include="ActiveRecord\Query\QueryProperty.vb" />
+    <Compile Include="ActiveRecord\Schema.vb" />
+    <Compile Include="ActiveRecord\SchemaColumn.vb" />
+    <Compile Include="DataAccess\CommandHelper.vb" />
+    <Compile Include="DataAccess\DataCommand.vb" />
+    <Compile Include="DataAccess\DataCommandParameter.vb" />
+    <Compile Include="DataAccess\DataService.vb" />
+    <Compile Include="DataAccess\DataSource.vb" />
+    <Compile Include="DataAccess\Dialects\IDialectProvider.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Dialects\MySQLDialect.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Dialects\SQL92DialectProvider.vb" />
+    <Compile Include="DataAccess\Dialects\SQLiteDialect.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Dialects\SQLServerDialectProvider.vb" />
+    <Compile Include="DataAccess\Providers\IDataProvider.vb" />
+    <Compile Include="DataAccess\Providers\ADONetProvider.vb" />
+    <Compile Include="DataAccess\Providers\MySQLProvider.vb" />
+    <Compile Include="DataAccess\ProviderFactory.vb" />
+    <Compile Include="DataAccess\Providers\RemoteWSProvider.vb" />
+    <Compile Include="DataAccess\Providers\SQLiteV3Provider.vb" />
+    <Compile Include="DataAccess\Providers\SQLServerProvider.vb" />
+    <Compile Include="Localization\ExceptionMessages.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DataAccess\ProviderTypes.vb" />
+    <Compile Include="Utilities\Compression.vb" />
+    <Compile Include="Utilities\Data.vb" />
+    <Compile Include="Utilities\DateAndTime.vb" />
+    <Compile Include="Utilities\Encryption.vb" />
+    <Compile Include="Utilities\ExcelDataRenderer.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExcelDataRenderer.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ExcelUtilities.vb" />
+    <Compile Include="Utilities\General.vb" />
+    <Compile Include="Utilities\PasswordGenerator.vb" />
+    <Compile Include="Utilities\Serialization.vb" />
+    <Compile Include="Utilities\Web.vb" />
+    <Compile Include="Web References\RemoteDataService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\ExceptionMessages.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\ExceptionMessages.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionMessages.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\ExcelDataRenderer.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExcelDataRenderer.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:2030/RemoteDataProvider/ws/dataservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RemoteDataService\</RelPath>
+      <UpdateFromURL>http://localhost:2030/RemoteDataProvider/ws/dataservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AppSimplicity_RemoteDataService_DataService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Web References\RemoteDataService\dataservice.disco" />
+    <None Include="Web References\RemoteDataService\dataservice.wsdl" />
+    <None Include="Web References\RemoteDataService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
