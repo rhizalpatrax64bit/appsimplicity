@@ -6,6 +6,8 @@ Imports System.IO
 Namespace Utilities
     Public Class Compressor
 
+        'TODO: Implement the following methods
+
         Public Shared Function CompressString(ByVal pString As String) As String
             Dim lBuffer As Byte()
 
