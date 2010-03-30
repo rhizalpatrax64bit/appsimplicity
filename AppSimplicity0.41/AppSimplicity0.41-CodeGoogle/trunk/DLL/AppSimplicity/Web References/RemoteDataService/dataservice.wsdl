@@ -175,10 +175,10 @@
   </wsdl:binding>
   <wsdl:service name="DataService">
     <wsdl:port name="DataServiceSoap" binding="tns:DataServiceSoap">
-      <soap:address location="http://localhost:2030/RemoteDataProvider/ws/dataservice.asmx" />
+      <soap:address location="http://localhost:2397/RemoteDataProvider/WS/DataService.asmx" />
     </wsdl:port>
     <wsdl:port name="DataServiceSoap12" binding="tns:DataServiceSoap12">
-      <soap12:address location="http://localhost:2030/RemoteDataProvider/ws/dataservice.asmx" />
+      <soap12:address location="http://localhost:2397/RemoteDataProvider/WS/DataService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
