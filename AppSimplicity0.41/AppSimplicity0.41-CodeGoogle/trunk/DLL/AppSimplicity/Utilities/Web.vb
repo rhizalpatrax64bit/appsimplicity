@@ -1,5 +1,11 @@
 ﻿Namespace Utilities
     Public Class Web
+
+        Public Enum TransmitType
+            EndResponse
+            CompleteRequest
+        End Enum
+
         ''' <summary>
         ''' Sends a file to a page response.
         ''' </summary>
@@ -10,14 +16,13 @@
         ''' <param name="pDownloadFileName">This parameter is used to specify the filename in the download dialog.
         ''' If this parameter is omited then the original filename will be used.
         ''' </param>
-        Public Shared Sub TransmitFile(ByVal pResponse As System.Web.HttpResponse, ByVal pFileAbsolutePath As String, Optional ByVal pContentTypeString As String = "", Optional ByVal pDownloadFileName As String = "", Optional ByVal pDeleteAfterTransmit As Boolean = False)
+        Public Shared Sub TransmitFile(ByVal pResponse As System.Web.HttpResponse, ByVal pFileAbsolutePath As String, Optional ByVal pContentTypeString As String = "", Optional ByVal pDownloadFileName As String = "", Optional ByVal pDeleteAfterTransmit As Boolean = False, Optional ByVal pTransmitMethod As TransmitType = TransmitType.EndResponse)
             If Not (System.IO.File.Exists(pFileAbsolutePath)) Then
                 Throw New Exception(String.Format("No se puede transmitir el archivo ""{0}"".  El archivo no existe.", pFileAbsolutePath))
             End If
 
             pResponse.Clear()
 
-            Dim lMimeExtractor As New MimeExtractor(pFileAbsolutePath)
             Dim lFileName As String = String.Empty
 
             If (pDownloadFileName <> String.Empty) Then
@@ -41,7 +46,15 @@
                 System.IO.File.Delete(pFileAbsolutePath)
             End If
 
-            pResponse.End()
+
+            If (pTransmitMethod = TransmitType.EndResponse) Then
+                pResponse.End()
+            End If
+
+            If (pTransmitMethod = TransmitType.CompleteRequest) Then
+                System.Web.HttpContext.Current.ApplicationInstance.CompleteRequest()
+            End If
+
         End Sub
 
         Private Class MimeExtractor
