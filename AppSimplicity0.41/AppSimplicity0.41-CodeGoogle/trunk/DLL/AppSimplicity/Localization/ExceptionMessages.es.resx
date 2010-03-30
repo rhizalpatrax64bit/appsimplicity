@@ -120,6 +120,9 @@
   <data name="CantReadConnectionString" xml:space="preserve">
     <value>No fue posible localizar una cadena de conexión con el nombre "{0}".  Por favor verifique el archivo de configuración.</value>
   </data>
+  <data name="CompressFileNotFound" xml:space="preserve">
+    <value>No es posible comprimir el archivo [{0}], no se encuentra en la ruta especificada.</value>
+  </data>
   <data name="InvalidProviderName" xml:space="preserve">
     <value>El nombre del proveedor de la cadena de conexión "{0}" es inválido.  Los proveedores válidos son : {1}.  Verifique el archivo de configuración.</value>
   </data>

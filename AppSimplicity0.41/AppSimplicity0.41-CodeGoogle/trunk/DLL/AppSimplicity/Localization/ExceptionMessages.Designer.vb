@@ -74,6 +74,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Can&apos;t compress file [{0}]. File not found..
+        '''</summary>
+        Friend Shared ReadOnly Property CompressFileNotFound() As String
+            Get
+                Return ResourceManager.GetString("CompressFileNotFound", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Provider name is invalid in connection string &quot;{0}.  Valid provider names are : {0}&quot;..
         '''</summary>
         Friend Shared ReadOnly Property InvalidProviderName() As String

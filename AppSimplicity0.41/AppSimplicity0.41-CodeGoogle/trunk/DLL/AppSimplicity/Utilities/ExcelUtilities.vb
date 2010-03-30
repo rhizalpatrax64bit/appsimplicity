@@ -133,7 +133,7 @@ Namespace Utilities.Excel
             sWriter.Dispose()
 
             If (pCompressToZip) Then
-                Utilities.Compressor.ZipFile(pFileAbsolutePath)
+                Utilities.Compression.ZipFile(pFileAbsolutePath)
             End If
         End Sub
 #End Region

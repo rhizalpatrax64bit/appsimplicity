@@ -120,6 +120,9 @@
   <data name="CantReadConnectionString" xml:space="preserve">
     <value>Unable to find a connection string named "{0}".  Verify configuration file.</value>
   </data>
+  <data name="CompressFileNotFound" xml:space="preserve">
+    <value>Can't compress file [{0}]. File not found.</value>
+  </data>
   <data name="InvalidProviderName" xml:space="preserve">
     <value>Provider name is invalid in connection string "{0}.  Valid provider names are : {0}".</value>
   </data>
