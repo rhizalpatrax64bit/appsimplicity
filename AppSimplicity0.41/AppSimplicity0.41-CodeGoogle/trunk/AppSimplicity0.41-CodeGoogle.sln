@@ -36,9 +36,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", 
 	ProjectSection(SolutionItems) = preProject
 		References\Ionic.Zip.Reduced.dll = References\Ionic.Zip.Reduced.dll
 		References\MySql.Data.dll = References\MySql.Data.dll
+		References\nunit.framework.dll = References\nunit.framework.dll
 		References\Readme.txt = References\Readme.txt
 		References\System.Data.SQLite.dll = References\System.Data.SQLite.dll
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{9D9ADCAF-BA8C-4E60-BD65-83E90DC05444}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity.UnitTesting", "DLL\UnitTests\AppSimplicity.UnitTesting\AppSimplicity.UnitTesting.vbproj", "{5A832DF4-1040-403C-B5B0-877391DDA10E}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -47,17 +52,35 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +88,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{74DA0659-AD47-4E13-B645-F027267D9C6B} = {83B73480-7DFC-4B9B-BDD3-C66733E10BEC}
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937} = {18CCD1E6-2455-4F5D-8755-F7AB928DAD75}
+		{5A832DF4-1040-403C-B5B0-877391DDA10E} = {9D9ADCAF-BA8C-4E60-BD65-83E90DC05444}
 	EndGlobalSection
 EndGlobal

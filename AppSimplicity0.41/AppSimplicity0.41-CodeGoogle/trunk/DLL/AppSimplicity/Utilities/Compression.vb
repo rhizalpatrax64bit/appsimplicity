@@ -21,10 +21,14 @@ Namespace Utilities
         End Function
 
         Public Shared Function DeCompressString(ByVal pString As String) As String
-
+            'TODO: terminar esto:
         End Function
 
         Public Shared Sub ZipFile(ByVal pFileName As String, Optional ByVal pOutputFileName As String = "", Optional ByVal DeleteOriginalFileAfterCompression As Boolean = False)
+            Dim lFileName As String = System.IO.Path.GetFileNameWithoutExtension(pFileName)
+
+
+            'TODO: Terminar esto
 
         End Sub
     End Class
