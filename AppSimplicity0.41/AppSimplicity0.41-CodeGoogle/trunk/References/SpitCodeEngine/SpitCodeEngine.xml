@@ -1,0 +1,118 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SpitCodeEngine
+</name>
+</assembly>
+<members>
+<member name="P:SpitCodeEngine.MetaDiscovery.MetaRelation.Relation">
+	<summary>
+ Determina el tipo de la relación con la entidad foránea
+ </summary>
+</member><member name="P:SpitCodeEngine.MetaDiscovery.Parameter.DisplayName">
+	<summary>
+ The formatted display
+ </summary>
+</member><member name="P:SpitCodeEngine.MetaDiscovery.Parameter.Name">
+	<summary>
+ The name of the undelying database object
+ </summary>
+</member><member name="P:SpitCodeEngine.MetaDiscovery.Parameter.DBType">
+	<summary>
+ The database type of the parameter
+ </summary>
+</member><member name="P:SpitCodeEngine.MetaDiscovery.Parameter.ParameterMode">
+	<summary>
+ The mode that this parameter operates in
+ </summary>
+</member><member name="P:SpitCodeEngine.MetaDiscovery.Parameter.QueryParameter">
+	<summary>
+ The query parameter
+ </summary>
+</member><member name="P:SpitCodeEngine.MetaDiscovery.Parameter.VariableType">
+	<summary>
+ What kind of variable type this parameter is on Visual Basic
+ </summary>
+</member><member name="F:SpitCodeEngine.CodeGeneration.CodeTemplateType.DbEntityTemplate">
+	<summary>
+ Establece que la plantilla generará archivos por cada tabla o vista del proveedor de datos
+ </summary>
+</member><member name="F:SpitCodeEngine.CodeGeneration.CodeTemplateType.TableTemplate">
+	<summary>
+ Establece que la plantilla generará archivos por cada tabla del proveedor de datos
+ </summary>
+</member><member name="F:SpitCodeEngine.CodeGeneration.CodeTemplateType.ViewTemplate">
+	<summary>
+ Establece que la plantilla generará archivos por cada vista del proveedor de datos
+ </summary>
+</member><member name="F:SpitCodeEngine.CodeGeneration.CodeTemplateType.ProviderTemplate">
+	<summary>
+ Establece que la plantilla generará archivos por cada proveedor de datos existente en el proyecto
+ </summary>
+</member><member name="F:SpitCodeEngine.CodeGeneration.CodeTemplateType.ProjectTemplate">
+	<summary>
+ Establece que la plantilla generará un archivo por todo el proyecto
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SpitCodeEngine.CodeGeneration.CodeTemplateType">
+	<summary>
+ Determina los tipos de plantillas que existen
+ </summary>
+</member><member name="F:SpitCodeEngine.CodeGeneration.EntityTypes.Table">
+	<summary>
+ Establece que la entidad es de tipo Tabla
+ </summary>
+</member><member name="F:SpitCodeEngine.CodeGeneration.EntityTypes.View">
+	<summary>
+ Establece que la entidad es de tipo Vista
+ </summary>
+</member><member name="T:SpitCodeEngine.CodeGeneration.EntityTypes">
+	<summary>
+ Determina el tipo de entidades posibles
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.TemplateSettings.Description">
+	<summary>
+ Establece una descripción del propósito de la plantilla
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.TemplateSettings.OverWriteFiles">
+	<summary>
+ Determina si se van a sobrescribir los archivos existente
+ con archivos nuevos generados.
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.TemplateSettings.TemplateType">
+	<summary>
+ Determina de qué tipo de plantilla se trata
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.CodeTemplate.EntityType">
+	<summary>
+ Determina el tipo de entidad que se utilizará para generar el código
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.CodeTemplate.CurrentProject">
+	<summary>
+ Refiere al proyecto actual
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.CodeTemplate.CurrentProvider">
+	<summary>
+ Refiere al proveedor actual
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.CodeTemplate.FilesGeneratedCount">
+	<summary>
+ Obtiene el número de archivos que se han generado en la plantilla
+ </summary>
+</member><member name="P:SpitCodeEngine.CodeGeneration.CodeTemplate.RootDirectory">
+	<summary>
+ Determina el directorio actual donde se está ejecutando el generador de código
+ </summary>
+</member><member name="M:SpitCodeEngine.CodeGeneration.CodeTemplate.SpitCode(SpitCodeEngine.MetaDiscovery.Project)">
+	<summary>
+ Método que realiza la generación del código
+ </summary>
+	<param name="Project">El proyecto consiste en una colección de Proveedores</param>
+</member><member name="T:SpitCodeEngine.CodeGeneration.CodeTemplate">
+	<summary>
+ Encapsula el comportamiento de una plantilla de generación de código.
+ </summary>
+</member>
+</members>
+</doc>
