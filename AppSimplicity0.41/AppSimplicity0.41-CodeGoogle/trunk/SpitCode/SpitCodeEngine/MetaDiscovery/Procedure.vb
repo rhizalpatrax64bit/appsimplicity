@@ -26,6 +26,7 @@
         End Property
 
         Private _Parameters As New List(Of MetaDiscovery.Parameter)
+        <Browsable(False)> _
         Public ReadOnly Property Parameters() As List(Of MetaDiscovery.Parameter)
             Get
                 Return _Parameters
