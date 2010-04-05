@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefaultSettings Version="1.0.0.0" FirstTime="false">
+  <Setting Name="FontFamily" value="" />
+  <Setting Name="DbDriver" value="SQL" />
+  <Setting Name="ConnectionString" value="Server=COR0023KR5H1\JPITALUA76;Database=ConsultasInversiones;User ID=sisadmin;Password=Invercap2008;Trusted_Connection=False;Provider=SQLOLEDB;" />
+  <Setting Name="LanguageMappingFile" value="C:\Archivos de programa\MyGeneration13\Settings\Languages.xml" />
+  <Setting Name="Language" value="C#" />
+  <Setting Name="DbTargetMappingFile" value="C:\Archivos de programa\MyGeneration13\Settings\DbTargets.xml" />
+  <Setting Name="DbTarget" value="SqlClient" />
+  <Setting Name="UserMetaDataFileName" value="C:\Archivos de programa\MyGeneration13\Settings\UserMetaData.xml" />
+  <Setting Name="EnableLineNumbering" value="False" />
+  <Setting Name="EnableClipboard" value="True" />
+  <Setting Name="CodePage" value="-1" />
+  <Setting Name="Tabs" value="4" />
+  <Setting Name="ScriptTimeout" value="-1" />
+  <Setting Name="DefaultTemplateDirectory" value="C:\Archivos de programa\MyGeneration13\Templates\" />
+  <Setting Name="DefaultOutputDirectory" value="C:\Archivos de programa\MyGeneration13\GeneratedCode\" />
+  <Setting Name="UseProxyServer" value="False" />
+  <Setting Name="ProxyServerUri" value="" />
+  <Setting Name="ProxyAuthUsername" value="" />
+  <Setting Name="ProxyAuthPassword" value="" />
+  <Setting Name="ProxyAuthDomain" value="" />
+  <Setting Name="WindowState" value="Maximized" />
+  <Setting Name="WindowPosTop" value="190" />
+  <Setting Name="WindowPosLeft" value="84" />
+  <Setting Name="WindowPosWidth" value="859" />
+  <Setting Name="WindowPosHeight" value="775" />
+  <Setting Name="CheckForNewBuild" value="True" />
+  <Setting Name="CompactMemoryOnStartup" value="True" />
+  <Setting Name="DomainOverride" value="True" />
+  <Setting Name="SQL" value="Server=COR0023KR5H1\JPITALUA76;Database=ConsultasInversiones;User ID=sisadmin;Password=Invercap2008;Trusted_Connection=False;Provider=SQLOLEDB;" />
+  <SavedSettings name="AppSimplicity" driver="SQL" connstr="Server=COR0023KR5H1\JPITALUA76;Database=ConsultasInversiones;User ID=sisadmin;Password=Invercap2008;Trusted_Connection=False;Provider=SQLOLEDB;" dbtargetpath="C:\Archivos de programa\MyGeneration13\Settings\DbTargets.xml" languagepath="C:\Archivos de programa\MyGeneration13\Settings\Languages.xml" usermetapath="C:\Archivos de programa\MyGeneration13\Settings\UserMetaData.xml" language="C#" dbtarget="SqlClient" />
+  <Setting Name="VersionRSSUrl" value="http://sourceforge.net/export/rss2_projfiles.php?group_id=198893" />
+  <Setting Name="TemplateBrowserExecAsync" value="True" />
+  <Setting Name="ConsoleWriteGeneratedDetails" value="False" />
+  <Setting Name="DocStyleSettings" value="False" />
+  <RecentFile>C:\Archivos de programa\MyGeneration13\Templates\VB.Net\VbNet_SQL_dOOdads_BusinessEntity.vbgen</RecentFile>
+  <RecentFile>C:\Archivos de programa\MyGeneration13\Templates\Other\UserMetaData.jgen</RecentFile>
+  <RecentFile>C:\Archivos de programa\MyGeneration13\Templates\PHP\PHP_BusinessObject.jgen</RecentFile>
+  <RecentFile>C:\Archivos de programa\MyGeneration13\Templates\VB.Net\VbNet_SQL_BusinessObject.vbgen</RecentFile>
+</DefaultSettings>
