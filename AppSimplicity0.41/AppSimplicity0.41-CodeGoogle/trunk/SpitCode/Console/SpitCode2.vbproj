@@ -189,7 +189,6 @@
     </Content>
     <Content Include="icon.ico" />
     <None Include="Resources\SplashScreen_singlelayerP.jpg" />
-    <None Include="SpitCode2_TemporaryKey.pfx" />
     <Content Include="Settings\DbTargets.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

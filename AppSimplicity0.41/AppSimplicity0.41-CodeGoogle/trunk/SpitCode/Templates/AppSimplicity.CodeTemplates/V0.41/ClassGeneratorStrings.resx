@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActiveRecordMethods" xml:space="preserve">
+    <value>#Region "IActiveRecordMethods"
+
+#Region "Get parameters"
+        Public Function Get_DELETE_Parameters() As System.Collections.Generic.List(Of AppSimplicity.DataAccess.DataCommandParameter) Implements AppSimplicity.ActiveRecord.IActiveRecord.Get_DELETE_Parameters
+            Dim lParameters As New List(Of DataAccess.DataCommandParameter)
+
+{2}
+
+            Return lParameters
+        End Function
+
+        Public Function Get_INSERT_Parameters() As System.Collections.Generic.List(Of AppSimplicity.DataAccess.DataCommandParameter) Implements AppSimplicity.ActiveRecord.IActiveRecord.Get_INSERT_Parameters
+            Dim lParameters As New List(Of DataAccess.DataCommandParameter)
+
+{3}
+
+            Return lParameters
+        End Function
+
+        Public Function Get_UPDATE_Parameters() As System.Collections.Generic.List(Of AppSimplicity.DataAccess.DataCommandParameter) Implements AppSimplicity.ActiveRecord.IActiveRecord.Get_UPDATE_Parameters
+            Dim lParameters As New List(Of DataAccess.DataCommandParameter)
+
+{4}
+
+            Return lParameters
+        End Function
+#End Region
+
+#Region "Events"
+        Public Event OnAfterCreate() Implements AppSimplicity.ActiveRecord.IActiveRecord.OnAfterCreate
+
+        Public Event OnAfterDelete() Implements AppSimplicity.ActiveRecord.IActiveRecord.OnAfterDelete
+
+        Public Event OnAfterSave() Implements AppSimplicity.ActiveRecord.IActiveRecord.OnAfterSave
+
+        Public Event OnAfterUpdate() Implements AppSimplicity.ActiveRecord.IActiveRecord.OnAfterUpdate
+
+        Public Event OnBeforeCreate(ByRef e As AppSimplicity.ActiveRecord.DataOperationEventArgs) Implements AppSimplicity.ActiveRecord.IActiveRecord.OnBeforeCreate
+
+        Public Event OnBeforeDelete(ByRef e As AppSimplicity.ActiveRecord.DataOperationEventArgs) Implements AppSimplicity.ActiveRecord.IActiveRecord.OnBeforeDelete
+
+        Public Event OnBeforeSave(ByRef e As AppSimplicity.ActiveRecord.DataOperationEventArgs) Implements AppSimplicity.ActiveRecord.IActiveRecord.OnBeforeSave
+
+        Public Event OnBeforeUpdate(ByRef e As AppSimplicity.ActiveRecord.DataOperationEventArgs) Implements AppSimplicity.ActiveRecord.IActiveRecord.OnBeforeUpdate
+#End Region
+
+#Region "Data Operation Methods"
+        ''' &lt;summary&gt;
+        ''' Creates the physical record for this instance in the database
+        ''' &lt;/summary&gt;
+        Public Sub Create() Implements AppSimplicity.ActiveRecord.IActiveRecord.Create
+            Dim lEventArgs As New ActiveRecord.DataOperationEventArgs
+
+            RaiseEvent OnBeforeCreate(lEventArgs)
+
+            If (lEventArgs.PerformOperation) Then
+                {0}.DataContext.Service.Insert(Me)
+            End If
+
+            RaiseEvent OnAfterCreate()
+        End Sub
+
+        ''' &lt;summary&gt;
+        ''' Updates the physical record for this instance in the database
+        ''' &lt;/summary&gt;
+        Public Sub Update() Implements AppSimplicity.ActiveRecord.IActiveRecord.Update
+            Dim lEventArgs As New ActiveRecord.DataOperationEventArgs
+
+            RaiseEvent OnBeforeUpdate(lEventArgs)
+
+            If (lEventArgs.PerformOperation) Then
+                {0}.DataContext.Service.Update(Me)
+            End If
+
+            RaiseEvent OnAfterUpdate()
+        End Sub
+
+        ''' &lt;summary&gt;
+        ''' Removes the physical record for this instance in the database
+        ''' &lt;/summary&gt;
+        Public Sub Delete() Implements AppSimplicity.ActiveRecord.IActiveRecord.Delete
+            Dim lEventArgs As New ActiveRecord.DataOperationEventArgs
+
+            RaiseEvent OnBeforeDelete(lEventArgs)
+
+            If (lEventArgs.PerformOperation) Then
+                {0}.DataContext.Service.Delete(Me)
+            End If
+
+            RaiseEvent OnAfterDelete()
+        End Sub
+
+        ''' &lt;summary&gt;
+        ''' Saves the physical record for this instance in the database
+        ''' &lt;/summary&gt;
+        Public Sub Save() Implements AppSimplicity.ActiveRecord.IActiveRecord.Save
+            Dim lEventArgs As New ActiveRecord.DataOperationEventArgs
+
+            RaiseEvent OnBeforeSave(lEventArgs)
+
+            If (lEventArgs.PerformOperation) Then
+                If (Me.IsLoadedFromDB) Then
+                    Me.Update()
+                Else
+                    Me.Create()
+                End If
+            End If
+
+            RaiseEvent OnAfterSave()
+        End Sub
+#End Region
+
+        ''' &lt;summary&gt;
+        ''' Sets the value of the corresponding identity in the database
+        ''' &lt;/summary&gt;
+        ''' &lt;param name="pId"&gt;The value of identity&lt;/param&gt;        
+        Public Sub SetId(ByVal pId As Object) Implements AppSimplicity.ActiveRecord.IActiveRecord.SetId
+            _{5}.Value = pId
+        End Sub
+
+        ''' &lt;summary&gt;
+        ''' Obtains the data structure of the physical table schema
+        ''' &lt;/summary&gt;        
+        Public Function GetSchema() As AppSimplicity.ActiveRecord.Schema Implements AppSimplicity.ActiveRecord.IActiveRecord.GetSchema
+            Return {0}.{1}.Schema
+        End Function
+#End Region</value>
+  </data>
+  <data name="BelongsToProperty" xml:space="preserve">
+    <value>        Private _{0} As {1}.{0}
+        &lt;System.Xml.Serialization.XmlIgnore()&gt; _
+        Public Property {0}() As {1}.{0}
+            Get
+                If (_{0} Is Nothing) Then
+                    _{0} = {1}.{2}.FetchById(Me._{3}.Value)
+                End If
+                Return _{0}
+            End Get
+            Set(ByVal value As {1}.{0})
+                Me._{3}.Value = value.{4}
+                Me.Save()
+				
+                _{0} = value
+            End Set
+        End Property</value>
+  </data>
+  <data name="ClassWrapper" xml:space="preserve">
+    <value>Imports AppSimplicity
+
+Namespace {0}
+    ''' &lt;summary&gt;
+    ''' {11}
+    ''' &lt;/summary&gt;
+    &lt;Serializable()&gt; _
+    Partial {10} Class {1}
+        Implements ActiveRecord.IEntityRecord, ActiveRecord.IActiveRecord, System.Runtime.Serialization.ISerializable
+        
+#Region "Fields"
+{2}
+#End Region
+
+#Region "Properties"
+{3}
+        Private _IsLoadedFromDB As Boolean = False
+        ''' &lt;summary&gt;
+        ''' Determines whether the instance data comes from the data source
+        ''' &lt;/summary&gt;
+        ''' &lt;value&gt;&lt;/value&gt;
+        Public ReadOnly Property IsLoadedFromDB() As Boolean Implements AppSimplicity.ActiveRecord.IEntityRecord.IsLoadedFromDB
+            Get
+                Return _IsLoadedFromDB
+            End Get
+        End Property
+#End Region
+
+#Region "BelongsTo Properties"
+{8}
+#End Region
+
+#Region "HasMany Properties"
+{9}
+#End Region
+
+#Region ".ctors"
+        Public Sub New()
+            Dim lSchema As ActiveRecord.Schema
+
+            lSchema = {5}.Schema
+
+{4}
+            
+        End Sub
+
+        Protected Sub New(ByVal info As Runtime.Serialization.SerializationInfo, ByVal context As Runtime.Serialization.StreamingContext)
+            Me.New()
+
+{13}
+
+            Me._IsLoadedFromDB = True
+
+        End Sub
+
+#End Region
+
+{6}
+
+{7}
+
+#Region "Serialization Data"
+        Public Sub GetObjectData(ByVal info As System.Runtime.Serialization.SerializationInfo, ByVal context As System.Runtime.Serialization.StreamingContext) _
+            Implements System.Runtime.Serialization.ISerializable.GetObjectData
+
+{12}            
+        End Sub
+#End Region
+
+
+    End Class    
+
+End Namespace</value>
+  </data>
+  <data name="ColumnDefinition" xml:space="preserve">
+    <value>            lColumn = New ActiveRecord.SchemaColumn()
+            lColumn.ColumnName = "{0}"
+            lColumn.DataType = {1}
+            lColumn.MaxLength = {2}
+            lColumn.AutoIncrement = {3}
+            lColumn.IsNullable = {4}
+            lColumn.IsPrimaryKey = {5}
+            lColumn.FieldLabel = "{6}"
+            lColumn.GridCaption = "{7}"
+            lColumn.IsDescription = {8}
+            lSchema.AddColumn(lColumn)</value>
+  </data>
+  <data name="DataContextGenerator" xml:space="preserve">
+    <value>Imports AppSimplicity
+
+Namespace {0}
+    ''' &lt;summary&gt;
+    ''' This class exposes the services to access data using the data source {0}
+    ''' &lt;/summary&gt;
+    Partial {3} Class DataContext
+
+        Private Shared WithEvents _Service As DataAccess.DataService
+        ''' &lt;summary&gt;
+        ''' Contains the data access service instance. Through this object is possible to run SQL commands in the data source.
+        ''' &lt;/summary&gt;        
+        Public Shared ReadOnly Property Service() As DataAccess.DataService
+            Get
+                If (_Service Is Nothing) Then
+                    _Service = New DataAccess.DataService("{1}", {2})
+                End If
+                Return _Service
+            End Get
+        End Property
+
+        ''' &lt;summary&gt;
+        ''' Starts a transaction.
+        ''' &lt;/summary&gt;
+        Public Shared Sub BeginTransaction(Optional ByVal pIsolationLevel As System.Data.IsolationLevel = IsolationLevel.ReadCommitted)
+            Service.BeginTransaction(pIsolationLevel)
+        End Sub
+
+        ''' &lt;summary&gt;
+        ''' Commits the current active transaction.
+        ''' &lt;/summary&gt;
+        Public Shared Sub CommitTransaction()
+            Service.CommitTransaction()
+        End Sub
+
+        ''' &lt;summary&gt;
+        ''' Rollback the current active transaction.
+        ''' &lt;/summary&gt;
+        Public Shared Sub RollBackTransaction()
+            Service.RollBackTransaction()
+        End Sub
+
+    End Class
+
+End Namespace</value>
+  </data>
+  <data name="DataContextSPFunctionsWrapper" xml:space="preserve">
+    <value>Imports AppSimplicity
+
+Namespace {0}
+
+    Partial {2} Class DataContext
+
+#Region "Stored Procedures"
+
+        ''' &lt;summary&gt;
+        ''' This class exposes methods to invoke stored procedures in {1} data source.
+        ''' &lt;/summary&gt;        
+        Partial Public Class SPs
+
+{3}
+
+        End Class
+
+#End Region
+
+    End Class
+
+End Namespace</value>
+  </data>
+  <data name="EntityMethods" xml:space="preserve">
+    <value>#Region "IEntity Methods"
+        Public Sub Load(ByVal pReader As System.Data.Common.DbDataReader, Optional ByVal pUseQualifiedNames As Boolean = False) Implements AppSimplicity.ActiveRecord.IEntityRecord.Load
+            RaiseEvent OnBeforeLoad()
+
+            If (pUseQualifiedNames) Then
+{0}
+            Else
+{1}            
+            End If
+
+            _IsLoadedFromDB = True
+            
+            RaiseEvent OnAfterLoad()
+        End Sub
+
+        Public Sub Load(ByVal pRow As System.Data.DataRow, Optional ByVal pUseQualifiedNames As Boolean = False) Implements AppSimplicity.ActiveRecord.IEntityRecord.Load
+            RaiseEvent OnBeforeLoad()
+
+            If (pUseQualifiedNames) Then
+{2}
+            Else
+{3}
+            End If
+            
+            _IsLoadedFromDB = True
+
+            RaiseEvent OnAfterLoad()
+        End Sub
+
+        Public Event OnAfterLoad() Implements AppSimplicity.ActiveRecord.IEntityRecord.OnAfterLoad
+
+        Public Event OnBeforeLoad() Implements AppSimplicity.ActiveRecord.IEntityRecord.OnBeforeLoad
+		
+		''' &lt;summary&gt;
+        ''' Resets the values of the instance to null values
+        ''' &lt;/summary&gt;
+        Public Sub Reset() Implements AppSimplicity.ActiveRecord.IEntityRecord.Reset
+
+{4}
+
+            _IsLoadedFromDB = False
+        End Sub
+#End Region</value>
+  </data>
+  <data name="ExtendedDataContextGenerator" xml:space="preserve">
+    <value>Imports AppSimplicity
+
+Namespace {0}
+    Partial {1} Class DataContext
+
+        'To arbitrarily set the data source, uncomment and customize the following code:
+        '
+        'Private Shared Sub _Service_OnSetDataSource(ByRef pDataSource As AppSimplicity.DataAccess.DataSource) Handles _Service.OnSetDataSource
+        '    Dim lDataSource As New DataAccess.DataSource("{2}")
+
+        '    lDataSource.ConnectionString = "Get Connection String from anywhere you want."
+        '    lDataSource.ConnectionString = 6000
+        '    lDataSource.ProviderType = DataAccess.ProviderTypes.SQLServer
+
+        '    pDataSource = lDataSource
+        'End Sub
+
+    End Class
+End Namespace</value>
+  </data>
+  <data name="FetchHasManyByMethod" xml:space="preserve">
+    <value>'
+        {8} Shared Function Fetch{0}By{3}(ByVal p{3} As {1}.{3}) As List(Of {1}.{2})
+            Dim lReturnValue As List(Of {1}.{2}) = Nothing
+
+            Dim lQuery As New {1}.{5}.Query
+
+            lQuery.SelectList.SelectNone()
+
+            lQuery.Join.{4}.SelectList.SelectNone()
+
+            lQuery.Join.{0}.SelectList.AddAll()
+
+            lQuery.Where({5}.Columns.{7}).EqualsTo(p{3}.{6})
+
+            If ({1}.DataContext.Service.DataProvider.CanHandleConnectedReaders) Then
+                lReturnValue = {1}.{0}.FetchList(lQuery.GetDataReader, True)
+            Else
+                lReturnValue = {1}.{0}.FetchList(lQuery.GetDataSet, True)
+            End If
+
+            Return lReturnValue
+        End Function</value>
+  </data>
+  <data name="FetchMethods" xml:space="preserve">
+    <value>#Region "Fetch Methods"
+        {4} Shared Function FetchById(ByVal pId As Object) As {0}.{1}
+            Dim lReturnValue As {0}.{1} = Nothing
+
+            Dim lList As List(Of {0}.{1})
+            Dim lQuery As New {2}.Query
+
+            lQuery.Where(Columns.Id).EqualsTo(pId)
+
+            lList = lQuery.FetchList()
+
+            If (lList.Count &gt; 0) Then
+                lReturnValue = lList(0)
+            End If
+
+            Return lReturnValue
+        End Function
+
+        {4} Shared Function FetchAll() As List(Of {0}.{1})
+            Dim lQuery As New {2}.Query
+
+            Return lQuery.FetchList
+        End Function
+
+        {4} Shared Function FetchList(ByVal pDataSet As DataSet, Optional ByVal pUseQualifiedNames As Boolean = False) As List(Of {0}.{1})
+            Dim lReturnValue As New List(Of {0}.{1})
+
+            If Utilities.Data.FirstTableHasRows(pDataSet) Then
+                For Each lDR As DataRow In pDataSet.Tables(0).Rows
+                    Dim lObj As New {0}.{1}
+
+                    lObj.Load(lDR, pUseQualifiedNames)
+
+                    lReturnValue.Add(lObj)
+                Next
+            End If
+
+            Return lReturnValue
+        End Function
+
+        {4} Shared Function FetchList(ByVal pDataReader As System.Data.Common.DbDataReader, Optional ByVal pUseQualifiedNames As Boolean = False) As List(Of {0}.{1})
+            Dim lReturnValue As New List(Of {0}.{1})
+
+            If Not (pDataReader Is Nothing) Then
+                If Not (pDataReader.IsClosed) Then          
+                    
+                    While (pDataReader.Read)
+                        Dim lObj As New {0}.{1}
+
+                        lObj.Load(pDataReader, pUseQualifiedNames)
+
+                        lReturnValue.Add(lObj)
+                    End While
+
+                    pDataReader.Close()
+
+                End If
+            End If
+            
+            Return lReturnValue
+        End Function
+        
+{3}
+
+#End Region</value>
+  </data>
+  <data name="FieldGenerator" xml:space="preserve">
+    <value>        Private Shared _Fields As String() = -&lt; _
+{0}        &gt;-
+
+        Public Shared ReadOnly Property Fields() As String()
+            Get
+                Return _Fields
+            End Get
+        End Property
+
+        Public Enum Columns
+{1}        End Enum</value>
+  </data>
+  <data name="HasAndBelongsToManyProperty" xml:space="preserve">
+    <value>        Private _{0} As List(Of {1}.{2})
+        &lt;System.Xml.Serialization.XmlIgnore()&gt; _
+        Public Property {0}() As List(Of {1}.{2})
+            Get
+                If (_{0} Is Nothing) Then
+                    _{0} = {1}.{0}.Fetch{0}By{3}(Me)
+
+                    If (_{0} Is Nothing) Then
+                        _{0} = New List(Of {1}.{2})
+                    End If
+                End If
+
+                Return _{0}
+            End Get
+            Set(ByVal value As List(Of {1}.{2}))
+                _{0} = value
+            End Set
+        End Property</value>
+  </data>
+  <data name="HasManyProperty" xml:space="preserve">
+    <value>        Private _{1} As List(Of {0})
+        &lt;System.Xml.Serialization.XmlIgnore()&gt; _
+        Public Property {1}() As List(Of {0})
+            Get
+                If (_{1} Is Nothing) Then
+                    Dim lQuery As New {2}.{1}.Query
+
+                    lQuery.Where({2}.{1}.Columns.{3}).EqualsTo(Me.{4})
+
+                    _{1} = lQuery.FetchList
+
+                    If (_{1} Is Nothing) Then
+                        _{1} = New List(Of {0})
+                    End If
+                End If
+                Return _{1}
+            End Get
+            Set(ByVal value As List(Of {0}))
+                _{1} = value
+            End Set
+        End Property</value>
+  </data>
+  <data name="JoinList" xml:space="preserve">
+    <value>#Region "Join Class"
+            Public Class JoinList
+                Inherits ActiveRecord.Query.QueryProperty
+
+{0}
+
+                Public Sub New(ByVal pQuery As Query)
+                    MyBase.New(pQuery)
+                End Sub
+            End Class
+#End Region</value>
+  </data>
+  <data name="JoinProperty" xml:space="preserve">
+    <value>        
+                Public ReadOnly Property {0}() As {0}.Query
+                    Get
+                        If Not (Query.Joins.ContainsKey("{0}")) Then
+                            Query.Joins("{0}") = New ActiveRecord.Query.Join(Schema("{1}"), New {0}.Query)
+                        End If
+                        Return Query.Joins("{0}").ForeignQuery
+                    End Get
+                End Property</value>
+  </data>
+  <data name="PropertyWrapper" xml:space="preserve">
+    <value>        ''' &lt;summary&gt;
+        ''' {2}
+        ''' &lt;/summary&gt;{3}
+        Public Property {0}() As {1}
+            Get
+                Return _{0}.Value
+            End Get
+            Set(ByVal value As {1})
+                _{0}.Value = value
+            End Set
+        End Property</value>
+  </data>
+  <data name="QueryBuilderClassWrapper" xml:space="preserve">
+    <value>#Region "QueryBuilder"
+        {5} Class Query
+            Inherits AppSimplicity.ActiveRecord.Query.QueryBuilder
+
+            Private _SelectList As SelectColumnList
+            Public ReadOnly Property SelectList() As SelectColumnList
+                Get
+                    If (_SelectList Is Nothing) Then
+                        _SelectList = New SelectColumnList(Me)
+                    End If
+
+                    Return _SelectList
+                End Get
+            End Property
+
+            Private _Join As JoinList
+            Public ReadOnly Property Join() As JoinList
+                Get
+                    If (_Join Is Nothing) Then
+                        _Join = New JoinList(Me)
+                    End If
+                    Return _Join
+                End Get
+            End Property
+
+            Public Sub New()
+                MyBase.New({0}.Schema)
+            End Sub
+
+            Public Overrides Sub Reset()
+                Me.SelectList.Reset()
+                MyBase.Reset()
+            End Sub
+
+#Region "Where Methods"
+            Public Function Where(ByVal pColumn As {0}.Columns) As ActiveRecord.Query.ComparisonConditions
+                Return Me.GetComparisonMethods(Me.Schema({0}.Fields(pColumn)), ActiveRecord.Query.Comparison.LogicalOperatorType._AND_)
+            End Function
+
+            Public Function Where_Not(ByVal pColumn As {0}.Columns) As ActiveRecord.Query.ComparisonConditions
+                Return Me.GetComparisonMethods(Me.Schema({0}.Fields(pColumn)), ActiveRecord.Query.Comparison.LogicalOperatorType._AND_NOT_)
+            End Function
+
+            Public Function Or_Where(ByVal pColumn As {0}.Columns) As ActiveRecord.Query.ComparisonConditions
+                Return Me.GetComparisonMethods(Me.Schema({0}.Fields(pColumn)), ActiveRecord.Query.Comparison.LogicalOperatorType._OR_)
+            End Function
+
+            Public Function Or_Where_Not(ByVal pColumn As {0}.Columns) As ActiveRecord.Query.ComparisonConditions
+                Return Me.GetComparisonMethods(Me.Schema({0}.Fields(pColumn)), ActiveRecord.Query.Comparison.LogicalOperatorType._OR_NOT_)
+            End Function
+
+            Public Sub OrderBy(ByVal pColumn As {0}.Columns, Optional ByVal pDirection As ActiveRecord.Query.OrderBy.OrderByDirections = ActiveRecord.Query.OrderBy.OrderByDirections.ASC)
+                Me.AddOrderByStatement(Me.Schema({0}.Fields(pColumn)), pDirection)
+            End Sub
+#End Region
+
+#Region "Get List"
+            Public Function FetchList() As List(Of {1}.{2})
+                If (Me.UseDataReaders) Then
+                    Return {0}.FetchList(Me.GetDataReader, Me.UseQualifiedNames)
+                Else
+                    Return {0}.FetchList(Me.GetDataSet, Me.UseQualifiedNames)
+                End If
+            End Function
+#End Region
+
+{3}
+
+{4}
+
+        End Class
+#End Region</value>
+  </data>
+  <data name="SchemaWraper" xml:space="preserve">
+    <value>Imports AppSimplicity
+
+Namespace {0}
+    Partial {8} Class {1}
+
+        Private Shared _Schema As ActiveRecord.Schema
+        Public Shared ReadOnly Property Schema() As ActiveRecord.Schema
+            Get
+                If (_Schema Is Nothing) Then
+                    _Schema = GetSchema(DataContext.Service, False)
+                End If
+                Return _Schema
+            End Get
+        End Property
+
+#Region "Columns"
+
+{5}
+
+#End Region
+
+#Region "GetSchema"
+
+        Public Shared Function GetSchema(ByVal pDataService As DataAccess.DataService, ByVal pIncludeDependencies As Boolean) As ActiveRecord.Schema
+            Dim lSchema As New ActiveRecord.Schema("{2}", pDataService, {3})
+            Dim lColumn As ActiveRecord.SchemaColumn
+
+{4}
+ 
+            Return lSchema
+        End Function
+
+#End Region
+
+{6}
+
+{7}
+
+    End Class
+End Namespace</value>
+  </data>
+  <data name="SelectColumnsClassWrapper" xml:space="preserve">
+    <value>#Region "Column Selection Class"
+            Public Class SelectColumnList
+                Inherits ActiveRecord.Query.QueryProperty
+
+                Public Sub AddAll()
+                    Query.ColumnsList.Clear()
+
+{1}
+                End Sub
+
+                Public Sub SelectNone()
+                    Reset()
+                End Sub
+
+                Public Sub Reset()
+                    Query.ColumnsList.Clear()
+                End Sub
+
+                Public Sub Add(ByVal pColumn As {0}.Columns)
+                    Query.ColumnsList.Add(Schema({0}.Fields(pColumn)))
+                End Sub
+
+                Public Sub New(ByVal pQuery As Query)
+                    MyBase.New(pQuery)
+                    Me.AddAll()
+                End Sub
+            End Class
+#End Region</value>
+  </data>
+  <data name="SPFunctionWrapper" xml:space="preserve">
+    <value>            ''' &lt;summary&gt;
+            ''' Wraps the procedure call to [{0}] in the database.
+            ''' &lt;/summary&gt;        
+            Public Shared Function {1}({2}) As DataAccess.CommandHelper
+
+                Dim lReturnValue As DataAccess.CommandHelper
+                Dim lCommand As New DataAccess.DataCommand
+
+                lCommand.SQLCommand = "{0}"
+                lCommand.CommandType = CommandType.StoredProcedure
+
+{3}
+
+                lReturnValue = New DataAccess.CommandHelper({4}.DataContext.Service, lCommand)
+
+                Return lReturnValue
+            End Function</value>
+  </data>
+  <data name="ExtendedClassGenerator" xml:space="preserve">
+    <value>Imports AppSimplicity
+
+Namespace {0}
+
+    Partial {1} Class {2}
+
+        'TODO: Add custom logic here.
+
+    End Class
+
+{3}
+
+End Namespace</value>
+  </data>
+  <data name="ExtendedPluralClassWrapper" xml:space="preserve">
+    <value>    Partial {0} Class {1}
+
+        'TODO: Extend with custom methods.
+
+    End Class</value>
+  </data>
+</root>
