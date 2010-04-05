@@ -42,38 +42,42 @@
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=2.8.5.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\ComponentFactory.Krypton.Toolkit.DLL</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\ComponentFactory.Krypton.Toolkit.DLL</HintPath>
     </Reference>
     <Reference Include="FirebirdSql.Data.Firebird, Version=1.7.1.0, Culture=neutral, PublicKeyToken=fa843d180294369d">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MyMeta\bin\Release\FirebirdSql.Data.Firebird.dll</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\FirebirdSql.Data.Firebird.dll</HintPath>
     </Reference>
     <Reference Include="Interop.ADOX, Version=2.8.0.0, Culture=neutral, PublicKeyToken=647678227438c82a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MyMeta\bin\Release\Interop.ADOX.dll</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\Interop.ADOX.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MyMeta\bin\Release\Mono.Security.dll</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="MyMeta, Version=1.2.0.0, Culture=neutral, PublicKeyToken=647678227438c82a, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MyMeta\bin\Release\MyMeta.dll</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\MyMeta.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=5.1.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\References\MySql.Data.dll</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\MyGenerations\Npgsql.dll</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="SpitCodeEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SpitCodeEngine\SpitCodeEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.SQLite, Version=1.0.38.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MyMeta\bin\Release\System.Data.SQLite.DLL</HintPath>
+      <HintPath>..\..\References\SpitCodeEngine\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />

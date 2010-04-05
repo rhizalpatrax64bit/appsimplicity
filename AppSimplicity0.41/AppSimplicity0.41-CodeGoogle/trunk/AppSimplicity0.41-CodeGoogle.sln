@@ -49,11 +49,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeGenerator", "CodeGenera
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Program", "Program", "{36D26C33-0AA4-4D9F-98F4-7713E8D9AA4B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MetaExtraction", "MetaExtraction", "{F406BA4C-D89B-47F9-94DF-C17622FFC606}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{F406BA4C-D89B-47F9-94DF-C17622FFC606}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpitCode", "SpitCode", "{6F088458-78E2-437F-BDB3-D9D5FC7A81A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{88821999-A8A1-4537-914E-7A762A4817B9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpitCodeEngine", "SpitCode\SpitCodeEngine\SpitCodeEngine.vbproj", "{2850DDBE-7FD2-45D1-874E-09B4CA86209E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpitCodeEngine", "SpitCodeEngine", "{47A02A61-50F0-421A-890B-45C4156B3F6B}"
+	ProjectSection(SolutionItems) = preProject
+		References\SpitCodeEngine\ComponentFactory.Krypton.Toolkit.DLL = References\SpitCodeEngine\ComponentFactory.Krypton.Toolkit.DLL
+		References\SpitCodeEngine\FirebirdSql.Data.Firebird.dll = References\SpitCodeEngine\FirebirdSql.Data.Firebird.dll
+		References\SpitCodeEngine\Interop.ADOX.dll = References\SpitCodeEngine\Interop.ADOX.dll
+		References\SpitCodeEngine\Mono.Security.dll = References\SpitCodeEngine\Mono.Security.dll
+		References\SpitCodeEngine\MyMeta.dll = References\SpitCodeEngine\MyMeta.dll
+		References\SpitCodeEngine\MySql.Data.dll = References\SpitCodeEngine\MySql.Data.dll
+		References\SpitCodeEngine\Npgsql.dll = References\SpitCodeEngine\Npgsql.dll
+		References\SpitCodeEngine\SpitCodeEngine.dll = References\SpitCodeEngine\SpitCodeEngine.dll
+		References\SpitCodeEngine\SpitCodeEngine.pdb = References\SpitCodeEngine\SpitCodeEngine.pdb
+		References\SpitCodeEngine\SpitCodeEngine.xml = References\SpitCodeEngine\SpitCodeEngine.xml
+		References\SpitCodeEngine\System.Data.SQLite.dll = References\SpitCodeEngine\System.Data.SQLite.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -91,6 +108,14 @@ Global
 		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5A832DF4-1040-403C-B5B0-877391DDA10E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,10 +123,12 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{74DA0659-AD47-4E13-B645-F027267D9C6B} = {83B73480-7DFC-4B9B-BDD3-C66733E10BEC}
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937} = {18CCD1E6-2455-4F5D-8755-F7AB928DAD75}
+		{47A02A61-50F0-421A-890B-45C4156B3F6B} = {D7022D65-7B88-4686-B8B8-55A3F13F85B9}
 		{5A832DF4-1040-403C-B5B0-877391DDA10E} = {9D9ADCAF-BA8C-4E60-BD65-83E90DC05444}
 		{36D26C33-0AA4-4D9F-98F4-7713E8D9AA4B} = {9CFF2F87-4C8A-4F8D-B040-B954795ED76D}
 		{88821999-A8A1-4537-914E-7A762A4817B9} = {9CFF2F87-4C8A-4F8D-B040-B954795ED76D}
 		{F406BA4C-D89B-47F9-94DF-C17622FFC606} = {36D26C33-0AA4-4D9F-98F4-7713E8D9AA4B}
 		{6F088458-78E2-437F-BDB3-D9D5FC7A81A5} = {36D26C33-0AA4-4D9F-98F4-7713E8D9AA4B}
+		{2850DDBE-7FD2-45D1-874E-09B4CA86209E} = {F406BA4C-D89B-47F9-94DF-C17622FFC606}
 	EndGlobalSection
 EndGlobal
