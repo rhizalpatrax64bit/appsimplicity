@@ -20,6 +20,36 @@
             End Get
         End Property
 
+        <System.ComponentModel.DisplayName("Code Documentation"), Category("Code Documentation"), Description("A brief description of what the procedure does")> _
+        Public Property Summary() As String
+            Get
+                Dim lKey As String = "Summary"
+
+                Me.ValidatePropertyInstance(lKey, String.Format("Code description for parameter {0}", Me.Name))
+
+                Return _MetaParameter.Properties(lKey).Value
+            End Get
+            Set(ByVal value As String)
+                Dim lKey As String = "Summary"
+                Me.ValidatePropertyInstance(lKey, String.Format("Code description for parameter {0}", Me.Name))
+
+                _MetaParameter.Properties(lKey).Value = value
+                Me.SaveData()
+            End Set
+        End Property
+
+        Protected Sub ValidatePropertyInstance(ByVal pKey As String, ByVal pDefaultValue As String)
+            If _MetaParameter.Properties(pKey) Is Nothing Then
+                _MetaParameter.Properties.AddKeyValue(pKey, pDefaultValue)
+                Me.SaveData()
+            End If
+        End Sub
+
+        Private Sub SaveData()
+            _Procedure.SaveData()
+        End Sub
+
+
         ''' <summary>
         ''' The name of the undelying database object
         ''' </summary>        
