@@ -22,7 +22,7 @@
     <ManifestCertificateThumbprint>C8D28EE9A29544BBA03A1969370EAE8699F1366C</ManifestCertificateThumbprint>
     <ManifestKeyFile>SpitCode2_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <PublishUrl>http://localhost:2030/SpitCodePublishing/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
