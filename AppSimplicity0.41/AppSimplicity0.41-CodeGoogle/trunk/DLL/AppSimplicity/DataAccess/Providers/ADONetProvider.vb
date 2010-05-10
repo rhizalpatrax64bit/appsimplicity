@@ -277,5 +277,10 @@ Namespace DataAccess.Providers
             End If
         End Sub
 #End Region
+
+        Protected Overrides Sub Finalize()
+            Me.CloseConnection()
+            MyBase.Finalize()
+        End Sub
     End Class
 End Namespace
