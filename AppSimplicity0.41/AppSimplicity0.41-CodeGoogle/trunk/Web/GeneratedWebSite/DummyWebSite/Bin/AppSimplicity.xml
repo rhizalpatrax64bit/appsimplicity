@@ -1,0 +1,623 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AppSimplicity
+</name>
+</assembly>
+<members>
+<member name="M:AppSimplicity.Utilities.Security.Encryption.CryptoService.Encrypt(System.String)">
+	<summary>
+ Encrypts a string
+ </summary>
+	<param name="pValue">Value to encrypt</param>
+	<returns>It returns the value encrypted</returns>
+</member><member name="M:AppSimplicity.Utilities.Security.Encryption.CryptoService.Decrypt(System.String)">
+	<summary>
+ Decrypt a previously encrypted value
+ </summary>
+	<param name="pValue">Previously encrypted value</param>
+	<returns>Devuelve el valor de la cadena despues de aplicar el algoritmo de desencriptacion</returns>
+</member><member name="M:AppSimplicity.Utilities.Security.Encryption.CryptoService.#ctor(System.String)">
+	<summary>
+ Crea la instancia de un servicio de encriptación 
+ </summary>
+	<param name="pEncryptionKey">Establece la clave de encriptacion</param>
+	<remarks>La clave de encriptación debe tener al menos 16 caracteres</remarks>
+</member><member name="T:AppSimplicity.Utilities.Security.Encryption.CryptoService">
+	<summary>
+ Class to encrypt/decrypt using TripleDES algorythm
+ </summary>
+</member><member name="M:AppSimplicity.Utilities.Security.Encryption.PasswordGenerator.Generate(System.Int32)">
+	<summary>
+ Genera una contraseña segura de forma aleatoria
+ </summary>
+	<param name="pPasswordLength">La longitud que maxima que tendrá la contraseña generada</param>
+	<returns>Devuelve una cadena con la contraseña generada</returns>
+</member><member name="P:AppSimplicity.ActiveRecord.Query.QueryBuilder.ParamCount">
+	<summary>
+ Lleva el contador de parámetros
+ </summary>
+</member><member name="M:AppSimplicity.DataAccess.Providers.SQL92DialectProvider.GetCommaSeparatedColumns(AppSimplicity.ActiveRecord.Schema,System.Boolean,AppSimplicity.DataAccess.Providers.SQL92DialectProvider.ColumnFormat)">
+	<summary>
+ Obtiene la lista de columnas en una cadena
+ </summary>
+	<param name="pSchema">El esquema que contiene la lista de columnas</param>
+	<param name="pIncludeIdentity">Determina si se debe incluir el campo identidad</param>
+	<param name="pFormat">Determina él formato de la lista de parametros</param>
+	<returns>Devuelve la lista de columnas en una cadena</returns>
+</member><member name="M:AppSimplicity.DataAccess.Providers.SQL92DialectProvider.GetComparisonString(AppSimplicity.ActiveRecord.Query.Comparison,System.Boolean)">
+	<summary>
+ Obtiene la cadena de comparación en SQL
+ </summary>
+	<param name="pIncludeOperator">Determina si debe incluir el operador lógico o no</param>
+</member><member name="P:AppSimplicity.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.Resources.AssemblyStrongKey">
+	<summary>
+  Looks up a localized string similar to e8ff885d0f7e44c7b1d89d1301002db2.
+</summary>
+</member><member name="T:AppSimplicity.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:AppSimplicity.DataAccess.ProviderTypes.SQLServer">
+	<summary>
+ Provider for SQLServer database engine
+ </summary>
+</member><member name="F:AppSimplicity.DataAccess.ProviderTypes.SQLite">
+	<summary>
+ Provider for SQLite database engine
+ </summary>
+</member><member name="F:AppSimplicity.DataAccess.ProviderTypes.MySQL">
+	<summary>
+ Provider for MySQL database engine
+ </summary>
+</member><member name="F:AppSimplicity.DataAccess.ProviderTypes.Oracle">
+	<summary>
+ Provider for Oracle (integrated ADO.Net provider)
+ </summary>
+</member><member name="F:AppSimplicity.DataAccess.ProviderTypes.Oracle10g">
+	<summary>
+ Provider for Oracle10g (propietary ADO.Net provider)
+ </summary>
+</member><member name="T:AppSimplicity.DataAccess.ProviderTypes">
+	<summary>
+ List the types of data providers
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.Providers.IDataProvider.CanHandleTransactions">
+	<summary>
+ Determines whether the instance is a transactional data provider
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.Providers.IDataProvider.CanHandleConnectedReaders">
+	<summary>
+ Determines whether the data provider can return connected data readers
+ </summary>
+</member><member name="M:AppSimplicity.DataAccess.Providers.IDataProvider.BeginTransaction(System.Data.IsolationLevel)">
+	<summary>
+ Starts a transaction in the context of the data provider
+ </summary>
+	<param name="pIsolationLevel">Determines the level of isolation in transaction.</param>
+</member><member name="M:AppSimplicity.DataAccess.Providers.IDataProvider.CommitTransaction">
+	<summary>
+ Run the changes made under the context of the transaction
+ </summary>
+</member><member name="M:AppSimplicity.DataAccess.Providers.IDataProvider.RollBackTransaction">
+	<summary>
+ Undo the changes made under the context of the transaction
+ </summary>
+</member><member name="M:AppSimplicity.DataAccess.Providers.IDataProvider.ExecuteDataSet(AppSimplicity.DataAccess.DataCommand)">
+	<summary>
+ Execute a command of data and returns a dataset
+ </summary>
+	<param name="pCommand">Represents the data request command</param>
+</member><member name="M:AppSimplicity.DataAccess.Providers.IDataProvider.ExecuteDataReader(AppSimplicity.DataAccess.DataCommand)">
+	<summary>
+ Execute a command of data and returns an instance of a connected data reader
+ </summary>
+	<param name="pCommand">Represents the data request command</param>
+</member><member name="M:AppSimplicity.DataAccess.Providers.IDataProvider.ExecuteScalar(AppSimplicity.DataAccess.DataCommand)">
+	<summary>
+ Execute a command of data and returns the result of a data command which results matrix is 1x1
+ </summary>
+	<param name="pCommand">Represents the data request command</param>
+</member><member name="M:AppSimplicity.DataAccess.Providers.IDataProvider.ExecuteNonQuery(AppSimplicity.DataAccess.DataCommand)">
+	<summary>
+ Execute a command of data and returns the number of rows affected
+ </summary>
+	<param name="pCommand">Represents the data request command</param>
+</member><member name="T:AppSimplicity.DataAccess.Providers.IDataProvider">
+	<summary>
+ The purpose of this interface is to implement classes that may function as data providers.
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.DataOperationEventArgs.PerformOperation">
+	<summary>
+ This property determines whether to perform the physical write operation
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.ColumnName">
+	<summary>
+ Establece u obtiene el nombre de la columna
+ </summary>
+	<value>Una cadena que contiene el nombre de la columna</value>
+	<returns>El nombre de la columna en la tabla física</returns>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.Schema">
+	<summary>
+ Obtiene o establece el esquema de la tabla a la que pertenece la columna
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.DataType">
+	<summary>
+ Obtiene el tipo de dato que se puede almacenar en la columna
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.IsText">
+	<summary>
+ Determina si la columna puede contener valor de texto
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.IsNumeric">
+	<summary>
+ Determina si la columna puede contener un valor numérico
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.IsDate">
+	<summary>
+ Determina si la columna puede contener un valor de fecha
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.FieldLabel">
+	<summary>
+ Obtiene el título del control de la interfaz de usuario
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.GridCaption">
+	<summary>
+ Obtiene la descripción de una columna
+ </summary>
+	<remarks>Esta propiedad se utiliza para propósitos de presentación únicamente</remarks>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.IsDescription">
+	<summary>
+ Determina si una columna contiene una descripción para el registro
+ </summary>
+	<returns>A boolean that indicates if the column contains a description value</returns>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.MaxLength">
+	<summary>
+ Establece la longitud máxima en caracteres del campo
+ </summary>
+	<remarks>Aplica únicamente para columnas que pueden almacenar datos de tipo cadena (como son VARCHAR, CHAR, TEXT, etc.)</remarks>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.AutoIncrement">
+	<summary>
+ Propiedad que determina si una columna es autoincremental
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.IsNullable">
+	<summary>
+ Establece si el contenido de la columna puede ser un valor de tipo a System.DBnull.Value
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.SchemaColumn.IsPrimaryKey">
+	<summary>
+ Determina si la columna se define como llave primaria 
+ </summary>
+</member><member name="T:AppSimplicity.ActiveRecord.SchemaColumn">
+	<summary>
+ Representa las intancias de de cada columna de las tablas 
+ mapeadas desde la base de datos.
+ </summary>
+</member><member name="T:AppSimplicity.DataAccess.CommandHelper">
+	<summary>
+ An instance that inherits from this class may perform any of the various data access methods.
+ </summary>
+</member><member name="T:AppSimplicity.DataAccess.Providers.SQLServerProvider">
+	<summary>
+ It encapsulates the behavior of a data provider for SQLClient namespace
+ </summary>
+	<remarks></remarks>
+</member><member name="P:AppSimplicity.My.Resources.ExcelDataRenderer.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExcelDataRenderer.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExcelDataRenderer.ExcelXMLFileHeader">
+	<summary>
+  Looks up a localized string similar to &lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+&lt;?mso-application progid="Excel.Sheet"?&gt;
+&lt;Workbook 
+	xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+	xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+	xmlns:html="http://www.w3.org/TR/REC-html40"&gt;
+      &lt;DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"&gt;
+          &lt;LastAuthor&gt;[$Author]&lt;/LastAuthor&gt;
+          &lt;Created&gt;[$Crea [rest of string was truncated]";.
+</summary>
+</member><member name="T:AppSimplicity.My.Resources.ExcelDataRenderer">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExceptionMessages.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExceptionMessages.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExceptionMessages.CantReadConnectionString">
+	<summary>
+  Looks up a localized string similar to Unable to find a connection string named "{0}".  Verify configuration file..
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExceptionMessages.CompressFileNotFound">
+	<summary>
+  Looks up a localized string similar to Can't compress file [{0}]. File not found..
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExceptionMessages.InvalidProviderName">
+	<summary>
+  Looks up a localized string similar to Provider name is invalid in connection string "{0}.  Valid provider names are : {0}"..
+</summary>
+</member><member name="P:AppSimplicity.My.Resources.ExceptionMessages.MaxLenghtExceeded">
+	<summary>
+  Looks up a localized string similar to The value assigned to the column [{0}] exceeds the maximum allowed in the database..
+</summary>
+</member><member name="T:AppSimplicity.My.Resources.ExceptionMessages">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:AppSimplicity.ActiveRecord.DataValue.Column">
+	<summary>
+ Contains the definition of the column of the table in the database
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.DataValue.UnderlyingValue">
+	<summary>
+ Gets the data stored without any processing
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.DataValue.Value">
+	<summary>
+ Sets or gets the value stored in the column.  Where the value of the physical 
+ table contains a System.DbNull value, Nothing will be returned to the property.        
+ </summary>
+	<value>If value is a string value, the maximum value will be validated</value>
+	<returns>Returns the value stored</returns>
+</member><member name="P:AppSimplicity.ActiveRecord.DataValue.IsDBNull">
+	<summary>
+ Determines whether the stored value is a null value
+ </summary>
+</member><member name="M:AppSimplicity.ActiveRecord.DataValue.GetIdentityName">
+	<summary>
+ Gets the name of current user's identity
+ </summary>
+</member><member name="M:AppSimplicity.ActiveRecord.DataValue.GetCommandParameter(AppSimplicity.ActiveRecord.DataValue.AuditType)">
+	<summary>
+ Gets the corresponding parameter for a data access operation
+ </summary>
+	<returns>Returns the instance of the parameter</returns>
+</member><member name="M:AppSimplicity.ActiveRecord.DataValue.#ctor(AppSimplicity.ActiveRecord.SchemaColumn)">
+	<summary>
+Initializes the object's value with the column definition
+ </summary>
+	<param name="pColumn">Requires a TableColumn object to be instantiated</param>
+</member><member name="T:AppSimplicity.ActiveRecord.DataValue">
+	<summary>
+The objects from this class store the physical values of each column of a record in the database.
+ </summary>
+</member><member name="M:AppSimplicity.Utilities.Security.PasswordGenerator.Generate(System.Int32)">
+	<summary>
+ Genera una contraseña segura de forma aleatoria
+ </summary>
+	<param name="pPasswordLength">La longitud que maxima que tendrá la contraseña generada</param>
+	<returns>Devuelve una cadena con la contraseña generada</returns>
+</member><member name="M:AppSimplicity.Utilities.Security.PasswordGenerator.GenerateStrongPassword(System.Int32)">
+	<summary>
+ Genera una contraseña segura de forma aleatoria
+ </summary>
+	<returns>Devuelve un string que contiene la contraseña segura</returns>
+</member><member name="M:AppSimplicity.Utilities.Data.FirstTableHasRows(System.Data.DataSet)">
+	<summary>
+ Determines if the first row of the first table contains information.
+ </summary>
+	<param name="pDataSet">The instance of the dataset to be evaluated.</param>
+	<returns>Returns true if the first row of the first table contains data.</returns>
+</member><member name="T:AppSimplicity.Utilities.Data">
+	<summary>
+ It exposes useful methods for handling datasets
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Query.Comparison.LogicalOperator">
+	<summary>
+ Indica el tipo de operador lógico que se utilizará para la sentencia
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Query.Comparison.Parameters">
+	<summary>
+ Almacena los parametros para realizar la consulta
+ </summary>
+</member><member name="M:AppSimplicity.Utilities.File.CreateToFile(System.String,System.String)">
+	<summary>
+ Creates a file and write some text on it
+ </summary>
+	<param name="absolutePath">The full path of the text file</param>
+	<param name="fileText">The text to write to file</param>
+</member><member name="M:AppSimplicity.Utilities.File.WriteToFile(System.String,System.String)">
+	<summary>
+ Escribe una cadena a un archivo.
+ </summary>
+	<param name="absolutePath">La ruta completa del archivo a guardar</param>
+	<param name="fileText">La cadena que contiene el texto a guardar</param>
+</member><member name="M:AppSimplicity.Utilities.File.GetFileText(System.String)">
+	<summary>
+ Lee un archivo de texto y obtiene su contenido
+ </summary>
+	<param name="absolutePath">La ruta completa del archivo a guardar</param>
+	<returns>El contenido del archivo</returns>
+</member><member name="P:AppSimplicity.DataAccess.DataCommand.CommandType">
+	<summary>
+ Determines whether the type of command is a stored procedure or a sql statement
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.DataCommand.Parameters">
+	<summary>
+ Keeps the list of parameters associated with data command
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.DataCommand.SQLCommand">
+	<summary>
+ Sets or gets the data command sql statement
+ </summary>
+</member><member name="M:AppSimplicity.DataAccess.DataCommand.AddParameter(System.String,System.Object)">
+	<summary>
+ Adds a parameter to the command parameters collection of data.
+ </summary>
+	<param name="pParameterName">Specifies the parameter name</param>
+	<param name="pParameterValue">Determines the value of parameter</param>
+	<remarks></remarks>
+</member><member name="M:AppSimplicity.DataAccess.DataCommand.AddParameter(AppSimplicity.DataAccess.DataCommandParameter)">
+	<summary>
+ Adds a parameter to the command parameters collection of data.
+ </summary>
+	<param name="pParameter">Specifies the parameter</param>
+</member><member name="T:AppSimplicity.DataAccess.DataCommand">
+	<summary>
+ The objects that inherit from this class may perform command executions to the data provider
+ </summary>
+</member><member name="M:AppSimplicity.Utilities.Compression.ZipFile(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Compresses a file into a Zip file.
+ </summary>
+	<param name="pFileName">The full path to source file.</param>
+	<param name="pOutputPath">The full path to save zip file. If this parameter is not specified function will generate zip file in source file path.</param>
+	<param name="pOutputFileName">Use this parameter to rename output file name.  If this parameter is not specified output file name will be the same as source file name.</param>
+	<param name="pOverWriteFile">Wether or not overwrite zip file if already exists.</param>
+	<param name="pDeleteOriginalFileAfterCompression">If this parameter is set to true it will delete source file after compression.</param>
+	<returns>Returns the full path to output zip file.</returns>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.TableName">
+	<summary>
+ Obtiene el nombre de la tabla física mapeada
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.Item(System.String)">
+	<summary>
+ Obtiene la instancia de la columna determinada por la clave
+ </summary>
+	<param name="pKey">La clave de la columna (el nombre de la columna en la tabla físicamente mapeada)</param>
+	<value></value>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.IsReadOnly">
+	<summary>
+ Determina si los objetos que utilicen este esquema podrán realizar operaciones de escritura hacia la tabla física.
+ </summary>
+	<remarks>Las vistas son tablas acceso de sólo lectura</remarks>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.IdIsAutoGenerated">
+	<summary>
+ Indica si el campo de la llave primaria se genera automáticamente
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.PKColumn">
+	<summary>
+ Obtiene la columna que contiene el valor de la llave primaria
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.DescriptionColumns">
+	<summary>
+ Obtiene los nombres de las columnas que describen al objeto
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.DataService">
+	<summary>
+ Obtiene el ambiente de conexión de la tabla
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.AllColumns">
+	<summary>
+ Contiene la lista de las columnas declaradas dentro del esquema
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.InsertSQLStatement">
+	<summary>
+ Obtiene la sentencia SQL de inserción de la tabla mapeada
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.DeleteSQLStatement">
+	<summary>
+ Gets a formatted SQL statement for deletion
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.SelectSQLStatement">
+	<summary>
+ Obtiene la sentencia SQL para realizar un SELECT sobre un elemento en base a su id
+ </summary>
+</member><member name="P:AppSimplicity.ActiveRecord.Schema.UpdateSQLStatement">
+	<summary>
+ Obtiene la sentencia SQL 
+ </summary>
+</member><member name="M:AppSimplicity.ActiveRecord.Schema.AddColumn(AppSimplicity.ActiveRecord.SchemaColumn)">
+	<summary>
+ Agrega la definición de una columna
+ </summary>
+	<param name="pColumn">La instancia preconfigurada de la columna</param>
+</member><member name="M:AppSimplicity.ActiveRecord.Schema.Contains(System.String)">
+	<summary>
+ Averigua si un determinado nombre de columna está definido dentro del esquema
+ </summary>
+	<param name="pKey">Un nombre de columna</param>
+	<returns>Devuelve True cuando el nombre de la columna existe</returns>
+</member><member name="M:AppSimplicity.ActiveRecord.Schema.ValidateColumnName(System.String)">
+	<summary>
+ Valida si un nombre determinado de columna existe dentro del esquema
+ </summary>
+	<param name="pColumnName"></param>
+	<remarks></remarks>
+</member><member name="M:AppSimplicity.ActiveRecord.Schema.ValidateWritingOperation">
+	<summary>
+ Valida si es posible realizar operaciones de escritura
+ </summary>
+</member><member name="M:AppSimplicity.ActiveRecord.Schema.#ctor(System.String,AppSimplicity.DataAccess.DataService,System.Boolean)">
+	<summary>
+ Inicializa el esquema para una tipo de entidad
+ </summary>
+	<param name="pTableName">El nombre de la tabla</param>
+	<param name="pIsReadOnly">Determina si las operaciones para este esquema será de sólo lectura</param>
+	<param name="pService">El servicio de datos de conexión</param>
+	<remarks>Las vistas deberán ser inicializadas como sólo lectura ('ReadOnly')</remarks>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.#ctor">
+	<remarks/>
+</member><member name="E:AppSimplicity.RemoteDataService.DataService.ExecuteDataSetCompleted">
+	<remarks/>
+</member><member name="E:AppSimplicity.RemoteDataService.DataService.ExecuteNonQueryCompleted">
+	<remarks/>
+</member><member name="E:AppSimplicity.RemoteDataService.DataService.ExecuteScalarCompleted">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteDataSet(System.String,AppSimplicity.RemoteDataService.DataCommand)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteDataSetAsync(System.String,AppSimplicity.RemoteDataService.DataCommand)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteDataSetAsync(System.String,AppSimplicity.RemoteDataService.DataCommand,System.Object)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteNonQuery(System.String,AppSimplicity.RemoteDataService.DataCommand)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteNonQueryAsync(System.String,AppSimplicity.RemoteDataService.DataCommand)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteNonQueryAsync(System.String,AppSimplicity.RemoteDataService.DataCommand,System.Object)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteScalar(System.String,AppSimplicity.RemoteDataService.DataCommand)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteScalarAsync(System.String,AppSimplicity.RemoteDataService.DataCommand)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.ExecuteScalarAsync(System.String,AppSimplicity.RemoteDataService.DataCommand,System.Object)">
+	<remarks/>
+</member><member name="M:AppSimplicity.RemoteDataService.DataService.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.DataService">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.DataCommand.CommandType">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.DataCommand.Parameters">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.DataCommand.SQLCommand">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.DataCommand">
+	<remarks/>
+</member><member name="F:AppSimplicity.RemoteDataService.CommandType.Text">
+	<remarks/>
+</member><member name="F:AppSimplicity.RemoteDataService.CommandType.StoredProcedure">
+	<remarks/>
+</member><member name="F:AppSimplicity.RemoteDataService.CommandType.TableDirect">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.CommandType">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.DataCommandParameter.Name">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.DataCommandParameter.Value">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.DataCommandParameter">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.ExecuteDataSetCompletedEventHandler">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.ExecuteDataSetCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.ExecuteDataSetCompletedEventArgs">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.ExecuteNonQueryCompletedEventHandler">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.ExecuteNonQueryCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.ExecuteNonQueryCompletedEventArgs">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.ExecuteScalarCompletedEventHandler">
+	<remarks/>
+</member><member name="P:AppSimplicity.RemoteDataService.ExecuteScalarCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:AppSimplicity.RemoteDataService.ExecuteScalarCompletedEventArgs">
+	<remarks/>
+</member><member name="M:AppSimplicity.Utilities.Web.TransmitFile(System.Web.HttpResponse,System.String,System.String,System.String,System.Boolean,AppSimplicity.Utilities.Web.TransmitType)">
+	<summary>
+ Sends a file to a page response.
+ </summary>
+	<param name="pResponse">The current page response object</param>
+	<param name="pFileAbsolutePath">The file to transmit</param>
+	<param name="pContentTypeString">The Mime type for file.  
+ This parameter is required only if file extension is NOT one of the following: doc, pdf, zip, xls, xml, txt, csv</param>
+	<param name="pDownloadFileName">This parameter is used to specify the filename in the download dialog.
+ If this parameter is omited then the original filename will be used.
+ </param>
+</member><member name="M:AppSimplicity.Utilities.Excel.ExcelExporter.RenderTableToExcelFile(System.Data.DataTable,System.String,System.String[],System.Boolean,System.Boolean,System.Boolean)">
+	<summary>
+ Shared method to render a System.Data.DataTable to a Excel file in openxml format
+ </summary>
+	<param name="pTable">The table to render to file</param>
+	<param name="pFileAbsolutePath ">The complete file path to generate</param>
+	<param name="pCompressToZip">If this parameter is true it will compress file to zip.</param>
+	<param name="pSelectList">
+ Only columns in this list will be rendered to the excel file,<br/> 
+ if this parameter is nothing all columns in the table will be rendered.
+ 
+ Column renaming is allowed if a column name is specified 
+ in the following format:
+ 
+ "ColumnName|HumanReadableColumnName"
+ 
+ (The pipe character is required)
+ </param>
+	<remarks>If a column name is specified in the column name list it must exists in the datatable, 
+ otherwise an exception will be thrown.
+ </remarks>
+</member><member name="M:AppSimplicity.Utilities.Excel.ExcelExporter.RenderDataTableToExcelFile(System.Data.DataTable,System.String,System.String[],System.Boolean,System.Boolean,System.Boolean)">
+	<summary>
+ Renders a System.Data.DataTable to a Excel file in OpenXml format
+ </summary>
+	<param name="pTable">The table to render to file</param>
+	<param name="pFileAbsolutePath ">The complete file path to generate</param>
+	<param name="pCompressToZip">If this parameter is true it will compress file to zip.</param>
+	<param name="pSelectList">
+ Only columns in this list will be rendered to the excel file,<br/> 
+ if this parameter is nothing all columns in the table will be rendered.
+ 
+ Column renaming is allowed if a column name is specified 
+ in the following format:
+ 
+ "ColumnName|HumanReadableColumnName"
+ 
+ (The pipe character is required)
+ </param>
+	<remarks>If a column name is specified in the column name list it must exists in the datatable, 
+ otherwise an exception will be thrown.
+ </remarks>
+</member><member name="M:AppSimplicity.Utilities.Serialization.SerializeToString(System.Object)">
+	<summary>
+ Serializes an object in binary form and converts it to a string
+ </summary>
+	<param name="pObject">The instance of the object being serialized</param>
+	<returns>Returns the serialized instance of the object</returns>
+</member><member name="M:AppSimplicity.Utilities.Serialization.DeserializeFromString(System.String)">
+	<summary>
+ Deserializes an object from a string 
+ </summary>
+	<param name="pData">The instance of the object previously serialized in a string</param>
+	<returns>The deserialized object instance.</returns>
+</member><member name="M:AppSimplicity.DataAccess.DataService.#ctor(System.String,System.Boolean)">
+	<summary>
+ Initializes the data service. You must enter data source name and whether the data service will use stored procedures for data access operations.
+ </summary>
+	<param name="pDataServiceName">Indicates the name of the data service. For practical purposes, the name must match the connection string in the .config file. </param>
+	<param name="pUseSPsForCRUD">
+ This parameter indicates if operations objects that implement IActiveRecord would use stored procedures for data access operations.
+ </param>
+</member><member name="M:AppSimplicity.DataAccess.DataService.SetDataSource(AppSimplicity.DataAccess.DataSource)">
+	<summary>
+ Sets the origin of the data source
+ </summary>
+	<param name="pDataSource">Indicates where the data should be taken to stablish a connection</param>
+</member>
+</members>
+</doc>

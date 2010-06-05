@@ -1,0 +1,1677 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Entities
+</name>
+</assembly>
+<members>
+<member name="P:Entities.SM_WebFI.Adquiriente.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Adquiriente.Adquiriente">
+	<summary>
+ Adquiriente
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Adquiriente.Serie">
+	<summary>
+ Serie
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Adquiriente.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Adquiriente.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Adquiriente.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Adquiriente.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Adquiriente.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Adquiriente.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Adquiriente.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Adquiriente.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Adquiriente">
+	<summary>
+ Summary description for Adquiriente class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstrategiaDinamica.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstrategiaDinamica.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstrategiaDinamica.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.EstrategiaDinamica.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstrategiaDinamica.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstrategiaDinamica.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstrategiaDinamica.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstrategiaDinamica.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstrategiaDinamica.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.EstrategiaDinamica.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.EstrategiaDinamica">
+	<summary>
+ Summary description for EstrategiasDinamica class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Parametro.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Parametro.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Parametro.Descripcion">
+	<summary>
+ Descripcion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Parametro.Contenido">
+	<summary>
+ Contenido
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Parametro.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Parametro.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Parametro.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Parametro.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Parametro.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Parametro.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Parametro.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Parametro.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Parametro">
+	<summary>
+ Summary description for Parametro class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Serie.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Serie.FondoId">
+	<summary>
+ FondoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Serie.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Serie.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Serie.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Serie.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Serie.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Serie.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Serie.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Serie.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Serie.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Serie">
+	<summary>
+ Summary description for Serie class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.Descripcion">
+	<summary>
+ Descripcion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Producto.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Producto.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Producto.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Producto.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Producto.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Producto.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Producto.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Producto.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Producto">
+	<summary>
+ Summary description for Producto class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.FondoId">
+	<summary>
+ FondoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.Titulo">
+	<summary>
+ Titulo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.FechaComunicado">
+	<summary>
+ FechaComunicado
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.ArchivoId">
+	<summary>
+ ArchivoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.PublicarDesde">
+	<summary>
+ PublicarDesde
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.PublicarHasta">
+	<summary>
+ PublicarHasta
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Comunicado.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Comunicado.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Comunicado.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Comunicado.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Comunicado.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Comunicado.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Comunicado.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Comunicado.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Comunicado">
+	<summary>
+ Summary description for Comunicado class
+ </summary>
+</member><member name="T:Entities.SM_WebFI.DataContext.SPs">
+	<summary>
+ This class exposes methods to invoke stored procedures in InvercapFI data source.
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosDistribuidorasMap.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosDistribuidorasMap.FondoId">
+	<summary>
+ FondoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosDistribuidorasMap.DistribuidoraId">
+	<summary>
+ DistribuidoraId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosDistribuidorasMap.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.FondosDistribuidorasMap.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosDistribuidorasMap.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosDistribuidorasMap.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosDistribuidorasMap.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosDistribuidorasMap.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosDistribuidorasMap.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.FondosDistribuidorasMap.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.FondosDistribuidorasMap">
+	<summary>
+ Summary description for FondosDistribuidorasMap class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.NombreFisico">
+	<summary>
+ NombreFisico
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.Extension">
+	<summary>
+ Extension
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.RutaFisica">
+	<summary>
+ RutaFisica
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Archivo.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Archivo.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Archivo.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Archivo.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Archivo.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Archivo.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Archivo.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Archivo.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Archivo">
+	<summary>
+ Summary description for Archivo class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.PeriodoDesde">
+	<summary>
+ PeriodoDesde
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.PeriodoHasta">
+	<summary>
+ PeriodoHasta
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.ArchivoId">
+	<summary>
+ ArchivoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.InverfacilPortafolio.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.InverfacilPortafolio.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.InverfacilPortafolio.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.InverfacilPortafolio.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.InverfacilPortafolio.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.InverfacilPortafolio.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.InverfacilPortafolio.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.InverfacilPortafolio.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.InverfacilPortafolio">
+	<summary>
+ Summary description for InverfacilPortafolio class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Periodo.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Periodo.FechaInicialMensual">
+	<summary>
+ FechaInicialMensual
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Periodo.FechaInicialAnual">
+	<summary>
+ FechaInicialAnual
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Periodo.FechaFinal">
+	<summary>
+ FechaFinal
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Periodo.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Periodo.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Periodo.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Periodo.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Periodo.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Periodo.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Periodo.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Periodo.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Periodo.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Periodo">
+	<summary>
+ Summary description for Periodo class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.Titulo">
+	<summary>
+ Titulo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.FechaNoticia">
+	<summary>
+ FechaNoticia
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.Descripcion">
+	<summary>
+ Descripcion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.ArchivoId">
+	<summary>
+ ArchivoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.PublicarDesde">
+	<summary>
+ PublicarDesde
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.PublicarHasta">
+	<summary>
+ PublicarHasta
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Noticia.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Noticia.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Noticia.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Noticia.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Noticia.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Noticia.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Noticia.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Noticia.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Noticia">
+	<summary>
+ Summary description for Noticia class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.NoticiaId">
+	<summary>
+ NoticiaId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.UbicacionPublicacionId">
+	<summary>
+ UbicacionPublicacionId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.NoticiasUbicacionesPublicacionMap">
+	<summary>
+ Summary description for NoticiasUbicacionesPublicacionMap class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.EstrategiaDinamicaId">
+	<summary>
+ EstrategiaDinamicaId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.PeriodoId">
+	<summary>
+ PeriodoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Indicador">
+	<summary>
+ Indicador
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.PorcentajeMensual">
+	<summary>
+ PorcentajeMensual
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.PorcentajeAnualizado">
+	<summary>
+ PorcentajeAnualizado
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Porcentaje12Meses">
+	<summary>
+ Porcentaje12Meses
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.RendimientosEstrategiasDinamica.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.RendimientosEstrategiasDinamica.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.RendimientosEstrategiasDinamica.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.RendimientosEstrategiasDinamica.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.RendimientosEstrategiasDinamica">
+	<summary>
+ Summary description for RendimientosEstrategiasDinamica class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.TiposFondo.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.TiposFondo.Descripcion">
+	<summary>
+ Descripcion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.TiposFondo.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.TiposFondo.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.TiposFondo.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.TiposFondo.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.TiposFondo.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.TiposFondo.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.TiposFondo.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.TiposFondo.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.TiposFondo">
+	<summary>
+ Summary description for TiposFondo class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.FondoId">
+	<summary>
+ FondoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.PeriodoDesde">
+	<summary>
+ PeriodoDesde
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.PeriodoHasta">
+	<summary>
+ PeriodoHasta
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.Mercado">
+	<summary>
+ Mercado
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.Horizonte">
+	<summary>
+ Horizonte
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.Credito">
+	<summary>
+ Credito
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.Liquidez">
+	<summary>
+ Liquidez
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.RiesgoMercadoProm">
+	<summary>
+ RiesgoMercadoProm
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.RiesgoMercadoMax">
+	<summary>
+ RiesgoMercadoMax
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.RiesgoCreditoProm">
+	<summary>
+ RiesgoCreditoProm
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.RiesgoCreditoMax">
+	<summary>
+ RiesgoCreditoMax
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.RiesgoLiquidezProm">
+	<summary>
+ RiesgoLiquidezProm
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.RiesgoLiquidezMax">
+	<summary>
+ RiesgoLiquidezMax
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.AspectoCuantitativo.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.AspectoCuantitativo.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.AspectoCuantitativo.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.AspectoCuantitativo.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.AspectoCuantitativo.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.AspectoCuantitativo.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.AspectoCuantitativo.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.AspectoCuantitativo.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.AspectoCuantitativo">
+	<summary>
+ Summary description for AspectosCuantitativo class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.DistribuidoraId">
+	<summary>
+ DistribuidoraId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.PeriodoDesde">
+	<summary>
+ PeriodoDesde
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.PeriodoHasta">
+	<summary>
+ PeriodoHasta
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.TipoPeriodo">
+	<summary>
+ TipoPeriodo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.ArchivoId">
+	<summary>
+ ArchivoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.EstadoFinanciero.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.EstadoFinanciero.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstadoFinanciero.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstadoFinanciero.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstadoFinanciero.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstadoFinanciero.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.EstadoFinanciero.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.EstadoFinanciero.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.EstadoFinanciero">
+	<summary>
+ Summary description for EstadosFinanciero class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.DataContext.Service">
+	<summary>
+ Contains the data access service instance. Through this object is possible to run SQL commands in the data source.
+ </summary>
+</member><member name="M:Entities.SM_WebFI.DataContext.BeginTransaction(System.Data.IsolationLevel)">
+	<summary>
+ Starts a transaction.
+ </summary>
+</member><member name="M:Entities.SM_WebFI.DataContext.CommitTransaction">
+	<summary>
+ Commits the current active transaction.
+ </summary>
+</member><member name="M:Entities.SM_WebFI.DataContext.RollBackTransaction">
+	<summary>
+ Rollback the current active transaction.
+ </summary>
+</member><member name="T:Entities.SM_WebFI.DataContext">
+	<summary>
+ This class exposes the services to access data using the data source SM_WebFI
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosAdquirientesMap.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosAdquirientesMap.FondoId">
+	<summary>
+ FondoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosAdquirientesMap.AdquirienteId">
+	<summary>
+ AdquirienteId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.FondosAdquirientesMap.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.FondosAdquirientesMap.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosAdquirientesMap.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosAdquirientesMap.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosAdquirientesMap.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosAdquirientesMap.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.FondosAdquirientesMap.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.FondosAdquirientesMap.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.FondosAdquirientesMap">
+	<summary>
+ Summary description for FondosAdquirientesMap class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.CuotaAdministrativa.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.CuotaAdministrativa.SerieId">
+	<summary>
+ SerieId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.CuotaAdministrativa.InversionDesde">
+	<summary>
+ InversionDesde
+ </summary>
+</member><member name="P:Entities.SM_WebFI.CuotaAdministrativa.InversionHasta">
+	<summary>
+ InversionHasta
+ </summary>
+</member><member name="P:Entities.SM_WebFI.CuotaAdministrativa.PorcentajeCuota">
+	<summary>
+ PorcentajeCuota
+ </summary>
+</member><member name="P:Entities.SM_WebFI.CuotaAdministrativa.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.CuotaAdministrativa.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.CuotaAdministrativa.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.CuotaAdministrativa.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.CuotaAdministrativa.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.CuotaAdministrativa.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.CuotaAdministrativa.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.CuotaAdministrativa.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.CuotaAdministrativa">
+	<summary>
+ Summary description for CuotasAdministrativa class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Boletin.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Boletin.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Boletin.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Boletin.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Boletin.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Boletin.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Boletin.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Boletin.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Boletin.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Boletin.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Boletin">
+	<summary>
+ Summary description for Boletine class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.id">
+	<summary>
+ id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.BoletinId">
+	<summary>
+ BoletinId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.FechaBoletin">
+	<summary>
+ FechaBoletin
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.Titulo">
+	<summary>
+ Titulo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.ArchivoId">
+	<summary>
+ ArchivoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PublicacionBoletine.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.PublicacionBoletine.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PublicacionBoletine.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PublicacionBoletine.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PublicacionBoletine.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PublicacionBoletine.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PublicacionBoletine.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.PublicacionBoletine.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.PublicacionBoletine">
+	<summary>
+ Summary description for PublicacionBoletine class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Suscriptore.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Suscriptore.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Suscriptore.CorreoElectronico">
+	<summary>
+ CorreoElectronico
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Suscriptore.FechaSuscripcion">
+	<summary>
+ FechaSuscripcion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Suscriptore.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Suscriptore.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Suscriptore.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Suscriptore.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Suscriptore.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Suscriptore.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Suscriptore.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Suscriptore.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Suscriptore.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Suscriptore">
+	<summary>
+ Summary description for Suscriptore class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Distribuidora.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Distribuidora.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Distribuidora.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Distribuidora.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Distribuidora.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Distribuidora.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Distribuidora.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Distribuidora.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Distribuidora.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Distribuidora.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Distribuidora">
+	<summary>
+ Summary description for Distribuidora class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.AdministradoraId">
+	<summary>
+ AdministradoraId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.ClavePizarra">
+	<summary>
+ ClavePizarra
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.RazonSocial">
+	<summary>
+ RazonSocial
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.Calificacion">
+	<summary>
+ Calificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.Clasificacion">
+	<summary>
+ Clasificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.TipoFondoId">
+	<summary>
+ TipoFondoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.HorizonteInversion">
+	<summary>
+ HorizonteInversion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.MinimoInversion">
+	<summary>
+ MinimoInversion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.Liquidez">
+	<summary>
+ Liquidez
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.Calificadora">
+	<summary>
+ Calificadora
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.EstrategiaInversion">
+	<summary>
+ EstrategiaInversion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.CarteraArchivoId">
+	<summary>
+ CarteraArchivoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.ProspectoArchivoId">
+	<summary>
+ ProspectoArchivoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.FondoPropio">
+	<summary>
+ FondoPropio
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.Activo">
+	<summary>
+ Activo
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.Fondo.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.Fondo.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Fondo.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Fondo.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Fondo.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Fondo.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.Fondo.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.Fondo.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.Fondo">
+	<summary>
+ Summary description for Fondo class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.UbicacionesPublicacion.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.UbicacionesPublicacion.Nombre">
+	<summary>
+ Nombre
+ </summary>
+</member><member name="P:Entities.SM_WebFI.UbicacionesPublicacion.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.UbicacionesPublicacion.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.UbicacionesPublicacion.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.UbicacionesPublicacion.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.UbicacionesPublicacion.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.UbicacionesPublicacion.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.UbicacionesPublicacion.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.UbicacionesPublicacion.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.UbicacionesPublicacion">
+	<summary>
+ Summary description for UbicacionesPublicacion class
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.Id">
+	<summary>
+ Id
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.EstrategiaDinamicaId">
+	<summary>
+ EstrategiaDinamicaId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.FondoId">
+	<summary>
+ FondoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.PeriodoId">
+	<summary>
+ PeriodoId
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.ComposicionPortafolio">
+	<summary>
+ ComposicionPortafolio
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.Porcentaje">
+	<summary>
+ Porcentaje
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.FechaCreacion">
+	<summary>
+ FechaCreacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.CreadoPor">
+	<summary>
+ CreadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.FechaModificacion">
+	<summary>
+ FechaModificacion
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.ModificadoPor">
+	<summary>
+ ModificadoPor
+ </summary>
+</member><member name="P:Entities.SM_WebFI.PortafolioEstrategiasDinamica.IsLoadedFromDB">
+	<summary>
+ Determines whether the instance data comes from the data source
+ </summary>
+	<value></value>
+</member><member name="M:Entities.SM_WebFI.PortafolioEstrategiasDinamica.Reset">
+	<summary>
+ Resets the values of the instance to null values
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PortafolioEstrategiasDinamica.Create">
+	<summary>
+ Creates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PortafolioEstrategiasDinamica.Update">
+	<summary>
+ Updates the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PortafolioEstrategiasDinamica.Delete">
+	<summary>
+ Removes the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PortafolioEstrategiasDinamica.Save">
+	<summary>
+ Saves the physical record for this instance in the database
+ </summary>
+</member><member name="M:Entities.SM_WebFI.PortafolioEstrategiasDinamica.SetId(System.Object)">
+	<summary>
+ Sets the value of the corresponding identity in the database
+ </summary>
+	<param name="pId">The value of identity</param>
+</member><member name="M:Entities.SM_WebFI.PortafolioEstrategiasDinamica.GetSchema">
+	<summary>
+ Obtains the data structure of the physical table schema
+ </summary>
+</member><member name="T:Entities.SM_WebFI.PortafolioEstrategiasDinamica">
+	<summary>
+ Summary description for PortafolioEstrategiasDinamica class
+ </summary>
+</member>
+</members>
+</doc>
