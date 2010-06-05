@@ -1,0 +1,11 @@
+﻿.input-text-off {
+	
+}
+
+.input-text-on {
+	font-size: 11px;
+	color: #666666;
+	height: 17px;
+	padding-top: 4px;
+	padding-left: 5px;
+}
