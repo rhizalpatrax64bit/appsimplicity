@@ -81,6 +81,7 @@
     <Compile Include="V0.41\ExtendedClassGenerator.vb" />
     <Compile Include="V0.41\ExtendedDataContext.vb" />
     <Compile Include="V0.41\SchemaGenerator.vb" />
+    <Compile Include="V0.41\UIGenerator.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
