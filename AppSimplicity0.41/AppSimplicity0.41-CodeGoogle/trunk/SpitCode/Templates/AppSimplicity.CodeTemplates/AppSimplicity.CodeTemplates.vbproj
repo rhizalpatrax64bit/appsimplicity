@@ -31,7 +31,7 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\LatestRelease\Templates\</OutputPath>
+    <OutputPath>C:\Program Files\LatestRelease\Templates\</OutputPath>
     <DocumentationFile>AppSimplicity.CodeTemplates.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
@@ -81,7 +81,12 @@
     <Compile Include="V0.41\ExtendedClassGenerator.vb" />
     <Compile Include="V0.41\ExtendedDataContext.vb" />
     <Compile Include="V0.41\SchemaGenerator.vb" />
-    <Compile Include="V0.41\UIGenerator.vb" />
+    <Compile Include="V0.41\UIGeneration\EditItemASCX.vb" />
+    <Compile Include="V0.41\UIGeneration\UI.CodeGenStrings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UI.CodeGenStrings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -100,6 +105,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ClassGeneratorStrings.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V0.41\UIGeneration\UI.CodeGenStrings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UI.CodeGenStrings.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
