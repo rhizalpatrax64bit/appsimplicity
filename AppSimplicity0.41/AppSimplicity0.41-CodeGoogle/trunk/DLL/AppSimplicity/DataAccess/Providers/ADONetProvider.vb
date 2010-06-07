@@ -239,13 +239,18 @@ Namespace DataAccess.Providers
 
 #Region "Transaction Handling"
         Private Sub OpenConnection()
-            Connection.Open()
+            If Not (Connection.State = ConnectionState.Open) Then
+                Connection.Open()
+            End If
         End Sub
 
         Private Sub CloseConnection()
-            If (Connection.State <> ConnectionState.Closed) Then
+            Try
                 Connection.Close()
-            End If
+                Connection.Dispose()
+            Catch ex As Exception
+
+            End Try
         End Sub
 
         Public Sub BeginTransaction(ByVal pIsolationLevel As System.Data.IsolationLevel) Implements IDataProvider.BeginTransaction
