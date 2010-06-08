@@ -41,7 +41,7 @@
 
         Public ReadOnly Property UseDataReaders() As Boolean
             Get
-                Return Me.Schema.DataService.DataProvider.CanHandleConnectedReaders
+                Return False
             End Get
         End Property
 
@@ -144,14 +144,6 @@
             Return Me.Schema.DataService.ExecuteDataSet(Me.GetCommand)
         End Function
 
-        Public Function GetDataReader() As System.Data.Common.DbDataReader
-            Dim lReturnValue As System.Data.Common.DbDataReader
-
-            lReturnValue = Me.Schema.DataService.ExecuteDataReader(Me.GetCommand)
-
-            Return lReturnValue
-        End Function
-
         Public Sub AddOrderByStatement(ByVal pColumn As SchemaColumn, ByVal pDirection As OrderBy.OrderByDirections)
             Dim lOrderBy As New OrderBy(pColumn, pDirection)
             Me.OrderByList.Add(lOrderBy)
@@ -167,10 +159,5 @@
 #End Region
 
     End Class
-
-
-
-
-
 
 End Namespace
