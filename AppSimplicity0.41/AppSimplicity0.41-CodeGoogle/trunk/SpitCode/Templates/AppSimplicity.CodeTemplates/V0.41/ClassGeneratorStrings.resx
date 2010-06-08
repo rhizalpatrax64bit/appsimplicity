@@ -482,12 +482,8 @@ End Namespace</value>
             lQuery.Join.{0}.SelectList.AddAll()
 
             lQuery.Where({5}.Columns.{7}).EqualsTo(p{3}.{6})
-
-            If ({1}.DataContext.Service.DataProvider.CanHandleConnectedReaders) Then
-                lReturnValue = {1}.{0}.FetchList(lQuery.GetDataReader, True)
-            Else
-                lReturnValue = {1}.{0}.FetchList(lQuery.GetDataSet, True)
-            End If
+            
+            lReturnValue = {1}.{0}.FetchList(lQuery.GetDataSet, True)            
 
             Return lReturnValue
         End Function</value>

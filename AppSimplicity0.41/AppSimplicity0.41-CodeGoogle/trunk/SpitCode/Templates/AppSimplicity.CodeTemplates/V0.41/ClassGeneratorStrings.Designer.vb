@@ -298,9 +298,10 @@ Namespace My.Resources
         '''            lQuery.Join.{0}.SelectList.AddAll()
         '''
         '''            lQuery.Where({5}.Columns.{7}).EqualsTo(p{3}.{6})
+        '''            
+        '''            lReturnValue = {1}.{0}.FetchList(lQuery.GetDataSet, True)            
         '''
-        '''            If ({1}.DataContext.Service.DataProvider.CanHandleConnectedReaders) Then
-        '''             [rest of string was truncated]&quot;;.
+        '''  [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property FetchHasManyByMethod() As String
             Get

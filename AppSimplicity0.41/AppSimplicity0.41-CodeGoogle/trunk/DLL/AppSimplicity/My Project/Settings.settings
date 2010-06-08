@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="AppSimplicity_RemoteDataServices_DataService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:2030/RemoteDataProvider/WS/DataService.asmx</Value>
+      <Value Profile="(Default)">http://localhost:2397/RemoteDataProvider/WS/DataService.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:2030/RemoteDataProvider/WS/DataService.asmx")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:2397/RemoteDataProvider/WS/DataService.asmx")>  _
         Public ReadOnly Property AppSimplicity_RemoteDataServices_DataService() As String
             Get
                 Return CType(Me("AppSimplicity_RemoteDataServices_DataService"),String)
