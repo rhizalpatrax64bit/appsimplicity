@@ -37,6 +37,11 @@
         ''' Undo the changes made under the context of the transaction
         ''' </summary>
         Sub RollBackTransaction()
+
+        ''' <summary>
+        ''' Explicitly closes the active connection if connection is open.
+        ''' </summary>
+        Sub CloseConnection()
 #End Region
 
 #Region "Execute methods"

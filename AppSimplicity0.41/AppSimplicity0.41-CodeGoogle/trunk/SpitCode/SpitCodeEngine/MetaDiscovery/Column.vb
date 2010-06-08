@@ -7,6 +7,8 @@
         HTMLEditor = 5
         TextAreaField = 6
         FloatNumberTextField = 7
+        ListOfValues = 8
+        File = 9
     End Enum
 
     Public Class Column
@@ -38,11 +40,95 @@
             End Set
         End Property
 
+        <System.ComponentModel.DisplayName("Hint Text"), Category("UI Control Generation"), Description("Outputs hint for input editing.")> _
+        Public Property HintText() As String
+            Get
+                Dim lKey As String = "HintText"
+                Me.ValidatePropertyInstance(lKey, String.Format("Input {0} field.", Me.PropertyName))
+
+                Return _MetaColumn.Properties(lKey).Value
+            End Get
+            Set(ByVal value As String)
+                Dim lKey As String = "HintText"
+                Me.ValidatePropertyInstance(lKey, Me.PropertyName)
+
+                _MetaColumn.Properties(lKey).Value = value
+                Me.SaveData()
+            End Set
+        End Property
+
+        <System.ComponentModel.DisplayName("Show Hint when editing"), Category("UI Control Generation"), Description("Outputs hint for input editing.")> _
+        Public Property DisplayHint() As Boolean
+            Get
+                Dim lKey As String = "DisplayHint"
+                Me.ValidatePropertyInstance(lKey, True)
+
+                Return _MetaColumn.Properties(lKey).Value
+            End Get
+            Set(ByVal value As Boolean)
+                Dim lKey As String = "DisplayHint"
+                Me.ValidatePropertyInstance(lKey, True)
+
+                _MetaColumn.Properties(lKey).Value = value
+                Me.SaveData()
+            End Set
+        End Property
+
+
+        Private Function GetUIWidth(ByVal pColumn As MetaDiscovery.Column) As Integer
+            Dim lReturnValue As Integer = 200
+
+            If (pColumn.HasBelongsToReference) Then
+                lReturnValue = 250
+            Else
+
+                Select Case (pColumn.DbTargetType)
+                    Case _
+                            "DbType.Byte", "DbType.UInt16", "DbType.UInt32", "DbType.UInt64", "DbType.Double", _
+                            "DbType.Int16", "DbType.Int32", "DbType.Int64", "DbType.SByte", "DbType.Single"
+                        lReturnValue = 130
+
+                    Case _
+                            "DbType.AnsiString", "DbType.AnsiStringFixedLength", "DbType.Guid", _
+                            "DbType.Xml", "DbType.String", "DbType.StringFixedLength"
+                        If (pColumn.MaxLength > 255) Then
+                            lReturnValue = 600
+                        Else
+                            Dim lWidth As Decimal = pColumn.MaxLength * 600
+
+                            lWidth = lWidth / 255
+
+                            If (lWidth < 100) Then
+                                lWidth = 100
+                            End If
+
+                            lReturnValue = Math.Floor(lWidth)
+                        End If
+
+                    Case "DbType.Boolean"
+                        lReturnValue = 150
+
+                    Case "DbType.Currency", "DbType.Decimal", "DbType.VarNumeric"
+                        lReturnValue = 130
+
+                    Case "DbType.Date", "DbType.DateTime"
+                        lReturnValue = 150
+
+                    Case "DbType.Object", "DbType.Binary"
+                        lReturnValue = 400
+
+                End Select
+
+            End If
+
+            Return lReturnValue
+        End Function
+
         <System.ComponentModel.DisplayName("UI Control Width"), Category("UI Control Generation"), Description("Defines the width for ui generated control")> _
         Public Property UIControlWidth() As Integer
             Get
                 Dim lKey As String = "UIControlWidth"
-                Me.ValidatePropertyInstance(lKey, "200")
+                Me.ValidatePropertyInstance(lKey, Convert.ToString(Me.GetUIWidth(Me)))
 
                 Return _MetaColumn.Properties(lKey).Value
             End Get
@@ -72,11 +158,71 @@
             End Set
         End Property
 
+        <System.ComponentModel.DisplayName("Has a BelongsTo Reference"), Category("UI Control Generation"), Description("Wether or not this column describes an external BelongsTo reference")> _
+        Public ReadOnly Property HasBelongsToReference() As Boolean
+            Get
+                Dim lReturnValue As Boolean = False
+
+                If Not (Me.Table Is Nothing) Then
+                    For Each lReference As MetaDiscovery.MetaRelation In Me.Table.BelongsToRelations
+                        If (lReference.ExternalReferenceColumn.Name = Me.Name) Then
+                            lReturnValue = True
+                            Exit For
+                        End If
+                    Next
+                End If
+
+                Return lReturnValue
+            End Get
+        End Property
+
+
+        Private Function GetEditUIType(ByVal pColumn As MetaDiscovery.Column) As MetaDiscovery.UIControlType
+            Dim lReturnValue As MetaDiscovery.UIControlType = MetaDiscovery.UIControlType.TextField
+
+            If (pColumn.HasBelongsToReference) Then
+                lReturnValue = MetaDiscovery.UIControlType.ListOfValues
+            Else
+
+                Select Case (pColumn.DbTargetType)
+                    Case _
+                            "DbType.Byte", "DbType.UInt16", "DbType.UInt32", "DbType.UInt64", "DbType.Double", _
+                            "DbType.Int16", "DbType.Int32", "DbType.Int64", "DbType.SByte", "DbType.Single"
+                        lReturnValue = MetaDiscovery.UIControlType.IntegerNumberTextField
+
+                    Case _
+                            "DbType.AnsiString", "DbType.AnsiStringFixedLength", "DbType.Guid", _
+                            "DbType.Xml", "DbType.String", "DbType.StringFixedLength"
+                        If (pColumn.MaxLength > 255) Then
+                            lReturnValue = MetaDiscovery.UIControlType.TextAreaField
+                        Else
+                            lReturnValue = MetaDiscovery.UIControlType.TextField
+                        End If
+
+                    Case "DbType.Boolean"
+                        lReturnValue = MetaDiscovery.UIControlType.CheckBox
+
+                    Case "DbType.Currency", "DbType.Decimal", "DbType.VarNumeric"
+                        lReturnValue = MetaDiscovery.UIControlType.FloatNumberTextField
+
+                    Case "DbType.Date", "DbType.DateTime"
+                        lReturnValue = MetaDiscovery.UIControlType.DateField
+
+                    Case "DbType.Object", "DbType.Binary"
+                        lReturnValue = MetaDiscovery.UIControlType.File
+
+                End Select
+
+            End If
+
+            Return lReturnValue
+        End Function
+
         <System.ComponentModel.DisplayName("UI Control Type"), Category("UI Control Generation"), Description("Sets the UI predefined control")> _
         Public Property UIControlType() As MetaDiscovery.UIControlType
             Get
                 Dim lKey As String = "UIControlType"
-                Me.ValidatePropertyInstance(lKey, MetaDiscovery.UIControlType.TextField)
+                Me.ValidatePropertyInstance(lKey, Me.GetEditUIType(Me))
 
                 Return _MetaColumn.Properties(lKey).Value
             End Get

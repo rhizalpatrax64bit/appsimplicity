@@ -287,5 +287,9 @@ Namespace DataAccess.Providers
             Me.CloseConnection()
             MyBase.Finalize()
         End Sub
+
+        Public Sub CloseConnection1() Implements IDataProvider.CloseConnection
+
+        End Sub
     End Class
 End Namespace
