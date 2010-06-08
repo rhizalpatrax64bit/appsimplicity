@@ -553,28 +553,6 @@ End Namespace</value>
 
             Return lReturnValue
         End Function
-
-        {4} Shared Function FetchList(ByVal pDataReader As System.Data.Common.DbDataReader, Optional ByVal pUseQualifiedNames As Boolean = False) As List(Of {0}.{1})
-            Dim lReturnValue As New List(Of {0}.{1})
-
-            If Not (pDataReader Is Nothing) Then
-                If Not (pDataReader.IsClosed) Then          
-                    
-                    While (pDataReader.Read)
-                        Dim lObj As New {0}.{1}
-
-                        lObj.Load(pDataReader, pUseQualifiedNames)
-
-                        lReturnValue.Add(lObj)
-                    End While
-
-                    pDataReader.Close()
-
-                End If
-            End If
-            
-            Return lReturnValue
-        End Function
         
 {3}
 
