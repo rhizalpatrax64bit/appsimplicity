@@ -23,10 +23,6 @@
             Return _DataService.ExecuteDataSet(_Command)
         End Function
 
-        Public Function ExecuteDataReader() As Data.Common.DbDataReader
-            Return _DataService.ExecuteDataReader(_Command)
-        End Function
-
         Public Function ExecuteNonQuery() As Integer
             Return _DataService.ExecuteNonQuery(_Command)
         End Function

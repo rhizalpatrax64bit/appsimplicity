@@ -11,7 +11,7 @@
     <AssemblyName>AppSimplicity</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
@@ -42,17 +42,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\References\Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\MySql.Data.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -65,6 +62,7 @@
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveRecord\DataValue.vb" />
@@ -94,13 +92,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAccess\Dialects\SQLServerDialectProvider.vb" />
+    <Compile Include="DataAccess\Providers\EnterpriseLibraryProvider.vb" />
     <Compile Include="DataAccess\Providers\IDataProvider.vb" />
-    <Compile Include="DataAccess\Providers\ADONetProvider.vb" />
-    <Compile Include="DataAccess\Providers\MySQLProvider.vb" />
     <Compile Include="DataAccess\ProviderFactory.vb" />
     <Compile Include="DataAccess\Providers\RemoteWSProvider.vb" />
-    <Compile Include="DataAccess\Providers\SQLiteV3Provider.vb" />
-    <Compile Include="DataAccess\Providers\SQLServerProvider.vb" />
     <Compile Include="Localization\ExceptionMessages.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

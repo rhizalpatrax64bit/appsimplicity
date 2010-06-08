@@ -7,6 +7,8 @@ Namespace Utilities
     Public Class Compression
 
         Public Shared Function CompressString(ByVal pString As String) As String
+            'TODO: terminar esto:
+
             Dim lBuffer As Byte()
 
             lBuffer = Encoding.UTF8.GetBytes(pString)

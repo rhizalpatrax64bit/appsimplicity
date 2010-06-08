@@ -21,9 +21,20 @@
             End Set
         End Property
 
-        Public Sub New(ByVal pParameterName As String, ByVal pValue As Object)
+        Private _Type As System.Data.DbType
+        Public Property Type() As System.Data.DbType
+            Get
+                Return _Type
+            End Get
+            Set(ByVal value As System.Data.DbType)
+                _Type = value
+            End Set
+        End Property
+
+        Public Sub New(ByVal pParameterName As String, ByVal pValue As Object, ByVal pType As System.Data.DbType)
             Me.Name = pParameterName
             Me.Value = pValue
+            Me.Type = pType
         End Sub
 
         Public Sub New()

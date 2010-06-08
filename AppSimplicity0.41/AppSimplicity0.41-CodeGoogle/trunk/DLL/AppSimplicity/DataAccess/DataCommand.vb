@@ -53,8 +53,8 @@
         ''' <param name="pParameterName">Specifies the parameter name</param>
         ''' <param name="pParameterValue">Determines the value of parameter</param>
         ''' <remarks></remarks>
-        Public Sub AddParameter(ByVal pParameterName As String, ByVal pParameterValue As Object)
-            Dim lParameter As New DataCommandParameter(pParameterName, pParameterValue)
+        Public Sub AddParameter(ByVal pParameterName As String, ByVal pParameterType As System.Data.DbType, ByVal pParameterValue As Object)
+            Dim lParameter As New DataCommandParameter(pParameterName, pParameterType, pParameterValue)
 
             Me.Parameters.Add(lParameter)
         End Sub

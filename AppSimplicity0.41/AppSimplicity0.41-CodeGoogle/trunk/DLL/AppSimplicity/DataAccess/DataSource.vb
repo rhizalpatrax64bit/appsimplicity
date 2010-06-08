@@ -8,24 +8,40 @@
             End Get
         End Property
 
-        Private _ProviderType As ProviderTypes
-        Public Property ProviderType() As ProviderTypes
+        Private Function GetProviderType() As ProviderTypes
+            Dim lReturnValue As ProviderTypes = ProviderTypes.Undefined
+
+            Select Case Me._ProviderName
+                Case "System.Data.Odbc"
+                    lReturnValue = ProviderTypes.ODBC
+
+                Case "System.Data.OleDb"
+                    lReturnValue = ProviderTypes.OleDB
+
+                Case "System.Data.OracleClient"
+                    lReturnValue = ProviderTypes.Oracle
+
+                Case "System.Data.SqlClient"
+                    lReturnValue = ProviderTypes.SQLServer
+
+                Case "System.Data.SqlServerCe.3.5", "Microsoft.SqlServerCe.Client.3.5"
+                    lReturnValue = ProviderTypes.SQLServerCE
+
+                Case "MySql.Data.MySqlClient"
+                    lReturnValue = ProviderTypes.MySQL
+
+                Case "System.Data.SQLite"
+                    lReturnValue = ProviderTypes.SQLite
+
+            End Select
+
+            Return lReturnValue
+        End Function
+
+        Public ReadOnly Property ProviderType() As ProviderTypes
             Get
-                Return _ProviderType
+                Return Me.GetProviderType
             End Get
-            Set(ByVal value As ProviderTypes)
-                Select Case value
-                    Case ProviderTypes.MySQL
-                        _ProviderName = "SQLServer"
-                    Case ProviderTypes.Oracle
-                        _ProviderName = "Oracle"
-                    Case ProviderTypes.Oracle10g
-                        _ProviderName = "Oracle10g"
-                    Case ProviderTypes.SQLite
-                        _ProviderName = "SQLite"
-                End Select
-                _ProviderType = value
-            End Set
         End Property
 
         Private _ConnectionString As String
@@ -55,7 +71,7 @@
             End Get
             Set(ByVal value As String)
                 If (value = String.Empty) Then
-                    _ProviderName = "SQLServer"
+                    _ProviderName = "System.Data.SqlClient"
                 Else
                     _ProviderName = value
                 End If
@@ -82,7 +98,16 @@
             End If
         End Sub
 
-        Private _ValidProviderNames As String() = {"SQLServer", "MySQL", "Oracle", "Oracle10g", "SQLite"}
+        Private _ValidProviderNames As String() = { _
+                    "System.Data.Odbc", _
+                    "System.Data.OleDb", _
+                    "System.Data.OracleClient", _
+                    "System.Data.SqlClient", _
+                    "System.Data.SqlServerCe.3.5", _
+                    "MySql.Data.MySqlClient", _
+                    "System.Data.SQLite", _
+                    "Microsoft.SqlServerCe.Client.3.5"}
+
         Public ReadOnly Property ValidProviderNames() As String()
             Get
                 Return _ValidProviderNames

@@ -5,9 +5,21 @@
     ''' </summary>
     Public Enum ProviderTypes
         ''' <summary>
+        ''' Provider for OleDB Generic database client connector
+        ''' </summary>
+        OleDB
+        ''' <summary>
+        ''' Provider for ODBC Generic database client connector
+        ''' </summary>
+        ODBC
+        ''' <summary>
         ''' Provider for SQLServer database engine
         ''' </summary>
         SQLServer
+        ''' <summary>
+        ''' Provider for SQLServer Compact Edition database engine
+        ''' </summary>
+        SQLServerCE
         ''' <summary>
         ''' Provider for SQLite database engine
         ''' </summary>
@@ -21,9 +33,9 @@
         ''' </summary>
         Oracle
         ''' <summary>
-        ''' Provider for Oracle10g (propietary ADO.Net provider)
+        ''' No provider is specified
         ''' </summary>
-        Oracle10g
+        Undefined
     End Enum
 End Namespace
 

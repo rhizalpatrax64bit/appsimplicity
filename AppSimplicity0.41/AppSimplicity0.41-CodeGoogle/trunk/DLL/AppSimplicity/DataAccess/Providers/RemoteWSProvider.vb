@@ -1,22 +1,10 @@
 ﻿Imports AppSimplicity
 Namespace DataAccess.Providers
     Public Class RemoteWSProvider
-        Implements DataAccess.Providers.IDataProvider
+        Implements IDataProvider
 
-        Public ReadOnly Property CanHandleTransactions() As Boolean Implements IDataProvider.CanHandleTransactions
-            Get
-                Return False
-            End Get
-        End Property
-
-        Public ReadOnly Property CanHandleConnectedReaders() As Boolean Implements IDataProvider.CanHandleConnectedReaders
-            Get
-                Return False
-            End Get
-        End Property
-
-        Private _DataSource As DataAccess.DataSource
-        Private ReadOnly Property DataSource() As DataAccess.DataSource
+        Private _DataSource As DataSource
+        Private ReadOnly Property DataSource() As DataSource
             Get
                 Return _DataSource
             End Get
@@ -34,20 +22,6 @@ Namespace DataAccess.Providers
             End Get
         End Property
 
-#Region "Transaction Handling"
-        Public Sub BeginTransaction(ByVal pIsolationLevel As System.Data.IsolationLevel) Implements IDataProvider.BeginTransaction
-            'Just do nothing
-        End Sub
-
-        Public Sub CommitTransaction() Implements IDataProvider.CommitTransaction
-            'Just do nothing
-        End Sub
-
-        Public Sub RollBackTransaction() Implements IDataProvider.RollBackTransaction
-            'Just do nothing
-        End Sub
-#End Region
-
         Private Function GetTransportCommand(ByVal pCommand As DataCommand) As RemoteDataService.DataCommand
             Dim lRemoteCommand As New RemoteDataService.DataCommand
             Dim lParameters As New List(Of RemoteDataService.DataCommandParameter)
@@ -63,7 +37,7 @@ Namespace DataAccess.Providers
 
             lRemoteCommand.SQLCommand = pCommand.SQLCommand
 
-            For Each lParameter As DataAccess.DataCommandParameter In pCommand.Parameters
+            For Each lParameter As DataCommandParameter In pCommand.Parameters
                 Dim lDataParameter As New RemoteDataService.DataCommandParameter
 
                 lDataParameter.Name = lParameter.Name
@@ -77,11 +51,7 @@ Namespace DataAccess.Providers
             Return lRemoteCommand
         End Function
 
-        Public Function ExecuteDataReader(ByVal pCommand As DataCommand) As System.Data.Common.DbDataReader Implements IDataProvider.ExecuteDataReader
-            Throw New NotImplementedException
-        End Function
-
-        Public Function ExecuteDataSet(ByVal pCommand As DataAccess.DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
+        Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
             Return Me.RemoteDataService.ExecuteDataSet(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
         End Function
 
@@ -96,8 +66,6 @@ Namespace DataAccess.Providers
         Public Sub New(ByVal pDataSource As DataSource)
             _DataSource = pDataSource
         End Sub
-
-        
     End Class
 End Namespace
 

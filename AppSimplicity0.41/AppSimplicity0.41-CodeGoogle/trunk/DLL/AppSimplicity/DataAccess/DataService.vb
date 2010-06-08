@@ -61,18 +61,6 @@
             End Get
         End Property
 
-        Public Sub BeginTransaction(Optional ByVal pIsolationLevel As System.Data.IsolationLevel = IsolationLevel.ReadUncommitted)
-            DataProvider.BeginTransaction(pIsolationLevel)
-        End Sub
-
-        Public Sub RollBackTransaction()
-            DataProvider.RollBackTransaction()
-        End Sub
-
-        Public Sub CommitTransaction()
-            DataProvider.CommitTransaction()
-        End Sub
-
         Public Function CreateCommand(ByVal pSQLCommand As String, ByVal pType As System.Data.CommandType) As DataCommand
             Dim lCommand As New DataCommand()
 
@@ -81,10 +69,6 @@
 
             Return lCommand
         End Function
-
-        Public Sub CloseConnection()
-            Me.DataProvider.
-        End Sub
 
         ''' <summary>
         ''' Initializes the data service. You must enter data source name and whether the data service will use stored procedures for data access operations.
@@ -117,10 +101,6 @@
 
         Public Function ExecuteScalar(ByVal pCommand As DataAccess.DataCommand) As Object
             Return DataProvider.ExecuteScalar(pCommand)
-        End Function
-
-        Public Function ExecuteDataReader(ByVal pCommand As DataAccess.DataCommand) As System.Data.Common.DbDataReader
-            Return DataProvider.ExecuteDataReader(pCommand)
         End Function
 #End Region
 
