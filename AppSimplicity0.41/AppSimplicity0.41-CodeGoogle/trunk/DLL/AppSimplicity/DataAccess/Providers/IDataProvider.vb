@@ -1,10 +1,5 @@
 ﻿Namespace DataAccess.Providers
 
-    Public Enum DataAccesModes
-        ConnectedReaders
-        DisconnectedDataSets
-    End Enum
-
     ''' <summary>
     ''' The purpose of this interface is to implement classes that may function as data providers.
     ''' </summary>
