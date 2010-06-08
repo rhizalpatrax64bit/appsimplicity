@@ -82,6 +82,10 @@
             Return lCommand
         End Function
 
+        Public Sub CloseConnection()
+            Me.DataProvider.
+        End Sub
+
         ''' <summary>
         ''' Initializes the data service. You must enter data source name and whether the data service will use stored procedures for data access operations.
         ''' </summary>
