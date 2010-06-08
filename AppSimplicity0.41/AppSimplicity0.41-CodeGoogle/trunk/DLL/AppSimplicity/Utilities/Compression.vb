@@ -18,10 +18,14 @@ Namespace Utilities
             Using lZip As New GZipStream(lMemoryStream, CompressionMode.Compress, True)
                 lZip.Write(lBuffer, 0, lBuffer.Length)
             End Using
+
+            Return String.Empty
         End Function
 
         Public Shared Function DeCompressString(ByVal pString As String) As String
             'TODO: terminar esto:
+
+            Return String.Empty
         End Function
 
         ''' <summary>
