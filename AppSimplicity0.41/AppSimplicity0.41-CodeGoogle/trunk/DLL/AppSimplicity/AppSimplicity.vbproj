@@ -131,6 +131,11 @@
     <Compile Include="Utilities\PasswordGenerator.vb" />
     <Compile Include="Utilities\Serialization.vb" />
     <Compile Include="Utilities\Web.vb" />
+    <Compile Include="Web References\RemoteData\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\ExceptionMessages.es.resx">
@@ -172,6 +177,27 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="AppSimplicitySN.pfx" />
+    <None Include="Web References\RemoteData\DataService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:2030/RemoteDataProvider/WS/DataService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RemoteData\</RelPath>
+      <UpdateFromURL>http://localhost:2030/RemoteDataProvider/WS/DataService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AppSimplicity_RemoteData_DataService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\RemoteData\DataService.disco" />
+    <None Include="Web References\RemoteData\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
