@@ -180,10 +180,10 @@
     <None Include="Web References\RemoteDataServices\DataService.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:2030/RemoteDataProvider/WS/DataService.asmx">
+    <WebReferenceUrl Include="http://localhost:2397/RemoteDataProvider/WS/DataService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\RemoteDataServices\</RelPath>
-      <UpdateFromURL>http://localhost:2030/RemoteDataProvider/WS/DataService.asmx</UpdateFromURL>
+      <UpdateFromURL>http://localhost:2397/RemoteDataProvider/WS/DataService.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

@@ -31,10 +31,10 @@
             End Set
         End Property
 
-        Public Sub New(ByVal pParameterName As String, ByVal pValue As Object, ByVal pType As System.Data.DbType)
+        Public Sub New(ByVal pParameterName As String, ByVal pType As System.Data.DbType, ByVal pValue As Object)
             Me.Name = pParameterName
-            Me.Value = pValue
             Me.Type = pType
+            Me.Value = pValue
         End Sub
 
         Public Sub New()

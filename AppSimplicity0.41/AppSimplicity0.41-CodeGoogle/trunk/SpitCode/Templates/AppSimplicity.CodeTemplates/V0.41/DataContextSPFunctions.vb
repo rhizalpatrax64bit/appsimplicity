@@ -55,7 +55,7 @@ Public Class DataContextSPFunctions
         Dim lSB As New StringBuilder
 
         For Each lParameter As MetaDiscovery.Parameter In pProcedure.Parameters
-            lSB.AppendFormat("                lCommand.AddParameter(""{0}"", p{1})" & vbCrLf, lParameter.Name, lParameter.DisplayName)
+            lSB.AppendFormat("                lCommand.AddParameter(""{0}"", {1}, p{2})" & vbCrLf, lParameter.Name, lParameter.VariableType, lParameter.DisplayName)
         Next
 
         Return lSB.ToString
