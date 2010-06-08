@@ -374,27 +374,6 @@ Namespace {0}
             End Get
         End Property
 
-        ''' &lt;summary&gt;
-        ''' Starts a transaction.
-        ''' &lt;/summary&gt;
-        Public Shared Sub BeginTransaction(Optional ByVal pIsolationLevel As System.Data.IsolationLevel = IsolationLevel.ReadCommitted)
-            Service.BeginTransaction(pIsolationLevel)
-        End Sub
-
-        ''' &lt;summary&gt;
-        ''' Commits the current active transaction.
-        ''' &lt;/summary&gt;
-        Public Shared Sub CommitTransaction()
-            Service.CommitTransaction()
-        End Sub
-
-        ''' &lt;summary&gt;
-        ''' Rollback the current active transaction.
-        ''' &lt;/summary&gt;
-        Public Shared Sub RollBackTransaction()
-            Service.RollBackTransaction()
-        End Sub
-
     End Class
 
 End Namespace</value>
@@ -709,12 +688,8 @@ End Namespace</value>
 #End Region
 
 #Region "Get List"
-            Public Function FetchList() As List(Of {1}.{2})
-                If (Me.UseDataReaders) Then
-                    Return {0}.FetchList(Me.GetDataReader, Me.UseQualifiedNames)
-                Else
-                    Return {0}.FetchList(Me.GetDataSet, Me.UseQualifiedNames)
-                End If
+            Public Function FetchList() As List(Of {1}.{2})                
+                Return {0}.FetchList(Me.GetDataSet, Me.UseQualifiedNames)                
             End Function
 #End Region
 
