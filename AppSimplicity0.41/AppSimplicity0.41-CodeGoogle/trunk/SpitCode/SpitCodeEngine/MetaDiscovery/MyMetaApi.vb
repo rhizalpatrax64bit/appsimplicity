@@ -63,15 +63,20 @@ Namespace MetaDiscovery
             Get
                 'TODO: Add more providers:
                 Dim lReturnValue As MyMeta.dbDriver = MyMeta.dbDriver.SQL
+
                 Select Case _CS.ProviderName
-                    Case "SQLServer"
+                    Case "System.Data.SqlClient", "System.Data.Odbc", "System.Data.OleDb", "System.Data.SqlServerCe.3.5", "Microsoft.SqlServerCe.Client.3.5"
                         lReturnValue = MyMeta.dbDriver.SQL
-                    Case "Oracle"
+
+                    Case "System.Data.OracleClient"
                         lReturnValue = MyMeta.dbDriver.Oracle
-                    Case "MySQL"
-                        lReturnValue = MyMeta.dbDriver.MySql2
-                    Case "SQLite"
+                    
+                    Case "MySql.Data.MySqlClient"
+                        lReturnValue = MyMeta.dbDriver.MySql
+
+                    Case "System.Data.SQLite"
                         lReturnValue = MyMeta.dbDriver.SQLite
+
                 End Select
 
                 Return lReturnValue

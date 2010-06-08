@@ -267,7 +267,7 @@ Namespace MetaDiscovery
         End Sub
 
         Private Sub FixOleDBConnectionString()
-            If (_CS.ProviderName.ToLower = "SQLServer".ToLower) Then
+            If (_CS.ProviderName.ToLower = "System.Data.SQLClient".ToLower) Then
                 If Not (_CS.ConnectionString.ToUpper.Contains("SQLOLEDB")) Then
                     If (_CS.ConnectionString.EndsWith(";")) Then
                         Me._CS.ConnectionString = String.Format("{0};Provider=SQLOLEDB;", Me._CS.ConnectionString)
