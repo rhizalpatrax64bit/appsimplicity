@@ -10,35 +10,35 @@ Namespace DataAccess.Providers
             End Get
         End Property
 
-        Private _RemoteDataService As RemoteDataService.DataService
-        Protected ReadOnly Property RemoteDataService() As RemoteDataService.DataService
+        Private _DataService As DataService.DataService
+        Protected ReadOnly Property DataService() As DataService.DataService
             Get
-                If (_RemoteDataService Is Nothing) Then
-                    _RemoteDataService = New RemoteDataService.DataService
+                If (_DataService Is Nothing) Then
+                    _DataService = New DataService.DataService
 
-                    _RemoteDataService.Url = Me.DataSource.ConnectionString
+                    _DataService.Url = Me.DataSource.ConnectionString
                 End If
-                Return _RemoteDataService
+                Return _DataService
             End Get
         End Property
 
-        Private Function GetTransportCommand(ByVal pCommand As DataCommand) As RemoteDataService.DataCommand
-            Dim lRemoteCommand As New RemoteDataService.DataCommand
-            Dim lParameters As New List(Of RemoteDataService.DataCommandParameter)
+        Private Function GetTransportCommand(ByVal pCommand As DataCommand) As DataService.DataCommand
+            Dim lRemoteCommand As New DataService.DataCommand
+            Dim lParameters As New List(Of DataService.DataCommandParameter)
 
             Select Case (pCommand.CommandType)
                 Case CommandType.StoredProcedure
-                    lRemoteCommand.CommandType = AppSimplicity.RemoteDataService.CommandType.StoredProcedure
+                    lRemoteCommand.CommandType = AppSimplicity.DataService.CommandType.StoredProcedure
                 Case CommandType.Text
-                    lRemoteCommand.CommandType = AppSimplicity.RemoteDataService.CommandType.Text
+                    lRemoteCommand.CommandType = AppSimplicity.DataService.CommandType.Text
                 Case CommandType.TableDirect
-                    lRemoteCommand.CommandType = AppSimplicity.RemoteDataService.CommandType.TableDirect
+                    lRemoteCommand.CommandType = AppSimplicity.DataService.CommandType.TableDirect
             End Select
 
             lRemoteCommand.SQLCommand = pCommand.SQLCommand
 
             For Each lParameter As DataCommandParameter In pCommand.Parameters
-                Dim lDataParameter As New RemoteDataService.DataCommandParameter
+                Dim lDataParameter As New DataService.DataCommandParameter
 
                 lDataParameter.Name = lParameter.Name
                 lDataParameter.Value = lParameter.Value
@@ -52,15 +52,15 @@ Namespace DataAccess.Providers
         End Function
 
         Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
-            Return Me.RemoteDataService.ExecuteDataSet(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
+            Return Me.DataService.ExecuteDataSet(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
         End Function
 
         Public Function ExecuteNonQuery(ByVal pCommand As DataCommand) As Integer Implements IDataProvider.ExecuteNonQuery
-            Return Me.RemoteDataService.ExecuteNonQuery(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
+            Return Me.DataService.ExecuteNonQuery(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
         End Function
 
         Public Function ExecuteScalar(ByVal pCommand As DataCommand) As Object Implements IDataProvider.ExecuteScalar
-            Return Me.RemoteDataService.ExecuteScalar(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
+            Return Me.DataService.ExecuteScalar(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
         End Function
 
         Public Sub New(ByVal pDataSource As DataSource)
