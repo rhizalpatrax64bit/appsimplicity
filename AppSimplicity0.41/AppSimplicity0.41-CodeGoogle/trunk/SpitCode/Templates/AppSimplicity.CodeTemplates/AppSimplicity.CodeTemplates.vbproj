@@ -83,6 +83,8 @@
     <Compile Include="V0.41\SchemaGenerator.vb" />
     <Compile Include="V0.41\UIGeneration\EditItemASCX.vb" />
     <Compile Include="V0.41\UIGeneration\EditItemASCX_VB.vb" />
+    <Compile Include="V0.41\UIGeneration\ToolBarEditItemASCX.vb" />
+    <Compile Include="V0.41\UIGeneration\ToolBarEditItemASCXvb.vb" />
     <Compile Include="V0.41\UIGeneration\UI.CodeGenStrings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

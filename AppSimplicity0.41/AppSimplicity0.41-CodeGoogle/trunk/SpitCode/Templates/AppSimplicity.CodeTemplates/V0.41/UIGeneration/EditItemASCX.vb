@@ -117,7 +117,7 @@ Namespace UI
 
                     End Select
 
-                    lSB.AppendFormat("                                <\li>" & vbCrLf)
+                    lSB.AppendFormat("                                </li>" & vbCrLf)
                 End If
             Next
 

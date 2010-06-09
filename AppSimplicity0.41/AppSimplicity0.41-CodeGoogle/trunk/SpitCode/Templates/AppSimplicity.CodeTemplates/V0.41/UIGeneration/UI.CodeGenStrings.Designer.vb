@@ -65,6 +65,26 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Partial Class Edit_{1}
+        '''    Inherits UI.EditItemWebControl
+        '''
+        '''    Protected Sub LayoutSelector_OnLayoutSelection(ByVal pLayout As UI.EditItemWebControl.Layout) Handles LayoutSelector.OnLayoutSelection
+        '''        Me.SetLayoutMode(pLayout)
+        '''    End Sub
+        '''
+        '''    Public Sub Initialize(ByVal pItem As {0}.{1})
+        '''        {2}
+        '''    End Sub
+        '''
+        '''End Class.
+        '''</summary>
+        Friend Shared ReadOnly Property EditItem_ASCvb() As String
+            Get
+                Return ResourceManager.GetString("EditItem_ASCvb", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to &lt;%@ Control Language=&quot;VB&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;Edit_[$ClassName].ascx.vb&quot; Inherits=&quot;Edit_[$ClassName]&quot; %&gt;
         '''
         '''&lt;%@ Register src=&quot;../../../WebControls/Application/Edit/TextEditControl.ascx&quot; tagname=&quot;TextEditControl&quot; tagprefix=&quot;TextEditControl&quot; %&gt;
@@ -74,6 +94,34 @@ Namespace My.Resources
         Friend Shared ReadOnly Property EditItem_ASCX() As String
             Get
                 Return ResourceManager.GetString("EditItem_ASCX", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;%@ Control Language=&quot;VB&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;Edit_Toolbar_{0}.ascx.vb&quot; Inherits=&quot;Edit_Toolbar_{0}&quot; %&gt;
+        '''
+        '''&lt;div class=&quot;toolbar&quot;&gt;
+        '''    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;5&quot; width=&quot;10&quot;&gt;
+        '''        &lt;tr&gt;                
+        '''            &lt;td&gt;&lt;asp:Button ID=&quot;btnSave&quot; runat=&quot;server&quot; Text=&quot;guardar&quot; /&gt;&lt;/td&gt;        
+        '''            &lt;td&gt;&lt;asp:Button ID=&quot;btnSaveNew&quot; runat=&quot;server&quot; Text=&quot;guardar y crear nuevo&quot; /&gt;&lt;/td&gt;                            
+        '''            &lt;td&gt;&lt;asp:Button ID=&quot;btnCancel&quot; runat=&quot;server&quot; T [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property ToolBarASCX() As String
+            Get
+                Return ResourceManager.GetString("ToolBarASCX", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Partial Class Edit_Toolbar_{0}
+        '''    Inherits UI.EditToolbarControl
+        '''
+        '''End Class.
+        '''</summary>
+        Friend Shared ReadOnly Property ToolBarASCXvb() As String
+            Get
+                Return ResourceManager.GetString("ToolBarASCXvb", resourceCulture)
             End Get
         End Property
     End Class

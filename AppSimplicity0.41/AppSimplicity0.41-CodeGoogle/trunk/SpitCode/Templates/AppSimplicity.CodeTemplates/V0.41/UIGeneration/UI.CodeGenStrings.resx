@@ -117,6 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EditItem_ASCvb" xml:space="preserve">
+    <value>Partial Class Edit_{1}
+    Inherits UI.EditItemWebControl
+
+    Protected Sub LayoutSelector_OnLayoutSelection(ByVal pLayout As UI.EditItemWebControl.Layout) Handles LayoutSelector.OnLayoutSelection
+        Me.SetLayoutMode(pLayout)
+    End Sub
+
+    Public Sub Initialize(ByVal pItem As {0}.{1})
+        {2}
+    End Sub
+
+End Class</value>
+  </data>
   <data name="EditItem_ASCX" xml:space="preserve">
     <value>&lt;%@ Control Language="VB" AutoEventWireup="false" CodeFile="Edit_[$ClassName].ascx.vb" Inherits="Edit_[$ClassName]" %&gt;
 
@@ -180,5 +194,26 @@
         &lt;/td&gt;
     &lt;/tr&gt;
 &lt;/table&gt;</value>
+  </data>
+  <data name="ToolBarASCX" xml:space="preserve">
+    <value>&lt;%@ Control Language="VB" AutoEventWireup="false" CodeFile="Edit_Toolbar_{0}.ascx.vb" Inherits="Edit_Toolbar_{0}" %&gt;
+
+&lt;div class="toolbar"&gt;
+    &lt;table border="0" cellpadding="0" cellspacing="5" width="10"&gt;
+        &lt;tr&gt;                
+            &lt;td&gt;&lt;asp:Button ID="btnSave" runat="server" Text="guardar" /&gt;&lt;/td&gt;        
+            &lt;td&gt;&lt;asp:Button ID="btnSaveNew" runat="server" Text="guardar y crear nuevo" /&gt;&lt;/td&gt;                            
+            &lt;td&gt;&lt;asp:Button ID="btnCancel" runat="server" Text="cancelar" /&gt;&lt;/td&gt;                            
+            &lt;td&gt;&lt;asp:Button ID="btnDelete" runat="server" Text="eliminar" /&gt;&lt;/td&gt;                            
+            &lt;td&gt;&lt;asp:Button ID="btnNew" runat="server" Text="crear nuevo..." /&gt;&lt;/td&gt;        
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="ToolBarASCXvb" xml:space="preserve">
+    <value>Partial Class Edit_Toolbar_{0}
+    Inherits UI.EditToolbarControl
+
+End Class</value>
   </data>
 </root>
