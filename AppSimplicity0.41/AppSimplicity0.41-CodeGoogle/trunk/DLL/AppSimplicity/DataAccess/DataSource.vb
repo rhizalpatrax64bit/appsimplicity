@@ -122,6 +122,10 @@
                     lReturnValue = True
                 End If
 
+                If (Me.ConnectionString.ToLower.StartsWith("https://")) Then
+                    lReturnValue = True
+                End If
+
                 Return lReturnValue
             End Get
         End Property
