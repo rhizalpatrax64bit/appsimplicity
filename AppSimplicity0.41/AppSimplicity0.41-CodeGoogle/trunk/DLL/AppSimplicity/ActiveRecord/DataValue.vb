@@ -130,6 +130,8 @@
 
             End Select
 
+            lParameter.Type = Me.Column.DataType
+
             Return lParameter
         End Function
 
