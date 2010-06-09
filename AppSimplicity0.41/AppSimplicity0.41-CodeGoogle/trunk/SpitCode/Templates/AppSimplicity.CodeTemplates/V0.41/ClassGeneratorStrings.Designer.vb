@@ -208,21 +208,22 @@ Namespace My.Resources
         
         '''<summary>
         '''  Looks up a localized string similar to #Region &quot;IEntity Methods&quot;
-        '''        Public Sub Load(ByVal pReader As System.Data.Common.DbDataReader, Optional ByVal pUseQualifiedNames As Boolean = False) Implements AppSimplicity.ActiveRecord.IEntityRecord.Load
+        '''
+        '''        Public Sub Load(ByVal pRow As System.Data.DataRow, Optional ByVal pUseQualifiedNames As Boolean = False) Implements AppSimplicity.ActiveRecord.IEntityRecord.Load
         '''            RaiseEvent OnBeforeLoad()
         '''
         '''            If (pUseQualifiedNames) Then
-        '''{0}
+        '''{2}
         '''            Else
-        '''{1}            
+        '''{3}
         '''            End If
-        '''
-        '''            _IsLoadedFromDB = True
         '''            
+        '''            _IsLoadedFromDB = True
+        '''
         '''            RaiseEvent OnAfterLoad()
         '''        End Sub
         '''
-        '''        Public Sub Load(ByVal pRow As System.Da [rest of string was truncated]&quot;;.
+        '''        Public Event OnAfterLoad() Implements AppSimplicity.ActiveRecord [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property EntityMethods() As String
             Get

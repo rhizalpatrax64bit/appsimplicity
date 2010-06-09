@@ -404,19 +404,6 @@ End Namespace</value>
   </data>
   <data name="EntityMethods" xml:space="preserve">
     <value>#Region "IEntity Methods"
-        Public Sub Load(ByVal pReader As System.Data.Common.DbDataReader, Optional ByVal pUseQualifiedNames As Boolean = False) Implements AppSimplicity.ActiveRecord.IEntityRecord.Load
-            RaiseEvent OnBeforeLoad()
-
-            If (pUseQualifiedNames) Then
-{0}
-            Else
-{1}            
-            End If
-
-            _IsLoadedFromDB = True
-            
-            RaiseEvent OnAfterLoad()
-        End Sub
 
         Public Sub Load(ByVal pRow As System.Data.DataRow, Optional ByVal pUseQualifiedNames As Boolean = False) Implements AppSimplicity.ActiveRecord.IEntityRecord.Load
             RaiseEvent OnBeforeLoad()
@@ -436,7 +423,7 @@ End Namespace</value>
 
         Public Event OnBeforeLoad() Implements AppSimplicity.ActiveRecord.IEntityRecord.OnBeforeLoad
 		
-		''' &lt;summary&gt;
+        ''' &lt;summary&gt;
         ''' Resets the values of the instance to null values
         ''' &lt;/summary&gt;
         Public Sub Reset() Implements AppSimplicity.ActiveRecord.IEntityRecord.Reset
