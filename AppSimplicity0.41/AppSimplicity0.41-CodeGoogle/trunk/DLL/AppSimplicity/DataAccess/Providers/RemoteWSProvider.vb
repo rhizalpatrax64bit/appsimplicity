@@ -41,6 +41,7 @@ Namespace DataAccess.Providers
 
                 lDataParameter.Name = lParameter.Name
                 lDataParameter.Value = lParameter.Value
+                lDataParameter.Type = lParameter.Type
 
                 lParameters.Add(lDataParameter)
             Next
@@ -51,15 +52,15 @@ Namespace DataAccess.Providers
         End Function
 
         Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
-            Return Me._DataService.ExecuteDataSet(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
+            Return Me.DataService.ExecuteDataSet(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
         End Function
 
         Public Function ExecuteNonQuery(ByVal pCommand As DataCommand) As Integer Implements IDataProvider.ExecuteNonQuery
-            Return Me._DataService.ExecuteNonQuery(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
+            Return Me.DataService.ExecuteNonQuery(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
         End Function
 
         Public Function ExecuteScalar(ByVal pCommand As DataCommand) As Object Implements IDataProvider.ExecuteScalar
-            Return Me._DataService.ExecuteScalar(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
+            Return Me.DataService.ExecuteScalar(Me.DataSource.DataSourceName, Me.GetTransportCommand(pCommand))
         End Function
 
         Public Sub New(ByVal pDataSource As DataSource)
