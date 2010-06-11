@@ -86,8 +86,6 @@
             End Get
         End Property
 
-
-
         ''' <summary>
         ''' Gets the name of current user's identity
         ''' </summary>        
