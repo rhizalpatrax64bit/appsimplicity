@@ -357,21 +357,21 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to         Private _{0} As List(Of {1}.{2})
+        '''  Looks up a localized string similar to         Private _{0}By{3} As List(Of {1}.{2})
         '''        &lt;System.Xml.Serialization.XmlIgnore()&gt; _
-        '''        Public Property {0}() As List(Of {1}.{2})
+        '''        Public Property {0}By{3}() As List(Of {1}.{2})
         '''            Get
-        '''                If (_{0} Is Nothing) Then
-        '''                    _{0} = {1}.{0}.Fetch{0}By{3}(Me)
+        '''                If (_{0}By{3} Is Nothing) Then
+        '''                    _{0}By{3} = {1}.{0}.Fetch{0}By{3}(Me)
         '''
-        '''                    If (_{0} Is Nothing) Then
-        '''                        _{0} = New List(Of {1}.{2})
+        '''                    If (_{0}By{3} Is Nothing) Then
+        '''                        _{0}By{3} = New List(Of {1}.{2})
         '''                    End If
         '''                End If
         '''
-        '''                Return _{0}
+        '''                Return _{0}By{3}
         '''            End Get
-        '''            Set(ByVal value As List(Of {1}.{2}))        ''' [rest of string was truncated]&quot;;.
+        '''            Se [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property HasAndBelongsToManyProperty() As String
             Get
