@@ -110,13 +110,33 @@ Namespace UI
 
                         Case MetaDiscovery.UIControlType.ListOfValues
 
-                            lSB.AppendFormat("{0}<DDLEditControl:DDLEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" />" & vbCrLf, _
+                            Dim lForeignId As String = "Id"
+                            Dim lForeignDescription As String = "Description"
+
+                            If (lColumn.HasBelongsToReference) Then
+                                Dim lRelation As MetaDiscovery.MetaRelation = lColumn.GetForeignRelation()
+
+                                If (lRelation Is Nothing) Then
+
+                                End If
+                                Dim lForeignTable As MetaDiscovery.Table = lRelation.ForeignEntity
+
+                                lForeignId = lForeignTable.PKColumn.PropertyName
+
+                                Dim lDescriptionColumn As MetaDiscovery.Column = lForeignTable.GetDescriptionColumn()
+
+                                If Not (lDescriptionColumn Is Nothing) Then
+                                    lForeignDescription = lDescriptionColumn.PropertyName
+                                End If
+                            End If
+
+                            lSB.AppendFormat("{0}<DDLEditControl:DDLEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" DataTextField=""{6}"" DataValueField=""{7}"" NothingSelectedText=""Seleccione un elemento"" />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
-                                                lColumn.UIControlWidth)
+                                                lColumn.UIControlWidth, lForeignDescription, lForeignId)
 
 
                     End Select
