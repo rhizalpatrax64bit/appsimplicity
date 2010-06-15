@@ -223,18 +223,32 @@
         End Function
 
         Public Sub ExtractForeignKeys()
+            Dim lSomethingWrong = False
+
             For Each lForeignKey As MyMeta.ForeignKey In Me._UnderlyingMeta.ForeignKeys
-                Console.WriteLine(String.Format("Foreign key found for: [{0}]", Me.Name))
+                Try
+                    Console.WriteLine(String.Format("Foreign key found for: [{0}]", Me.Name))
 
-                Dim lMetaRelation = New MetaRelation(Me, lForeignKey)
+                    Dim lMetaRelation = New MetaRelation(Me, lForeignKey)
 
-                Select Case lMetaRelation.Relation
-                    Case RelationType.HasMany
-                        Me.HasManyRelations.Add(lMetaRelation)
-                    Case RelationType.BelongsTo
-                        Me.BelongsToRelations.Add(lMetaRelation)
-                End Select
+                    Select Case lMetaRelation.Relation
+                        Case RelationType.HasMany
+                            Me.HasManyRelations.Add(lMetaRelation)
+                        Case RelationType.BelongsTo
+                            Me.BelongsToRelations.Add(lMetaRelation)
+                    End Select
+
+                Catch ex As Exception
+                    lSomethingWrong = True
+
+                    Console.WriteLine("Error when reading foreign key for table [{0}] with external entity: [{1}], Details:, ", Me.Name, lForeignKey.ForeignTable)
+                    Console.WriteLine(ex.Message)
+                End Try
             Next
+
+            If (lSomethingWrong) Then
+                Throw New Exception("Something went wrong trying to read foreign key.")
+            End If
         End Sub
 
         Public Function FindColumnInstance(ByVal pColumnName As String) As MetaDiscovery.Column

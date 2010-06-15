@@ -40,6 +40,10 @@ Namespace UI
                     End If
                 End If
 
+                If Not (lColumn.AuditMode = MetaDiscovery.AuditModes.NotAuditable) Then
+                    lIncludeInList = False
+                End If
+
                 If (lIncludeInList) Then
                     lSB.AppendFormat("                                <li>" & vbCrLf)
 

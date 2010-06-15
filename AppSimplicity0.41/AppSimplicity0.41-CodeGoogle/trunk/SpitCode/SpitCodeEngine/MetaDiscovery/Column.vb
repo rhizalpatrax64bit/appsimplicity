@@ -11,6 +11,14 @@
         File = 9
     End Enum
 
+    Public Enum AuditModes
+        NotAuditable
+        CreatedOn
+        CreatedBy
+        ModifiedOn
+        ModifiedBy
+    End Enum
+
     Public Class Column
 
         Private _MetaColumn As MyMeta.Column
@@ -22,6 +30,32 @@
                 Return Me._MetaColumn.Name
             End Get
         End Property
+
+
+        <System.ComponentModel.DisplayName("Audit Mode"), Category("Metadata"), Description("Gets if this column acts as an audit column")> _
+        ReadOnly Property AuditMode() As AuditModes
+            Get
+                Dim lReturnValue As AuditModes = AuditModes.NotAuditable
+
+                Select Case (Me.Name.ToLower)
+                    Case "createdon", "fechacreacion"
+                        lReturnValue = AuditModes.CreatedOn
+
+                    Case "createdby", "creadopor"
+                        lReturnValue = AuditModes.CreatedBy
+
+                    Case "modifiedon", "fechamodificacion"
+                        lReturnValue = AuditModes.ModifiedOn
+
+                    Case "modifiedby", "modificadopor"
+                        lReturnValue = AuditModes.ModifiedBy
+
+                End Select
+
+                Return lReturnValue
+            End Get
+        End Property
+
 
         <System.ComponentModel.DisplayName("Field label"), Category("UI Control Generation"), Description("Describes a human readable description for this column")> _
         Public Property FieldLabel() As String
@@ -130,6 +164,10 @@
                 Dim lKey As String = "UIControlWidth"
                 Me.ValidatePropertyInstance(lKey, Convert.ToString(Me.GetUIWidth(Me)))
 
+                If (Me.HasBelongsToReference) Then
+                    _MetaColumn.Properties(lKey).Value = Convert.ToString(Me.GetUIWidth(Me))
+                End If
+
                 Return _MetaColumn.Properties(lKey).Value
             End Get
             Set(ByVal value As Integer)
@@ -183,7 +221,6 @@
             If (pColumn.HasBelongsToReference) Then
                 lReturnValue = MetaDiscovery.UIControlType.ListOfValues
             Else
-
                 Select Case (pColumn.DbTargetType)
                     Case _
                             "DbType.Byte", "DbType.UInt16", "DbType.UInt32", "DbType.UInt64", "DbType.Double", _
@@ -223,6 +260,10 @@
             Get
                 Dim lKey As String = "UIControlType"
                 Me.ValidatePropertyInstance(lKey, Me.GetEditUIType(Me))
+
+                If (Me.HasBelongsToReference) Then
+                    _MetaColumn.Properties(lKey).Value = Me.GetEditUIType(Me)
+                End If
 
                 Return _MetaColumn.Properties(lKey).Value
             End Get

@@ -321,7 +321,8 @@ Namespace CodeGeneration
                     Console.WriteLine("  Writing file: " & FullFileName)
 
                     'Crear el archivo:
-                    SW = New StreamWriter(FullFileName)
+                    SW = New StreamWriter(FullFileName, False, System.Text.Encoding.UTF8)
+
                     'Escribir el código generado
                     ProduceCode(SW)
                     Console.WriteLine("  File generated successfully.")
