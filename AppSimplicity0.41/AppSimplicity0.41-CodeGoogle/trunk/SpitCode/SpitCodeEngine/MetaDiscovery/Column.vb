@@ -255,6 +255,24 @@
             Return lReturnValue
         End Function
 
+        ''' <summary>
+        ''' Obtiene la referencia de la tabla 
+        ''' </summary>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        Public Function GetForeignRelation() As MetaDiscovery.MetaRelation
+            Dim lReturnValue As MetaDiscovery.MetaRelation = Nothing
+
+            For Each lRelation As MetaDiscovery.MetaRelation In Me.Table.BelongsToRelations
+                If (lRelation.ExternalReferenceColumn.Name = Me.Name) Then
+                    lReturnValue = lRelation
+                    Exit For
+                End If
+            Next
+
+            Return lReturnValue
+        End Function
+
         <System.ComponentModel.DisplayName("UI Control Type"), Category("UI Control Generation"), Description("Sets the UI predefined control")> _
         Public Property UIControlType() As MetaDiscovery.UIControlType
             Get

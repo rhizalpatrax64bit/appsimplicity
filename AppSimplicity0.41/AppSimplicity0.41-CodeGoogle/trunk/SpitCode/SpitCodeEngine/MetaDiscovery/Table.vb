@@ -251,6 +251,25 @@
             End If
         End Sub
 
+        ''' <summary>
+        ''' Obtiene la columna que funciona como descripcion
+        ''' </summary>        
+        Public Function GetDescriptionColumn() As MetaDiscovery.Column
+            Dim lReturnValue As Column = Nothing
+
+            For Each lColumn As MetaDiscovery.Column In Me.Columns
+                If (lColumn.AuditMode = AuditModes.NotAuditable) Then
+                    Select Case (lColumn.DbTargetType.ToLower)
+                        Case "dbtype.ansistring", "dbtype.string", "dbtype.ansistringfixedlength", "dbtype.stringfixedlength"
+                            lReturnValue = lColumn
+                            Exit For
+                    End Select
+                End If
+            Next
+
+            Return lReturnValue
+        End Function
+
         Public Function FindColumnInstance(ByVal pColumnName As String) As MetaDiscovery.Column
             Dim lReturnValue As MetaDiscovery.Column = Nothing
 
