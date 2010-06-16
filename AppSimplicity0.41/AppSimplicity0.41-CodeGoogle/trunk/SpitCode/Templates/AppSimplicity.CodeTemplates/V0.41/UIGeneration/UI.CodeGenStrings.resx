@@ -132,6 +132,7 @@
     ''' &lt;/summary&gt;
     ''' &lt;param name="pItem"&gt;Indica el objeto con el que se llenará la forma&lt;/param&gt;
     Public Sub FillForm(ByVal pItem As [$GeneratedNamespace].[$ClassName])
+        Me.ItemId = pItem.[$ClassName][$PKPropertyName]      
         [$FillForm]        
     End Sub
 
