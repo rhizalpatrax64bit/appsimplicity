@@ -27,6 +27,13 @@ Public Class EditItemASCX_VB
     End Function
 
     Public Overrides Sub ProduceCode(ByRef Output As System.IO.StreamWriter)
-        Output.Write(My.Resources.UI_CodeGenStrings.EditItem_ASCvb, Me.CurrentTable.Provider.GeneratedNamespace, Me.CurrentTable.ClassName, "")
+        Dim lOutput As String = My.Resources.UI_CodeGenStrings.EditItem_ASCvb
+
+        lOutput = lOutput.Replace("[$GeneratedNamespace]", Me.CurrentTable.Provider.GeneratedNamespace)
+        lOutput = lOutput.Replace("[$ClassName]", Me.CurrentTable.ClassName)
+        lOutput = lOutput.Replace("[$PKPropertyName]", Me.CurrentTable.PKColumn.PropertyName)
+        lOutput = lOutput.Replace("[$PluralClassName]", Me.CurrentTable.PluralClassName)
+
+        Output.Write(lOutput)
     End Sub
 End Class

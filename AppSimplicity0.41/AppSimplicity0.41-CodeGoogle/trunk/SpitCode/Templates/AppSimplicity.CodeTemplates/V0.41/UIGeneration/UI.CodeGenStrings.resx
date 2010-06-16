@@ -118,17 +118,208 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="EditItem_ASCvb" xml:space="preserve">
-    <value>Partial Class Edit_{1}
+    <value>Partial Class Edit_[$ClassName]
     Inherits UI.EditItemWebControl
+
+    Public Event OnCancel()
 
     Protected Sub LayoutSelector_OnLayoutSelection(ByVal pLayout As UI.EditItemWebControl.Layout) Handles LayoutSelector.OnLayoutSelection
         Me.SetLayoutMode(pLayout)
     End Sub
 
-    Public Sub Initialize(ByVal pItem As {0}.{1})
-        {2}
+    ''' &lt;summary&gt;
+    ''' Inicializa la forma con un objeto existente previamente instanciado
+    ''' &lt;/summary&gt;
+    ''' &lt;param name="pItem"&gt;Indica el objeto con el que se llenará la forma&lt;/param&gt;
+    Public Sub FillForm(ByVal pItem As [$GeneratedNamespace].[$ClassName])
+        [$FillForm]        
     End Sub
 
+    ''' &lt;summary&gt;
+    ''' Inicializar combos
+    ''' &lt;/summary&gt;
+    Public Sub FillDDLs()
+        [$FillDDls]        
+    End Sub
+
+    ''' &lt;summary&gt;
+    ''' Prepara el formulario para iniciar una captura nueva
+    ''' &lt;/summary&gt;
+    Public Sub InitNewItem()
+        Me.ItemId = Nothing
+        Me.EditMode = EditModes.CreateNew
+
+        [$ResetControls]        
+
+        Me.FillDDLs()
+    End Sub
+
+    ''' &lt;summary&gt;
+    ''' Inicializa el formulario con la instancia de un objeto previamente instanciado
+    ''' &lt;/summary&gt;
+    Public Sub EditItem(ByVal pItem As [$GeneratedNamespace].[$ClassName])
+        Me.EditMode = EditModes.EditItem
+        Me.FillForm(pItem)
+    End Sub
+
+    ''' &lt;summary&gt;
+    ''' Determina el modo de edición de la página (Creación de un registro nuevo/Modificación de un registro)
+    ''' &lt;/summary&gt;
+    Private Sub SetEditMode()
+        Dim lItem As [$GeneratedNamespace].[$ClassName] = Nothing
+
+        If (Me.Request.QueryString("[$ClassName][$PKPropertyName]") &lt;&gt; String.Empty) Then
+            lItem = SM_WebFI.Fondos.FetchById(Me.Request.QueryString("[$ClassName][$PKPropertyName]"))
+
+            If Not (lItem Is Nothing) Then
+                Me.EditItem(lItem)
+            Else
+                Me.FormAlert.DisplayAlert("No se localizó el registro. Verifique el parámetro de la página.")
+            End If
+        Else
+            Me.InitNewItem()
+        End If
+    End Sub
+
+#Region "Save"
+    ''' &lt;summary&gt;
+    ''' Ejecuta la validación de cada uno de los controles.  Valida los controles requeridos y que los valores tengan el formato correcto.
+    ''' &lt;/summary&gt;
+    Public Sub RunControlValidations()
+        Dim lValidationErrors As New List(Of String)
+
+        [$RunValidations]        
+
+        If lValidationErrors.Count &gt; 0 Then
+            Throw New Exception(Me.GetValidationSummary(lValidationErrors))
+        End If
+    End Sub
+
+    ''' &lt;summary&gt;
+    ''' Obtiene los datos del formulario hacia una instancia
+    ''' &lt;/summary&gt;
+    ''' &lt;param name="pItem"&gt;La instancia del objeto previamente instanciado&lt;/param&gt;
+    Private Sub FillItem(ByVal pItem As SM_WebFI.Fondo)
+    
+        [$FillProperties]
+        
+    End Sub
+
+    ''' &lt;summary&gt;
+    ''' Guarda la información en la base de datos
+    ''' &lt;/summary&gt;
+    ''' &lt;returns&gt;Si la operación no es posible devuelve falso&lt;/returns&gt;
+    Public Function Save() As Boolean
+        Dim lReturnValue As Boolean = False
+
+        Try
+            Me.RunControlValidations()
+
+            Dim lItem As [$GeneratedNamespace].[$ClassName] = Nothing
+
+            Select Case (Me.EditMode)
+                Case EditModes.CreateNew
+                    lItem = New SM_WebFI.Fondo
+                Case EditModes.EditItem
+                    lItem = SM_WebFI.Fondos.FetchById(Me.ItemId)
+
+                    If (lItem Is Nothing) Then
+                        Throw New Exception("La información del registro no está disponible en la base de datos.  Actualice la información.")
+                    End If
+            End Select
+
+            Me.FillItem(lItem)
+            lItem.Save()
+
+            Me.EditItem(lItem)
+
+            lReturnValue = True
+        Catch ex As Exception
+            Me.FormAlert.DisplayAlert(ex.Message)
+            lReturnValue = False
+        End Try
+
+        Return lReturnValue
+    End Function
+#End Region
+
+#Region "Delete"
+    ''' &lt;summary&gt;
+    ''' Ejecuta el método de eliminación
+    ''' &lt;/summary&gt;
+    ''' &lt;remarks&gt;&lt;/remarks&gt;
+    Private Sub Delete()
+        Try
+            If (Me.EditMode = EditModes.EditItem) Then
+                Dim lItem As [$GeneratedNamespace].[$ClassName]
+
+                lItem = [$GeneratedNamespace].[$PluralClassName].FetchById(Me.ItemId)
+
+                If Not (lItem Is Nothing) Then
+                    lItem.Delete()
+                End If
+            End If
+        Catch ex As Exception
+            Me.FormAlert.DisplayAlert(ex.Message)
+        End Try
+    End Sub
+#End Region
+
+#Region "Init"
+    Public Overrides Sub Initialize()
+        Me.FillDDLs()
+        Me.SetEditMode()
+    End Sub
+#End Region
+
+#Region "ToolBar Commands"
+    Protected Sub ToolBarTop_OnCancel() Handles ToolBarTop.OnCancel
+        RaiseEvent OnCancel()
+    End Sub
+
+    Protected Sub ToolBarBottom_OnCancel() Handles ToolBarBottom.OnCancel
+        RaiseEvent OnCancel()
+    End Sub
+
+    Protected Sub ToolBarTop_OnDelete() Handles ToolBarTop.OnDelete
+        Me.Delete()
+    End Sub
+
+    Protected Sub ToolBarBottom_OnDelete() Handles ToolBarBottom.OnDelete
+        Me.Delete()
+    End Sub
+
+    Protected Sub ToolBarTop_OnNew() Handles ToolBarTop.OnNew
+        Me.InitNewItem()
+    End Sub
+
+    Protected Sub ToolBarBottom_OnNew() Handles ToolBarBottom.OnNew
+        Me.InitNewItem()
+    End Sub
+
+    Protected Sub ToolBarTop_OnSave() Handles ToolBarTop.OnSave
+        Me.Save()
+    End Sub
+
+    Protected Sub ToolBarBottom_OnSave() Handles ToolBarBottom.OnSave
+        Me.Save()
+    End Sub
+
+    Protected Sub ToolBarTop_OnSaveNew() Handles ToolBarTop.OnSaveNew
+        If (Me.Save()) Then
+            Me.InitNewItem()
+            Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")
+        End If
+    End Sub
+
+    Protected Sub ToolBarBottom_OnSaveNew() Handles ToolBarBottom.OnSaveNew
+        If (Me.Save()) Then
+            Me.InitNewItem()
+            Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")
+        End If
+    End Sub
+#End Region
+    
 End Class</value>
   </data>
   <data name="EditItem_ASCX" xml:space="preserve">

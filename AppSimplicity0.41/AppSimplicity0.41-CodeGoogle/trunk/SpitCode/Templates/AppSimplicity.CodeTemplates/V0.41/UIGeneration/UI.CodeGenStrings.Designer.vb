@@ -65,18 +65,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Partial Class Edit_{1}
+        '''  Looks up a localized string similar to Partial Class Edit_[$ClassName]
         '''    Inherits UI.EditItemWebControl
+        '''
+        '''    Public Event OnCancel()
         '''
         '''    Protected Sub LayoutSelector_OnLayoutSelection(ByVal pLayout As UI.EditItemWebControl.Layout) Handles LayoutSelector.OnLayoutSelection
         '''        Me.SetLayoutMode(pLayout)
         '''    End Sub
         '''
-        '''    Public Sub Initialize(ByVal pItem As {0}.{1})
-        '''        {2}
-        '''    End Sub
-        '''
-        '''End Class.
+        '''    &apos;&apos;&apos; &lt;summary&gt;
+        '''    &apos;&apos;&apos; Inicializa la forma con un objeto existente previamente instanciado
+        '''    &apos;&apos;&apos; &lt;/summary&gt;
+        '''    &apos;&apos;&apos; &lt;param name=&quot;pItem&quot;&gt;Indica el objeto con el que se llenará la forma&lt;/param&gt;
+        '''    Public Sub Fill [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property EditItem_ASCvb() As String
             Get
