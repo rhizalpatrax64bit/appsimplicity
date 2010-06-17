@@ -26,6 +26,21 @@
             End Get
         End Property
 
+
+        Private Function ValueIsDate(ByVal pValue As Object) As Boolean
+            Dim lReturnValue As Boolean = False
+
+            If (TypeOf (pValue) Is Date) Then
+                lReturnValue = True
+            End If
+
+            If (TypeOf (pValue) Is DateTime) Then
+                lReturnValue = True
+            End If
+
+            Return lReturnValue
+        End Function
+
         Private _Value As Object
         ''' <summary>
         ''' Sets or gets the value stored in the column.  Where the value of the physical 
@@ -63,6 +78,12 @@
                         If (CType(value, System.String).Length > _Column.MaxLength) Then
                             Throw New Exception(String.Format(My.Resources.ExceptionMessages.MaxLenghtExceeded, _Column.ColumnName))
                         End If
+                    End If
+                End If
+
+                If (ValueIsDate(value)) Then
+                    If (CType(value, DateTime) = DateTime.MinValue) Then
+                        value = Nothing
                     End If
                 End If
 
