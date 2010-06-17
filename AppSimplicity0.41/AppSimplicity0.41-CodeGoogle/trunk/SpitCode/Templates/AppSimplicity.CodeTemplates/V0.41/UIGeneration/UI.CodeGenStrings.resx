@@ -300,10 +300,12 @@
 
     Protected Sub ToolBarTop_OnSave() Handles ToolBarTop.OnSave
         Me.Save()
+        Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")        
     End Sub
 
     Protected Sub ToolBarBottom_OnSave() Handles ToolBarBottom.OnSave
         Me.Save()
+        Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")
     End Sub
 
     Protected Sub ToolBarTop_OnSaveNew() Handles ToolBarTop.OnSaveNew
