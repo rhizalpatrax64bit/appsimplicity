@@ -61,7 +61,7 @@ Namespace UI
 
                         Case MetaDiscovery.UIControlType.IntegerNumberTextField
 
-                            lSB.AppendFormat("{0}<NumericEditControl:NumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" Precision=""2"" EditMode=""IntegerBehavior"" IsRequired=""{6}""  />" & vbCrLf, _
+                            lSB.AppendFormat("{0}<NumericEditControl:NumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" IsRequired=""{6}""  />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
@@ -71,7 +71,7 @@ Namespace UI
 
                         Case MetaDiscovery.UIControlType.FloatNumberTextField
 
-                            lSB.AppendFormat("{0}<NumericEditControl:NumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" Precision=""2"" EditMode=""FloatBehavior"" IsRequired=""{6}""  />" & vbCrLf, _
+                            lSB.AppendFormat("{0}<FloatNumericEditControl:FloatNumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" Precision=""2"" IsRequired=""{6}""  />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _

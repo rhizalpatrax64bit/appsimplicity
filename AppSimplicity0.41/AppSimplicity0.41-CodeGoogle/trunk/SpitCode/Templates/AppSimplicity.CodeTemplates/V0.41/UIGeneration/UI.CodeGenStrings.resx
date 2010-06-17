@@ -170,7 +170,7 @@
         Dim lItem As [$GeneratedNamespace].[$ClassName] = Nothing
 
         If (Me.Request.QueryString("[$ClassName][$PKPropertyName]") &lt;&gt; String.Empty) Then
-            lItem = SM_WebFI.Fondos.FetchById(Me.Request.QueryString("[$ClassName][$PKPropertyName]"))
+            lItem = [$GeneratedNamespace].[$PluralClassName].FetchById(Me.Request.QueryString("[$ClassName][$PKPropertyName]"))
 
             If Not (lItem Is Nothing) Then
                 Me.EditItem(lItem)
@@ -200,7 +200,7 @@
     ''' Obtiene los datos del formulario hacia una instancia
     ''' &lt;/summary&gt;
     ''' &lt;param name="pItem"&gt;La instancia del objeto previamente instanciado&lt;/param&gt;
-    Private Sub FillItem(ByVal pItem As SM_WebFI.Fondo)
+    Private Sub FillItem(ByVal pItem As [$GeneratedNamespace].[$ClassName])
     
         [$FillProperties]
         
@@ -220,9 +220,9 @@
 
             Select Case (Me.EditMode)
                 Case EditModes.CreateNew
-                    lItem = New SM_WebFI.Fondo
+                    lItem = New [$GeneratedNamespace].[$ClassName]
                 Case EditModes.EditItem
-                    lItem = SM_WebFI.Fondos.FetchById(Me.ItemId)
+                    lItem = [$GeneratedNamespace].[$PluralClassName].FetchById(Me.ItemId)
 
                     If (lItem Is Nothing) Then
                         Throw New Exception("La información del registro no está disponible en la base de datos.  Actualice la información.")
@@ -299,13 +299,15 @@
     End Sub
 
     Protected Sub ToolBarTop_OnSave() Handles ToolBarTop.OnSave
-        Me.Save()
-        Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")        
+        If (Me.Save()) Then
+            Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")
+        End If
     End Sub
 
     Protected Sub ToolBarBottom_OnSave() Handles ToolBarBottom.OnSave
-        Me.Save()
-        Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")
+        If (Me.Save()) Then
+            Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro ha sido guardado con éxito")
+        End If
     End Sub
 
     Protected Sub ToolBarTop_OnSaveNew() Handles ToolBarTop.OnSaveNew
@@ -331,6 +333,7 @@ End Class</value>
 &lt;%@ Register src="../../../WebControls/Application/Edit/TextEditControl.ascx" tagname="TextEditControl" tagprefix="TextEditControl" %&gt;
 &lt;%@ Register src="../../../WebControls/Application/Edit/TextAreaEditControl.ascx" tagname="TextAreaEditControl" tagprefix="TextAreaEditControl" %&gt;
 &lt;%@ Register src="../../../WebControls/Application/Edit/NumericEditControl.ascx" tagname="NumericEditControl" tagprefix="NumericEditControl" %&gt;
+&lt;%@ Register src="../../../WebControls/Application/Edit/FloatNumericEditControl.ascx" tagname="FloatNumericEditControl" tagprefix="FloatNumericEditControl" %&gt;
 &lt;%@ Register src="../../../WebControls/Application/Edit/CheckBoxEditControl.ascx" tagname="CheckBoxEditControl" tagprefix="CheckBoxEditControl" %&gt;
 &lt;%@ Register src="../../../WebControls/Application/Edit/DatePickerEditControl.ascx" tagname="DatePickerEditControl" tagprefix="DatePickerEditControl" %&gt;
 &lt;%@ Register src="../../../WebControls/Application/Edit/DDLEditControl.ascx" tagname="DDLEditControl" tagprefix="DDLEditControl" %&gt;
