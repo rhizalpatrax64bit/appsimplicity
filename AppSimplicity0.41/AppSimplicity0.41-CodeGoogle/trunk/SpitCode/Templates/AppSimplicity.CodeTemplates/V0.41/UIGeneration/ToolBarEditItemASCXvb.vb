@@ -31,5 +31,12 @@ Public Class ToolBarEditItemASCXvb
         Output.Write(lOutput)
     End Sub
 
+    Public Overrides Function ValidateCodeFile() As Boolean
+        If (Me.CurrentTable.ClassName.ToLower.EndsWith("map")) Then
+            Return False
+        End If
+        Return True
+    End Function
+
 End Class
 

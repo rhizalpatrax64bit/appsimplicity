@@ -29,4 +29,11 @@ Public Class ToolBarEditItemASCX
         Output.Write(My.Resources.UI_CodeGenStrings.ToolBarASCX, Me.CurrentTable.ClassName)
     End Sub
 
+    Public Overrides Function ValidateCodeFile() As Boolean
+        If (Me.CurrentTable.ClassName.ToLower.EndsWith("map")) Then
+            Return False
+        End If
+        Return True
+    End Function
+
 End Class

@@ -159,6 +159,7 @@ Public Class EditItemASCX_VB
     End Function
 
     Public Overrides Sub ProduceCode(ByRef Output As System.IO.StreamWriter)
+      
         Dim lOutput As String = My.Resources.UI_CodeGenStrings.EditItem_ASCvb
 
         lOutput = lOutput.Replace("[$GeneratedNamespace]", Me.CurrentTable.Provider.GeneratedNamespace)
@@ -173,4 +174,11 @@ Public Class EditItemASCX_VB
 
         Output.Write(lOutput)
     End Sub
+
+    Public Overrides Function ValidateCodeFile() As Boolean
+        If (Me.CurrentTable.ClassName.ToLower.EndsWith("map")) Then
+            Return False
+        End If
+        Return True
+    End Function
 End Class
