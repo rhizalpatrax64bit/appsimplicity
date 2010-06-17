@@ -26,7 +26,7 @@ Public Class ToolBarEditItemASCXvb
     End Function
 
     Public Overrides Sub ProduceCode(ByRef Output As System.IO.StreamWriter)
-        Dim lOutput As String = My.Resources.UI_CodeGenStrings.ToolBarASCXvb
+        Dim lOutput As String = String.Format(My.Resources.UI_CodeGenStrings.ToolBarASCXvb, Me.CurrentTable.ClassName)
 
         Output.Write(lOutput)
     End Sub

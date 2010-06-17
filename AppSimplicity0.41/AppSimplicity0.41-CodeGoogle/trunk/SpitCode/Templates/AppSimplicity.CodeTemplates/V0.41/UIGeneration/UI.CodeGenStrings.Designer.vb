@@ -100,6 +100,19 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to         Try
+        '''            Me.{0}.RunValidation()
+        '''        Catch ex As Exception
+        '''            lValidationErrors.Add(ex.Message)
+        '''        End Try.
+        '''</summary>
+        Friend Shared ReadOnly Property RunValidationCodeBlock() As String
+            Get
+                Return ResourceManager.GetString("RunValidationCodeBlock", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to &lt;%@ Control Language=&quot;VB&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;Edit_Toolbar_{0}.ascx.vb&quot; Inherits=&quot;Edit_Toolbar_{0}&quot; %&gt;
         '''
         '''&lt;div class=&quot;toolbar&quot;&gt;

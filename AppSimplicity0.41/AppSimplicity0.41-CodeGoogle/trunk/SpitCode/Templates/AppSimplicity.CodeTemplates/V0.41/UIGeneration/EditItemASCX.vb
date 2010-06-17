@@ -50,63 +50,63 @@ Namespace UI
                     Select Case lColumn.UIControlType
                         Case MetaDiscovery.UIControlType.TextField
 
-                            lSB.AppendFormat("{0}<TextEditControl:TextEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" MaxLength=""{6}""/>" & vbCrLf, _
+                            lSB.AppendFormat("{0}<TextEditControl:TextEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" MaxLength=""{6}"" IsRequired=""{7}"" />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
                                                 lColumn.UIControlWidth, _
-                                                lColumn.MaxLength)
+                                                lColumn.MaxLength, IIf(lColumn.IsNullable, "false", "true"))
 
                         Case MetaDiscovery.UIControlType.IntegerNumberTextField
 
-                            lSB.AppendFormat("{0}<NumericEditControl:NumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" Precision=""2"" EditMode=""IntegerBehavior""  />" & vbCrLf, _
+                            lSB.AppendFormat("{0}<NumericEditControl:NumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" Precision=""2"" EditMode=""IntegerBehavior"" IsRequired=""{6}""  />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
-                                                lColumn.UIControlWidth)
+                                                lColumn.UIControlWidth, IIf(lColumn.IsNullable, "false", "true"))
 
                         Case MetaDiscovery.UIControlType.FloatNumberTextField
 
-                            lSB.AppendFormat("{0}<NumericEditControl:NumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" Precision=""2"" EditMode=""FloatBehavior""  />" & vbCrLf, _
+                            lSB.AppendFormat("{0}<NumericEditControl:NumericEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" Precision=""2"" EditMode=""FloatBehavior"" IsRequired=""{6}""  />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
-                                                lColumn.UIControlWidth)
+                                                lColumn.UIControlWidth, IIf(lColumn.IsNullable, "false", "true"))
 
                         Case MetaDiscovery.UIControlType.DateField
-                            lSB.AppendFormat("{0}<DatePickerEditControl:DatePickerEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" />" & vbCrLf, _
+                            lSB.AppendFormat("{0}<DatePickerEditControl:DatePickerEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" IsRequired=""{6}"" />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
-                                                lColumn.UIControlWidth)
+                                                lColumn.UIControlWidth, IIf(lColumn.IsNullable, "false", "true"))
 
                         Case MetaDiscovery.UIControlType.CheckBox
-                            lSB.AppendFormat("{0}<CheckBoxEditControl:CheckBoxEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" />" & vbCrLf, _
+                            lSB.AppendFormat("{0}<CheckBoxEditControl:CheckBoxEditControl ID=""{1}"" runat=""server""  Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}""  Width=""{5}"" IsRequired=""{6}"" />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
-                                                lColumn.UIControlWidth)
+                                                lColumn.UIControlWidth, IIf(lColumn.IsNullable, "false", "true"))
 
                         Case MetaDiscovery.UIControlType.TextAreaField
 
-                            lSB.AppendFormat("{0}<TextAreaEditControl:TextAreaEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" MaxLength=""{6}""/>" & vbCrLf, _
+                            lSB.AppendFormat("{0}<TextAreaEditControl:TextAreaEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" MaxLength=""{6}"" IsRequired=""{7}"" />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
                                                 lColumn.UIControlWidth, _
-                                                lColumn.MaxLength)
+                                                lColumn.MaxLength, IIf(lColumn.IsNullable, "false", "true"))
 
                         Case MetaDiscovery.UIControlType.ListOfValues
 
@@ -130,13 +130,13 @@ Namespace UI
                                 End If
                             End If
 
-                            lSB.AppendFormat("{0}<DDLEditControl:DDLEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" DataTextField=""{6}"" DataValueField=""{7}"" NothingSelectedText=""Seleccione un elemento"" />" & vbCrLf, _
+                            lSB.AppendFormat("{0}<DDLEditControl:DDLEditControl ID=""{1}"" runat=""server"" Label=""{2}"" DisplayHint=""{3}"" Hint=""{4}"" Width=""{5}"" DataTextField=""{6}"" DataValueField=""{7}"" NothingSelectedText=""Seleccione un elemento"" IsRequired=""{8}""  />" & vbCrLf, _
                                                 "                                    ", _
                                                 lColumn.UIControlID, _
                                                 lColumn.FieldLabel, _
                                                 Convert.ToString(lColumn.DisplayHint).ToLower, _
                                                 lColumn.HintText, _
-                                                lColumn.UIControlWidth, lForeignDescription, lForeignId)
+                                                lColumn.UIControlWidth, lForeignDescription, lForeignId, IIf(lColumn.IsNullable, "false", "true"))
 
 
                     End Select
