@@ -302,8 +302,6 @@ Namespace CodeGeneration
             Dim SW As StreamWriter = Nothing
             Try
                 Dim lWriteFile As Boolean = True
-                'Obtener el nombre de archivo:
-                ValidateFileDir()
 
                 Dim FullFileName As String = String.Format("{0}\{1}", Me.OutputDirectory, OutputFileName)
 
@@ -315,6 +313,9 @@ Namespace CodeGeneration
 
                 If Not (ValidateCodeFile()) Then
                     lWriteFile = False
+                Else
+                    'Obtener el nombre de archivo:
+                    ValidateFileDir()
                 End If
 
                 If (lWriteFile) Then
