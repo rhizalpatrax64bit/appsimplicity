@@ -153,6 +153,8 @@
         [$ResetControls]        
 
         Me.FillDDLs()
+        Me.ToolBarTop.EnableDelete = False
+        Me.ToolBarBottom.EnableDelete = False
     End Sub
 
     ''' &lt;summary&gt;
@@ -161,6 +163,9 @@
     Public Sub EditItem(ByVal pItem As [$GeneratedNamespace].[$ClassName])
         Me.EditMode = EditModes.EditItem
         Me.FillForm(pItem)
+        
+        Me.ToolBarTop.EnableDelete = True
+        Me.ToolBarBottom.EnableDelete = True
     End Sub
 
     ''' &lt;summary&gt;
@@ -169,17 +174,22 @@
     Private Sub SetEditMode()
         Dim lItem As [$GeneratedNamespace].[$ClassName] = Nothing
 
-        If (Me.Request.QueryString("[$ClassName][$PKPropertyName]") &lt;&gt; String.Empty) Then
-            lItem = [$GeneratedNamespace].[$PluralClassName].FetchById(Me.Request.QueryString("[$ClassName][$PKPropertyName]"))
+        Try
+            If (Me.Request.QueryString("[$ClassName][$PKPropertyName]") &lt;&gt; String.Empty) Then
+                lItem = [$GeneratedNamespace].[$PluralClassName].FetchById(Me.Request.QueryString("[$ClassName][$PKPropertyName]"))
 
-            If Not (lItem Is Nothing) Then
-                Me.EditItem(lItem)
+                If Not (lItem Is Nothing) Then
+                    Me.EditItem(lItem)
+                Else
+                    Throw New Exception("No se localizó el registro. Verifique el parámetro de la página.")
+                End If
             Else
-                Me.FormAlert.DisplayAlert("No se localizó el registro. Verifique el parámetro de la página.")
+                Me.InitNewItem()
             End If
-        Else
+        Catch ex As Exception
+            Me.FormAlert.DisplayAlert("Error", UI_WebControls_Application_Common_InLineAlert.Type.Critical, ex.Message)
             Me.InitNewItem()
-        End If
+        End Try        
     End Sub
 
 #Region "Save"
