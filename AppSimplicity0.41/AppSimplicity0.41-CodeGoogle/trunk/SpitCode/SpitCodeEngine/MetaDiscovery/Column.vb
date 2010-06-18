@@ -132,8 +132,8 @@
 
                             lWidth = lWidth / 255
 
-                            If (lWidth < 100) Then
-                                lWidth = 100
+                            If (lWidth < 200) Then
+                                lWidth = 200
                             End If
 
                             lReturnValue = Math.Floor(lWidth)
@@ -146,7 +146,7 @@
                         lReturnValue = 130
 
                     Case "DbType.Date", "DbType.DateTime"
-                        lReturnValue = 150
+                        lReturnValue = 200
 
                     Case "DbType.Object", "DbType.Binary"
                         lReturnValue = 400
