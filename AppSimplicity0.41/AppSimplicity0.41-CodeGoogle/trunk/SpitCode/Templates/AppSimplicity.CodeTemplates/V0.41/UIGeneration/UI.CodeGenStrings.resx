@@ -432,4 +432,75 @@ End Class</value>
             lValidationErrors.Add(ex.Message)
         End Try</value>
   </data>
+  <data name="EditItem_ASPX" xml:space="preserve">
+    <value>&lt;%@ Page Language="VB" MasterPageFile="~/UI/PageThemes/Default/Layout/MasterPage.master" AutoEventWireup="false" CodeFile="Edit[$ClassName].aspx.vb" Inherits="[$GeneratedNamespace]_[$PluralClassName]_Edit[$ClassName]" title="Crear / Editar [$ClassName]" %&gt;
+&lt;%@ OutputCache Duration="1" VaryByParam="FondoId" NoStore="true" %&gt;
+
+&lt;%@ Register src="../../../CustomControls/[$GeneratedNamespace]/[$PluralClassName]/Edit_[$ClassName].ascx" tagname="Edit_[$ClassName]" tagprefix="ctrl[$ClassName]" %&gt;
+
+&lt;asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ID="Content2" ContentPlaceHolderID="ContentCPH" Runat="Server"&gt;    
+
+    &lt;ctrl[$ClassName]:Edit_[$ClassName] ID="ctrl_Edit[$ClassName]" runat="server" /&gt;    
+
+&lt;/asp:Content&gt;</value>
+  </data>
+  <data name="EditItem_ASPXvb" xml:space="preserve">
+    <value>Partial Class [$GeneratedNamespace]_[$PluralClassName]_Edit[$ClassName]
+    Inherits UI.BasePage
+
+    Public Overrides Sub Initialize()
+
+    End Sub
+
+    Protected Sub ctrl_Edit[$ClassName]_OnCancel() Handles ctrl_Edit[$ClassName].OnCancel
+        If (Me.ctrl_Edit[$ClassName].EditMode = UI.EditItemWebControl.EditModes.CreateNew) Then
+            Response.Redirect("List[$PluralClassName].aspx")
+        Else
+            Response.Redirect("View[$ClassName].aspx")
+        End If
+    End Sub
+End Class</value>
+  </data>
+  <data name="GridViewASCX" xml:space="preserve">
+    <value>&lt;%@ Control Language="VB" AutoEventWireup="false" CodeFile="GridView_[$ClassName].ascx.vb" Inherits="[$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]" %&gt;
+
+&lt;table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" &gt;
+&lt;tr&gt;
+&lt;td valign="top" &gt;
+    
+&lt;div style="height:450px;overflow:auto;" class="GridPanel" id="GridPanel" runat="server"&gt;                
+&lt;asp:UpdatePanel ID="AjaxGridViewPanel" runat="server"&gt;
+&lt;ContentTemplate&gt;
+&lt;asp:GridView ID="DataGrid" runat="server" AllowPaging="True"  
+        PageSize="14" AllowSorting="true" AutoGenerateColumns="False" 
+         Width="950px" &gt;                        
+                 
+&lt;Columns&gt;
+    &lt;asp:TemplateField ItemStyle-Width="10"&gt; 
+        &lt;ItemTemplate&gt;
+            &lt;asp:HiddenField runat="server" id="SelectedId" /&gt;
+            &lt;asp:CheckBox runat="server" id="chkSelection" /&gt;                            
+        &lt;/ItemTemplate&gt;                                
+        &lt;ItemStyle Width="10px" /&gt;
+    &lt;/asp:TemplateField&gt;
+    
+    &lt;asp:BoundField DataField="[$PluralClassName].[$PKPropertyName]" HeaderText="Id" SortExpression="[$PluralClassName].[$PKPropertyName]" &gt;
+        &lt;ItemStyle Width="45px" Wrap="False" HorizontalAlign="Left" /&gt;
+    &lt;/asp:BoundField&gt;
+    
+[$Columns]
+
+&lt;/Columns&gt;
+
+&lt;/asp:GridView&gt;
+&lt;/ContentTemplate&gt;                                
+&lt;/asp:UpdatePanel&gt;
+&lt;/div&gt;        
+    
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</value>
+  </data>
 </root>
