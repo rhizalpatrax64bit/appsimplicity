@@ -272,6 +272,8 @@
             End If
         Catch ex As Exception
             Me.FormAlert.DisplayAlert(ex.Message)
+            Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro se ha eliminado con éxito.")
+            Me.InitNewItem()
         End Try
     End Sub
 #End Region
