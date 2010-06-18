@@ -100,6 +100,61 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to &lt;%@ Page Language=&quot;VB&quot; MasterPageFile=&quot;~/UI/PageThemes/Default/Layout/MasterPage.master&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;Edit[$ClassName].aspx.vb&quot; Inherits=&quot;[$GeneratedNamespace]_[$PluralClassName]_Edit[$ClassName]&quot; title=&quot;Crear / Editar [$ClassName]&quot; %&gt;
+        '''&lt;%@ OutputCache Duration=&quot;1&quot; VaryByParam=&quot;FondoId&quot; NoStore=&quot;true&quot; %&gt;
+        '''
+        '''&lt;%@ Register src=&quot;../../../CustomControls/[$GeneratedNamespace]/[$PluralClassName]/Edit_[$ClassName].ascx&quot; tagname=&quot;Edit_[$ClassName]&quot; tagprefix=&quot;ctrl[$ClassName]&quot; %&gt;
+        '''
+        '''&lt;asp:Content [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property EditItem_ASPX() As String
+            Get
+                Return ResourceManager.GetString("EditItem_ASPX", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Partial Class [$GeneratedNamespace]_[$PluralClassName]_Edit[$ClassName]
+        '''    Inherits UI.BasePage
+        '''
+        '''    Public Overrides Sub Initialize()
+        '''
+        '''    End Sub
+        '''
+        '''    Protected Sub ctrl_Edit[$ClassName]_OnCancel() Handles ctrl_Edit[$ClassName].OnCancel
+        '''        If (Me.ctrl_Edit[$ClassName].EditMode = UI.EditItemWebControl.EditModes.CreateNew) Then
+        '''            Response.Redirect(&quot;List[$PluralClassName].aspx&quot;)
+        '''        Else
+        '''            Response.Redirect(&quot;View[$ClassName].aspx&quot;)
+        '''        End If
+        '''    End Sub
+        '''End Cl [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property EditItem_ASPXvb() As String
+            Get
+                Return ResourceManager.GetString("EditItem_ASPXvb", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;%@ Control Language=&quot;VB&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;GridView_[$ClassName].ascx.vb&quot; Inherits=&quot;[$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]&quot; %&gt;
+        '''
+        '''&lt;table width=&quot;100%&quot; align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
+        '''&lt;tr&gt;
+        '''&lt;td valign=&quot;top&quot; &gt;
+        '''    
+        '''&lt;div style=&quot;height:450px;overflow:auto;&quot; class=&quot;GridPanel&quot; id=&quot;GridPanel&quot; runat=&quot;server&quot;&gt;                
+        '''&lt;asp:UpdatePanel ID=&quot;AjaxGridViewPanel&quot; runat=&quot;server&quot;&gt;
+        '''&lt;ContentTemplate&gt;
+        '''&lt;asp:GridView ID=&quot;DataGrid&quot; runat=&quot;server&quot; All [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property GridViewASCX() As String
+            Get
+                Return ResourceManager.GetString("GridViewASCX", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to         Try
         '''            Me.{0}.ValidateInput()
         '''        Catch ex As Exception
