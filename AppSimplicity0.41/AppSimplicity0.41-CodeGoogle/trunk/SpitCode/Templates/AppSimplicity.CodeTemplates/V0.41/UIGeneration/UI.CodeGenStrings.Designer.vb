@@ -101,7 +101,7 @@ Namespace My.Resources
         
         '''<summary>
         '''  Looks up a localized string similar to         Try
-        '''            Me.{0}.RunValidation()
+        '''            Me.{0}.ValidateInput()
         '''        Catch ex As Exception
         '''            lValidationErrors.Add(ex.Message)
         '''        End Try.

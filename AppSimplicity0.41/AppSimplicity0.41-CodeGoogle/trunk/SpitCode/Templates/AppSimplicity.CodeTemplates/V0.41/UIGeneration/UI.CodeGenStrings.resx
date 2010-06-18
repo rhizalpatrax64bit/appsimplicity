@@ -425,7 +425,7 @@ End Class</value>
   </data>
   <data name="RunValidationCodeBlock" xml:space="preserve">
     <value>        Try
-            Me.{0}.RunValidation()
+            Me.{0}.ValidateInput()
         Catch ex As Exception
             lValidationErrors.Add(ex.Message)
         End Try</value>
