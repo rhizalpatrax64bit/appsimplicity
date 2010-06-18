@@ -412,7 +412,7 @@ End Class</value>
         &lt;tr&gt;                
             &lt;td&gt;&lt;asp:Button ID="btnSave" runat="server" Text="guardar" /&gt;&lt;/td&gt;        
             &lt;td&gt;&lt;asp:Button ID="btnSaveNew" runat="server" Text="guardar y crear nuevo" /&gt;&lt;/td&gt;                            
-            &lt;td&gt;&lt;asp:Button ID="btnCancel" runat="server" Text="ver detalle" /&gt;&lt;/td&gt;                            
+            &lt;td&gt;&lt;asp:Button ID="btnCancel" runat="server" Text="cancelar" /&gt;&lt;/td&gt;                            
             &lt;td&gt;&lt;asp:Button ID="btnDelete" runat="server" Text="eliminar" /&gt;&lt;/td&gt;                            
             &lt;td&gt;&lt;asp:Button ID="btnNew" runat="server" Text="crear nuevo..." /&gt;&lt;/td&gt;        
         &lt;/tr&gt;
