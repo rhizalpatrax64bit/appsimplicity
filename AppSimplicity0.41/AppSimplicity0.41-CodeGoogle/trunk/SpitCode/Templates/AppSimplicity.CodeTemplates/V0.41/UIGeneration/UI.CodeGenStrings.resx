@@ -267,13 +267,13 @@
                 lItem = [$GeneratedNamespace].[$PluralClassName].FetchById(Me.ItemId)
 
                 If Not (lItem Is Nothing) Then
-                    lItem.Delete()
-                    Me.FormAlert.DisplayAlert(ex.Message)
+                    lItem.Delete()                    
                     Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "El registro se ha eliminado con éxito.")
+                    Me.InitNewItem()
                 End If
             End If
         Catch ex As Exception
-            Me.InitNewItem()
+            Me.FormAlert.DisplayAlert(ex.Message)
         End Try
     End Sub
 #End Region
