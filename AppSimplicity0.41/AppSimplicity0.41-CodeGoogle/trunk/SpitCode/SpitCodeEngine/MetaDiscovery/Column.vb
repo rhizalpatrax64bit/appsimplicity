@@ -108,6 +108,49 @@
             End Set
         End Property
 
+        Public Enum BasicTypes
+            BooleanType
+            StringType
+            FloatType
+            DateType
+            BinaryType
+            IntegerType
+            UndefinedType
+        End Enum
+
+        <System.ComponentModel.DisplayName("Basic Type"), Category("Metadata"), Description("Gets what kind of primitive type this column is.")> _
+        Public ReadOnly Property BasicType() As BasicTypes
+            Get
+                Dim lReturnValue As BasicTypes
+
+                Select Case (Me.DbTargetType)
+                    Case _
+                            "DbType.Byte", "DbType.UInt16", "DbType.UInt32", "DbType.UInt64", "DbType.Double", _
+                            "DbType.Int16", "DbType.Int32", "DbType.Int64", "DbType.SByte", "DbType.Single"
+                        lReturnValue = BasicTypes.IntegerType
+
+                    Case _
+                            "DbType.AnsiString", "DbType.AnsiStringFixedLength", "DbType.Guid", _
+                            "DbType.Xml", "DbType.String", "DbType.StringFixedLength"
+                        lReturnValue = BasicTypes.StringType
+
+                    Case "DbType.Boolean"
+                        lReturnValue = BasicTypes.BooleanType
+
+                    Case "DbType.Currency", "DbType.Decimal", "DbType.VarNumeric"
+                        lReturnValue = BasicTypes.FloatType
+
+                    Case "DbType.Date", "DbType.DateTime"
+                        lReturnValue = BasicTypes.DateType
+
+                    Case "DbType.Object", "DbType.Binary"
+                        lReturnValue = BasicTypes.BinaryType
+
+                End Select
+
+                Return lReturnValue
+            End Get
+        End Property
 
         Private Function GetUIWidth(ByVal pColumn As MetaDiscovery.Column) As Integer
             Dim lReturnValue As Integer = 200
