@@ -137,20 +137,54 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &lt;%@ Control Language=&quot;VB&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;GridView_[$ClassName].ascx.vb&quot; Inherits=&quot;[$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]&quot; %&gt;
+        '''  Looks up a localized string similar to &lt;asp:CheckBoxField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot; &gt;
+        '''    &lt;ItemStyle Width=&quot;62px&quot; Wrap=&quot;False&quot; /&gt;
+        '''&lt;/asp:CheckBoxField&gt;.
+        '''</summary>
+        Friend Shared ReadOnly Property GridColumn_Boolean() As String
+            Get
+                Return ResourceManager.GetString("GridColumn_Boolean", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;asp:BoundField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot;  &gt;
+        '''&lt;ItemStyle Width=&quot;[$Width]px&quot; Wrap=&quot;False&quot; /&gt;
+        '''&lt;/asp:BoundField&gt;.
+        '''</summary>
+        Friend Shared ReadOnly Property GridColumn_String() As String
+            Get
+                Return ResourceManager.GetString("GridColumn_String", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;%@ Control Language=&quot;VB&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;GridView_[$PluralClassName].ascx.vb&quot; Inherits=&quot;[$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]&quot; %&gt;
         '''
         '''&lt;table width=&quot;100%&quot; align=&quot;center&quot; border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; &gt;
         '''&lt;tr&gt;
         '''&lt;td valign=&quot;top&quot; &gt;
         '''    
-        '''&lt;div style=&quot;height:450px;overflow:auto;&quot; class=&quot;GridPanel&quot; id=&quot;GridPanel&quot; runat=&quot;server&quot;&gt;                
+        '''&lt;div style=&quot;width:950px;height:450px;overflow:auto;&quot; class=&quot;GridPanel&quot; id=&quot;GridPanel&quot; runat=&quot;server&quot;&gt;                
         '''&lt;asp:UpdatePanel ID=&quot;AjaxGridViewPanel&quot; runat=&quot;server&quot;&gt;
         '''&lt;ContentTemplate&gt;
-        '''&lt;asp:GridView ID=&quot;DataGrid&quot; runat=&quot;server&quot; All [rest of string was truncated]&quot;;.
+        '''&lt;asp:GridView ID=&quot;DataGrid&quot;  [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property GridViewASCX() As String
             Get
                 Return ResourceManager.GetString("GridViewASCX", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Partial Class [$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]
+        '''    Inherits UI.GenericGridControl
+        '''
+        '''End Class.
+        '''</summary>
+        Friend Shared ReadOnly Property GridViewASCXvb() As String
+            Get
+                Return ResourceManager.GetString("GridViewASCXvb", resourceCulture)
             End Get
         End Property
         

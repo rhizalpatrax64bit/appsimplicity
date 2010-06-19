@@ -464,18 +464,18 @@ End Class</value>
 End Class</value>
   </data>
   <data name="GridViewASCX" xml:space="preserve">
-    <value>&lt;%@ Control Language="VB" AutoEventWireup="false" CodeFile="GridView_[$ClassName].ascx.vb" Inherits="[$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]" %&gt;
+    <value>&lt;%@ Control Language="VB" AutoEventWireup="false" CodeFile="GridView_[$PluralClassName].ascx.vb" Inherits="[$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]" %&gt;
 
 &lt;table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" &gt;
 &lt;tr&gt;
 &lt;td valign="top" &gt;
     
-&lt;div style="height:450px;overflow:auto;" class="GridPanel" id="GridPanel" runat="server"&gt;                
+&lt;div style="width:950px;height:450px;overflow:auto;" class="GridPanel" id="GridPanel" runat="server"&gt;                
 &lt;asp:UpdatePanel ID="AjaxGridViewPanel" runat="server"&gt;
 &lt;ContentTemplate&gt;
 &lt;asp:GridView ID="DataGrid" runat="server" AllowPaging="True"  
-        PageSize="14" AllowSorting="true" AutoGenerateColumns="False" 
-         Width="950px" &gt;                        
+        PageSize="17" AllowSorting="true" AutoGenerateColumns="False" 
+         Width="970px" &gt;                        
                  
 &lt;Columns&gt;
     &lt;asp:TemplateField ItemStyle-Width="10"&gt; 
@@ -486,7 +486,7 @@ End Class</value>
         &lt;ItemStyle Width="10px" /&gt;
     &lt;/asp:TemplateField&gt;
     
-    &lt;asp:BoundField DataField="[$PluralClassName].[$PKPropertyName]" HeaderText="Id" SortExpression="[$PluralClassName].[$PKPropertyName]" &gt;
+    &lt;asp:BoundField DataField="[$TableName].[$PKPropertyName]" HeaderText="Id" SortExpression="[$TableName].[$PKPropertyName]" &gt;
         &lt;ItemStyle Width="45px" Wrap="False" HorizontalAlign="Left" /&gt;
     &lt;/asp:BoundField&gt;
     
@@ -502,5 +502,21 @@ End Class</value>
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;</value>
+  </data>
+  <data name="GridViewASCXvb" xml:space="preserve">
+    <value>Partial Class [$GeneratedNamespace]_[$PluralClassName]_GridView[$ClassName]
+    Inherits UI.GenericGridControl
+
+End Class</value>
+  </data>
+  <data name="GridColumn_Boolean" xml:space="preserve">
+    <value>&lt;asp:CheckBoxField DataField="[$TableName].[$ColumnName]" HeaderText="[$GridCaption]" SortExpression="[$TableName].[$ColumnName]" &gt;
+    &lt;ItemStyle Width="62px" Wrap="False" /&gt;
+&lt;/asp:CheckBoxField&gt;</value>
+  </data>
+  <data name="GridColumn_String" xml:space="preserve">
+    <value>&lt;asp:BoundField DataField="[$TableName].[$ColumnName]" HeaderText="[$GridCaption]" SortExpression="[$TableName].[$ColumnName]"  &gt;
+&lt;ItemStyle Width="[$Width]px" Wrap="False" /&gt;
+&lt;/asp:BoundField&gt;</value>
   </data>
 </root>
