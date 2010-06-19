@@ -47,6 +47,11 @@ Public Class GridViewGeneratorASCX
                     Else
                         lS = My.Resources.UI_CodeGenStrings.GridColumn_String
                     End If
+                Case MetaDiscovery.Column.BasicTypes.BinaryType
+                    lInclude = False
+
+                Case MetaDiscovery.Column.BasicTypes.DateType
+
 
             End Select
 
