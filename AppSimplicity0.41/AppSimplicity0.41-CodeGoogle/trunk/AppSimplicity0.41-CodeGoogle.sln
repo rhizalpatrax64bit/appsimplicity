@@ -98,6 +98,15 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DummyWebSite", "Web\Generat
 		VWDPort = "2953"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnterpriseLibrary3.1", "EnterpriseLibrary3.1", "{9DDA4E7E-05E0-46A0-A6CF-9C7565E424C4}"
+	ProjectSection(SolutionItems) = preProject
+		References\Microsoft.Practices.EnterpriseLibrary.Common.dll = References\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		References\Microsoft.Practices.EnterpriseLibrary.Common.xml = References\Microsoft.Practices.EnterpriseLibrary.Common.xml
+		References\Microsoft.Practices.EnterpriseLibrary.Data.dll = References\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		References\Microsoft.Practices.EnterpriseLibrary.Data.xml = References\Microsoft.Practices.EnterpriseLibrary.Data.xml
+		References\Microsoft.Practices.ObjectBuilder.dll = References\Microsoft.Practices.ObjectBuilder.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -191,6 +200,7 @@ Global
 		{74DA0659-AD47-4E13-B645-F027267D9C6B} = {83B73480-7DFC-4B9B-BDD3-C66733E10BEC}
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937} = {18CCD1E6-2455-4F5D-8755-F7AB928DAD75}
 		{47A02A61-50F0-421A-890B-45C4156B3F6B} = {D7022D65-7B88-4686-B8B8-55A3F13F85B9}
+		{9DDA4E7E-05E0-46A0-A6CF-9C7565E424C4} = {D7022D65-7B88-4686-B8B8-55A3F13F85B9}
 		{5A832DF4-1040-403C-B5B0-877391DDA10E} = {9D9ADCAF-BA8C-4E60-BD65-83E90DC05444}
 		{36D26C33-0AA4-4D9F-98F4-7713E8D9AA4B} = {9CFF2F87-4C8A-4F8D-B040-B954795ED76D}
 		{88821999-A8A1-4537-914E-7A762A4817B9} = {9CFF2F87-4C8A-4F8D-B040-B954795ED76D}
