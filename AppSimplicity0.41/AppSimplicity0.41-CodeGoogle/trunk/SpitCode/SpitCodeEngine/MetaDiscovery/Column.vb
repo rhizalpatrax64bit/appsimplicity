@@ -372,7 +372,7 @@
         Public Property GridColumnWidth() As Integer
             Get
                 Dim lKey As String = "GridColumnWidth"
-                Me.ValidatePropertyInstance(lKey, "80")
+                Me.ValidatePropertyInstance(lKey, Me.GetUIWidth(Me))
 
                 Return _MetaColumn.Properties(lKey).Value
             End Get
