@@ -283,6 +283,28 @@
             Return lReturnValue
         End Function
 
+        ''' <summary>
+        ''' Obtiene la instancia de la columna descripcion del catálogo si el catálogo no tiene descripción se usará el id
+        ''' </summary>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        Public Function GetColumnDescription() As MetaDiscovery.Column
+            Dim lReturnValue As MetaDiscovery.Column = Me.PKColumn
+
+            For Each lColumn As MetaDiscovery.Column In Me.Columns
+                If Not (lColumn.IsPrimaryKey) Then
+                    If (lColumn.BasicType = Column.BasicTypes.StringType) Then
+                        If (lColumn.AuditMode = AuditModes.NotAuditable) Then
+                            lReturnValue = lColumn
+                            Exit For
+                        End If
+                    End If
+                End If
+            Next
+
+            Return lReturnValue
+        End Function
+
         Public Sub New(ByVal pUnderlyingTable As MyMeta.Table, ByVal pProvider As MetaDiscovery.Provider)
             MyBase.New(pProvider)
 
