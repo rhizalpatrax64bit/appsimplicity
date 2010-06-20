@@ -4,6 +4,8 @@ Imports System.Text
 Public Class GridViewGeneratorASCX
     Inherits CodeGeneration.CodeTemplate
 
+    Public lWidth As Integer = 0
+
     Public Overrides Sub Initialize(ByVal pSettings As SpitCodeEngine.CodeGeneration.TemplateSettings)
         pSettings.Description = "v0.41 - GridView Generator ASCX"
         pSettings.TemplateType = CodeGeneration.CodeTemplateType.TableTemplate
@@ -33,10 +35,6 @@ Public Class GridViewGeneratorASCX
             Dim lInclude As Boolean = True
             Dim lS As String = String.Empty
 
-            If (lColumn.IsPrimaryKey) Then
-                lInclude = False
-            End If
-
             Select Case lColumn.BasicType
                 Case MetaDiscovery.Column.BasicTypes.BooleanType
                     lS = My.Resources.UI_CodeGenStrings.GridColumn_Boolean
@@ -51,25 +49,53 @@ Public Class GridViewGeneratorASCX
                     lInclude = False
 
                 Case MetaDiscovery.Column.BasicTypes.DateType
+                    lS = My.Resources.UI_CodeGenStrings.GridColumn_DateTime
 
+                Case MetaDiscovery.Column.BasicTypes.IntegerType
+                    lS = My.Resources.UI_CodeGenStrings.GridColumn_Numeric
+
+                Case MetaDiscovery.Column.BasicTypes.FloatType
+                    lS = My.Resources.UI_CodeGenStrings.GridColumn_Decimal
 
             End Select
 
             lS = lS.Replace("[$TableName]", pTable.Name)
             lS = lS.Replace("[$ColumnName]", lColumn.Name)
             lS = lS.Replace("[$GridCaption]", lColumn.GridColumnCaption)
-            lS = lS.Replace("[$Width]", lColumn.GridColumnWidth)
+
+            If (lColumn.IsPrimaryKey) Then
+                If lColumn.BasicType = MetaDiscovery.Column.BasicTypes.IntegerType Then
+                    lS = lS.Replace("[$Width]", 60)
+                Else
+                    lS = lS.Replace("[$Width]", lColumn.GridColumnWidth)
+                End If
+            Else
+                lS = lS.Replace("[$Width]", lColumn.GridColumnWidth)
+            End If
+
 
             If (lInclude) Then
-                lSB.Append(lS)
-                lSB.AppendLine()
-
                 If (lColumn.HasBelongsToReference) Then
 
+                Else
+                    lSB.Append(lS)
+                    lSB.AppendLine()
+
+                    If (lColumn.IsPrimaryKey) Then
+                        If (lColumn.BasicType = MetaDiscovery.Column.BasicTypes.IntegerType) Then
+                            lWidth = lWidth + 60
+                        Else
+                            lWidth = lWidth + lColumn.GridColumnWidth
+                        End If
+                    Else
+                        lWidth = lWidth + lColumn.GridColumnWidth
+                    End If
                 End If
             End If
 
         Next
+
+        lWidth = lWidth + 10
 
         Return lSB.ToString
     End Function
@@ -83,7 +109,10 @@ Public Class GridViewGeneratorASCX
         lOutput = lOutput.Replace("[$GeneratedNamespace]", Me.CurrentTable.Provider.GeneratedNamespace)
         lOutput = lOutput.Replace("[$PKPropertyName]", Me.CurrentTable.PKColumn.PropertyName)
 
+        lWidth = 0
+
         lOutput = lOutput.Replace("[$Columns]", Me.GetColumnsMarkup(Me.CurrentTable))
+        lOutput = lOutput.Replace("[$Width]", Convert.ToInt32(lWidth))
 
         Output.Write(lOutput)
     End Sub
