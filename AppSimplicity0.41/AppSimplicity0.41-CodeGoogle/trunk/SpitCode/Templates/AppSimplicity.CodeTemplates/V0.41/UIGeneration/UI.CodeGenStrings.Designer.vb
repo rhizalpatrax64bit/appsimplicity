@@ -222,6 +222,19 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to &lt;%@ Control Language=&quot;VB&quot; AutoEventWireup=&quot;false&quot; CodeFile=&quot;ListManager_[$PluralClassName].ascx.vb&quot; Inherits=&quot;[$GeneratedNamespace]_[$PluralClassName]_ListManager_[$PluralClassName]&quot; %&gt;
+        '''
+        '''&lt;%@ Register src=&quot;GridView_[$PluralClassName].ascx&quot; tagname=&quot;GridView_[$PluralClassName]&quot; tagprefix=&quot;GridView[$PluralClassName]&quot; %&gt;
+        '''&lt;%@ Register src=&quot;../../../WebControls/Application/Common/InLineAlert.ascx&quot; tagname=&quot;InLineAlert&quot; tagprefix=&quot;InLineAlert&quot; %&gt;
+        '''&lt;%@ Register src=&quot;../../../WebControls/Application/Filter/FindBy [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property ListManager_ASCX() As String
+            Get
+                Return ResourceManager.GetString("ListManager_ASCX", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to         Try
         '''            Me.{0}.ValidateInput()
         '''        Catch ex As Exception
