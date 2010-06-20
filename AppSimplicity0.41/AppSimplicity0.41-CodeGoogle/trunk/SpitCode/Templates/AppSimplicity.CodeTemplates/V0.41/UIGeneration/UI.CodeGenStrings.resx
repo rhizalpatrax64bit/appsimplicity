@@ -470,12 +470,11 @@ End Class</value>
 &lt;tr&gt;
 &lt;td valign="top" &gt;
     
-&lt;div style="width:950px;height:450px;overflow:auto;" class="GridPanel" id="GridPanel" runat="server"&gt;                
+&lt;div style="width:950px;height:500px;overflow:auto;" class="GridPanel" id="GridPanel" runat="server"&gt;                  
 &lt;asp:UpdatePanel ID="AjaxGridViewPanel" runat="server"&gt;
 &lt;ContentTemplate&gt;
 &lt;asp:GridView ID="DataGrid" runat="server" AllowPaging="True"  
-        PageSize="17" AllowSorting="true" AutoGenerateColumns="False" 
-         Width="970px" &gt;                        
+        PageSize="17" AllowSorting="true" AutoGenerateColumns="False" Width="[$Width]" &gt;                        
                  
 &lt;Columns&gt;
     &lt;asp:TemplateField ItemStyle-Width="10"&gt; 
@@ -484,11 +483,15 @@ End Class</value>
             &lt;asp:CheckBox runat="server" id="chkSelection" /&gt;                            
         &lt;/ItemTemplate&gt;                                
         &lt;ItemStyle Width="10px" /&gt;
-    &lt;/asp:TemplateField&gt;
+    &lt;/asp:TemplateField&gt;   
     
-    &lt;asp:BoundField DataField="[$TableName].[$PKPropertyName]" HeaderText="Id" SortExpression="[$TableName].[$PKPropertyName]" &gt;
-        &lt;ItemStyle Width="45px" Wrap="False" HorizontalAlign="Left" /&gt;
-    &lt;/asp:BoundField&gt;
+    &lt;asp:TemplateField ItemStyle-Width="21"&gt; 
+        &lt;ItemTemplate&gt;
+            &lt;asp:Image ID="EditIcon" runat="server" ImageUrl="~/Assets/icons/edit.gif" 
+                Height="21px" Width="21px" AlternateText="Editar registro"  /&gt;
+        &lt;/ItemTemplate&gt;                                
+        &lt;ItemStyle Width="21px" /&gt;
+    &lt;/asp:TemplateField&gt;         
     
 [$Columns]
 
@@ -511,12 +514,27 @@ End Class</value>
   </data>
   <data name="GridColumn_Boolean" xml:space="preserve">
     <value>&lt;asp:CheckBoxField DataField="[$TableName].[$ColumnName]" HeaderText="[$GridCaption]" SortExpression="[$TableName].[$ColumnName]" &gt;
-    &lt;ItemStyle Width="62px" Wrap="False" /&gt;
+    &lt;ItemStyle Width="62px"  /&gt;
 &lt;/asp:CheckBoxField&gt;</value>
   </data>
   <data name="GridColumn_String" xml:space="preserve">
     <value>&lt;asp:BoundField DataField="[$TableName].[$ColumnName]" HeaderText="[$GridCaption]" SortExpression="[$TableName].[$ColumnName]"  &gt;
-&lt;ItemStyle Width="[$Width]px" Wrap="False" /&gt;
+&lt;ItemStyle Width="[$Width]px" /&gt;
+&lt;/asp:BoundField&gt;</value>
+  </data>
+  <data name="GridColumn_DateTime" xml:space="preserve">
+    <value>&lt;asp:BoundField DataField="[$TableName].[$ColumnName]" HeaderText="[$GridCaption]" DataFormatString="{0:dd/MMM/yyyy hh:mmt}m"  SortExpression="[$TableName].[$ColumnName]"  &gt;                            
+&lt;ItemStyle Width="160px" /&gt;
+&lt;/asp:BoundField&gt;</value>
+  </data>
+  <data name="GridColumn_Numeric" xml:space="preserve">
+    <value>&lt;asp:BoundField DataField="[$TableName].[$ColumnName]" HeaderText="[$GridCaption]" SortExpression="[$TableName].[$ColumnName]" &gt;
+&lt;ItemStyle Width="[$Width]px" Wrap="False" HorizontalAlign="Left" /&gt;
+&lt;/asp:BoundField&gt;</value>
+  </data>
+  <data name="GridColumn_Decimal" xml:space="preserve">
+    <value>&lt;asp:BoundField DataField="[$TableName].[$ColumnName]" HeaderText="[$GridCaption]" SortExpression="[$TableName].[$ColumnName]" DataFormatString="{0:##,##0.00}" &gt;
+&lt;ItemStyle Width="[$Width]px" Wrap="False" HorizontalAlign="Left" /&gt;
 &lt;/asp:BoundField&gt;</value>
   </data>
 </root>

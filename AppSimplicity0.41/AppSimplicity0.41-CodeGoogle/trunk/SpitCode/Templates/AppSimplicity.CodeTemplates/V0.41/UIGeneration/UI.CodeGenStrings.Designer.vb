@@ -138,7 +138,7 @@ Namespace My.Resources
         
         '''<summary>
         '''  Looks up a localized string similar to &lt;asp:CheckBoxField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot; &gt;
-        '''    &lt;ItemStyle Width=&quot;62px&quot; Wrap=&quot;False&quot; /&gt;
+        '''    &lt;ItemStyle Width=&quot;62px&quot;  /&gt;
         '''&lt;/asp:CheckBoxField&gt;.
         '''</summary>
         Friend Shared ReadOnly Property GridColumn_Boolean() As String
@@ -148,8 +148,41 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to &lt;asp:BoundField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; DataFormatString=&quot;{0:dd/MMM/yyyy hh:mmt}m&quot;  SortExpression=&quot;[$TableName].[$ColumnName]&quot;  &gt;                            
+        '''&lt;ItemStyle Width=&quot;160px&quot; /&gt;
+        '''&lt;/asp:BoundField&gt;.
+        '''</summary>
+        Friend Shared ReadOnly Property GridColumn_DateTime() As String
+            Get
+                Return ResourceManager.GetString("GridColumn_DateTime", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;asp:BoundField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot; DataFormatString=&quot;{0:##,##0.00}&quot; &gt;
+        '''&lt;ItemStyle Width=&quot;[$Width]px&quot; Wrap=&quot;False&quot; HorizontalAlign=&quot;Left&quot; /&gt;
+        '''&lt;/asp:BoundField&gt;.
+        '''</summary>
+        Friend Shared ReadOnly Property GridColumn_Decimal() As String
+            Get
+                Return ResourceManager.GetString("GridColumn_Decimal", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;asp:BoundField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot; &gt;
+        '''&lt;ItemStyle Width=&quot;[$Width]px&quot; Wrap=&quot;False&quot; HorizontalAlign=&quot;Left&quot; /&gt;
+        '''&lt;/asp:BoundField&gt;.
+        '''</summary>
+        Friend Shared ReadOnly Property GridColumn_Numeric() As String
+            Get
+                Return ResourceManager.GetString("GridColumn_Numeric", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to &lt;asp:BoundField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot;  &gt;
-        '''&lt;ItemStyle Width=&quot;[$Width]px&quot; Wrap=&quot;False&quot; /&gt;
+        '''&lt;ItemStyle Width=&quot;[$Width]px&quot; /&gt;
         '''&lt;/asp:BoundField&gt;.
         '''</summary>
         Friend Shared ReadOnly Property GridColumn_String() As String
@@ -165,10 +198,10 @@ Namespace My.Resources
         '''&lt;tr&gt;
         '''&lt;td valign=&quot;top&quot; &gt;
         '''    
-        '''&lt;div style=&quot;width:950px;height:450px;overflow:auto;&quot; class=&quot;GridPanel&quot; id=&quot;GridPanel&quot; runat=&quot;server&quot;&gt;                
+        '''&lt;div style=&quot;width:950px;height:500px;overflow:auto;&quot; class=&quot;GridPanel&quot; id=&quot;GridPanel&quot; runat=&quot;server&quot;&gt;                  
         '''&lt;asp:UpdatePanel ID=&quot;AjaxGridViewPanel&quot; runat=&quot;server&quot;&gt;
         '''&lt;ContentTemplate&gt;
-        '''&lt;asp:GridView ID=&quot;DataGrid&quot;  [rest of string was truncated]&quot;;.
+        '''&lt;asp:GridView ID=&quot;DataGrid [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property GridViewASCX() As String
             Get
