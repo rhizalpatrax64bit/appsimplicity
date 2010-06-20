@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{981E94C5-A6F5-4101-9D8C-4E24D4FB4493}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -87,6 +87,7 @@
     <Compile Include="V0.41\UIGeneration\EditItemASPX_VB.vb" />
     <Compile Include="V0.41\UIGeneration\GridViewGeneratorASCX.vb" />
     <Compile Include="V0.41\UIGeneration\GridViewGeneratorASCX_VB.vb" />
+    <Compile Include="V0.41\UIGeneration\ListManagerASCX.vb" />
     <Compile Include="V0.41\UIGeneration\ToolBarEditItemASCX.vb" />
     <Compile Include="V0.41\UIGeneration\ToolBarEditItemASCXvb.vb" />
     <Compile Include="V0.41\UIGeneration\UI.CodeGenStrings.Designer.vb">
