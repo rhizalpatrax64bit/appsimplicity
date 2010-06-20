@@ -358,7 +358,7 @@ End Class</value>
         &lt;td&gt;
             &lt;table width="100%" cellpadding="0" cellspacing="0" border="0"&gt;
                 &lt;tr&gt;
-                    &lt;td width="100%" valign="middle"&gt;
+                    &lt;td width="100%" valign="middle" class="form-title" &gt;
                         Crear / Editar [$ClassName]
                     &lt;/td&gt;
                     &lt;td valign="middle"&gt;
@@ -612,5 +612,137 @@ End Class</value>
     &lt;/td&gt;
     &lt;/tr&gt;
 &lt;/table&gt;</value>
+  </data>
+  <data name="ListManagerASCXvb" xml:space="preserve">
+    <value>Partial Class [$GeneratedNamespace]_[$PluralClassName]_ListManager_[$PluralClassName]
+    Inherits UI.CustomWebControl
+
+    Public Event OnNew()
+
+    Private Sub ValidateFilters()
+        If (Me.ctrl_filterby_[$FilterByUIControlId].IncludeInQuery) Then
+            Me.ctrl_filterby_[$FilterByUIControlId].ValidateInput()
+        End If
+    End Sub
+
+    Private Sub AddQueryFilters(ByVal pQuery As [$GeneratedNamespace].[$PluralClassName].Query)
+        If (Me.ctrl_filterby_[$DescriptionColumnPropertyName].IncludeInQuery) Then
+            pQuery.Where([$GeneratedNamespace].[$PluralClassName].Columns.[$DescriptionColumnPropertyName]).IsLike(Me.ctrl_filterby_[$DescriptionColumnPropertyName].Value)
+        End If
+    End Sub
+
+    Public Sub RunQuery(Optional ByVal pFilter As Boolean = False)
+        Try
+            Dim lDS As System.Data.DataSet = Nothing
+            Dim lQuery As New [$GeneratedNamespace].[$PluralClassName].Query
+
+            lQuery.SelectList.AddAll()
+
+            If (pFilter) Then
+                Me.ValidateFilters()
+                Me.AddQueryFilters(lQuery)
+            End If
+
+            lDS = lQuery.GetDataSet()
+
+            Me.DataGridDisplay.SetDataSource(lDS)
+
+            If (Me.DataGridDisplay.HasRecords) Then
+                Me.btnDeleteSelection.Visible = True
+                Me.btnExport.Visible = True
+            Else
+                Me.btnDeleteSelection.Visible = False
+                Me.btnExport.Visible = False
+            End If
+
+        Catch ex As Exception
+            Me.FormAlert.DisplayAlert(ex.Message)
+            Me.DataGridDisplay.Reset()
+            Me.SetRecorCountLabel(0)
+        End Try
+    End Sub
+
+    Public Sub DeleteSelection()
+        Try
+            Dim lList As List(Of String)
+
+            lList = Me.DataGridDisplay.GetSelectedItems
+
+            For Each lId As String In lList
+                Dim lItem As [$GeneratedNamespace].[$ClassName]
+
+                lItem = [$GeneratedNamespace].[$PluralClassName].FetchById(lId)
+
+                If Not (lItem Is Nothing) Then
+                    lItem.Delete()
+                End If
+            Next
+
+            Me.FormAlert.DisplayAlert("Información", UI_WebControls_Application_Common_InLineAlert.Type.Information, "Se han eliminado los registros con éxito")
+        Catch ex As Exception
+            Me.FormAlert.DisplayAlert("Error", UI_WebControls_Application_Common_InLineAlert.Type.Warning, ex.Message)
+        End Try
+
+        Me.RunQuery(True)
+    End Sub
+
+    Protected Sub btnShowAll_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnShowAll.Click
+        Try
+            Me.RunQuery()
+        Catch ex As Exception
+            Me.FormAlert.DisplayAlert(ex.Message)
+        End Try
+    End Sub
+
+    Protected Sub btnNew_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnNew.Click
+        RaiseEvent OnNew()
+    End Sub
+
+    Private Sub Initialize()
+        Utilities.Web.AddWaitOverlay(Me.btnNew)
+        Utilities.Web.AddWaitOverlay(Me.btnRunQuery)
+        Utilities.Web.AddWaitOverlay(Me.btnShowAll)
+        Utilities.Web.AddWaitOverlay(Me.btnDeleteSelection)
+
+        If (Me.DataGridDisplay.HasRecords) Then
+            Me.btnDeleteSelection.Visible = True
+            Me.btnExport.Visible = True
+        Else
+            Me.btnDeleteSelection.Visible = False
+            Me.btnExport.Visible = False
+        End If
+    End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Not IsPostBack Then
+            Try
+                Me.DataGridDisplay.Initialize()
+                Me.Initialize()
+            Catch ex As Exception
+                Me.FormAlert.DisplayAlert(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    Public Sub SetRecorCountLabel(ByVal pCount As Integer)
+        Me.lblRecordCount.Text = String.Format("Mostrando actualmente: {0} registros.", pCount)
+    End Sub
+
+    Protected Sub DataGridDisplay_OnAfterGridBind(ByVal pRecordCount As Integer) Handles DataGridDisplay.OnAfterGridBind
+        Me.SetRecorCountLabel(pRecordCount)
+    End Sub
+
+    Protected Sub DataGridDisplay_OnDataBindError(ByVal pCause As String) Handles DataGridDisplay.OnDataBindError
+        Me.FormAlert.DisplayAlert("Error", UI_WebControls_Application_Common_InLineAlert.Type.Critical, pCause)
+    End Sub
+
+    Protected Sub btnRunQuery_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnRunQuery.Click
+        Me.RunQuery(True)
+    End Sub
+
+    Protected Sub btnDeleteSelection_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnDeleteSelection.Click
+        Me.DeleteSelection()
+    End Sub
+End Class</value>
   </data>
 </root>
