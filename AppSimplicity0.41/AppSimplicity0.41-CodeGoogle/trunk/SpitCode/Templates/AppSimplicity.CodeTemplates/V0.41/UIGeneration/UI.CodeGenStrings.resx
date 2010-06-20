@@ -585,7 +585,7 @@ End Class</value>
                         &lt;div id="FormLayout" runat="server" class="form-layout-flow"  &gt;                        
                             &lt;ul class="form-layout"&gt;
                              &lt;li&gt;
-                                &lt;FilterByText:FindByText ID="ctrl_filterby_clavepizarra" runat="server" Width="400" DisplayHint="true"  Hint="Especifique la búsqueda por Clave Pizarra" Label="Buscar por Clave Pizarra" FieldName="Clave Pizarra"  /&gt;                                 
+                                &lt;FilterByText:FindByText ID="ctrl_filterby_[$DescriptionColumnPropertyName]" runat="server" Width="[$DescriptionColumnUIWidth]" DisplayHint="true"  Hint="Especifique la búsqueda por [$DescriptionColumnUILabel]" Label="Buscar por [$DescriptionColumnUILabel]" FieldName="[$DescriptionColumnUILabel]"  /&gt;                                 
                              &lt;/li&gt;
                             &lt;/ul&gt;
                         &lt;/div&gt;
