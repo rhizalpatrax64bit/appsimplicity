@@ -235,6 +235,27 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Partial Class [$GeneratedNamespace]_[$PluralClassName]_ListManager_[$PluralClassName]
+        '''    Inherits UI.CustomWebControl
+        '''
+        '''    Public Event OnNew()
+        '''
+        '''    Private Sub ValidateFilters()
+        '''        If (Me.ctrl_filterby_[$FilterByUIControlId].IncludeInQuery) Then
+        '''            Me.ctrl_filterby_[$FilterByUIControlId].ValidateInput()
+        '''        End If
+        '''    End Sub
+        '''
+        '''    Private Sub AddQueryFilters(ByVal pQuery As [$GeneratedNamespace].[$PluralClassName].Query)
+        '''        If (Me.ctrl_filterby_[$DescriptionColumnPropert [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend Shared ReadOnly Property ListManagerASCXvb() As String
+            Get
+                Return ResourceManager.GetString("ListManagerASCXvb", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to         Try
         '''            Me.{0}.ValidateInput()
         '''        Catch ex As Exception
