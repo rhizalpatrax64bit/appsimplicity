@@ -1,6 +1,6 @@
 ﻿Imports SpitCodeEngine
 
-Public Class ToolBarEditItemASCX
+Public Class ListManagerASCX
     Inherits CodeGeneration.CodeTemplate
 
     Public Overrides Sub Initialize(ByVal pSettings As SpitCodeEngine.CodeGeneration.TemplateSettings)
