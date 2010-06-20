@@ -35,6 +35,12 @@ Public Class ListManagerASCX
         lASCX = lASCX.Replace("[$PKPropertyName]", Me.CurrentTable.PKColumn.PropertyName)
         lASCX = lASCX.Replace("[$PKColumnName]", Me.CurrentTable.PKColumn.Name)
 
+        Dim lDescription As MetaDiscovery.Column = Me.CurrentTable.GetDescriptionColumn
+
+        lASCX = lASCX.Replace("[$DescriptionColumnPropertyName]", lDescription.PropertyName)
+        lASCX = lASCX.Replace("[$DescriptionColumnUIWidth]", lDescription.UIControlWidth)
+        lASCX = lASCX.Replace("[$DescriptionColumnUILabel]", lDescription.FieldLabel)
+
         Output.Write(lASCX)
     End Sub
 
