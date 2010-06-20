@@ -537,4 +537,80 @@ End Class</value>
 &lt;ItemStyle Width="[$Width]px" Wrap="False" HorizontalAlign="Left" /&gt;
 &lt;/asp:BoundField&gt;</value>
   </data>
+  <data name="ListManager_ASCX" xml:space="preserve">
+    <value>&lt;%@ Control Language="VB" AutoEventWireup="false" CodeFile="ListManager_[$PluralClassName].ascx.vb" Inherits="[$GeneratedNamespace]_[$PluralClassName]_ListManager_[$PluralClassName]" %&gt;
+
+&lt;%@ Register src="GridView_[$PluralClassName].ascx" tagname="GridView_[$PluralClassName]" tagprefix="GridView[$PluralClassName]" %&gt;
+&lt;%@ Register src="../../../WebControls/Application/Common/InLineAlert.ascx" tagname="InLineAlert" tagprefix="InLineAlert" %&gt;
+&lt;%@ Register src="../../../WebControls/Application/Filter/FindByText.ascx" tagname="FindByText" tagprefix="FilterByText" %&gt;
+
+&lt;table width="95%" cellpadding="0" cellspacing="0" align="center"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;table width="100%" cellpadding="0" cellspacing="0" border="0"&gt;
+                &lt;tr&gt;
+                    &lt;td width="100%" valign="middle"&gt;
+                        Catálogo de [$PluralClassName]
+                    &lt;/td&gt;
+                    &lt;td valign="middle"&gt;
+                        &amp;nbsp;&lt;/td&gt;
+                    
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;    
+    &lt;tr&gt;
+        &lt;td&gt;
+        
+&lt;div class="toolbar"&gt;
+    &lt;table border="0" cellpadding="0" cellspacing="5" width="10"&gt;
+        &lt;tr&gt;                
+            &lt;td&gt;&lt;asp:Button ID="btnShowAll" runat="server" Text="mostrar todos los registros" /&gt;&lt;/td&gt;                    
+            &lt;td&gt;&lt;asp:Button ID="btnNew" runat="server" Text="crear nuevo..." /&gt;&lt;/td&gt;      
+            &lt;td&gt;&lt;asp:Button ID="btnRunQuery" runat="server" Text="consultar ahora" /&gt;&lt;/td&gt;  
+            &lt;td&gt;&lt;asp:Button ID="btnDeleteSelection" runat="server" Text="eliminar selección" /&gt;&lt;/td&gt;  
+            &lt;td&gt;&lt;asp:Button ID="btnExport" runat="server" Text="exportar" /&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+        
+&lt;table border="0" width="95%" align="center" cellpadding="5" cellspacing="0"&gt;
+                &lt;tr&gt;
+                    &lt;td valign="top"&gt;
+                    
+                        &lt;div id="FormLayout" runat="server" class="form-layout-flow"  &gt;                        
+                            &lt;ul class="form-layout"&gt;
+                             &lt;li&gt;
+                                &lt;FilterByText:FindByText ID="ctrl_filterby_clavepizarra" runat="server" Width="400" DisplayHint="true"  Hint="Especifique la búsqueda por Clave Pizarra" Label="Buscar por Clave Pizarra" FieldName="Clave Pizarra"  /&gt;                                 
+                             &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                     &lt;/td&gt;
+                &lt;/tr&gt;
+&lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;asp:Label ID="lblRecordCount" runat="server" Text="Mostrando actualmente: 0 registros."&gt;&lt;/asp:Label&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;InLineAlert:InLineAlert ID="FormAlert" runat="server" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;    
+    &lt;tr&gt;
+    &lt;td valign="top"&gt;    
+        &lt;GridView[$PluralClassName]:GridView_[$PluralClassName] ID="DataGridDisplay" runat="server" IdFieldName="[$TableName].[$PKColumnName]" DataSourceName="DataSet[$PluralClassName]" EditURL="Edit[$ClassName].aspx?[$ClassName][$PKPropertyName]={0}" /&gt;
+        
+        &lt;asp:GridView ID="GridView1" runat="server"&gt;
+                    &lt;/asp:GridView&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</value>
+  </data>
 </root>
