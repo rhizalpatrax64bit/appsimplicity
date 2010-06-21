@@ -137,6 +137,18 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to &apos;Join belongs to:[$FKPluralClassName]
+        '''            lQuery.Join.[$FKPluralClassName].SelectList.SelectNone()
+        '''            lQuery.Join.[$FKPluralClassName].SelectList.Add([$GeneratedNamespace].[$FKPluralClassName].Columns.[$FKPKPropertyName])
+        '''            lQuery.Join.[$FKPluralClassName].SelectList.Add([$GeneratedNamespace].[$FKPluralClassName].Columns.[$FKDescriptionPropertyName]).
+        '''</summary>
+        Friend Shared ReadOnly Property FKJoinQueryCode() As String
+            Get
+                Return ResourceManager.GetString("FKJoinQueryCode", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to &lt;asp:CheckBoxField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot; &gt;
         '''    &lt;ItemStyle Width=&quot;62px&quot;  /&gt;
         '''&lt;/asp:CheckBoxField&gt;.
@@ -172,7 +184,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to &lt;asp:HyperLinkField DataNavigateUrlFields=&quot;[$ExternalTableName].[$ExternalTablePKColumnName],[$ExternalTableName].[$ExternalTableDescriptionColumnName]&quot; HeaderText=&quot;[$ExternalTableDescriptionCaption]&quot; 
         '''        DataNavigateUrlFormatString=&quot;../[$ExternalTablePluralClassName]/Edit[$ExternalTableClassName].aspx?[$ExternalTableClassName][$ExternalTablePKPropertyName]={0}&quot; Target=&quot;_blank&quot;
-        '''        DataTextField=&quot;[$ExternalTableName].[$ExternalTableDescriptionColumnName]&quot; /&gt;.
+        '''        DataTextField=&quot;[$ExternalTableName].[$ExternalTableDescriptionColumnName]&quot; &gt;
+        ''' &lt;ItemStyle Width=&quot;[$Width]px&quot; /&gt;
+        '''&lt;/a [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property GridColumn_ForeignReference() As String
             Get

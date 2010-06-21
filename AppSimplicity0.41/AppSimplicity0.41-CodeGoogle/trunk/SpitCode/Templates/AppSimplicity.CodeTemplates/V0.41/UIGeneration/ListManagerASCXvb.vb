@@ -1,4 +1,5 @@
 ﻿Imports SpitCodeEngine
+Imports System.Text
 
 Public Class ListManagerASCXVB
     Inherits CodeGeneration.CodeTemplate
@@ -25,6 +26,29 @@ Public Class ListManagerASCXVB
         Return "undefined.txt"
     End Function
 
+    Private Function GetJoinList(ByVal pTable As MetaDiscovery.Table)
+        Dim lSB As New StringBuilder
+
+        For Each lMetaRelation As MetaDiscovery.MetaRelation In pTable.BelongsToRelations
+
+            Dim lcode As String = My.Resources.UI_CodeGenStrings.FKJoinQueryCode
+
+            lcode = lcode.Replace("[$FKPluralClassName]", lMetaRelation.ForeignEntity.PluralClassName)
+            lcode = lcode.Replace("[$GeneratedNamespace]", pTable.Provider.GeneratedNamespace)
+            lcode = lcode.Replace("[$FKPKPropertyName]", lMetaRelation.ForeignEntity.PKColumn.PropertyName)
+
+            Dim lColumn As MetaDiscovery.Column = lMetaRelation.ForeignEntity.GetDescriptionColumn
+
+            lcode = lcode.Replace("[$FKDescriptionPropertyName]", lColumn.PropertyName)
+
+            lSB.Append(lcode)
+            lSB.AppendLine(vbCrLf)
+
+        Next
+
+        Return lSB.ToString
+    End Function
+
     Public Overrides Sub ProduceCode(ByRef Output As System.IO.StreamWriter)
         Dim lASCX As String = My.Resources.UI_CodeGenStrings.ListManagerASCXvb
 
@@ -40,6 +64,8 @@ Public Class ListManagerASCXVB
         lASCX = lASCX.Replace("[$DescriptionColumnPropertyName]", lDescription.PropertyName)
         lASCX = lASCX.Replace("[$DescriptionColumnUIWidth]", lDescription.UIControlWidth)
         lASCX = lASCX.Replace("[$DescriptionColumnUILabel]", lDescription.FieldLabel)
+
+        lASCX = lASCX.Replace("[$JoinList]", Me.GetJoinList(Me.CurrentTable))
 
         Output.Write(lASCX)
     End Sub

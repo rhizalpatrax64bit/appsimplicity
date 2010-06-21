@@ -637,6 +637,8 @@ End Class</value>
             Dim lQuery As New [$GeneratedNamespace].[$PluralClassName].Query
 
             lQuery.SelectList.AddAll()
+            
+            [$JoinList]
 
             If (pFilter) Then
                 Me.ValidateFilters()
@@ -748,6 +750,14 @@ End Class</value>
   <data name="GridColumn_ForeignReference" xml:space="preserve">
     <value>&lt;asp:HyperLinkField DataNavigateUrlFields="[$ExternalTableName].[$ExternalTablePKColumnName],[$ExternalTableName].[$ExternalTableDescriptionColumnName]" HeaderText="[$ExternalTableDescriptionCaption]" 
         DataNavigateUrlFormatString="../[$ExternalTablePluralClassName]/Edit[$ExternalTableClassName].aspx?[$ExternalTableClassName][$ExternalTablePKPropertyName]={0}" Target="_blank"
-        DataTextField="[$ExternalTableName].[$ExternalTableDescriptionColumnName]" /&gt;</value>
+        DataTextField="[$ExternalTableName].[$ExternalTableDescriptionColumnName]" &gt;
+ &lt;ItemStyle Width="[$Width]px" /&gt;
+&lt;/asp:HyperLinkfield&gt;</value>
+  </data>
+  <data name="FKJoinQueryCode" xml:space="preserve">
+    <value>'Join belongs to:[$FKPluralClassName]
+            lQuery.Join.[$FKPluralClassName].SelectList.SelectNone()
+            lQuery.Join.[$FKPluralClassName].SelectList.Add([$GeneratedNamespace].[$FKPluralClassName].Columns.[$FKPKPropertyName])
+            lQuery.Join.[$FKPluralClassName].SelectList.Add([$GeneratedNamespace].[$FKPluralClassName].Columns.[$FKDescriptionPropertyName])</value>
   </data>
 </root>

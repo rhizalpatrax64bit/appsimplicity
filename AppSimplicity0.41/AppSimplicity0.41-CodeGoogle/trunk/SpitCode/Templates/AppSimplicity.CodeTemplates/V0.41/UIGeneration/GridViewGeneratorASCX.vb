@@ -77,9 +77,35 @@ Public Class GridViewGeneratorASCX
             If (lInclude) Then
                 If (lColumn.HasBelongsToReference) Then
 
+                    Dim lRelation As MetaDiscovery.MetaRelation
+
+                    lRelation = lColumn.GetForeignRelation
+
+                    If Not (lRelation Is Nothing) Then
+
+                        lS = My.Resources.UI_CodeGenStrings.GridColumn_ForeignReference
+
+                        lS = lS.Replace("[$ExternalTableName]", lRelation.ForeignEntity.Name)
+                        lS = lS.Replace("[$ExternalTablePKColumnName]", lRelation.ForeignEntity.PKColumn.Name)
+
+                        Dim lFKDescriptionColumn As MetaDiscovery.Column = lRelation.ForeignEntity.GetColumnDescription
+
+                        lS = lS.Replace("[$ExternalTableDescriptionColumnName]", lFKDescriptionColumn.Name)
+                        lS = lS.Replace("[$ExternalTableDescriptionCaption]", lRelation.ForeignEntity.ClassName)
+                        lS = lS.Replace("[$ExternalTablePluralClassName]", lRelation.ForeignEntity.PluralClassName)
+                        lS = lS.Replace("[$ExternalTableClassName]", lRelation.ForeignEntity.ClassName)
+                        lS = lS.Replace("[$ExternalTablePKPropertyName]", lRelation.ForeignEntity.PKColumn.PropertyName)
+                        lS = lS.Replace("[$Width]", lFKDescriptionColumn.GridColumnWidth)
+
+                        lWidth = lWidth + lFKDescriptionColumn.GridColumnWidth
+
+                        lSB.Append(lS)
+                        lSB.AppendLine(vbCrLf)
+
+                    End If
                 Else
                     lSB.Append(lS)
-                    lSB.AppendLine()
+                    lSB.AppendLine(vbCrLf)
 
                     If (lColumn.IsPrimaryKey) Then
                         If (lColumn.BasicType = MetaDiscovery.Column.BasicTypes.IntegerType) Then
