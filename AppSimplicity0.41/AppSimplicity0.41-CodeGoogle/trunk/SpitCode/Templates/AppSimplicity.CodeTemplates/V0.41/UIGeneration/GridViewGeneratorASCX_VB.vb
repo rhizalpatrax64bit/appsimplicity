@@ -1,4 +1,5 @@
 ﻿Imports SpitCodeEngine
+Imports System.Text
 
 Public Class GridViewGeneratorASCXVB
     Inherits CodeGeneration.CodeTemplate
@@ -25,6 +26,8 @@ Public Class GridViewGeneratorASCXVB
         Return "undefined.txt"
     End Function
 
+  
+
     Public Overrides Sub ProduceCode(ByRef Output As System.IO.StreamWriter)
         Dim lOutput As String = My.Resources.UI_CodeGenStrings.GridViewASCXvb
 
@@ -32,6 +35,7 @@ Public Class GridViewGeneratorASCXVB
         lOutput = lOutput.Replace("[$PluralClassName]", Me.CurrentTable.PluralClassName)
         lOutput = lOutput.Replace("[$GeneratedNamespace]", Me.CurrentTable.Provider.GeneratedNamespace)
         lOutput = lOutput.Replace("[$PKPropertyName]", Me.CurrentTable.PKColumn.PropertyName)
+
 
         Output.Write(lOutput)
     End Sub
