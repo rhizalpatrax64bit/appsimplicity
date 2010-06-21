@@ -170,6 +170,17 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to &lt;asp:HyperLinkField DataNavigateUrlFields=&quot;[$ExternalTableName].[$ExternalTablePKColumnName],[$ExternalTableName].[$ExternalTableDescriptionColumnName]&quot; HeaderText=&quot;[$ExternalTableDescriptionCaption]&quot; 
+        '''        DataNavigateUrlFormatString=&quot;../[$ExternalTablePluralClassName]/Edit[$ExternalTableClassName].aspx?[$ExternalTableClassName][$ExternalTablePKPropertyName]={0}&quot; Target=&quot;_blank&quot;
+        '''        DataTextField=&quot;[$ExternalTableName].[$ExternalTableDescriptionColumnName]&quot; /&gt;.
+        '''</summary>
+        Friend Shared ReadOnly Property GridColumn_ForeignReference() As String
+            Get
+                Return ResourceManager.GetString("GridColumn_ForeignReference", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to &lt;asp:BoundField DataField=&quot;[$TableName].[$ColumnName]&quot; HeaderText=&quot;[$GridCaption]&quot; SortExpression=&quot;[$TableName].[$ColumnName]&quot; &gt;
         '''&lt;ItemStyle Width=&quot;[$Width]px&quot; Wrap=&quot;False&quot; HorizontalAlign=&quot;Left&quot; /&gt;
         '''&lt;/asp:BoundField&gt;.
@@ -241,13 +252,13 @@ Namespace My.Resources
         '''    Public Event OnNew()
         '''
         '''    Private Sub ValidateFilters()
-        '''        If (Me.ctrl_filterby_[$FilterByUIControlId].IncludeInQuery) Then
-        '''            Me.ctrl_filterby_[$FilterByUIControlId].ValidateInput()
+        '''        If (Me.ctrl_filterby_[$DescriptionColumnPropertyName].IncludeInQuery) Then
+        '''            Me.ctrl_filterby_[$DescriptionColumnPropertyName].ValidateInput()
         '''        End If
         '''    End Sub
         '''
         '''    Private Sub AddQueryFilters(ByVal pQuery As [$GeneratedNamespace].[$PluralClassName].Query)
-        '''        If (Me.ctrl_filterby_[$DescriptionColumnPropert [rest of string was truncated]&quot;;.
+        '''        If (Me.ctrl_filterby_[$Desc [rest of string was truncated]&quot;;.
         '''</summary>
         Friend Shared ReadOnly Property ListManagerASCXvb() As String
             Get
