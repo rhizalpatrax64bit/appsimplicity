@@ -620,8 +620,8 @@ End Class</value>
     Public Event OnNew()
 
     Private Sub ValidateFilters()
-        If (Me.ctrl_filterby_[$FilterByUIControlId].IncludeInQuery) Then
-            Me.ctrl_filterby_[$FilterByUIControlId].ValidateInput()
+        If (Me.ctrl_filterby_[$DescriptionColumnPropertyName].IncludeInQuery) Then
+            Me.ctrl_filterby_[$DescriptionColumnPropertyName].ValidateInput()
         End If
     End Sub
 
@@ -744,5 +744,10 @@ End Class</value>
         Me.DeleteSelection()
     End Sub
 End Class</value>
+  </data>
+  <data name="GridColumn_ForeignReference" xml:space="preserve">
+    <value>&lt;asp:HyperLinkField DataNavigateUrlFields="[$ExternalTableName].[$ExternalTablePKColumnName],[$ExternalTableName].[$ExternalTableDescriptionColumnName]" HeaderText="[$ExternalTableDescriptionCaption]" 
+        DataNavigateUrlFormatString="../[$ExternalTablePluralClassName]/Edit[$ExternalTableClassName].aspx?[$ExternalTableClassName][$ExternalTablePKPropertyName]={0}" Target="_blank"
+        DataTextField="[$ExternalTableName].[$ExternalTableDescriptionColumnName]" /&gt;</value>
   </data>
 </root>
