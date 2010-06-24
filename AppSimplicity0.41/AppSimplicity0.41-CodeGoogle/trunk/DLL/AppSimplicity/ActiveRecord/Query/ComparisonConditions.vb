@@ -76,35 +76,35 @@
             _Comparison.ComparisonType = Comparison.ComparisonOperation.ValueIsGreaterThan
             _Comparison.Parameters.Add(Me.GetParameter(pValue))
 
-            _Query.Comparisons.Add(pValue)
+            _Query.Comparisons.Add(_Comparison)
         End Sub
 
         Public Sub IsGreaterThanOrEqualsTo(ByVal pValue As Object)
             _Comparison.ComparisonType = Comparison.ComparisonOperation.ValueIsGreaterThanOrEqualsTo
             _Comparison.Parameters.Add(Me.GetParameter(pValue))
 
-            _Query.Comparisons.Add(pValue)
+            _Query.Comparisons.Add(_Comparison)
         End Sub
 
         Public Sub IsLessThan(ByVal pValue As Object)
             _Comparison.ComparisonType = Comparison.ComparisonOperation.ValueIsLessThan
             _Comparison.Parameters.Add(Me.GetParameter(pValue))
 
-            _Query.Comparisons.Add(pValue)
+            _Query.Comparisons.Add(_Comparison)
         End Sub
 
         Public Sub IsLessThanOrEqualsTo(ByVal pValue As Object)
             _Comparison.ComparisonType = Comparison.ComparisonOperation.ValueIsLessThanOrEqualsTo
             _Comparison.Parameters.Add(Me.GetParameter(pValue))
 
-            _Query.Comparisons.Add(pValue)
+            _Query.Comparisons.Add(_Comparison)
         End Sub
 
         Public Sub IsDifferentFrom(ByVal pValue As Object)
             _Comparison.ComparisonType = Comparison.ComparisonOperation.ValueIsDifferentFrom
             _Comparison.Parameters.Add(Me.GetParameter(pValue))
 
-            _Query.Comparisons.Add(pValue)
+            _Query.Comparisons.Add(_Comparison)
         End Sub
     End Class
 
