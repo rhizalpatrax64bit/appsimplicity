@@ -1,5 +1,5 @@
-﻿Imports Microsoft.Practices.EnterpriseLibrary.Common
-Imports Microsoft.Practices.EnterpriseLibrary.Data
+﻿'Imports Microsoft.Practices.EnterpriseLibrary.Common
+'Imports Microsoft.Practices.EnterpriseLibrary.Data
 
 Namespace DataAccess.Providers
 
@@ -8,46 +8,92 @@ Namespace DataAccess.Providers
 
         Private _DataSource As DataSource
         
-        Private Function GetCommand(ByVal pCommand As DataCommand, ByVal pDataBase As Database) As System.Data.Common.DbCommand
-            Dim lReturnValue As System.Data.Common.DbCommand = Nothing
+        'Private Function GetCommand(ByVal pCommand As DataCommand, ByVal pDataBase As Database) As System.Data.Common.DbCommand
+        '    Dim lReturnValue As System.Data.Common.DbCommand = Nothing
 
-            Select Case pCommand.CommandType
-                Case CommandType.StoredProcedure
-                    lReturnValue = pDataBase.GetStoredProcCommand(pCommand.SQLCommand)
-                Case CommandType.Text
-                    lReturnValue = pDataBase.GetSqlStringCommand(pCommand.SQLCommand)
-            End Select
+        '    Select Case pCommand.CommandType
+        '        Case CommandType.StoredProcedure
+        '            lReturnValue = pDataBase.GetStoredProcCommand(pCommand.SQLCommand)
+        '        Case CommandType.Text
+        '            lReturnValue = pDataBase.GetSqlStringCommand(pCommand.SQLCommand)
+        '    End Select
 
-            For Each lParameter As DataAccess.DataCommandParameter In pCommand.Parameters
-                pDataBase.AddInParameter(lReturnValue, lParameter.Name, lParameter.Type, lParameter.Value)
+        '    For Each lParameter As DataAccess.DataCommandParameter In pCommand.Parameters
+        '        pDataBase.AddInParameter(lReturnValue, lParameter.Name, lParameter.Type, lParameter.Value)
+        '    Next
+
+        '    Return lReturnValue
+        'End Function
+
+
+        Private Function GetParameters(ByVal pCommand As DataCommand) As List(Of System.Data.SqlClient.SqlParameter)
+            Dim lList As New List(Of System.Data.SqlClient.SqlParameter)
+
+            For Each lParameter As AppSimplicity.DataAccess.DataCommandParameter In pCommand.Parameters
+                Dim lSQLParameter As New System.Data.SqlClient.SqlParameter
+
+                lSQLParameter.ParameterName = lParameter.Type
+                lSQLParameter.Direction = ParameterDirection.Input
+                lSQLParameter.DbType = lParameter.Type
+                lSQLParameter.Value = lParameter.Value
+
+                lList.Add(lSQLParameter)
             Next
 
-            Return lReturnValue
+            Return lList
         End Function
-
 #Region "Execute Methods"
+        'Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
+        '    Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
+
+        '    Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
+
+        '    Return lDB.ExecuteDataSet(lCommand)
+        'End Function
+
+        'Public Function ExecuteNonQuery(ByVal pCommand As DataCommand) As Integer Implements IDataProvider.ExecuteNonQuery
+        '    Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
+
+        '    Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
+
+        '    Return lDB.ExecuteNonQuery(lCommand)
+        'End Function
+
+        'Public Function ExecuteScalar(ByVal pCommand As DataCommand) As Object Implements IDataProvider.ExecuteScalar
+        '    Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
+
+        '    Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
+
+        '    Return lDB.ExecuteScalar(lCommand)
+        'End Function
+
         Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
-            Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
 
-            Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
+            If (pCommand.Parameters.Count > 0) Then
+                Dim lParameters As List(Of System.Data.SqlClient.SqlParameter) = Me.GetParameters(pCommand)
+                Return SqlHelper.ExecuteDataset(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand, lParameters.ToArray())
+            Else
+                Return SqlHelper.ExecuteDataset(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand)
+            End If
 
-            Return lDB.ExecuteDataSet(lCommand)
         End Function
 
         Public Function ExecuteNonQuery(ByVal pCommand As DataCommand) As Integer Implements IDataProvider.ExecuteNonQuery
-            Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
-
-            Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
-
-            Return lDB.ExecuteNonQuery(lCommand)
+            If (pCommand.Parameters.Count > 0) Then
+                Dim lParameters As List(Of System.Data.SqlClient.SqlParameter) = Me.GetParameters(pCommand)
+                Return SqlHelper.ExecuteNonQuery(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand, lParameters.ToArray())
+            Else
+                Return SqlHelper.ExecuteNonQuery(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand)
+            End If
         End Function
 
         Public Function ExecuteScalar(ByVal pCommand As DataCommand) As Object Implements IDataProvider.ExecuteScalar
-            Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
-
-            Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
-
-            Return lDB.ExecuteScalar(lCommand)
+            If (pCommand.Parameters.Count > 0) Then
+                Dim lParameters As List(Of System.Data.SqlClient.SqlParameter) = Me.GetParameters(pCommand)
+                Return SqlHelper.ExecuteScalar(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand, lParameters.ToArray())
+            Else
+                Return SqlHelper.ExecuteScalar(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand)
+            End If
         End Function
 #End Region
 

@@ -79,13 +79,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneratedWebSite", "GeneratedWebSite", "{D2A8A998-F896-4ABF-8ACC-A336F5AB28CC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnterpriseLibrary3.1", "EnterpriseLibrary3.1", "{9DDA4E7E-05E0-46A0-A6CF-9C7565E424C4}"
-	ProjectSection(SolutionItems) = preProject
-		References\Microsoft.Practices.EnterpriseLibrary.Common.dll = References\Microsoft.Practices.EnterpriseLibrary.Common.dll
-		References\Microsoft.Practices.EnterpriseLibrary.Common.xml = References\Microsoft.Practices.EnterpriseLibrary.Common.xml
-		References\Microsoft.Practices.EnterpriseLibrary.Data.dll = References\Microsoft.Practices.EnterpriseLibrary.Data.dll
-		References\Microsoft.Practices.EnterpriseLibrary.Data.xml = References\Microsoft.Practices.EnterpriseLibrary.Data.xml
-		References\Microsoft.Practices.ObjectBuilder.dll = References\Microsoft.Practices.ObjectBuilder.dll
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
