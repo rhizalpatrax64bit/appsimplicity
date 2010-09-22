@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
+Imports System.Security
 
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
@@ -30,6 +31,8 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
+
+<Assembly: AllowPartiallyTrustedCallers()> 
 
 <Assembly: AssemblyVersion("0.4.1.2")> 
 <Assembly: AssemblyFileVersion("0.4.1.2")> 
