@@ -42,18 +42,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\References\Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Microsoft.Practices.ObjectBuilder.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -102,6 +90,7 @@
     <Compile Include="DataAccess\Providers\IDataProvider.vb" />
     <Compile Include="DataAccess\ProviderFactory.vb" />
     <Compile Include="DataAccess\Providers\RemoteWSProvider.vb" />
+    <Compile Include="DataAccess\Providers\SQLHelper.vb" />
     <Compile Include="Localization\ExceptionMessages.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
