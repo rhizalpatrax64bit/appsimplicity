@@ -32,7 +32,7 @@ Namespace DataAccess.Providers
             For Each lParameter As AppSimplicity.DataAccess.DataCommandParameter In pCommand.Parameters
                 Dim lSQLParameter As New System.Data.SqlClient.SqlParameter
 
-                lSQLParameter.ParameterName = lParameter.Type
+                lSQLParameter.ParameterName = lParameter.Name
                 lSQLParameter.Direction = ParameterDirection.Input
                 lSQLParameter.DbType = lParameter.Type
                 lSQLParameter.Value = lParameter.Value
