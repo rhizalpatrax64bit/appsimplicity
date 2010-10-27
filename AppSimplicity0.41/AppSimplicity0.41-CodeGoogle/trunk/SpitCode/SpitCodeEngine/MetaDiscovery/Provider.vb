@@ -128,6 +128,25 @@ Namespace MetaDiscovery
             End Set
         End Property
 
+
+        <System.ComponentModel.DisplayName("Include Prefix"), Category("Code Generation"), Description("If this property is set only objects with this prefix will be included")> _
+        Public Property IncludePrefix() As String
+            Get
+                Dim lKey As String = "IncludePrefix"
+                Me.ValidatePropertyInstance(lKey, "")
+
+                Return MetaData.DbRoot.DefaultDatabase.Properties(lKey).Value
+            End Get
+            Set(ByVal value As String)
+                Dim lKey As String = "IncludePrefix"
+                Me.ValidatePropertyInstance(lKey, "")
+
+                MetaData.DbRoot.DefaultDatabase.Properties(lKey).Value = value
+                Me.SaveChanges()
+            End Set
+        End Property
+
+
         <System.ComponentModel.DisplayName("Use Stored Procedures for CRUD "), Category("Code Generation"), Description("Gets or sets if provider should use Stored procedures for CRUD")> _
         Public Property UseSPs() As Boolean
             Get
@@ -190,10 +209,19 @@ Namespace MetaDiscovery
 
                     End Select
 
+                    If (Me.IncludePrefix <> String.Empty) Then
+                        If lTable.Name.StartsWith(Me.IncludePrefix) Then
+                            lIncludeTable = True
+                        Else
+                            lIncludeTable = False
+                        End If
+                    End If
+
                     If (lIncludeTable) Then
                         Dim TableItem As New MetaDiscovery.Table(lTable, Me)
                         Me.Tables.Add(TableItem)
                     End If
+
                 Catch ex As Exception
                     Console.WriteLine("Ooops, something went wrong trying to read a table")
                     Console.WriteLine("Details:")
@@ -207,7 +235,21 @@ Namespace MetaDiscovery
             For Each lView As MyMeta.View In MetaData.DbRoot.DefaultDatabase.Views
                 Try
                     Dim TableItem As New MetaDiscovery.View(lView, Me)
-                    Me.Views.Add(TableItem)
+
+
+                    Dim lIncludeView As Boolean = True
+                    If (Me.IncludePrefix <> String.Empty) Then
+                        If lView.Name.StartsWith(Me.IncludePrefix) Then
+                            lIncludeView = True
+                        Else
+                            lIncludeView = False
+                        End If
+                    End If
+
+                    If (lIncludeView) Then
+                        Me.Views.Add(TableItem)
+                    End If
+
                 Catch ex As Exception
                     Console.WriteLine("Ooops, something went wrong trying to read a view")
                     Console.WriteLine("Details:")
@@ -232,6 +274,14 @@ Namespace MetaDiscovery
 
                     If (lProcedure.Name.ToLower.StartsWith("dt_")) Then
                         lIncludeProcedure = False
+                    End If
+
+                    If (Me.IncludePrefix <> String.Empty) Then
+                        If lProcedure.Name.StartsWith(Me.IncludePrefix) Then
+                            lIncludeProcedure = True
+                        Else
+                            lIncludeProcedure = False
+                        End If
                     End If
 
                     If (lIncludeProcedure) Then
