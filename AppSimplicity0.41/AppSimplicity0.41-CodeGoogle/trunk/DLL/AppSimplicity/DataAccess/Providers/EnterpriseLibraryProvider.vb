@@ -35,7 +35,17 @@ Namespace DataAccess.Providers
                 lSQLParameter.ParameterName = lParameter.Name
                 lSQLParameter.Direction = ParameterDirection.Input
                 lSQLParameter.DbType = lParameter.Type
-                lSQLParameter.Value = lParameter.Value
+
+                Select Case lParameter.Type
+                    Case DbType.Date, DbType.DateTime, DbType.DateTime2
+                        If (lParameter.Value Is Nothing) Then
+                            lSQLParameter.Value = System.DBNull.Value
+                        Else
+                            lSQLParameter.Value = lParameter.Value
+                        End If
+                    Case Else
+                        lSQLParameter.Value = lParameter.Value
+                End Select
 
                 lList.Add(lSQLParameter)
             Next
