@@ -72,7 +72,7 @@ Namespace Utilities
 
                 If (lPerform) Then
                     Dim lZip As New Ionic.Zip.ZipFile
-                    lZip.AddFile(pFileName)
+                    lZip.AddFile(pFileName, "")
                     lZip.Save(lOutputFileName)
 
                     lReturnValue = lOutputFileName
