@@ -175,6 +175,7 @@
 
             If (lEventArgs.PerformOperation) Then
                 {0}.DataContext.Service.Insert(Me)
+                Me._IsLoadedFromDB = True
             End If
 
             RaiseEvent OnAfterCreate()
