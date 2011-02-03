@@ -675,6 +675,24 @@ End Namespace</value>
             Public Function FetchList() As List(Of {1}.{2})                
                 Return {0}.FetchList(Me.GetDataSet, Me.UseQualifiedNames)                
             End Function
+            
+            ''' &lt;summary&gt;
+            ''' Fetch the first record in the query
+            ''' &lt;/summary&gt;
+            ''' &lt;returns&gt;Returns an object instance if exists.&lt;/returns&gt;
+            Public Function FetchFirst() As {1}.{2}
+                Dim lReturnValue As {1}.{2} = Nothing
+
+                Me.SetLimit(1)
+
+                Dim lList As List(Of {1}.{2}) = {1}.{0}.FetchList(Me.GetDataSet, Me.UseQualifiedNames)
+
+                If (lList.Count &gt; 0) Then
+                    lReturnValue = lList(0)
+                End If
+
+                Return lReturnValue
+            End Function
 #End Region
 
 {3}
