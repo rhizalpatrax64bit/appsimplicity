@@ -34,6 +34,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RemoteDataProvider", "Web\R
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{D7022D65-7B88-4686-B8B8-55A3F13F85B9}"
 	ProjectSection(SolutionItems) = preProject
+		References\Ionic.Zip.dll = References\Ionic.Zip.dll
 		References\Ionic.Zip.Reduced.dll = References\Ionic.Zip.Reduced.dll
 		References\MySql.Data.dll = References\MySql.Data.dll
 		References\nunit.framework.dll = References\nunit.framework.dll

@@ -38,9 +38,9 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ionic.Zip.Reduced, Version=1.8.4.19, Culture=neutral, PublicKeyToken=c551e179877da246, processorArchitecture=MSIL">
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>..\..\References\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
