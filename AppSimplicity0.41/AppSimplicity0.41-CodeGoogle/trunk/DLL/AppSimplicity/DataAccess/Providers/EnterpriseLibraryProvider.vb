@@ -63,32 +63,9 @@ Namespace DataAccess.Providers
         End Function
 
 #Region "Execute Methods"
-        'Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
-        '    Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
-
-        '    Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
-
-        '    Return lDB.ExecuteDataSet(lCommand)
-        'End Function
-
-        'Public Function ExecuteNonQuery(ByVal pCommand As DataCommand) As Integer Implements IDataProvider.ExecuteNonQuery
-        '    Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
-
-        '    Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
-
-        '    Return lDB.ExecuteNonQuery(lCommand)
-        'End Function
-
-        'Public Function ExecuteScalar(ByVal pCommand As DataCommand) As Object Implements IDataProvider.ExecuteScalar
-        '    Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
-
-        '    Dim lCommand As System.Data.Common.DbCommand = Me.GetCommand(pCommand, lDB)
-
-        '    Return lDB.ExecuteScalar(lCommand)
-        'End Function
 
         Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
-            Dim lReturnValue As Data.DataSet = Nothing
+            Dim lReturnValue As Data.DataSet = New DataSet
 
             Using lConn As New System.Data.SqlClient.SqlConnection(Me._DataSource.ConnectionString)
                 Dim lCommand As New System.Data.SqlClient.SqlCommand
