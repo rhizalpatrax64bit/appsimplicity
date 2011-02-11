@@ -39,10 +39,6 @@ Namespace DataAccess.Providers
                 Select Case lParameter.Type
                     Case DbType.Date, DbType.DateTime, DbType.DateTime2
 
-                        If (lParameter.Value = Date.MinValue) Then
-                            lSQLParameter.Value = System.DBNull.Value
-                        End If
-
                         If (lParameter.Value Is System.DBNull.Value) Then
                             lSQLParameter.Value = lParameter.Value
                         Else
@@ -52,6 +48,7 @@ Namespace DataAccess.Providers
                                 lSQLParameter.Value = lParameter.Value
                             End If
                         End If
+
                     Case Else
                         lSQLParameter.Value = lParameter.Value
                 End Select
