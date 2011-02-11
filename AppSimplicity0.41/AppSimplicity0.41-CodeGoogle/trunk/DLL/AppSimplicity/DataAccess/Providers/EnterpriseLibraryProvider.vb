@@ -61,6 +61,7 @@ Namespace DataAccess.Providers
 
             Return lList
         End Function
+
 #Region "Execute Methods"
         'Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
         '    Dim lDB As Database = DatabaseFactory.CreateDatabase(_DataSource.DataSourceName)
@@ -87,14 +88,28 @@ Namespace DataAccess.Providers
         'End Function
 
         Public Function ExecuteDataSet(ByVal pCommand As DataCommand) As System.Data.DataSet Implements IDataProvider.ExecuteDataSet
+            Dim lReturnValue As Data.DataSet = Nothing
 
-            If (pCommand.Parameters.Count > 0) Then
-                Dim lParameters As List(Of System.Data.SqlClient.SqlParameter) = Me.GetParameters(pCommand)
-                Return SqlHelper.ExecuteDataset(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand, lParameters.ToArray())
-            Else
-                Return SqlHelper.ExecuteDataset(_DataSource.ConnectionString, pCommand.CommandType, pCommand.SQLCommand)
-            End If
+            Using lConn As New System.Data.SqlClient.SqlConnection(Me._DataSource.ConnectionString)
+                Dim lCommand As New System.Data.SqlClient.SqlCommand
 
+                lCommand.CommandText = pCommand.SQLCommand
+                lCommand.CommandType = pCommand.CommandType
+                lCommand.CommandTimeout = Me._DataSource.ConnectionTimeOut
+                lCommand.Connection = lConn
+
+                If (pCommand.Parameters.Count > 0) Then
+                    For Each lParam As System.Data.SqlClient.SqlParameter In Me.GetParameters(pCommand)
+                        lCommand.Parameters.Add(lParam)
+                    Next
+                End If
+
+                Dim lAdapter As New System.Data.SqlClient.SqlDataAdapter(lCommand)
+
+                lAdapter.Fill(lReturnValue)
+            End Using
+
+            Return lReturnValue
         End Function
 
         Public Function ExecuteNonQuery(ByVal pCommand As DataCommand) As Integer Implements IDataProvider.ExecuteNonQuery
