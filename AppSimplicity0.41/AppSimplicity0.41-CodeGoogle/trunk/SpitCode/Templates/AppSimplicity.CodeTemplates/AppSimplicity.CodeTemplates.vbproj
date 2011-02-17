@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{981E94C5-A6F5-4101-9D8C-4E24D4FB4493}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -31,7 +31,7 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>C:\codegen\LatestRelease\Templates\</OutputPath>
+    <OutputPath>C:\SpitCode\LatestRelease\Templates\</OutputPath>
     <DocumentationFile>AppSimplicity.CodeTemplates.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
@@ -64,11 +64,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SQL\SelectDataProcedureGenerator.vb" />
     <Compile Include="SQL\SPGenerator.vb" />
     <Compile Include="SQL\SPGeneratorStrings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SPGeneratorStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\SPSelectGenerationStrings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPSelectGenerationStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="V0.41\ClassGenerator.vb" />
     <Compile Include="V0.41\ClassGeneratorStrings.Designer.vb">
@@ -110,6 +116,11 @@
       <LastGenOutput>SPGeneratorStrings.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQL\SPSelectGenerationStrings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SPSelectGenerationStrings.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="V0.41\ClassGeneratorStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
