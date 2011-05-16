@@ -23,7 +23,7 @@ Namespace MetaDiscovery
         <Browsable(False)> _
         Public ReadOnly Property TemplateDirectory() As String
             Get
-                Return String.Format("{0}\Templates", Me.WorkingDirectory)
+                Return String.Format("{0}Templates", Me.WorkingDirectory)
             End Get
         End Property
 
