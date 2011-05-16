@@ -140,25 +140,6 @@ Module Program
         lSplash.ShowDialog()
     End Sub
 
-    Public Function VerifyInstallation() As Boolean
-        Dim lReturnValue As Boolean = True
-        Dim lSpitCodeRegistry As RegistryKey = Registry.CurrentUser.CreateSubKey("SpitCode2")
-
-        If (lSpitCodeRegistry.GetValue("InstallDir") Is Nothing) Then
-            lReturnValue = False
-        End If
-
-
-        If (lReturnValue = False) Then
-            Console.WriteLine("SpitCode is not installed, run program like this:")
-            Console.WriteLine()
-            Console.WriteLine("SpitCode2.exe /action install")
-            Console.WriteLine()
-        End If
-
-        Return lReturnValue
-    End Function
-
     Sub Main()
         Console.WriteLine(String.Format("SPITCODE {0}", GetBuildVersion))
         Console.WriteLine("By Javier Pitalua Cobos.")
@@ -166,23 +147,26 @@ Module Program
         ShowSplashScreen()
         Console.WriteLine(" ")
         Console.WriteLine(String.Format("Running on: {0}", Directory.GetCurrentDirectory()))
-        Select Case (GetRunningMode())
-            Case RunningModes.Design
-                If (VerifyInstallation()) Then
+
+        Try
+            Select Case (GetRunningMode())
+                Case RunningModes.Design
                     Console.WriteLine()
                     Design()
                     Console.WriteLine()
-                End If
-            Case RunningModes.Generate
-                If (VerifyInstallation()) Then
+                Case RunningModes.Generate
                     Console.WriteLine()
                     Generate()
                     Console.WriteLine()
-                End If
-            Case RunningModes.Help
-                Console.Clear()
-                Console.Write(My.Resources.HelpInfo)
-        End Select
+                Case RunningModes.Help
+                    Console.Clear()
+                    Console.Write(My.Resources.HelpInfo)
+            End Select
+        Catch ex As Exception
+            Console.WriteLine("Something went wrong:")
+            Console.WriteLine(ex.Message)
+            Console.WriteLine("Our developer will be punished for this inconvenience.")
+        End Try
 
         Console.WriteLine(" ")
         Console.WriteLine("Press any key to exit...")
