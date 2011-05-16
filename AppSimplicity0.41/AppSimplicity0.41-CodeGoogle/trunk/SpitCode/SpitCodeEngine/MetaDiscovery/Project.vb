@@ -12,15 +12,11 @@ Namespace MetaDiscovery
     Public Class Project
         Private _LanguageType As NetLanguageType = NetLanguageType.VBNET
 
+        Private _WorkingDirectory As String
         <Browsable(False)> _
         Public ReadOnly Property WorkingDirectory() As String
             Get
-                Dim lSpitCodeRegistry As RegistryKey = Registry.CurrentUser.CreateSubKey("SpitCode2")
-
-                If (lSpitCodeRegistry.GetValue("InstallDir") Is Nothing) Then
-                    Throw New Exception("SpitCode is not installed, please verify.")
-                End If
-                Return lSpitCodeRegistry.GetValue("InstallDir")
+                Return _WorkingDirectory
             End Get
         End Property
 
@@ -62,7 +58,11 @@ Namespace MetaDiscovery
             Return lResult
         End Function
 
-        Public Sub New(Optional ByVal pLanguageType As NetLanguageType = NetLanguageType.VBNET)
+        Public Sub New(ByVal pWorkingDirectory As String, Optional ByVal pLanguageType As NetLanguageType = NetLanguageType.VBNET)
+            If (pWorkingDirectory = String.Empty) Then
+                Throw New Exception("The working directory must be specified.")
+            End If
+
             Try
                 Console.WriteLine()
                 Console.WriteLine("Looking for configuration file...")

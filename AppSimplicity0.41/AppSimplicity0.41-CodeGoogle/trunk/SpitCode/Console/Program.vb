@@ -6,7 +6,6 @@ Imports Microsoft.Win32
 
 Module Program
     Public Enum RunningModes
-        Install
         Generate
         Design
         Help
@@ -79,13 +78,31 @@ Module Program
         Return lReturnValue
     End Function
 
+    Private Function GetWorkingDirectory() As String
+        Dim lReturnValue As String
+
+        Dim lArguments As New Arguments(Environment.CommandLine)
+
+        lReturnValue = lArguments.Item("workingdir")
+
+        If (System.IO.Directory.Exists(lReturnValue)) Then
+            Throw New Exception("Working directory does not exists. Can not continue.")
+        End If
+
+        If (lReturnValue = String.Empty) Then
+            Throw New Exception("Working directory was not specified. This ends now.")
+        End If
+
+        Return lReturnValue
+    End Function
+
     Public Sub Design()
         Console.WriteLine(" ")
         Console.WriteLine(" ")
         Console.WriteLine("Reading Configuration File...")
         Console.WriteLine(" ")
 
-        _Project = New SpitCodeEngine.MetaDiscovery.Project
+        _Project = New SpitCodeEngine.MetaDiscovery.Project(GetWorkingDirectory())
 
         If _Project.Providers.Count = 0 Then
             Console.WriteLine("No providers found, this will end right now.")
@@ -106,8 +123,6 @@ Module Program
 
             If Not (arguments.Item("action") Is Nothing) Then
                 Select Case (arguments.Item("action").ToLower)
-                    Case "install"
-                        lRunningMode = RunningModes.Install
                     Case "design"
                         lRunningMode = RunningModes.Design
                     Case "generate"
@@ -118,11 +133,6 @@ Module Program
 
         Return lRunningMode
     End Function
-
-    Public Sub Install()
-        Dim lSpitCodeRegistry As RegistryKey = Registry.CurrentUser.CreateSubKey("SpitCode2")
-        lSpitCodeRegistry.SetValue("InstallDir", Directory.GetCurrentDirectory)
-    End Sub
 
     Public Sub ShowSplashScreen()
         Dim lSplash As New SplashScreen(SplashScreen.DisplayMode.SplashScreen)
@@ -169,11 +179,6 @@ Module Program
                     Generate()
                     Console.WriteLine()
                 End If
-            Case RunningModes.Install
-                Install()
-                Console.WriteLine()
-                Console.WriteLine("SpitCode was successfully installed.")
-                Console.WriteLine()
             Case RunningModes.Help
                 Console.Clear()
                 Console.Write(My.Resources.HelpInfo)
