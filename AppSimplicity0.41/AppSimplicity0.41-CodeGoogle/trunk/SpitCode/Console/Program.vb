@@ -85,7 +85,7 @@ Module Program
 
         lReturnValue = lArguments.Item("workingdir")
 
-        If (System.IO.Directory.Exists(lReturnValue)) Then
+        If Not (System.IO.Directory.Exists(lReturnValue)) Then
             Throw New Exception("Working directory does not exists. Can not continue.")
         End If
 
@@ -165,7 +165,6 @@ Module Program
         Catch ex As Exception
             Console.WriteLine("Something went wrong:")
             Console.WriteLine(ex.Message)
-            Console.WriteLine("Our developer will be punished for this inconvenience.")
         End Try
 
         Console.WriteLine(" ")
