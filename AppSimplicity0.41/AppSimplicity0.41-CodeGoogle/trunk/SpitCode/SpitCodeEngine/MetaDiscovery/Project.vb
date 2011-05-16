@@ -63,6 +63,8 @@ Namespace MetaDiscovery
                 Throw New Exception("The working directory must be specified.")
             End If
 
+            _WorkingDirectory = pWorkingDirectory
+
             Try
                 Console.WriteLine()
                 Console.WriteLine("Looking for configuration file...")
