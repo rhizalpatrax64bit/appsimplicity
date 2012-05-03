@@ -9,8 +9,8 @@
     </SchemaVersion>
     <ProjectGuid>{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SomERP</RootNamespace>
-    <AssemblyName>SomERP</AssemblyName>
+    <RootNamespace>SomeERP</RootNamespace>
+    <AssemblyName>SomeERP</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SomERP.xml</DocumentationFile>
+    <DocumentationFile>SomeERP.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SomERP.xml</DocumentationFile>
+    <DocumentationFile>SomeERP.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
