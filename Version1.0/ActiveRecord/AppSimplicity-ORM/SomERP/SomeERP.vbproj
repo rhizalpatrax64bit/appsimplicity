@@ -66,6 +66,7 @@
     <Compile Include="Entities\Generated\CustomerAddress.vb" />
     <Compile Include="Entities\Generated\CustomerType.vb" />
     <Compile Include="Entities\Generated\Region.vb" />
+    <Compile Include="Entities\Generated\SomeERPDataContext_.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
