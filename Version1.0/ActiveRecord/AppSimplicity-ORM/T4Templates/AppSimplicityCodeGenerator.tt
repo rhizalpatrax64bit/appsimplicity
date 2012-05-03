@@ -15,19 +15,20 @@
         {
             foreach (AppSimplicity.SchemaDiscovery.Entities.Table table in dS.Tables) 
             {
-                GeneratePOCOClass(table);
-                WriteOutputFile(System.IO.Path.Combine(OutputDirectory, string.Format(@"Entities\Generated\{0}.vb", table.ClassName)));
+                if (table.IncludeInCodeGeneration) 
+                { 
+					GeneratePOCOClass(table);
+					WriteOutputFile(System.IO.Path.Combine(OutputDirectory, string.Format(@"Entities\Generated\{0}.vb", table.ClassName)), true);
+                }                
             }
         }
     }      
     
 #>
 <#+
-  void WriteOutputFile(string outputFileName)
+  void WriteOutputFile(string outputFileName, bool overWriteIfExists)
   {
-      string templateDirectory = System.IO.Path.GetDirectoryName(Host.TemplateFile);
-      string outputFilePath = System.IO.Path.Combine(templateDirectory, outputFileName);
-      System.IO.File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString()); 
+      System.IO.File.WriteAllText(outputFileName, this.GenerationEnvironment.ToString()); 
       this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
   }
 #>

@@ -1,4 +1,4 @@
-﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+﻿<#@ template debug="false" hostspecific="True" language="C#" #>
 <#@ output extension=".txt" #>
 <#@ Assembly Name="$(SolutionDir)References\AppSimplicity.SchemaDiscovery.dll" #>
 <#+
