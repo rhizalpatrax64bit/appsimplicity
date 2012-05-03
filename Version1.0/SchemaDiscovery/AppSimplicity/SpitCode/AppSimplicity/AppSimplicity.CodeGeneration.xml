@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeGeneration>
+  <Template
+      Name="POCO Entity Classes Generator"
+      Description="Generates POCO classes for Nhibernate"
+      ProviderType="AppSimplicity.CodeGeneration.Templates.AppSimplicityORM.ORMEntitiesCodeTemplate, AppSimplicity.CodeGeneration.Templates"
+      TemplateSet="AppSimplcityORM"
+      OutputLanguage="VB.Net" />
+
+</CodeGeneration>

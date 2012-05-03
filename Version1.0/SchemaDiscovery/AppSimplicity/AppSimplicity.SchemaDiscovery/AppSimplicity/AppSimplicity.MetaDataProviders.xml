@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Providers>
+  <Provider Name="System.Data.SqlClient"
+            ProviderType="AppSimplicity.SchemaDiscovery.Providers.SqlServer.SqlServerMetaDataProvider, AppSimplicity.SchemaDiscovery.Providers"
+            Description="AppSimplicity SQL Server meta data discovery provider." />
+</Providers>
