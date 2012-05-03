@@ -1,0 +1,154 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AppSimplicity.DataAccess
+</name>
+</assembly>
+<members>
+<member name="P:AppSimplicity.DataAccess.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppSimplicity.DataAccess.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:AppSimplicity.DataAccess.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:AppSimplicity.DataAccess.DataService.#ctor(AppSimplicity.DataAccess.IDataServiceProvider)">
+	<summary>
+ Initializes the data service provider using a connection string from local app.config/web.config file.
+ </summary>
+	<param name="pDataServiceProvider">The instance of a custom data service provider.</param>
+</member><member name="M:AppSimplicity.DataAccess.DataService.#ctor(System.String)">
+	<summary>
+ Initializes the data service provider using a connection string from local app.config/web.config file.
+ </summary>
+	<param name="pDataSourceName">The name of the connection string.</param>
+</member><member name="M:AppSimplicity.DataAccess.DataService.#ctor(AppSimplicity.DataAccess.ConnectionInfo)">
+	<summary>
+ Initializes the data service provider using a previously loaded connectionInfo instance.
+ </summary>
+	<param name="connection">The previously loaded connectionInfo object</param>
+</member><member name="P:AppSimplicity.DataAccess.My.Resources.Exceptions.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppSimplicity.DataAccess.My.Resources.Exceptions.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AppSimplicity.DataAccess.My.Resources.Exceptions.CONNECTION_INFO_NOT_SET">
+	<summary>
+  Looks up a localized string similar to Connection information property was not set..
+</summary>
+</member><member name="P:AppSimplicity.DataAccess.My.Resources.Exceptions.CONNECTION_STRING_NOT_FOUND">
+	<summary>
+  Looks up a localized string similar to The connection string [{0}] was not found.  Verify the ConnectionStrings section in the configuration file..
+</summary>
+</member><member name="P:AppSimplicity.DataAccess.My.Resources.Exceptions.DATA_PROVIDER_NOT_FOUND">
+	<summary>
+  Looks up a localized string similar to System.Data provider [{0}] not found..
+</summary>
+</member><member name="P:AppSimplicity.DataAccess.My.Resources.Exceptions.DATASERVICE_NOT_SET">
+	<summary>
+  Looks up a localized string similar to Unable to run execute methods.  Dataservice was not set..
+</summary>
+</member><member name="T:AppSimplicity.DataAccess.My.Resources.Exceptions">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:AppSimplicity.DataAccess.OperativeModes.Connected">
+	<summary>
+ Specifies if provider can persist data accross tiers.
+ </summary>
+</member><member name="F:AppSimplicity.DataAccess.OperativeModes.Disconnected">
+	<summary>
+ Provider can not persist data across tiers (can not handle transactions and connected datareaders. Connected operations are not allowed).
+ </summary>
+</member><member name="M:AppSimplicity.DataAccess.ResultSetRow.GetValue(System.String)">
+	<summary>
+ Gets the appropiated value from reader
+ </summary>
+	<param name="pKey">The key for the value to be returned</param>
+	<returns></returns>
+</member><member name="M:AppSimplicity.DataAccess.ResultSetRow.IsNull(System.String)">
+	<summary>
+ Determines if a given data value is null
+ </summary>
+	<param name="pKey">The key of the data value</param>
+</member><member name="M:AppSimplicity.DataAccess.ADONetDbProviderFactory.GetADONetDBFactory(System.String)">
+	<summary>
+ Gets the instance of the ADO.Net data access provider with a given invariant name.
+ </summary>
+	<param name="pProviderInvariantName">The invariant name of the provider factory</param>
+	<returns></returns>
+	<remarks>If provider was not found it will throw an exception.</remarks>
+</member><member name="T:AppSimplicity.DataAccess.ResultSetEnumerator">
+	<summary>
+ The objective for this class is to implement an enumerator that wraps the call for a DbDataReader but internally handles exception and resource releasing issues.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:AppSimplicity.DataAccess.ConnectionInfo.DataSourceName">
+	<summary>
+ The unique name of the datasource in the connection 
+ </summary>
+	<value></value>
+</member><member name="P:AppSimplicity.DataAccess.ConnectionInfo.ConnectionString">
+	<summary>
+ The connection string.
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.ConnectionInfo.ConnectionTimeOut">
+	<summary>
+ Gets or sets maximum time to wait for an execution of a dataccess command. 
+ If this time its exceeded dataservice provider will throw an exception.
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.ConnectionInfo.ProviderName">
+	<summary>
+ The invariant Ado.Net provider factory Namespace.
+ </summary>
+</member><member name="T:AppSimplicity.DataAccess.ConnectionInfo">
+	<summary>
+ The intended purpose for this class is to wrap the connection settings for data access.
+ Connection settings will be retrieved through IConnectionProvider concrete classes.
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.ResultSet.RowsReaded">
+	<summary>
+ Gets the number of readed records
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.DataCommand.CommandType">
+	<summary>
+ Determines whether the type of command is a stored procedure or a sql statement
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.DataCommand.Parameters">
+	<summary>
+ Keeps the list of parameters associated with data command
+ </summary>
+</member><member name="P:AppSimplicity.DataAccess.DataCommand.SQLCommand">
+	<summary>
+ Sets or gets the data command sql statement
+ </summary>
+</member><member name="M:AppSimplicity.DataAccess.DataCommand.AddParameter(System.String,System.Data.DbType,System.Object)">
+	<summary>
+ Adds a parameter to the command parameters collection of data.
+ </summary>
+	<param name="pParameterName">Specifies the parameter name</param>
+	<param name="pParameterValue">Determines the value of parameter</param>
+	<remarks></remarks>
+</member><member name="M:AppSimplicity.DataAccess.DataCommand.AddParameter(AppSimplicity.DataAccess.DataCommandParameter)">
+	<summary>
+ Adds a parameter to the command parameters collection of data.
+ </summary>
+	<param name="pParameter">Specifies the parameter</param>
+</member><member name="T:AppSimplicity.DataAccess.DataCommand">
+	<summary>
+ The objects derived from this class may perform command executions to any data provider
+ </summary>
+</member>
+</members>
+</doc>

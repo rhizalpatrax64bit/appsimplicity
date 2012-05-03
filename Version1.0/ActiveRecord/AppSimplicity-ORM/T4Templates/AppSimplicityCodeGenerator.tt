@@ -1,0 +1,33 @@
+﻿<#@ template debug="false" hostspecific="True" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ Assembly Name="$(SolutionDir)References\AppSimplicity.SchemaDiscovery.dll" #>
+<#@ Include File="POCOEntityGenerator.tt" #>
+<#
+
+    string InputSchemaFile = @"D:\AppSimplicity\ORM-Ultimate\AppSimplicity-ORM\SomERP\AppSimplicity\AppSimplicity.SchemaDiscovery.xml";
+    string OutputDirectory = @"D:\AppSimplicity\ORM-Ultimate\AppSimplicity-ORM\SomERP\";
+    
+    AppSimplicity.SchemaDiscovery.Entities.Project project = AppSimplicity.SchemaDiscovery.ProjectFactory.LoadProjectFromDisk(InputSchemaFile);
+
+    if (project != null) 
+    {
+        foreach (AppSimplicity.SchemaDiscovery.Entities.DataSource dS in project.DataSources) 
+        {
+            foreach (AppSimplicity.SchemaDiscovery.Entities.Table table in dS.Tables) 
+            {
+                GeneratePOCOClass(table);
+                WriteOutputFile(System.IO.Path.Combine(OutputDirectory, string.Format(@"Entities\Generated\{0}.vb", table.ClassName)));
+            }
+        }
+    }      
+    
+#>
+<#+
+  void WriteOutputFile(string outputFileName)
+  {
+      string templateDirectory = System.IO.Path.GetDirectoryName(Host.TemplateFile);
+      string outputFilePath = System.IO.Path.Combine(templateDirectory, outputFileName);
+      System.IO.File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString()); 
+      this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+  }
+#>

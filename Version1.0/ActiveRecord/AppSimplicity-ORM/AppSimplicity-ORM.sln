@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActiveRecord", "ActiveRecord", "{8C26A18A-7B15-4061-9E0E-05A207B22F3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{220D8AE5-209D-4EAB-BB2A-C87B2D9B4987}"
+	ProjectSection(SolutionItems) = preProject
+		References\AppSimplicity.DataAccess.dll = References\AppSimplicity.DataAccess.dll
+		References\AppSimplicity.DataAccess.pdb = References\AppSimplicity.DataAccess.pdb
+		References\AppSimplicity.DataAccess.xml = References\AppSimplicity.DataAccess.xml
+		References\AppSimplicity.dll = References\AppSimplicity.dll
+		References\AppSimplicity.pdb = References\AppSimplicity.pdb
+		References\AppSimplicity.SchemaDiscovery.dll = References\AppSimplicity.SchemaDiscovery.dll
+		References\AppSimplicity.SchemaDiscovery.pdb = References\AppSimplicity.SchemaDiscovery.pdb
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity.ActiveRecord", "AppSimplicity.ActiveRecord\AppSimplicity.ActiveRecord.vbproj", "{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementation", "Implementation", "{19D961D8-ACAA-4BF0-9EA2-FBC619EB24F1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SomERP", "SomERP\SomERP.vbproj", "{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeGeneration", "CodeGeneration", "{DD15C061-AE82-415F-B488-33FDA66B306F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Templates", "T4Templates\T4Templates.csproj", "{EF4B11A3-E4A4-492D-81A0-450A50F21A15}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4B11A3-E4A4-492D-81A0-450A50F21A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4B11A3-E4A4-492D-81A0-450A50F21A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4B11A3-E4A4-492D-81A0-450A50F21A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4B11A3-E4A4-492D-81A0-450A50F21A15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF} = {8C26A18A-7B15-4061-9E0E-05A207B22F3B}
+		{19D961D8-ACAA-4BF0-9EA2-FBC619EB24F1} = {8C26A18A-7B15-4061-9E0E-05A207B22F3B}
+		{DD15C061-AE82-415F-B488-33FDA66B306F} = {8C26A18A-7B15-4061-9E0E-05A207B22F3B}
+		{F3DE01DF-4D80-4527-AFC8-D726984B9C0E} = {19D961D8-ACAA-4BF0-9EA2-FBC619EB24F1}
+		{EF4B11A3-E4A4-492D-81A0-450A50F21A15} = {DD15C061-AE82-415F-B488-33FDA66B306F}
+	EndGlobalSection
+EndGlobal

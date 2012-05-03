@@ -1,0 +1,41 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ Assembly Name="$(SolutionDir)References\AppSimplicity.SchemaDiscovery.dll" #>
+<#+
+
+    void GeneratePOCOClass(AppSimplicity.SchemaDiscovery.Entities.Table table) 
+    { 
+#>
+Namespace <#= table.DataSource.GeneratedNamespace #>
+    ''' <summary>
+    ''' <#= table.Summary #>
+    ''' </summary>
+    Partial Public Class <#= table.ClassName #>
+
+<#+
+    foreach (AppSimplicity.SchemaDiscovery.Entities.Column column in table.Columns)
+    { 
+#>
+        Private _<#= column.PropertyName #> As <#= column.CLRTargetType #>
+        ''' <summary>
+        ''' <#= column.Summary #>
+        ''' </summary>
+        Public Property <#= column.PropertyName #>() As <#= column.CLRTargetType #>
+            Get
+                Return _<#= column.PropertyName #>
+            End Get
+            Set(ByVal value As <#= column.CLRTargetType #>)
+                _<#= column.PropertyName #> = value
+            End Set
+        End Property		
+
+<#+    
+    }
+#>
+
+    End Class
+End Namespace
+			
+<#+
+	}
+#>
