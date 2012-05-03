@@ -62,6 +62,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\CustomerDataManager.vb" />
     <Compile Include="Entities\Generated\Customer.vb" />
     <Compile Include="Entities\Generated\CustomerAddress.vb" />
     <Compile Include="Entities\Generated\CustomerType.vb" />
