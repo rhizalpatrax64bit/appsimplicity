@@ -45,6 +45,17 @@
             End Set
         End Property
 
+        Private _Summary As String
+        <Category("Code generation"), DisplayName("Summary"), Description("A brief description for documenting this object."), PersistAfterRefreshSchema(True)> _
+        Public Property Summary() As String
+            Get
+                Return _Summary
+            End Get
+            Set(ByVal value As String)
+                _Summary = value
+            End Set
+        End Property
+
         Private _DataSource As DataSource
         <Browsable(False)> _
         Public ReadOnly Property DataSource() As DataSource
