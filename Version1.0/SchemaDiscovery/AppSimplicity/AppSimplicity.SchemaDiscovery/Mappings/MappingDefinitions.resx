@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MySQL_VBNet" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+  &lt;Type From="BIT" To="Boolean" /&gt;
+  &lt;Type From="BIGINT" To="long" /&gt;
+  &lt;Type From="INT" To="int" /&gt;
+  &lt;Type From="MEDIUM&lt;Definitions&gt;INT" To="int" /&gt;
+  &lt;Type From="SMALLINT" To="short" /&gt;
+  &lt;Type From="TINYINT" To="sbyte" /&gt;
+  &lt;Type From="BIGINT UNSIGNED" To="ulong" /&gt;
+  &lt;Type From="INT UNSIGNED" To="uint" /&gt;
+  &lt;Type From="MEDIUMINT UNSIGNED" To="uint" /&gt;
+  &lt;Type From="SMALLINT UNSIGNED" To="ushort" /&gt;
+  &lt;Type From="TINYINT UNSIGNED" To="byte" /&gt;
+  &lt;Type From="FLOAT" To="float" /&gt;
+  &lt;Type From="FLOAT UNSIGNED" To="float" /&gt;
+  &lt;Type From="DECIMAL" To="decimal" /&gt;
+  &lt;Type From="DECIMAL UNSIGNED" To="decimal" /&gt;
+  &lt;Type From="NUMERIC" To="decimal" /&gt;
+  &lt;Type From="NUMERIC UNSIGNED" To="decimal" /&gt;
+  &lt;Type From="DOUBLE UNSIGNED" To="double" /&gt;
+  &lt;Type From="DOUBLE" To="double" /&gt;
+  &lt;Type From="REAL" To="double" /&gt;
+  &lt;Type From="REAL UNSIGNED" To="double" /&gt;
+  &lt;Type From="VARCHAR" To="string" /&gt;
+  &lt;Type From="CHAR" To="string" /&gt;
+  &lt;Type From="TIMESTAMP" To="DateTime" /&gt;
+  &lt;Type From="DATE" To="DateTime" /&gt;
+  &lt;Type From="DATETIME" To="DateTime" /&gt;
+  &lt;Type From="BLOB" To="byte[]" /&gt;
+  &lt;Type From="LONGBLOB" To="byte[]" /&gt;
+  &lt;Type From="TINYBLOB" To="byte[]" /&gt;
+  &lt;Type From="MEDIUMBLOB" To="byte[]" /&gt;
+  &lt;Type From="TEXT" To="string" /&gt;
+  &lt;Type From="TIME" To="TimeSpan" /&gt;
+  &lt;Type From="LONGTEXT" To="string" /&gt;
+  &lt;Type From="MEDIUMTEXT" To="string" /&gt;
+  &lt;Type From="TINYTEXT" To="string" /&gt;
+  &lt;Type From="ENUM" To="string" /&gt;
+&lt;/Definitions&gt;</value>
+  </data>
+  <data name="SQLServer_VBNet" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Definitions&gt;
+  &lt;Type SQLType="bigint" CLRTargetType="Int64" /&gt;
+  &lt;Type SQLType="binary" CLRTargetType="Object" /&gt;
+  &lt;Type SQLType="bit" CLRTargetType="Boolean" /&gt;
+  &lt;Type SQLType="char" CLRTargetType="String" /&gt;
+  &lt;Type SQLType="datetime" CLRTargetType="DateTime" /&gt;
+  &lt;Type SQLType="decimal" CLRTargetType="Decimal" /&gt;
+  &lt;Type SQLType="float" CLRTargetType="Double" /&gt;
+  &lt;Type SQLType="image" CLRTargetType="Byte()" /&gt;
+  &lt;Type SQLType="int" CLRTargetType="Integer" /&gt;
+  &lt;Type SQLType="money" CLRTargetType="Decimal" /&gt;
+  &lt;Type SQLType="nchar" CLRTargetType="String" /&gt;
+  &lt;Type SQLType="ntext" CLRTargetType="String" /&gt;
+  &lt;Type SQLType="numeric" CLRTargetType="Decimal" /&gt;
+  &lt;Type SQLType="nvarchar" CLRTargetType="String" /&gt;
+  &lt;Type SQLType="real" CLRTargetType="Single" /&gt;
+  &lt;Type SQLType="smalldatetime" CLRTargetType="DateTime" /&gt;
+  &lt;Type SQLType="smallint" CLRTargetType="Int16" /&gt;
+  &lt;Type SQLType="smallmoney" CLRTargetType="System.Decimal" /&gt;
+  &lt;Type SQLType="text" CLRTargetType="String" /&gt;
+  &lt;Type SQLType="timestamp" CLRTargetType="Byte()" /&gt;
+  &lt;Type SQLType="tinyint" CLRTargetType="Byte" /&gt;
+  &lt;Type SQLType="uniqueidentifier" CLRTargetType="Guid" /&gt;
+  &lt;Type SQLType="varbinary" CLRTargetType="Byte()" /&gt;
+  &lt;Type SQLType="varchar" CLRTargetType="String" /&gt;
+  &lt;Type SQLType="xml" CLRTargetType="String" /&gt; 
+  &lt;Type SQLType="sql_variant" CLRTargetType="Object" /&gt;
+&lt;/Definitions&gt;</value>
+  </data>
+</root>
