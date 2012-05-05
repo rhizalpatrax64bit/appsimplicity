@@ -74,10 +74,38 @@
         <Category("Code generation"), DisplayName("CLR target type"), Description("Sets the CLR target property type"), [ReadOnly](True)> _
         Public Property CLRTargetType() As String
             Get
+                If (_CLRTargetType = String.Empty) Then
+                    Return ("Undefined")
+                End If
                 Return _CLRTargetType
             End Get
             Set(ByVal value As String)
                 _CLRTargetType = value
+            End Set
+        End Property
+
+        Private _Summary As String
+        <Category("Code generation"), DisplayName("Summary"), Description("A brief description for documenting this column."), PersistAfterRefreshSchema(True)> _
+        Public Property Summary() As String
+            Get
+                If (_Summary = String.Empty) Then
+                    _Summary = Me.PropertyName
+                End If
+                Return _Summary
+            End Get
+            Set(ByVal value As String)
+                _Summary = value
+            End Set
+        End Property
+
+        Private _IsCLRNullable As Boolean
+        <Category("Code generation"), DisplayName("Is CLR Nullable"), Description("If this value is true, the target property will be generated as a generic Nullable(Of T) property.  Applies only for db nullable colums."), [ReadOnly](True)> _
+        Public Property IsCLRNullable() As Boolean
+            Get
+                Return _IsCLRNullable
+            End Get
+            Set(ByVal value As Boolean)
+                _IsCLRNullable = value
             End Set
         End Property
 

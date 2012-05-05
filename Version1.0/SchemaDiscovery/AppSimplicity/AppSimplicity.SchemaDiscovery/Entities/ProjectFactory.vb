@@ -102,7 +102,7 @@ Public Class ProjectFactory
                     Next
                 End If
 
-                lDataSource.UpdateLanguageMappings()
+                lDataSource.SetProject(lProject)
                 lProject.DataSources.Add(lDataSource)
                 ReportActivity()
                 ReportActivity(String.Format("Extraction from [{0}] completed successfully.", lDataSource.DataSourceName))
@@ -206,6 +206,11 @@ Public Class ProjectFactory
                         Exit For
                     End If
                 Next
+            Next
+
+            For Each lDS As Entities.DataSource In lNewProject.DataSources
+                lDS.SetProject(lNewProject)
+                lDS.UpdateLanguageMappings()
             Next
 
             pProject = lNewProject

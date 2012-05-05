@@ -49,6 +49,9 @@
         <Category("Code generation"), DisplayName("Summary"), Description("A brief description for documenting this object."), PersistAfterRefreshSchema(True)> _
         Public Property Summary() As String
             Get
+                If (_Summary = String.Empty) Then
+                    _Summary = String.Format("Summary description for {0}", Me.Name)
+                End If
                 Return _Summary
             End Get
             Set(ByVal value As String)

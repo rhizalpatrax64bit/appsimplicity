@@ -198,23 +198,34 @@ Namespace Entities
 #End Region
 
         Public Sub UpdateLanguageMappings()
-            Dim lMappings As New LanguageMappingProvider(Me.ProviderName)
+            Dim lMappings As New LanguageMappingProvider(Me.ProviderName, Me.Project.TargetLanguage)
 
             For Each lTable As Table In Me.Tables
                 For Each lColumn In lTable.Columns
-                    lColumn.CLRTargetType = lMappings.GetCLRMapping(lColumn.SQLType, SchemaDiscovery.TargetLanguages.VisualBasic)
+                    Dim lTargetProperty As CLRTargetProperty = lMappings.GetCLRMapping(lColumn)
+                    If Not (lTargetProperty Is Nothing) Then
+                        lColumn.CLRTargetType = lTargetProperty.TargetType
+                        lColumn.IsCLRNullable = lTargetProperty.IsCLRNullable
+                    End If
                 Next
             Next
 
             For Each lView As View In Me.Views
                 For Each lColumn In lView.Columns
-                    lColumn.CLRTargetType = lMappings.GetCLRMapping(lColumn.SQLType, SchemaDiscovery.TargetLanguages.VisualBasic)
+                    Dim lTargetProperty As CLRTargetProperty = lMappings.GetCLRMapping(lColumn)
+                    If Not (lTargetProperty Is Nothing) Then
+                        lColumn.CLRTargetType = lTargetProperty.TargetType
+                        lColumn.IsCLRNullable = lTargetProperty.IsCLRNullable
+                    End If
                 Next
             Next
 
             For Each lSP As StoredProcedure In Me.StoredProcedures
                 For Each lParamenter In lSP.Parameters
-                    lParamenter.CLRTargetType = lMappings.GetCLRMapping(lParamenter.SQLType, SchemaDiscovery.TargetLanguages.VisualBasic)
+                    Dim lTargetProperty As CLRTargetProperty = lMappings.GetCLRMapping(lParamenter)
+                    If Not (lTargetProperty Is Nothing) Then
+                        lParamenter.CLRTargetType = lTargetProperty.TargetType
+                    End If
                 Next
             Next
         End Sub
