@@ -3,6 +3,7 @@ Namespace SomeERP
     ''' Summary description for CustomerAddresses
     ''' </summary>
     Partial Public Class CustomerAddress
+        Implements AppSimplicity.ActiveRecord.IActiveRecord
 
         Private _Id As Integer
         ''' <summary>
@@ -15,8 +16,8 @@ Namespace SomeERP
             Set(ByVal value As Integer)
                 _Id = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _Customer_Id As Integer
         ''' <summary>
         ''' Customer_Id
@@ -28,8 +29,8 @@ Namespace SomeERP
             Set(ByVal value As Integer)
                 _Customer_Id = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _Address As String
         ''' <summary>
         ''' Address
@@ -41,8 +42,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _Address = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _City As String
         ''' <summary>
         ''' City
@@ -54,8 +55,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _City = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _Region_Id As Integer
         ''' <summary>
         ''' Region_Id
@@ -67,8 +68,8 @@ Namespace SomeERP
             Set(ByVal value As Integer)
                 _Region_Id = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _PostalCode As String
         ''' <summary>
         ''' PostalCode
@@ -80,8 +81,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _PostalCode = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _CreatedOn As DateTime
         ''' <summary>
         ''' CreatedOn
@@ -93,8 +94,8 @@ Namespace SomeERP
             Set(ByVal value As DateTime)
                 _CreatedOn = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _CreatedBy As String
         ''' <summary>
         ''' CreatedBy
@@ -106,8 +107,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _CreatedBy = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _ModifiedOn As DateTime
         ''' <summary>
         ''' ModifiedOn
@@ -119,8 +120,8 @@ Namespace SomeERP
             Set(ByVal value As DateTime)
                 _ModifiedOn = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _ModifiedBy As String
         ''' <summary>
         ''' ModifiedBy
@@ -132,8 +133,17 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _ModifiedBy = value
             End Set
-        End Property		
-
+        End Property	
+			
+        Private _IsLoadedFromDB As Boolean = False
+        Public Property IsLoadedFromDB As Boolean Implements AppSimplicity.ActiveRecord.IActiveRecord.IsLoadedFromDB
+            Get
+                Return _IsLoadedFromDB
+            End Get
+            Set(ByVal value As Boolean)
+                _IsLoadedFromDB = value
+            End Set
+        End Property
 
     End Class
 End Namespace

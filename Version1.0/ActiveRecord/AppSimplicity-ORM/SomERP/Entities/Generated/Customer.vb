@@ -3,19 +3,20 @@ Namespace SomeERP
     ''' Summary description for Customers
     ''' </summary>
     Partial Public Class Customer
+        Implements AppSimplicity.ActiveRecord.IActiveRecord
 
         Private _Id As Integer
         ''' <summary>
         ''' Id
-        ''' </summary>
-        Public Property Id() As Integer
+        ''' </summary>        
+        Public Property Id As Integer Implements AppSimplicity.ActiveRecord.IActiveRecord.Id
             Get
                 Return _Id
             End Get
             Set(ByVal value As Integer)
                 _Id = value
             End Set
-        End Property		
+        End Property
 
         Private _Name As String
         ''' <summary>
@@ -28,8 +29,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _Name = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _TaxId As String
         ''' <summary>
         ''' TaxId
@@ -41,8 +42,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _TaxId = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _Phone As String
         ''' <summary>
         ''' Phone
@@ -54,8 +55,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _Phone = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _Email As String
         ''' <summary>
         ''' Email
@@ -67,8 +68,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _Email = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _CompanyName As String
         ''' <summary>
         ''' CompanyName
@@ -80,8 +81,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _CompanyName = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _CreatedOn As DateTime
         ''' <summary>
         ''' CreatedOn
@@ -93,8 +94,8 @@ Namespace SomeERP
             Set(ByVal value As DateTime)
                 _CreatedOn = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _CreatedBy As String
         ''' <summary>
         ''' CreatedBy
@@ -106,8 +107,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _CreatedBy = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _ModifiedOn As DateTime
         ''' <summary>
         ''' ModifiedOn
@@ -119,8 +120,8 @@ Namespace SomeERP
             Set(ByVal value As DateTime)
                 _ModifiedOn = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _ModifiedBy As String
         ''' <summary>
         ''' ModifiedBy
@@ -132,8 +133,8 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _ModifiedBy = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _Active As Boolean
         ''' <summary>
         ''' Active
@@ -145,8 +146,8 @@ Namespace SomeERP
             Set(ByVal value As Boolean)
                 _Active = value
             End Set
-        End Property		
-
+        End Property	
+			
         Private _CustomerTypeId As Integer
         ''' <summary>
         ''' CustomerTypeId
@@ -158,8 +159,17 @@ Namespace SomeERP
             Set(ByVal value As Integer)
                 _CustomerTypeId = value
             End Set
-        End Property		
-
+        End Property	
+			
+        Private _IsLoadedFromDB As Boolean = False
+        Public Property IsLoadedFromDB As Boolean Implements AppSimplicity.ActiveRecord.IActiveRecord.IsLoadedFromDB
+            Get
+                Return _IsLoadedFromDB
+            End Get
+            Set(ByVal value As Boolean)
+                _IsLoadedFromDB = value
+            End Set
+        End Property
 
     End Class
 End Namespace
