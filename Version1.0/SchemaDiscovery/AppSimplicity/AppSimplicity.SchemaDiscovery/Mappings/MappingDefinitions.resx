@@ -160,32 +160,32 @@
   <data name="SQLServer_VBNet" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;Definitions&gt;
-  &lt;Type SQLType="bigint" CLRTargetType="Int64" /&gt;
-  &lt;Type SQLType="binary" CLRTargetType="Object" /&gt;
-  &lt;Type SQLType="bit" CLRTargetType="Boolean" /&gt;
-  &lt;Type SQLType="char" CLRTargetType="String" /&gt;
-  &lt;Type SQLType="datetime" CLRTargetType="DateTime" /&gt;
-  &lt;Type SQLType="decimal" CLRTargetType="Decimal" /&gt;
-  &lt;Type SQLType="float" CLRTargetType="Double" /&gt;
-  &lt;Type SQLType="image" CLRTargetType="Byte()" /&gt;
-  &lt;Type SQLType="int" CLRTargetType="Integer" /&gt;
-  &lt;Type SQLType="money" CLRTargetType="Decimal" /&gt;
-  &lt;Type SQLType="nchar" CLRTargetType="String" /&gt;
-  &lt;Type SQLType="ntext" CLRTargetType="String" /&gt;
-  &lt;Type SQLType="numeric" CLRTargetType="Decimal" /&gt;
-  &lt;Type SQLType="nvarchar" CLRTargetType="String" /&gt;
-  &lt;Type SQLType="real" CLRTargetType="Single" /&gt;
-  &lt;Type SQLType="smalldatetime" CLRTargetType="DateTime" /&gt;
-  &lt;Type SQLType="smallint" CLRTargetType="Int16" /&gt;
-  &lt;Type SQLType="smallmoney" CLRTargetType="System.Decimal" /&gt;
-  &lt;Type SQLType="text" CLRTargetType="String" /&gt;
-  &lt;Type SQLType="timestamp" CLRTargetType="Byte()" /&gt;
-  &lt;Type SQLType="tinyint" CLRTargetType="Byte" /&gt;
-  &lt;Type SQLType="uniqueidentifier" CLRTargetType="Guid" /&gt;
-  &lt;Type SQLType="varbinary" CLRTargetType="Byte()" /&gt;
-  &lt;Type SQLType="varchar" CLRTargetType="String" /&gt;
-  &lt;Type SQLType="xml" CLRTargetType="String" /&gt; 
-  &lt;Type SQLType="sql_variant" CLRTargetType="Object" /&gt;
+  &lt;Type SQLType="bigint" CLRTargetType="Int64" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="binary" CLRTargetType="Object" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="bit" CLRTargetType="Boolean" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="char" CLRTargetType="String" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="datetime" CLRTargetType="DateTime" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="decimal" CLRTargetType="Decimal" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="float" CLRTargetType="Double" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="image" CLRTargetType="Byte()" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="int" CLRTargetType="Integer" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="money" CLRTargetType="Decimal" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="nchar" CLRTargetType="String" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="ntext" CLRTargetType="String" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="numeric" CLRTargetType="Decimal" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="nvarchar" CLRTargetType="String" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="real" CLRTargetType="Single" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="smalldatetime" CLRTargetType="DateTime" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="smallint" CLRTargetType="Int16" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="smallmoney" CLRTargetType="System.Decimal" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="text" CLRTargetType="String" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="timestamp" CLRTargetType="Byte()" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="tinyint" CLRTargetType="Byte" IsCLRNullable="true" /&gt;
+  &lt;Type SQLType="uniqueidentifier" CLRTargetType="Guid" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="varbinary" CLRTargetType="Byte()" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="varchar" CLRTargetType="String" IsCLRNullable="false" /&gt;
+  &lt;Type SQLType="xml" CLRTargetType="String" IsCLRNullable="false" /&gt; 
+  &lt;Type SQLType="sql_variant" CLRTargetType="Object" IsCLRNullable="false" /&gt;
 &lt;/Definitions&gt;</value>
   </data>
 </root>
