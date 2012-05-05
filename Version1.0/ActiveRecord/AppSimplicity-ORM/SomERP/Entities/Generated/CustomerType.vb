@@ -3,19 +3,20 @@ Namespace SomeERP
     ''' Summary description for CustomerTypes
     ''' </summary>
     Partial Public Class CustomerType
+        Implements AppSimplicity.ActiveRecord.IActiveRecord
 
         Private _Id As Integer
         ''' <summary>
         ''' Id
-        ''' </summary>
-        Public Property Id() As Integer
+        ''' </summary>        
+        Public Property Id As Integer Implements AppSimplicity.ActiveRecord.IActiveRecord.Id
             Get
                 Return _Id
             End Get
             Set(ByVal value As Integer)
                 _Id = value
             End Set
-        End Property		
+        End Property
 
         Private _Description As String
         ''' <summary>
@@ -28,8 +29,17 @@ Namespace SomeERP
             Set(ByVal value As String)
                 _Description = value
             End Set
-        End Property		
-
+        End Property	
+			
+        Private _IsLoadedFromDB As Boolean = False
+        Public Property IsLoadedFromDB As Boolean Implements AppSimplicity.ActiveRecord.IActiveRecord.IsLoadedFromDB
+            Get
+                Return _IsLoadedFromDB
+            End Get
+            Set(ByVal value As Boolean)
+                _IsLoadedFromDB = value
+            End Set
+        End Property
 
     End Class
 End Namespace
