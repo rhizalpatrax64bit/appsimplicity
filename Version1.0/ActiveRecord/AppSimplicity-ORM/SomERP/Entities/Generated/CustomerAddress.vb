@@ -8,16 +8,16 @@ Namespace SomeERP
         Private _Id As Integer
         ''' <summary>
         ''' Id
-        ''' </summary>
-        Public Property Id() As Integer
+        ''' </summary>        
+        Public Property Id As Integer Implements AppSimplicity.ActiveRecord.IActiveRecord.Id
             Get
                 Return _Id
             End Get
             Set(ByVal value As Integer)
                 _Id = value
             End Set
-        End Property	
-			
+        End Property
+
         Private _Customer_Id As Integer
         ''' <summary>
         ''' Customer_Id

@@ -1,43 +1,46 @@
-﻿Public Class CustomerDataManager
-    Implements ICustomerDataManager
+﻿Namespace SomeERP
+    Public Class CustomerDataManager
+        Implements ICustomerDataManager
 
-    Public Function Delete(ByVal Customer As SomeERP.Customer) As Object Implements ICustomerDataManager.Delete
+        Public Function Delete(ByVal Customer As Customer) As Object Implements ICustomerDataManager.Delete
 
-    End Function
+        End Function
 
-    Public Function DeleteAll(ByVal Customers As System.Collections.Generic.List(Of SomeERP.Customer)) As Object Implements ICustomerDataManager.DeleteAll
+        Public Function DeleteAll(ByVal Customers As System.Collections.Generic.List(Of Customer)) As Object Implements ICustomerDataManager.DeleteAll
 
-    End Function
+        End Function
 
-    Public Function DeleteByKey(ByVal key As Object) As Boolean Implements ICustomerDataManager.DeleteByKey
+        Public Function DeleteByKey(ByVal key As Object) As Boolean Implements ICustomerDataManager.DeleteByKey
 
-    End Function
+        End Function
 
-    Public Function GetAll() As System.Collections.Generic.List(Of SomeERP.Customer) Implements ICustomerDataManager.GetAll
+        Public Function GetAll() As System.Collections.Generic.List(Of Customer) Implements ICustomerDataManager.GetAll
 
-    End Function
+        End Function
 
-    Public Function GetAllActive() As System.Collections.Generic.List(Of SomeERP.Customer) Implements ICustomerDataManager.GetAllActive
+        Public Function GetAllActive() As System.Collections.Generic.List(Of Customer) Implements ICustomerDataManager.GetAllActive
 
-    End Function
+        End Function
 
-    Public Function GetByKey(ByVal Key As Object) As SomeERP.Customer Implements ICustomerDataManager.GetByKey
+        Public Function GetByKey(ByVal Key As Object) As Customer Implements ICustomerDataManager.GetByKey
 
-    End Function
+        End Function
 
-    Public Function Insert(ByVal Customer As SomeERP.Customer) As Object Implements ICustomerDataManager.Insert
+        Public Function Insert(ByVal Customer As Customer) As Object Implements ICustomerDataManager.Insert
 
-    End Function
+        End Function
 
-    Public Function InsertAll(ByVal Customers As System.Collections.Generic.List(Of SomeERP.Customer)) As Object Implements ICustomerDataManager.InsertAll
+        Public Function InsertAll(ByVal Customers As System.Collections.Generic.List(Of Customer)) As Object Implements ICustomerDataManager.InsertAll
 
-    End Function
+        End Function
 
-    Public Function Update(ByVal Customer As SomeERP.Customer) As Object Implements ICustomerDataManager.Update
+        Public Function Update(ByVal Customer As Customer) As Object Implements ICustomerDataManager.Update
 
-    End Function
+        End Function
 
-    Public Function UpdateAll(ByVal Customers As System.Collections.Generic.LinkedList(Of SomeERP.Customer)) As Object Implements ICustomerDataManager.UpdateAll
+        Public Function UpdateAll(ByVal Customers As System.Collections.Generic.List(Of Customer)) As Object Implements ICustomerDataManager.UpdateAll
 
-    End Function
-End Class
+        End Function
+    End Class
+End Namespace
+
