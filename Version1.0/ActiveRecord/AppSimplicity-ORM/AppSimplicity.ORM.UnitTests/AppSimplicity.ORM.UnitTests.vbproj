@@ -7,10 +7,10 @@
     </ProductVersion>
     <SchemaVersion>
     </SchemaVersion>
-    <ProjectGuid>{38F54C0A-B725-4B02-96D2-295C2551C014}</ProjectGuid>
+    <ProjectGuid>{37BD0873-08A2-4888-AA4F-811A2540F5B3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Some.ERP.DataAccess</RootNamespace>
-    <AssemblyName>Some.ERP.DataAccess</AssemblyName>
+    <RootNamespace>AppSimplicity.ORM.UnitTests</RootNamespace>
+    <AssemblyName>AppSimplicity.ORM.UnitTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Some.ERP.DataAccess.xml</DocumentationFile>
+    <DocumentationFile>AppSimplicity.ORM.UnitTests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Some.ERP.DataAccess.xml</DocumentationFile>
+    <DocumentationFile>AppSimplicity.ORM.UnitTests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,12 +46,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AppSimplicity">
-      <HintPath>..\References\AppSimplicity.dll</HintPath>
-    </Reference>
-    <Reference Include="AppSimplicity.DataAccess">
-      <HintPath>..\References\AppSimplicity.DataAccess.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -65,8 +59,6 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataManagers\SomeERP\CustomerDataManager.vb" />
-    <Compile Include="Mappings\SomeERP\CustomerDataMapper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -107,12 +99,15 @@
       <Project>{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF}</Project>
       <Name>AppSimplicity.ActiveRecord</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Some.ERP.DataAccess\Some.ERP.DataAccess.vbproj">
+      <Project>{38F54C0A-B725-4B02-96D2-295C2551C014}</Project>
+      <Name>Some.ERP.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SomERP\SomeERP.vbproj">
       <Project>{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}</Project>
       <Name>SomeERP</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

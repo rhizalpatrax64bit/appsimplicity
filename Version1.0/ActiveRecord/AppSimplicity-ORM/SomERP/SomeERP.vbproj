@@ -49,9 +49,6 @@
     <Reference Include="AppSimplicity.DataAccess">
       <HintPath>..\References\AppSimplicity.DataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="AppSimplicity.SchemaDiscovery">
-      <HintPath>..\References\AppSimplicity.SchemaDiscovery.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -66,8 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\CustomerDataManager.vb" />
-    <Compile Include="DataAccess\CustomerDataMapper.vb" />
     <Compile Include="DataAccess\DataContext.vb" />
+    <Compile Include="DataAccess\SomeERP\Mappings\CustomerDataMapper.vb" />
     <Compile Include="Entities\Generated\SomeERPDataContext_.vb" />
     <Compile Include="Entities\SomeERP\Customer.vb" />
     <Compile Include="Entities\SomeERP\CustomerAddress.vb" />
