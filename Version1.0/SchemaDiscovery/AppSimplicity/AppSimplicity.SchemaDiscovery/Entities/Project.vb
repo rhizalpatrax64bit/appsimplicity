@@ -40,7 +40,7 @@ Namespace Entities
             End Set
         End Property
 
-        Private _TargetLanguage As TargetLanguages = TargetLanguages.CSharp
+        Private _TargetLanguage As TargetLanguages = TargetLanguages.VisualBasic
         <Category("Code generation"), DisplayName("Code generation CLR target language"), Description("Sets the CLR language for code generation."), PersistAfterRefreshSchema(True)> _
         Public Property TargetLanguage() As TargetLanguages
             Get
@@ -78,6 +78,7 @@ Namespace Entities
         ''' </summary>
         Public Sub UpdateParenthood()
             For Each lDatasource As Entities.DataSource In Me.DataSources
+                lDatasource.SetProject(Me)
 
                 For Each lTable As Entities.Table In lDatasource.Tables
                     lTable.SetDataSource(lDatasource)

@@ -258,6 +258,12 @@ Public Class ProjectFactory
         If (System.IO.File.Exists(lFileName)) Then
             ReportActivity(String.Format("Reading project from [{0}]...", lFileName))
             lReturnValue = lSerializer.DeserializeFromString(Utilities.File.GetFileText(lFileName))
+            If Not (lReturnValue Is Nothing) Then
+                For Each lDS As Entities.DataSource In lReturnValue.DataSources
+                    lDS.SetProject(lReturnValue)
+                    lDS.UpdateLanguageMappings()
+                Next
+            End If
             ReportActivity("Project succesfully loaded.")
         Else
             ReportActivity("Project file was not found, proceeding to update schema from scratch...")
