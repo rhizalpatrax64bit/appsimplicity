@@ -18,7 +18,7 @@
                 if (table.IncludeInCodeGeneration) 
                 { 
 					GeneratePOCOClass(table);
-					WriteOutputFile(System.IO.Path.Combine(OutputDirectory, string.Format(@"Entities\Generated\{0}.vb", table.ClassName)), true);
+					WriteOutputFile(System.IO.Path.Combine(OutputDirectory, string.Format(@"Entities\{0}\{1}.vb", table.DataSource.GeneratedNamespace, table.ClassName)), true);
                 }                
             }
         }
