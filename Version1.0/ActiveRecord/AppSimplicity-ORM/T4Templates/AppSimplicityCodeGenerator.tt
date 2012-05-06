@@ -8,7 +8,7 @@
     string OutputDirectory = @"D:\AppSimplicity\ORM-Ultimate\AppSimplicity-ORM\SomERP\";
     
     AppSimplicity.SchemaDiscovery.Entities.Project project = AppSimplicity.SchemaDiscovery.ProjectFactory.LoadProjectFromDisk(InputSchemaFile);
-
+    
     if (project != null) 
     {
         foreach (AppSimplicity.SchemaDiscovery.Entities.DataSource dS in project.DataSources) 

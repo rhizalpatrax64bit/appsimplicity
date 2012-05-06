@@ -37,7 +37,7 @@ Namespace <#= table.DataSource.GeneratedNamespace #>
         else 
         {
             string targetType = column.CLRTargetType;
-            if (column.IsCLRNullable) 
+            if (column.IsCLRNullable == true) 
             {
                 targetType = string.Format("Nullable(Of {0})", column.CLRTargetType);
             }
