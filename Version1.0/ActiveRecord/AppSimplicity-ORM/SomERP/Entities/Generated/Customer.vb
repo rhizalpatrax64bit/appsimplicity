@@ -83,15 +83,15 @@ Namespace SomeERP
             End Set
         End Property	
 			
-        Private _CreatedOn As DateTime
+        Private _CreatedOn As Nullable(Of DateTime)
         ''' <summary>
         ''' CreatedOn
         ''' </summary>
-        Public Property CreatedOn() As DateTime
+        Public Property CreatedOn() As Nullable(Of DateTime)
             Get
                 Return _CreatedOn
             End Get
-            Set(ByVal value As DateTime)
+            Set(ByVal value As Nullable(Of DateTime))
                 _CreatedOn = value
             End Set
         End Property	
@@ -109,15 +109,15 @@ Namespace SomeERP
             End Set
         End Property	
 			
-        Private _ModifiedOn As DateTime
+        Private _ModifiedOn As Nullable(Of DateTime)
         ''' <summary>
         ''' ModifiedOn
         ''' </summary>
-        Public Property ModifiedOn() As DateTime
+        Public Property ModifiedOn() As Nullable(Of DateTime)
             Get
                 Return _ModifiedOn
             End Get
-            Set(ByVal value As DateTime)
+            Set(ByVal value As Nullable(Of DateTime))
                 _ModifiedOn = value
             End Set
         End Property	
@@ -135,28 +135,28 @@ Namespace SomeERP
             End Set
         End Property	
 			
-        Private _Active As Boolean
+        Private _Active As Nullable(Of Boolean)
         ''' <summary>
         ''' Active
         ''' </summary>
-        Public Property Active() As Boolean
+        Public Property Active() As Nullable(Of Boolean)
             Get
                 Return _Active
             End Get
-            Set(ByVal value As Boolean)
+            Set(ByVal value As Nullable(Of Boolean))
                 _Active = value
             End Set
         End Property	
 			
-        Private _CustomerTypeId As Integer
+        Private _CustomerTypeId As Nullable(Of Integer)
         ''' <summary>
         ''' CustomerTypeId
         ''' </summary>
-        Public Property CustomerTypeId() As Integer
+        Public Property CustomerTypeId() As Nullable(Of Integer)
             Get
                 Return _CustomerTypeId
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Nullable(Of Integer))
                 _CustomerTypeId = value
             End Set
         End Property	

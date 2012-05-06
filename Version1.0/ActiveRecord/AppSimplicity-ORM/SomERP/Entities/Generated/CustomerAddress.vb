@@ -18,15 +18,15 @@ Namespace SomeERP
             End Set
         End Property
 
-        Private _Customer_Id As Integer
+        Private _Customer_Id As Nullable(Of Integer)
         ''' <summary>
         ''' Customer_Id
         ''' </summary>
-        Public Property Customer_Id() As Integer
+        Public Property Customer_Id() As Nullable(Of Integer)
             Get
                 Return _Customer_Id
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Nullable(Of Integer))
                 _Customer_Id = value
             End Set
         End Property	
@@ -57,15 +57,15 @@ Namespace SomeERP
             End Set
         End Property	
 			
-        Private _Region_Id As Integer
+        Private _Region_Id As Nullable(Of Integer)
         ''' <summary>
         ''' Region_Id
         ''' </summary>
-        Public Property Region_Id() As Integer
+        Public Property Region_Id() As Nullable(Of Integer)
             Get
                 Return _Region_Id
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As Nullable(Of Integer))
                 _Region_Id = value
             End Set
         End Property	
@@ -83,15 +83,15 @@ Namespace SomeERP
             End Set
         End Property	
 			
-        Private _CreatedOn As DateTime
+        Private _CreatedOn As Nullable(Of DateTime)
         ''' <summary>
         ''' CreatedOn
         ''' </summary>
-        Public Property CreatedOn() As DateTime
+        Public Property CreatedOn() As Nullable(Of DateTime)
             Get
                 Return _CreatedOn
             End Get
-            Set(ByVal value As DateTime)
+            Set(ByVal value As Nullable(Of DateTime))
                 _CreatedOn = value
             End Set
         End Property	
@@ -109,15 +109,15 @@ Namespace SomeERP
             End Set
         End Property	
 			
-        Private _ModifiedOn As DateTime
+        Private _ModifiedOn As Nullable(Of DateTime)
         ''' <summary>
         ''' ModifiedOn
         ''' </summary>
-        Public Property ModifiedOn() As DateTime
+        Public Property ModifiedOn() As Nullable(Of DateTime)
             Get
                 Return _ModifiedOn
             End Get
-            Set(ByVal value As DateTime)
+            Set(ByVal value As Nullable(Of DateTime))
                 _ModifiedOn = value
             End Set
         End Property	
