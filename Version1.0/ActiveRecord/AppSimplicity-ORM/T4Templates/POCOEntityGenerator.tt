@@ -16,8 +16,7 @@ Namespace <#= table.DataSource.GeneratedNamespace #>
 <#+
     foreach (AppSimplicity.SchemaDiscovery.Entities.Column column in table.Columns)
     {
-
-        if (column.IsIdentity)
+        if ((column.IsIdentity) || (column.ColumnName.ToLower() == "id"))
         { 
 #>
         Private _Id As Integer
@@ -37,16 +36,21 @@ Namespace <#= table.DataSource.GeneratedNamespace #>
 		}
         else 
         {
+            string targetType = column.CLRTargetType;
+            if (column.IsCLRNullable) 
+            {
+                targetType = string.Format("Nullable(Of {0})", column.CLRTargetType);
+            }
 #>
-        Private _<#= column.PropertyName #> As <#= column.CLRTargetType #>
+        Private _<#= column.PropertyName #> As <#= targetType #>
         ''' <summary>
         ''' <#= column.Summary #>
         ''' </summary>
-        Public Property <#= column.PropertyName #>() As <#= column.CLRTargetType #>
+        Public Property <#= column.PropertyName #>() As <#= targetType #>
             Get
                 Return _<#= column.PropertyName #>
             End Get
-            Set(ByVal value As <#= column.CLRTargetType #>)
+            Set(ByVal value As <#= targetType #>)
                 _<#= column.PropertyName #> = value
             End Set
         End Property	
