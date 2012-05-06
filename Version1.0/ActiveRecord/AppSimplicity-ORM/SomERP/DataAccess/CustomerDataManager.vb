@@ -1,46 +1,39 @@
-﻿Namespace SomeERP
-    Public Class CustomerDataManager
-        Implements ICustomerDataManager
+﻿Imports AppSimplicity.ActiveRecord
+Imports AppSimplicity.DataAccess
 
-        Public Function Delete(ByVal Customer As Customer) As Object Implements ICustomerDataManager.Delete
+Namespace SomeERP
+    Partial Public Class CustomerDataManager
+        Inherits EntityDataManager(Of Customer)
+
+        Public Function GetByKey(ByVal Id As Integer) As Customer
+            Dim lCommand As DataCommand = CreateCommand("cgp_CUSTOMERS_GET_BY_KEY", System.Data.CommandType.StoredProcedure)
+
+            lCommand.AddParameter("@Id", System.Data.DbType.Int32, Id)
+
+            Dim lMapper As New CustomerDataMapper()
+            Return lMapper.FetchFirst(lCommand)
+        End Function
+
+        Public Function CreateCustomer(ByRef Item As Customer) As Boolean
+            Dim lReturnValue As Boolean = False
+            Dim lCommand As DataCommand = CreateCommand("cgp_CUSTOMERS_INSERT", System.Data.CommandType.StoredProcedure)
+
+            lCommand.AddParameter("@Id", System.Data.DbType.Int32, Item.Id)
+
+            Dim lService As New DataService(ConnectionSource.GetConnection(""))
+            For Each lRow As AppSimplicity.DataAccess.ResultSetRow In lService.RunCommand(lCommand).ExecuteResultSet()
+                Item.Id = lRow.GetValue("NEW_INSERTED_ID")
+                Item.IsLoadedFromDB = True
+            Next
+
+            Return lReturnValue
+        End Function
+
+        Public Function DeleteCustomer(ByVal Item As Customer)
 
         End Function
 
-        Public Function DeleteAll(ByVal Customers As System.Collections.Generic.List(Of Customer)) As Object Implements ICustomerDataManager.DeleteAll
 
-        End Function
-
-        Public Function DeleteByKey(ByVal key As Object) As Boolean Implements ICustomerDataManager.DeleteByKey
-
-        End Function
-
-        Public Function GetAll() As System.Collections.Generic.List(Of Customer) Implements ICustomerDataManager.GetAll
-
-        End Function
-
-        Public Function GetAllActive() As System.Collections.Generic.List(Of Customer) Implements ICustomerDataManager.GetAllActive
-
-        End Function
-
-        Public Function GetByKey(ByVal Key As Object) As Customer Implements ICustomerDataManager.GetByKey
-
-        End Function
-
-        Public Function Insert(ByVal Customer As Customer) As Object Implements ICustomerDataManager.Insert
-
-        End Function
-
-        Public Function InsertAll(ByVal Customers As System.Collections.Generic.List(Of Customer)) As Object Implements ICustomerDataManager.InsertAll
-
-        End Function
-
-        Public Function Update(ByVal Customer As Customer) As Object Implements ICustomerDataManager.Update
-
-        End Function
-
-        Public Function UpdateAll(ByVal Customers As System.Collections.Generic.List(Of Customer)) As Object Implements ICustomerDataManager.UpdateAll
-
-        End Function
     End Class
 End Namespace
 

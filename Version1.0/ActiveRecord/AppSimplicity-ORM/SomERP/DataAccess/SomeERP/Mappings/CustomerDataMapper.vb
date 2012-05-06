@@ -1,12 +1,15 @@
-﻿Namespace SomeERP
+﻿Imports AppSimplicity.DataAccess
+Imports AppSimplicity.ActiveRecord
+
+Namespace SomeERP
     Public Class CustomerDataMapper
-        Inherits AppSimplicity.ActiveRecord.EntityDataMapper(Of Customer)
+        Inherits EntityDataMapper(Of Customer)
 
         Public Overrides Function LoadInstance(ByVal dbRow As AppSimplicity.DataAccess.ResultSetRow) As Customer
-            Dim lItem As New Customer
+            Dim lItem As New Customer()
 
             lItem.Id = dbRow.GetValue("Id")
-            lItem.Name = dbRow.GetValue("Data")
+            lItem.Email = dbRow.GetValue("Email")
 
             Return lItem
         End Function
