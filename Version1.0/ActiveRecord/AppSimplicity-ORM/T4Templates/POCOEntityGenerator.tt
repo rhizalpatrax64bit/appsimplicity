@@ -6,12 +6,14 @@
     void GeneratePOCOClass(AppSimplicity.SchemaDiscovery.Entities.Table table) 
     { 
 #>
+Imports AppSimplicity.ActiveRecord
+
 Namespace <#= table.DataSource.GeneratedNamespace #>
     ''' <summary>
     ''' <#= table.Summary #>
     ''' </summary>
     Partial Public Class <#= table.ClassName #>
-        Implements AppSimplicity.ActiveRecord.IActiveRecord
+        Implements IActiveRecord, IEntity
 
 <#+
     foreach (AppSimplicity.SchemaDiscovery.Entities.Column column in table.Columns)
@@ -19,16 +21,16 @@ Namespace <#= table.DataSource.GeneratedNamespace #>
         if ((column.IsIdentity) || (column.ColumnName.ToLower() == "id"))
         { 
 #>
-        Private _Id As Integer
+        Private _<#= column.PropertyName #> As Integer
         ''' <summary>
         ''' <#= column.Summary #>
         ''' </summary>        
-        Public Property Id As Integer Implements AppSimplicity.ActiveRecord.IActiveRecord.Id
+        Public Property <#= column.PropertyName #> As Integer Implements AppSimplicity.ActiveRecord.IActiveRecord.Id
             Get
-                Return _Id
+                Return _<#= column.PropertyName #>
             End Get
             Set(ByVal value As Integer)
-                _Id = value
+                _<#= column.PropertyName #> = value
             End Set
         End Property
 
@@ -62,7 +64,7 @@ Namespace <#= table.DataSource.GeneratedNamespace #>
     }
 #>
         Private _IsLoadedFromDB As Boolean = False
-        Public Property IsLoadedFromDB As Boolean Implements AppSimplicity.ActiveRecord.IActiveRecord.IsLoadedFromDB
+        Public Property IsLoadedFromDB As Boolean Implements AppSimplicity.ActiveRecord.IEntity.IsLoadedFromDB
             Get
                 Return _IsLoadedFromDB
             End Get

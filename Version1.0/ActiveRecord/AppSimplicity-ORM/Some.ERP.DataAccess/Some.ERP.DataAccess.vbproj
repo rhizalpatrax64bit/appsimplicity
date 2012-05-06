@@ -7,10 +7,10 @@
     </ProductVersion>
     <SchemaVersion>
     </SchemaVersion>
-    <ProjectGuid>{A5F3A41F-61A3-4799-AA32-B4ACF31C1DEF}</ProjectGuid>
+    <ProjectGuid>{38F54C0A-B725-4B02-96D2-295C2551C014}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AppSimplicity.ActiveRecord</RootNamespace>
-    <AssemblyName>AppSimplicity.ActiveRecord</AssemblyName>
+    <RootNamespace>Some.ERP.DataAccess</RootNamespace>
+    <AssemblyName>Some.ERP.DataAccess</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>AppSimplicity.ActiveRecord.xml</DocumentationFile>
+    <DocumentationFile>Some.ERP.DataAccess.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>AppSimplicity.ActiveRecord.xml</DocumentationFile>
+    <DocumentationFile>Some.ERP.DataAccess.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,12 +46,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AppSimplicity">
-      <HintPath>..\References\AppSimplicity.dll</HintPath>
-    </Reference>
-    <Reference Include="AppSimplicity.DataAccess">
-      <HintPath>..\References\AppSimplicity.DataAccess.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -65,10 +59,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityDataManager.vb" />
-    <Compile Include="EntityDataMapper.vb" />
-    <Compile Include="IActiveRecord.vb" />
-    <Compile Include="IEntity.vb" />
+    <Compile Include="Class1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -103,6 +94,15 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SomERP\SomeERP.vbproj">
+      <Project>{F3DE01DF-4D80-4527-AFC8-D726984B9C0E}</Project>
+      <Name>SomeERP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mappers\SomeERP\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

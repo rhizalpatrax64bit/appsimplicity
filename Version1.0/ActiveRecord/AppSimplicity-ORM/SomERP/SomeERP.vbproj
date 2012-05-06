@@ -46,6 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AppSimplicity.DataAccess">
+      <HintPath>..\References\AppSimplicity.DataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="AppSimplicity.SchemaDiscovery">
       <HintPath>..\References\AppSimplicity.SchemaDiscovery.dll</HintPath>
     </Reference>
@@ -63,11 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\CustomerDataManager.vb" />
-    <Compile Include="Entities\Generated\Customer.vb" />
-    <Compile Include="Entities\Generated\CustomerAddress.vb" />
-    <Compile Include="Entities\Generated\CustomerType.vb" />
-    <Compile Include="Entities\Generated\Region.vb" />
+    <Compile Include="DataAccess\CustomerDataMapper.vb" />
+    <Compile Include="DataAccess\DataContext.vb" />
     <Compile Include="Entities\Generated\SomeERPDataContext_.vb" />
+    <Compile Include="Entities\SomeERP\Customer.vb" />
+    <Compile Include="Entities\SomeERP\CustomerAddress.vb" />
+    <Compile Include="Entities\SomeERP\CustomerType.vb" />
+    <Compile Include="Entities\SomeERP\Region.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
