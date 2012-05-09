@@ -52,6 +52,9 @@
     <Reference Include="AppSimplicity.DataAccess">
       <HintPath>..\References\AppSimplicity.DataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="AppSimplicity.SchemaDiscovery">
+      <HintPath>..\References\AppSimplicity.SchemaDiscovery.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -67,8 +70,10 @@
   <ItemGroup>
     <Compile Include="EntityDataManager.vb" />
     <Compile Include="EntityDataMapper.vb" />
-    <Compile Include="IActiveRecord.vb" />
-    <Compile Include="IEntity.vb" />
+    <Compile Include="Interfaces\IActiveRecord.vb" />
+    <Compile Include="Interfaces\IAuditable.vb" />
+    <Compile Include="Interfaces\IDialectProvider.vb" />
+    <Compile Include="Interfaces\IEntity.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -84,6 +89,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Providers\SqlServer\SQL92Provider.vb" />
+    <Compile Include="Providers\SqlServer\SqlServerProvider.vb" />
+    <Compile Include="Query\Comparison.vb" />
+    <Compile Include="Query\ComparisonConditions.vb" />
+    <Compile Include="Query\QueryBuilder.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -104,6 +114,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
