@@ -15,6 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{192E51
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity.SchemaDiscovery.Engine", "AppSimplicity.SchemaDiscovery.Engine\AppSimplicity.SchemaDiscovery.Engine.vbproj", "{C9E21E94-126C-458B-80F4-C9E5DD4E26E3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{BB4ADF6D-882D-4C14-B7A6-69EA54C9BB90}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicyt.SchemaDiscovery.Tests", "AppSimplicyt.SchemaDiscovery.Tests\AppSimplicyt.SchemaDiscovery.Tests.vbproj", "{B74D4BBA-A252-4B2E-B358-48D939A62699}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Referenced Assemblies", "Referenced Assemblies", "{1CF1DC14-8BAD-4B58-B806-16D44677C53C}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\nunit.framework.dll = Assemblies\nunit.framework.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -37,6 +46,10 @@ Global
 		{C9E21E94-126C-458B-80F4-C9E5DD4E26E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E21E94-126C-458B-80F4-C9E5DD4E26E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E21E94-126C-458B-80F4-C9E5DD4E26E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74D4BBA-A252-4B2E-B358-48D939A62699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74D4BBA-A252-4B2E-B358-48D939A62699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74D4BBA-A252-4B2E-B358-48D939A62699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74D4BBA-A252-4B2E-B358-48D939A62699}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,5 +58,6 @@ Global
 		{60E4EB1D-7F35-40A5-8A3B-B4C4308F5C99} = {DFA36648-8D17-4D31-8BAF-9DEFDEFE9DE1}
 		{C53C06B6-E27C-48CB-B46A-798B9AD96AFC} = {F88B21A8-2E91-4A65-AF96-FE2EB805B31D}
 		{C9E21E94-126C-458B-80F4-C9E5DD4E26E3} = {192E517D-57E9-44DC-9A05-773E24A63843}
+		{B74D4BBA-A252-4B2E-B358-48D939A62699} = {BB4ADF6D-882D-4C14-B7A6-69EA54C9BB90}
 	EndGlobalSection
 EndGlobal
