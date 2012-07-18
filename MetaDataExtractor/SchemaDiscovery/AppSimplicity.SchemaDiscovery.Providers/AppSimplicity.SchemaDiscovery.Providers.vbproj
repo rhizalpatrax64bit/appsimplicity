@@ -83,7 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SQLServerExtractionScripts.resx</DependentUpon>
     </Compile>
-    <Compile Include="SQLServer\SQLServerMetaDataProvider.vb" />
+    <Compile Include="SQLServer\SqlServerMetaDataProvider.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
