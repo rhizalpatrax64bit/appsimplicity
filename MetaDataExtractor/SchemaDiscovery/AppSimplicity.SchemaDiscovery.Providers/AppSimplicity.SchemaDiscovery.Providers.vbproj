@@ -77,6 +77,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="SQLServer\DataAccess\SQLHelper.vb" />
+    <Compile Include="SQLServer\SQLServerDataScripter.vb" />
+    <Compile Include="SQLServer\SQLServerExtractionScripts.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLServerExtractionScripts.resx</DependentUpon>
+    </Compile>
     <Compile Include="SQLServer\SQLServerMetaDataProvider.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +91,11 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLServer\SQLServerExtractionScripts.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SQLServerExtractionScripts.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

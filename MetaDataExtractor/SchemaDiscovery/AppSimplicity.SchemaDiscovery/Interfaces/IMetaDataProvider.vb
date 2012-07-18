@@ -4,7 +4,7 @@
 End Enum
 
 Public Interface IMetaDataProvider
-    Sub SetConnectionStringName(ByVal ConnectionStringName As String)
+    Sub SetConnectionString(ByVal ConnectionString As String)
     Function GetTables() As List(Of Entities.Table)
     Function GetViews() As List(Of Entities.View)
     Function GetColumns(ByVal table As Entities.Table) As List(Of Entities.Column)
