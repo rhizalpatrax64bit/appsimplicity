@@ -93,6 +93,24 @@ Public Class SQLServerDataScripter
             String.Join(", ", lValueList.ToArray()))
     End Function
 
+    ''' <summary>
+    ''' Determines if table primary key is identity.
+    ''' </summary>
+    ''' <param name="table">The instance of the table</param>    
+    Private Function SeeIfTableHasIdentity(table As Entities.Table) As Boolean
+        Dim lReturnValue As Boolean = False
+
+        If Not (table.PrimaryKey Is Nothing) Then
+            If table.Columns.Count = 1 Then
+                If table.GetColumnInstanceByName(table.PrimaryKey.Columns(0).ColumnName).IsIdentity Then
+                    lReturnValue = True
+                End If
+            End If
+        End If
+
+        Return lReturnValue
+    End Function
+
     Public Sub ScriptData(ByVal pTable As Entities.Table, ByRef pOutputScript As System.IO.StreamWriter)
         Console.WriteLine("Fetching data for [{0}].[{1}]", pTable.Schema, pTable.Name)
 
@@ -108,9 +126,12 @@ Public Class SQLServerDataScripter
         Dim lOverallCount As Integer = 0
         Dim lTotalCount As Integer = lDS.Tables(0).Rows.Count()
 
-        'If (pTable.HasIdentity) Then
-        '    pOutputScript.WriteLine("SET IDENTITY_INSERT [{0}].[{1}] ON", pTable.Schema, pTable.Name)
-        'End If
+
+        Dim lTableHasIdentity As Boolean = SeeIfTableHasIdentity(pTable)
+
+        If (lTableHasIdentity) Then
+            pOutputScript.WriteLine("SET IDENTITY_INSERT [{0}].[{1}] ON", pTable.Schema, pTable.Name)
+        End If
 
         For Each lDR As DataRow In lDS.Tables(0).Rows
             pOutputScript.WriteLine(Me.Get_INSERT_Statement(lDR, pTable))
@@ -125,10 +146,10 @@ Public Class SQLServerDataScripter
             End If
         Next
 
-        'If (pTable.HasIdentity) Then
-        '    pOutputScript.WriteLine("SET IDENTITY_INSERT [{0}].[{1}] OFF", pTable.Schema, pTable.Name)
-        'End If
-
+        If (lTableHasIdentity) Then
+            pOutputScript.WriteLine("SET IDENTITY_INSERT [{0}].[{1}] OFF", pTable.Schema, pTable.Name)
+        End If
+        
         pOutputScript.WriteLine("GO")
         pOutputScript.WriteLine("PRINT 'Data for insertion for [{0}].[{1}] completed successfully.'", pTable.Schema, pTable.Name)
         pOutputScript.WriteLine("PRINT 'Total {0} records were inserted.'", lDS.Tables(0).Rows.Count)
