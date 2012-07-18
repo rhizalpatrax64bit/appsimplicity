@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Imports AppSimplicity.SchemaDiscovery
 
 Namespace SqlServer
-    Public Class SqlServerMetaDataProvider
+    Public Class SQLServerMetaDataProvider
         Implements IMetaDataProvider
 
         Private _ConnectionString As String
