@@ -34,14 +34,14 @@
             End Get
         End Property
 
-        Private _IncludeInCodeGeneration As Boolean = True
-        <Category("Code generation"), DisplayName("Include in code generation"), Description("Sets if this object should be included for code generation"), PersistAfterRefreshSchema(True)> _
+        Private _IgnoreInCodeGeneration As Boolean = False
+        <Category("Code generation"), DisplayName("Ignore in code generation"), Description("Sets if this object should be included for code generation"), PersistAfterRefreshSchema(True)> _
         Public Property IncludeInCodeGeneration() As Boolean
             Get
-                Return _IncludeInCodeGeneration
+                Return _IgnoreInCodeGeneration
             End Get
             Set(ByVal value As Boolean)
-                _IncludeInCodeGeneration = value
+                _IgnoreInCodeGeneration = value
             End Set
         End Property
 

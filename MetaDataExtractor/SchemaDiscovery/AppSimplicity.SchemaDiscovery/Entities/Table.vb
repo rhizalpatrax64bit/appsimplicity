@@ -3,14 +3,14 @@
     Public Class Table
         Inherits AbstractTable
 
-        Private _IncludeForDataScripting As Boolean
+        Private _IgnoreForDataScripting As Boolean = False
         <Category("Scripting options"), DisplayName("Include for data scripting"), Description("Determines if this table should be included for data scripting")> _
-        Public Property IncludeForDataScripting() As Boolean
+        Public Property IgnoreForDataScripting() As Boolean
             Get
-                Return _IncludeForDataScripting
+                Return _IgnoreForDataScripting
             End Get
             Set(ByVal value As Boolean)
-                _IncludeForDataScripting = value
+                _IgnoreForDataScripting = value
             End Set
         End Property
 
