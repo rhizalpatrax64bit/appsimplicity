@@ -7,13 +7,14 @@
     </ProductVersion>
     <SchemaVersion>
     </SchemaVersion>
-    <ProjectGuid>{C53C06B6-E27C-48CB-B46A-798B9AD96AFC}</ProjectGuid>
+    <ProjectGuid>{B74D4BBA-A252-4B2E-B358-48D939A62699}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AppSimplicity.SchemaDiscovery.Providers</RootNamespace>
-    <AssemblyName>AppSimplicity.SchemaDiscovery.Providers</AssemblyName>
+    <RootNamespace>AppSimplicyt.SchemaDiscovery.Tests</RootNamespace>
+    <AssemblyName>AppSimplicyt.SchemaDiscovery.Tests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>AppSimplicity.SchemaDiscovery.Providers.xml</DocumentationFile>
+    <DocumentationFile>AppSimplicyt.SchemaDiscovery.Tests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>AppSimplicity.SchemaDiscovery.Providers.xml</DocumentationFile>
+    <DocumentationFile>AppSimplicyt.SchemaDiscovery.Tests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,7 +47,11 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Assemblies\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -56,9 +61,9 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
-    <Import Include="System.Data.SqlClient" />
     <Import Include="System.Diagnostics" />
-    <Import Include="System.Xml" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -76,8 +81,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SQLServer\DataAccess\SQLHelper.vb" />
-    <Compile Include="SQLServer\SQLServerMetaDataProvider.vb" />
+    <Compile Include="ProviderFactoryTests.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -88,6 +92,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -97,15 +104,21 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="SchemaDiscovery.UnitTests.nunit" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AppSimplicity.SchemaDiscovery.Engine\AppSimplicity.SchemaDiscovery.Engine.vbproj">
+      <Project>{C9E21E94-126C-458B-80F4-C9E5DD4E26E3}</Project>
+      <Name>AppSimplicity.SchemaDiscovery.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppSimplicity.SchemaDiscovery.Providers\AppSimplicity.SchemaDiscovery.Providers.vbproj">
+      <Project>{C53C06B6-E27C-48CB-B46A-798B9AD96AFC}</Project>
+      <Name>AppSimplicity.SchemaDiscovery.Providers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AppSimplicity.SchemaDiscovery\AppSimplicity.SchemaDiscovery.vbproj">
       <Project>{60E4EB1D-7F35-40A5-8A3B-B4C4308F5C99}</Project>
       <Name>AppSimplicity.SchemaDiscovery</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MySql\DataAccess\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
