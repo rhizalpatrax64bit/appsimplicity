@@ -1,4 +1,6 @@
-﻿Namespace Entities
+﻿Imports AppSimplicity.SchemaDiscovery.ComponentModel
+
+Namespace Entities
     Public Class Column
 
         Private _ColumnName As String

@@ -1,4 +1,4 @@
-﻿Imports System.ComponentModel
+﻿Imports AppSimplicity.SchemaDiscovery.ComponentModel
 
 Namespace Entities
     <Serializable()> _

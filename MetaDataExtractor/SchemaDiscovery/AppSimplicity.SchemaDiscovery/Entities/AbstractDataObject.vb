@@ -1,4 +1,6 @@
-﻿Namespace Entities
+﻿Imports AppSimplicity.SchemaDiscovery.ComponentModel
+
+Namespace Entities
     <Serializable()> _
     Public Class AbstractDataObject
 

@@ -1,7 +1,7 @@
 ﻿Imports System.Configuration
 Imports System.IO
 Imports Microsoft.Win32
-Imports System.ComponentModel
+Imports AppSimplicity.SchemaDiscovery.ComponentModel
 
 Namespace Entities
     Public Enum TargetLanguages
