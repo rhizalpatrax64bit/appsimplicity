@@ -78,8 +78,29 @@ Namespace Configuration
             Return lConfigSettings.ConnectionStrings
         End Function
 
+
+        Public Function GetAllConnectionsFromLocalConfiguration() As List(Of ConnectionStringSettings)
+            Dim lReturnValue As New List(Of ConnectionStringSettings)
+            Dim lLocalFile As String = Me.GetLocalConfigurationFile()
+
+            If (lLocalFile <> String.Empty) Then
+                If (System.IO.File.Exists(lLocalFile)) Then
+                    Dim lSection As ConnectionStringsSection = GetConnectionStringsSection(lLocalFile)
+
+                    If Not (lSection Is Nothing) Then
+                        For Each lCS As ConnectionStringSettings In lSection.ConnectionStrings
+                            lReturnValue.Add(lCS)
+                        Next
+                    End If
+                End If
+            End If
+
+            Return lReturnValue
+        End Function
+
+
 #Region "Shared methods"
-        Public Shared Function GetConnection(pConnectionName As String) As ConnectionStringSettings
+        Public Shared Function GetConnection(ByVal pConnectionName As String) As ConnectionStringSettings
             Dim lCS As New ConnectionSettings
             Return lCS.GetConnectionSettings(pConnectionName)
         End Function
@@ -89,6 +110,10 @@ Namespace Configuration
             Return lCS.GetAllConnectionSettings()
         End Function
 
+        Public Shared Function GetAllConnectionStringsFromLocalConfiguration() As List(Of ConnectionStringSettings)
+            Dim lSettings As New ConnectionSettings()
+            Return lSettings.GetAllConnectionsFromLocalConfiguration()
+        End Function
 #End Region
 
     End Class
