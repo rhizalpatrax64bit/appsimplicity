@@ -193,7 +193,7 @@ Public NotInheritable Class SqlHelper
                                                      ByVal ParamArray commandParameters() As SqlParameter) As Integer
         If (connectionString Is Nothing OrElse connectionString.Length = 0) Then Throw New ArgumentNullException("connectionString")
         ' Create & open a SqlConnection, and dispose of it after we are done
-        Dim connection As SqlConnection
+        Dim connection As SqlConnection = Nothing
         Try
             connection = New SqlConnection(connectionString)
             connection.Open()
@@ -449,7 +449,7 @@ Public NotInheritable Class SqlHelper
         If (connectionString Is Nothing OrElse connectionString.Length = 0) Then Throw New ArgumentNullException("connectionString")
         
         ' Create & open a SqlConnection, and dispose of it after we are done
-        Dim connection As SqlConnection 
+        Dim connection As SqlConnection = Nothing
         Try
             connection =  New SqlConnection(connectionString)
             connection.Open()
@@ -529,7 +529,7 @@ Public NotInheritable Class SqlHelper
         ' Create a command and prepare it for execution
         Dim cmd As New SqlCommand
         Dim ds As New DataSet
-        Dim dataAdatpter As SqlDataAdapter
+        Dim dataAdatpter As SqlDataAdapter = Nothing
         Dim mustCloseConnection As Boolean = False
 
         PrepareCommand(cmd, connection, CType(Nothing, SqlTransaction), commandType, commandText, commandParameters, mustCloseConnection)
@@ -624,22 +624,22 @@ Public NotInheritable Class SqlHelper
         ' Create a command and prepare it for execution
         Dim cmd As New SqlCommand
         Dim ds As New DataSet
-        Dim dataAdatpter As SqlDataAdapter
+        Dim dataAdapter As SqlDataAdapter = Nothing
         Dim mustCloseConnection As Boolean = False
 
         PrepareCommand(cmd, transaction.Connection, transaction, commandType, commandText, commandParameters, mustCloseConnection)
 
         Try
             ' Create the DataAdapter & DataSet
-            dataAdatpter = New SqlDataAdapter(cmd)
+            dataAdapter = New SqlDataAdapter(cmd)
 
             ' Fill the DataSet using default values for DataTable names, etc
-            dataAdatpter.Fill(ds)
+            dataAdapter.Fill(ds)
 
             ' Detach the SqlParameters from the command object, so they can be used again
             cmd.Parameters.Clear()
         Finally
-            If (Not dataAdatpter Is Nothing) Then dataAdatpter.Dispose()
+            If (Not dataAdapter Is Nothing) Then dataAdapter.Dispose()
         End Try
 
         ' Return the dataset
@@ -782,7 +782,7 @@ Public NotInheritable Class SqlHelper
         If (connectionString Is Nothing OrElse connectionString.Length = 0) Then Throw New ArgumentNullException("connectionString")
 
         ' Create & open a SqlConnection
-        Dim connection As SqlConnection
+        Dim connection As SqlConnection = Nothing
         Try
             connection = New SqlConnection(connectionString)
             connection.Open()
@@ -999,7 +999,7 @@ Public NotInheritable Class SqlHelper
                                                    ByVal ParamArray commandParameters() As SqlParameter) As Object
         If (connectionString Is Nothing OrElse connectionString.Length = 0) Then Throw New ArgumentNullException("connectionString")
         ' Create & open a SqlConnection, and dispose of it after we are done.
-        Dim connection As SqlConnection 
+        Dim connection As SqlConnection = Nothing
         Try
             connection = New SqlConnection(connectionString)
             connection.Open()
@@ -1413,7 +1413,7 @@ Public NotInheritable Class SqlHelper
         If (dataSet Is Nothing ) Then Throw New ArgumentNullException( "dataSet" )
         
         ' Create & open a SqlConnection, and dispose of it after we are done
-        Dim connection As SqlConnection
+        Dim connection As SqlConnection = Nothing
         Try
             connection = New SqlConnection(connectionString)
 
@@ -1445,7 +1445,7 @@ Public NotInheritable Class SqlHelper
         If (dataSet Is Nothing ) Then Throw New ArgumentNullException( "dataSet" )
 
         ' Create & open a SqlConnection, and dispose of it after we are done
-        Dim connection As SqlConnection
+        Dim connection As SqlConnection = Nothing
         Try
             connection = New SqlConnection(connectionString)
 
@@ -1478,7 +1478,7 @@ Public NotInheritable Class SqlHelper
         If (dataSet Is Nothing ) Then Throw New ArgumentNullException( "dataSet" )
 
         ' Create & open a SqlConnection, and dispose of it after we are done
-        Dim connection As SqlConnection
+        Dim connection As SqlConnection = Nothing
         Try
             connection = New SqlConnection(connectionString)
 
@@ -2324,7 +2324,7 @@ Public NotInheritable Class SqlHelperParameterCache
                                                        ByVal spName As String, _
                                                        ByVal includeReturnValueParameter As Boolean) As SqlParameter()
         If (connectionString Is Nothing OrElse connectionString.Length = 0) Then Throw New ArgumentNullException("connectionString")
-        Dim connection As SqlConnection
+        Dim connection As SqlConnection = Nothing
         Try
             connection = New SqlConnection(connectionString)
             GetSpParameterSet = GetSpParameterSetInternal(connection, spName, includeReturnValueParameter)
@@ -2357,7 +2357,7 @@ Public NotInheritable Class SqlHelperParameterCache
                                                        ByVal spName As String, _
                                                        ByVal includeReturnValueParameter As Boolean) As SqlParameter()
         If (connection Is Nothing) Then Throw New ArgumentNullException("connection")
-        Dim clonedConnection As SqlConnection
+        Dim clonedConnection As SqlConnection = Nothing
         Try
             clonedConnection = CType((CType(connection, ICloneable).Clone), SqlConnection)
             GetSpParameterSet = GetSpParameterSetInternal(clonedConnection, spName, includeReturnValueParameter)
