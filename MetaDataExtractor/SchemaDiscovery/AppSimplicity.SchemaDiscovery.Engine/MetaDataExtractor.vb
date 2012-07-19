@@ -40,7 +40,7 @@ Public Class MetaDataExtractor
         ReportActivity("Running schema extraction")
         ReportActivity("Looking for connections in .config file...")
 
-        For Each lCS As ConnectionStringSettings In Configuration.ConnectionSettings.GetAllConnections()
+        For Each lCS As ConnectionStringSettings In Configuration.ConnectionSettings.GetAllConnectionStringsFromLocalConfiguration()
             ReportActivity(String.Format("Runing metadata extraction for [{0}]", lCS.Name))
             Dim lMetaDataProvider As IMetaDataProvider = MetaDataProviderFactory.GetIntstance(lCS.ProviderName)
 
@@ -230,6 +230,7 @@ Public Class MetaDataExtractor
             Next
 
             UpdateParenthood(lNewProject)
+            SaveProjectToFile(lNewProject)
 
             pProject = lNewProject
         End If
@@ -305,5 +306,4 @@ Public Class MetaDataProviderFactory
     Public Shared Function GetIntstance(ByVal ProviderName As String) As IMetaDataProvider
         Return CType(Activator.CreateInstance(Type.GetType("AppSimplicity.SchemaDiscovery.Providers.SqlServer.SQLServerMetaDataProvider, AppSimplicity.SchemaDiscovery.Providers")), IMetaDataProvider)
     End Function
-
 End Class
