@@ -60,10 +60,11 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Constants.vb" />
+    <Compile Include="Configuration\ConnectionSettings.vb" />
     <Compile Include="Configuration\MetaDataProviderElement.vb" />
     <Compile Include="Configuration\MetaDataProviderElementCollection.vb" />
     <Compile Include="Configuration\MetaDataProviderSection.vb" />
-    <Compile Include="Factory\MetaDataProviderFactory.vb" />
     <Compile Include="MetaDataExtractor.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -80,6 +81,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities\XMLSerializer.vb" />
+    <Compile Include="VisualStudio\Project.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -107,7 +110,9 @@
       <Name>AppSimplicity.SchemaDiscovery</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Factory\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

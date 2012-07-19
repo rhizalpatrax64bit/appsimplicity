@@ -73,28 +73,5 @@ Namespace Entities
             End Set
         End Property
 
-        ' ''' <summary>
-        ' ''' Sets the parent for each element in the hierarchy tree.
-        ' ''' </summary>
-        'Public Sub UpdateParenthood()
-        '    For Each lDatasource As Entities.DataSource In Me.DataSources
-        '        lDatasource.SetProject(Me)
-
-        '        For Each lTable As Entities.Table In lDatasource.Tables
-        '            lTable.SetDataSource(lDatasource)
-        '        Next
-
-        '        For Each lView As Entities.View In lDatasource.Views
-        '            lView.SetDataSource(lDatasource)
-        '        Next
-
-        '        For Each lSP As Entities.StoredProcedure In lDatasource.StoredProcedures
-        '            lSP.SetDataSource(lDatasource)
-        '        Next
-
-        '        lDatasource.SetProject(Me)
-        '    Next
-        'End Sub
-
     End Class
 End Namespace
