@@ -42,7 +42,7 @@ Public Class MetaDataExtractor
 
         For Each lCS As ConnectionStringSettings In Configuration.ConnectionSettings.GetAllConnectionStringsFromLocalConfiguration()
             ReportActivity(String.Format("Runing metadata extraction for [{0}]", lCS.Name))
-            Dim lMetaDataProvider As IMetaDataProvider = MetaDataProviderFactory.GetIntstance(lCS.ProviderName)
+            Dim lMetaDataProvider As IMetaDataProvider = MetaDataProviderFactory.GetInstance(lCS.ProviderName)
 
             If (lMetaDataProvider Is Nothing) Then
                 ReportActivity(String.Format("Unable to find metadata provider for [{0}].", lCS.Name))
@@ -302,8 +302,8 @@ Public Class MetaDataExtractor
 #End Region
 End Class
 
-Public Class MetaDataProviderFactory
-    Public Shared Function GetIntstance(ByVal ProviderName As String) As IMetaDataProvider
-        Return CType(Activator.CreateInstance(Type.GetType("AppSimplicity.SchemaDiscovery.Providers.SqlServer.SQLServerMetaDataProvider, AppSimplicity.SchemaDiscovery.Providers")), IMetaDataProvider)
-    End Function
-End Class
+'Public Class MetaDataProviderFactory
+'    Public Shared Function GetIntstance(ByVal ProviderName As String) As IMetaDataProvider
+'        Return CType(Activator.CreateInstance(Type.GetType("AppSimplicity.SchemaDiscovery.Providers.SqlServer.SQLServerMetaDataProvider, AppSimplicity.SchemaDiscovery.Providers")), IMetaDataProvider)
+'    End Function
+'End Class
