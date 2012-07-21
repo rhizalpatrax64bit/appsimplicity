@@ -11,7 +11,6 @@ Public Interface IMetaDataProvider
     Function GetColumns(ByVal view As Entities.View) As List(Of Entities.Column)
     Function GetStoredProcedures() As List(Of Entities.StoredProcedure)
     Function GetStoredProcedureParameters(ByVal storedProcedure As Entities.StoredProcedure) As List(Of Entities.StoredProcedureParameter)
-    Function GetCLRTargetType(ByVal sqlType As String, ByVal pType As TargetLanguages) As String
     Function GetKeys(table As Entities.Table) As List(Of Entities.TableKey)
     Sub ScriptData(ByVal table As Entities.Table, ByRef OutputStream As System.IO.Stream)
 End Interface

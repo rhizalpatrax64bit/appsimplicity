@@ -15,16 +15,62 @@ Public Class MetaDataExtractor
         If (_WorkerProcess Is Nothing) Then
             Console.WriteLine(pMessage)
         Else
-            If (pMessage = String.Empty) Then
-                _WorkerProcess.ReportProgress(Math.Round((_CurrentProgress * 100) / _Overall))
-            Else
-                _WorkerProcess.ReportProgress(Math.Round((_CurrentProgress * 100) / _Overall), pMessage)
+            If (Me._Overall > 0) Then
+                If (pMessage = String.Empty) Then
+                    _WorkerProcess.ReportProgress(Math.Round((_CurrentProgress * 100) / _Overall))
+                Else
+                    _WorkerProcess.ReportProgress(Math.Round((_CurrentProgress * 100) / _Overall), pMessage)
+                End If
             End If
         End If
     End Sub
 
     Public Sub DetachBackgroundProcess()
         _WorkerProcess = Nothing
+    End Sub
+
+    Private Sub PopulateDBObjects(ByRef project As Entities.Project, metaProviders As Dictionary(Of String, IMetaDataProvider))
+
+
+        For Each lDatasource As Entities.DataSource In project.DataSources
+            Dim lMetaDataProvider As IMetaDataProvider = metaProviders(lDatasource.DataSourceName)
+            If (lDatasource.Tables.Count > 0) Then
+                ReportActivity()
+                ReportActivity("Now fetching tables metadata...")
+                For Each lTable As Entities.Table In lDatasource.Tables
+                    lTable.Columns = lMetaDataProvider.GetColumns(lTable)
+                    lTable.Keys = lMetaDataProvider.GetKeys(lTable)
+                    ReportActivity(lTable.QualifiedName)
+                    _CurrentProgress += 1
+                    Me.ReportActivity()
+                Next
+            End If
+
+            If (lDatasource.Views.Count > 0) Then
+                ReportActivity()
+                ReportActivity("Now fetching views metadata...")
+                For Each lView As Entities.View In lDatasource.Views
+                    lView.Columns = lMetaDataProvider.GetColumns(lView)
+                    ReportActivity(lView.QualifiedName)
+                    _CurrentProgress += 1
+                    ReportActivity()
+                Next
+            End If
+
+            If (lDatasource.StoredProcedures.Count > 0) Then
+                ReportActivity()
+                ReportActivity("Now fetching stored procedures metadata...")
+                For Each lSp As Entities.StoredProcedure In lDatasource.StoredProcedures
+                    lSp.Parameters = lMetaDataProvider.GetStoredProcedureParameters(lSp)
+                    ReportActivity(lSp.QualifiedName)
+                    _CurrentProgress += 1
+                    Me.ReportActivity()
+                Next
+            End If
+
+            lDatasource.SetProject(project)
+            ReportActivity(String.Format("Extraction from [{0}] completed successfully.", lDatasource.DataSourceName))
+        Next
     End Sub
 
     Public Function LoadProject() As Entities.Project
@@ -40,6 +86,11 @@ Public Class MetaDataExtractor
         ReportActivity("Running schema extraction")
         ReportActivity("Looking for connections in .config file...")
 
+        Me._Overall = 0
+        Me._CurrentProgress = 0
+
+        Dim lMetaProviders As New Dictionary(Of String, IMetaDataProvider)
+
         For Each lCS As ConnectionStringSettings In Configuration.ConnectionSettings.GetAllConnectionStringsFromLocalConfiguration()
             ReportActivity(String.Format("Runing metadata extraction for [{0}]", lCS.Name))
             Dim lMetaDataProvider As IMetaDataProvider = MetaDataProviderFactory.GetInstance(lCS.ProviderName)
@@ -48,6 +99,7 @@ Public Class MetaDataExtractor
                 ReportActivity(String.Format("Unable to find metadata provider for [{0}].", lCS.Name))
             Else
                 lMetaDataProvider.SetConnectionString(lCS.ConnectionString)
+
                 ReportActivity(String.Format("Instance of metadata provider [{0}] has been loaded.", lMetaDataProvider.GetType().FullName))
                 ReportActivity("Proceeding to run extraction...")
                 ReportActivity()
@@ -58,6 +110,8 @@ Public Class MetaDataExtractor
                 lDataSource.GeneratedNamespace = lCS.Name
                 lDataSource.ProviderName = lCS.ProviderName
 
+                lMetaProviders.Add(lDataSource.DataSourceName, lMetaDataProvider)
+
                 lDataSource.Tables = lMetaDataProvider.GetTables()
                 ReportActivity(String.Format("Found {0} tables.", lDataSource.Tables.Count))
                 lDataSource.Views = lMetaDataProvider.GetViews()
@@ -65,50 +119,15 @@ Public Class MetaDataExtractor
                 lDataSource.StoredProcedures = lMetaDataProvider.GetStoredProcedures()
                 ReportActivity(String.Format("Found {0} stored procedures.", lDataSource.StoredProcedures.Count))
 
-                Me._Overall = lDataSource.Tables.Count + lDataSource.Views.Count + lDataSource.StoredProcedures.Count
+                Me._Overall = Me._Overall + lDataSource.Tables.Count + lDataSource.Views.Count + lDataSource.StoredProcedures.Count
 
-                If (lDataSource.Tables.Count > 0) Then
-                    ReportActivity()
-                    ReportActivity("Now fetching tables metadata...")
-                    For Each lTable As Entities.Table In lDataSource.Tables
-                        lTable.Columns = lMetaDataProvider.GetColumns(lTable)
-                        lTable.Keys = lMetaDataProvider.GetKeys(lTable)
-                        ReportActivity(lTable.QualifiedName)
-                        _CurrentProgress += 1
-                        Me.ReportActivity()
-                    Next
-                End If
-
-                If (lDataSource.Views.Count > 0) Then
-                    ReportActivity()
-                    ReportActivity("Now fetching views metadata...")
-                    For Each lView As Entities.View In lDataSource.Views
-                        lView.Columns = lMetaDataProvider.GetColumns(lView)
-                        ReportActivity(lView.QualifiedName)
-                        _CurrentProgress += 1
-                        ReportActivity()
-                    Next
-                End If
-
-                If (lDataSource.StoredProcedures.Count > 0) Then
-                    ReportActivity()
-                    ReportActivity("Now fetching stored procedures metadata...")
-                    For Each lSp As Entities.StoredProcedure In lDataSource.StoredProcedures
-                        lSp.Parameters = lMetaDataProvider.GetStoredProcedureParameters(lSp)
-                        ReportActivity(lSp.QualifiedName)
-                        _CurrentProgress += 1
-                        Me.ReportActivity()
-                    Next
-                End If
-
-                lDataSource.SetProject(lProject)
                 lProject.DataSources.Add(lDataSource)
                 ReportActivity()
-                ReportActivity(String.Format("Extraction from [{0}] completed successfully.", lDataSource.DataSourceName))
             End If
         Next
 
-        _CurrentProgress = 0
+        'Fill columns and parameters, etc.
+        Me.PopulateDBObjects(lProject, lMetaProviders)
 
         ReportActivity()
         ReportActivity("Extraction process is now completed.")

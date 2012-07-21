@@ -128,25 +128,6 @@ Namespace SqlServer
             Return lReturnValue
         End Function
 
-        Public Function GetCLRTargetType(ByVal sqlType As String, ByVal type As TargetLanguages) As String Implements IMetaDataProvider.GetCLRTargetType
-            Dim lDataTypesDS As DataSet = New DataSet()
-            Dim xmlFile As String
-            If type = TargetLanguages.CSharp Then
-                xmlFile = "SQLCSharp.xml"
-            Else
-                xmlFile = "SQLVB.xml"
-            End If
-            lDataTypesDS.ReadXml(xmlFile)
-
-            Dim lDR As DataRow() = lDataTypesDS.Tables(0).Select(String.Format("[SourceType] = '{0}'", sqlType))
-
-            If (lDR.Length > 0) Then
-                Return lDR(0).Item("NetCLRTargetType").ToString
-            End If
-
-            Return String.Empty
-        End Function
-
         Public Sub ScriptData(ByVal table As Entities.Table, ByRef OutputStream As System.IO.Stream) Implements IMetaDataProvider.ScriptData
             Dim lScripter As New SQLServerDataScripter(_ConnectionString)
             Dim lStreamWriter As New System.IO.StreamWriter(OutputStream, System.Text.Encoding.Unicode)
