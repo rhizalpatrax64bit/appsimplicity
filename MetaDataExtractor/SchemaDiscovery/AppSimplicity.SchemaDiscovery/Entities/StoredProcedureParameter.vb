@@ -56,6 +56,17 @@
                 _ParameterDirection = value
             End Set
         End Property
+
+        Private _IsCLRNullable As Boolean
+        <Category("Code generation"), DisplayName("Is CLR Nullable"), Description("If this value is true, the target property will be generated as a generic Nullable(Of T) property.  Applies only for db nullable colums."), [ReadOnly](True)> _
+        Public Property IsCLRNullable() As Boolean
+            Get
+                Return _IsCLRNullable
+            End Get
+            Set(ByVal value As Boolean)
+                _IsCLRNullable = value
+            End Set
+        End Property
     End Class
 End Namespace
 

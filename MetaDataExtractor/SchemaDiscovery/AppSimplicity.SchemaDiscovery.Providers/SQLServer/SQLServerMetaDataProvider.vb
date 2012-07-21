@@ -5,6 +5,7 @@ Imports AppSimplicity.SchemaDiscovery
 
 Namespace SqlServer
     Public Class SQLServerMetaDataProvider
+        Inherits BaseProvider
         Implements IMetaDataProvider
 
         Private _ConnectionString As String
@@ -42,6 +43,13 @@ Namespace SqlServer
                 lColumn.SQLType = lDR.Item("DATA_TYPE").ToString()
                 lColumn.CharMaxLength = IIf(lDR.IsNull("CHARACTER_MAXIMUM_LENGTH"), 0, lDR.Item("CHARACTER_MAXIMUM_LENGTH"))
                 lColumn.IsIdentity = IIf(lDR.Item("IS_IDENTITY") = "YES", True, False)
+
+                Dim CLRMappingInfo As CLRMappingInfo = MyBase.GetTargetCLRType("SQL", "VB.NET", lDR.Item("DATA_TYPE").ToString())
+                If Not (CLRMappingInfo Is Nothing) Then
+                    lColumn.CLRTargetType = CLRMappingInfo.CLRTargetType
+                    lColumn.IsCLRNullable = CLRMappingInfo.IsCLRNullable
+                End If
+                
                 lReturnValue.Add(lColumn)
             Next
 
@@ -72,6 +80,12 @@ Namespace SqlServer
                 lParameter.SQLType = lDR.Item("DATA_TYPE").ToString()
                 lParameter.CharMaxLength = IIf(lDR.Item("CHARACTER_MAXIMUM_LENGTH") Is System.DBNull.Value, 0, lDR.Item("CHARACTER_MAXIMUM_LENGTH"))
                 lParameter.ParameterDirection = ParameterDirection.Input
+
+                Dim CLRMappingInfo As CLRMappingInfo = MyBase.GetTargetCLRType("SQL", "VB.NET", lDR.Item("DATA_TYPE").ToString())
+                If Not (CLRMappingInfo Is Nothing) Then
+                    lParameter.CLRTargetType = CLRMappingInfo.CLRTargetType
+                    lParameter.IsCLRNullable = CLRMappingInfo.IsCLRNullable
+                End If
 
                 lReturnValue.Add(lParameter)
             Next
@@ -139,7 +153,7 @@ Namespace SqlServer
             lScripter.ScriptData(table, lStreamWriter)
         End Sub
 
-        Public Function GetKeys(table As Entities.Table) As System.Collections.Generic.List(Of Entities.TableKey) Implements IMetaDataProvider.GetKeys
+        Public Function GetKeys(ByVal table As Entities.Table) As System.Collections.Generic.List(Of Entities.TableKey) Implements IMetaDataProvider.GetKeys
             Dim lReturnValue As New List(Of Entities.TableKey)
 
             Dim lParameters As New List(Of SqlClient.SqlParameter)
@@ -179,7 +193,7 @@ Namespace SqlServer
             Return lReturnValue
         End Function
 
-        Public Sub SetConnectionString(ConnectionString As String) Implements IMetaDataProvider.SetConnectionString
+        Public Sub SetConnectionString(ByVal ConnectionString As String) Implements IMetaDataProvider.SetConnectionString
             _ConnectionString = ConnectionString
         End Sub
     End Class
