@@ -30,8 +30,6 @@ Public Class MetaDataExtractor
     End Sub
 
     Private Sub PopulateDBObjects(ByRef project As Entities.Project, metaProviders As Dictionary(Of String, IMetaDataProvider))
-
-
         For Each lDatasource As Entities.DataSource In project.DataSources
             Dim lMetaDataProvider As IMetaDataProvider = metaProviders(lDatasource.DataSourceName)
             If (lDatasource.Tables.Count > 0) Then
@@ -176,6 +174,102 @@ Public Class MetaDataExtractor
         End If
     End Sub
 
+    Private Sub FixRelationships(pParentTable As Entities.AbstractTable, pNeighborhood As List(Of Entities.Table))
+        'Fix 'HasMany' relationships:
+        For Each ltable As Entities.AbstractTable In pNeighborhood
+            If (ltable.ClassName <> pParentTable.ClassName) Then
+                For Each lColumn As Entities.Column In ltable.Columns
+                    If (lColumn.ColumnName.ToLower().EndsWith("_id")) Then
+                        Dim entityName As String = Left(lColumn.ColumnName, lColumn.ColumnName.Length - 3)
+
+                        If (entityName.ToLower() = pParentTable.ClassName.ToLower()) Then
+                            Dim lRelationShip As New Entities.RelationShip
+                            lRelationShip.ForeignEntityName = ltable.ClassName
+                            lRelationShip.RelationshipColumn = lColumn.ColumnName
+                            pParentTable.HasManyRelationships.Add(lRelationShip)
+                        End If
+                    End If
+                Next
+            End If
+        Next
+
+        For Each lColumn As Entities.Column In pParentTable.Columns
+            If (lColumn.ColumnName.ToLower().EndsWith("_id")) Then
+                Dim entityName As String = Left(lColumn.ColumnName, lColumn.ColumnName.Length - 3)
+
+                For Each lotherTable In pNeighborhood
+                    If (lotherTable.ClassName.ToLower().EndsWith("map")) Then
+
+                    Else
+                        If (lotherTable.ClassName <> pParentTable.ClassName) Then
+                            If entityName.ToLower() = lotherTable.ClassName.ToLower() Then
+                                Dim lRelationShip As New Entities.RelationShip
+                                lRelationShip.ForeignEntityName = entityName
+                                lRelationShip.RelationshipColumn = lColumn.ColumnName
+
+                                pParentTable.BelongsToRelationShips.Add(lRelationShip)
+                            End If
+                        End If
+                    End If
+                Next
+            End If
+        Next
+    End Sub
+
+    Private Sub FixRelationships(pParentTable As Entities.AbstractTable, pNeighborhood As List(Of Entities.View))
+        'Fix 'HasMany' relationships:
+        For Each ltable As Entities.AbstractTable In pNeighborhood
+            If (ltable.ClassName <> pParentTable.ClassName) Then
+                For Each lColumn As Entities.Column In ltable.Columns
+                    If (lColumn.ColumnName.ToLower().EndsWith("_id")) Then
+                        Dim entityName As String = Left(lColumn.ColumnName, lColumn.ColumnName.Length - 3)
+
+                        If (entityName.ToLower() = ltable.ClassName.ToLower()) Then
+                            Dim lRelationShip As New Entities.RelationShip
+                            lRelationShip.ForeignEntityName = ltable.ClassName
+                            lRelationShip.RelationshipColumn = lColumn.ColumnName
+                            pParentTable.HasManyRelationships.Add(lRelationShip)
+                        End If
+                    End If
+                Next
+            End If
+        Next
+
+        For Each lColumn As Entities.Column In pParentTable.Columns
+            If (lColumn.ColumnName.ToLower().EndsWith("_id")) Then
+                Dim entityName As String = Left(lColumn.ColumnName, lColumn.ColumnName.Length - 3)
+
+                For Each lotherTable In pNeighborhood
+                    If (lotherTable.ClassName.ToLower().EndsWith("map")) Then
+
+                    Else
+                        If (lotherTable.ClassName <> pParentTable.ClassName) Then
+                            If entityName.ToLower() = lotherTable.ClassName.ToLower() Then
+                                Dim lRelationShip As New Entities.RelationShip
+                                lRelationShip.ForeignEntityName = entityName
+                                lRelationShip.RelationshipColumn = lColumn.ColumnName
+
+                                pParentTable.HasManyRelationships.Add(lRelationShip)
+                            End If
+                        End If
+                    End If
+                Next
+            End If
+        Next
+    End Sub
+
+    Private Sub RefreshRelationShips(ByRef pProject As Entities.Project)
+        For Each lDataSource As Entities.DataSource In pProject.DataSources
+            For Each lTable As Entities.AbstractTable In lDataSource.Tables
+                Me.FixRelationships(lTable, lDataSource.Tables)
+            Next
+
+            For Each lTable As Entities.AbstractTable In lDataSource.Views
+                Me.FixRelationships(lTable, lDataSource.Views)
+            Next
+        Next
+    End Sub
+
     Public Sub UpdateProject(ByRef pProject As Entities.Project)
         Dim lNewProject As Entities.Project = Nothing
         Dim lOldProject As Entities.Project = Me.LoadProjectFromFile()
@@ -248,6 +342,7 @@ Public Class MetaDataExtractor
             Next
 
             UpdateParenthood(lNewProject)
+            RefreshRelationShips(lNewProject)
             pProject = lNewProject
         End If
     End Sub
