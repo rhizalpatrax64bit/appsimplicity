@@ -61,6 +61,14 @@
     <Import Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseProvider.vb" />
+    <Compile Include="LanguageMapper\AllDB_CLRLanguageMappings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllDB_CLRLanguageMappings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageMapper\CLRMappingInfo.vb" />
+    <Compile Include="LanguageMapper\DBCLRMapper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -86,6 +94,11 @@
     <Compile Include="SQLServer\SQLServerMetaDataProvider.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LanguageMapper\AllDB_CLRLanguageMappings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AllDB_CLRLanguageMappings.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -117,6 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MySql\DataAccess\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LanguageMapper\DbTargets.xml" />
+    <Content Include="LanguageMapper\Languages.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
