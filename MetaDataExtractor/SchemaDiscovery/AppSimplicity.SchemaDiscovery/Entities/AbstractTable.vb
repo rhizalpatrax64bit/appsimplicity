@@ -44,7 +44,7 @@ Namespace Entities
         Public Property PluralClassName() As String
             Get
                 If (_PluralClassName = String.Empty) Then
-                    _PluralClassName = Me.Name
+                    _PluralClassName = String.Format("{0}Set", Me.Name)
                 End If
                 Return _PluralClassName
             End Get
@@ -81,6 +81,45 @@ Namespace Entities
 
             Return lReturnValue
         End Function
+
+        Private _BelongsToRelationShips As List(Of RelationShip)
+        Public Property BelongsToRelationShips() As List(Of RelationShip)
+            Get
+                If (_BelongsToRelationShips Is Nothing) Then
+                    _BelongsToRelationShips = New List(Of RelationShip)()
+                End If
+                Return _BelongsToRelationShips
+            End Get
+            Set(ByVal value As List(Of RelationShip))
+                _BelongsToRelationShips = value
+            End Set
+        End Property
+
+        Private _HasManyRelationships As List(Of RelationShip)
+        Public Property HasManyRelationships() As List(Of RelationShip)
+            Get
+                If (_HasManyRelationships Is Nothing) Then
+                    _HasManyRelationships = New List(Of RelationShip)()
+                End If
+                Return _HasManyRelationships
+            End Get
+            Set(ByVal value As List(Of RelationShip))
+                _HasManyRelationships = value
+            End Set
+        End Property
+
+        Private _BelongsToAndHasManyRelationships As List(Of RelationShip)
+        Public Property BelongsToAndHasManyRelationships() As List(Of RelationShip)
+            Get
+                If (_BelongsToAndHasManyRelationships Is Nothing) Then
+                    _BelongsToAndHasManyRelationships = New List(Of RelationShip)()
+                End If
+                Return _BelongsToAndHasManyRelationships
+            End Get
+            Set(ByVal value As List(Of RelationShip))
+                _BelongsToAndHasManyRelationships = value
+            End Set
+        End Property
     End Class
 
 End Namespace

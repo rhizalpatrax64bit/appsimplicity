@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Entities\AbstractDataObject.vb" />
     <Compile Include="Entities\AbstractTable.vb" />
+    <Compile Include="Entities\RelationShip.vb" />
     <Compile Include="Entities\CLRTargetProperty.vb" />
     <Compile Include="Entities\Column.vb" />
     <Compile Include="Entities\DataSource.vb" />
