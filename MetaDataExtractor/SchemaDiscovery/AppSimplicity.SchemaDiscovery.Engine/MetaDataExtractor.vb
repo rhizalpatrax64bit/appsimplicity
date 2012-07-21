@@ -157,7 +157,6 @@ Public Class MetaDataExtractor
         End If
     End Sub
 
-
     Public Sub UpdateProject(ByRef pProject As Entities.Project)
         Dim lNewProject As Entities.Project = Nothing
         Dim lOldProject As Entities.Project = Me.LoadProjectFromFile()
@@ -230,8 +229,6 @@ Public Class MetaDataExtractor
             Next
 
             UpdateParenthood(lNewProject)
-            SaveProjectToFile(lNewProject)
-
             pProject = lNewProject
         End If
     End Sub
@@ -259,7 +256,7 @@ Public Class MetaDataExtractor
         End If
 
         ReportActivity(String.Format("Persisting project settings to [{0}].", lFileName))
-        System.IO.File.WriteAllText (lFileName, lSerializer.SerializeToString(pProject))
+        System.IO.File.WriteAllText(lFileName, lSerializer.SerializeToString(pProject))
         ReportActivity("Settings were succesfully saved.")
     End Sub
 
@@ -300,10 +297,5 @@ Public Class MetaDataExtractor
         lExtractor.SaveProjectToFile(project, pathToFile)
     End Sub
 #End Region
-End Class
 
-'Public Class MetaDataProviderFactory
-'    Public Shared Function GetIntstance(ByVal ProviderName As String) As IMetaDataProvider
-'        Return CType(Activator.CreateInstance(Type.GetType("AppSimplicity.SchemaDiscovery.Providers.SqlServer.SQLServerMetaDataProvider, AppSimplicity.SchemaDiscovery.Providers")), IMetaDataProvider)
-'    End Function
-'End Class
+End Class
