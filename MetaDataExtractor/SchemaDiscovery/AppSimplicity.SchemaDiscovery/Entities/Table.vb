@@ -2,6 +2,7 @@
     <Serializable()> _
     Public Class Table
         Inherits AbstractTable
+        Implements IComparable(Of Table)
 
         Private _IgnoreForDataScripting As Boolean = False
         <Category("Scripting options"), DisplayName("Include for data scripting"), Description("Determines if this table should be included for data scripting")> _
@@ -52,6 +53,12 @@
             Return lReturnValue
         End Function
 
+        Public Function CompareTo(ByVal other As Table) As Integer Implements System.IComparable(Of Table).CompareTo
+            If other Is Nothing Then
+                Return 1
+            End If
+            Return String.Compare(Me.Name, other.Name)
+        End Function
     End Class
 End Namespace
 

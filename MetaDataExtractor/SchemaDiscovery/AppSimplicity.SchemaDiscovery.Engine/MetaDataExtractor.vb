@@ -111,10 +111,23 @@ Public Class MetaDataExtractor
                 lMetaProviders.Add(lDataSource.DataSourceName, lMetaDataProvider)
 
                 lDataSource.Tables = lMetaDataProvider.GetTables()
+                For Each lTable As Entities.Table In lDataSource.Tables
+                    lTable.ClassName = NameFixer.GetSingularClassName(lTable.Name)
+                    lTable.PluralClassName = NameFixer.GetPluralClassName(lTable.Name)
+                Next
+                lDataSource.Tables.Sort()
                 ReportActivity(String.Format("Found {0} tables.", lDataSource.Tables.Count))
+
                 lDataSource.Views = lMetaDataProvider.GetViews()
+                For Each lView As Entities.View In lDataSource.Views
+                    lView.ClassName = NameFixer.GetSingularClassName(lView.Name)
+                    lView.PluralClassName = NameFixer.GetPluralClassName(lView.Name)
+                Next
+                lDataSource.Views.Sort()
                 ReportActivity(String.Format("Found {0} views.", lDataSource.Views.Count))
+
                 lDataSource.StoredProcedures = lMetaDataProvider.GetStoredProcedures()
+                lDataSource.StoredProcedures.Sort()
                 ReportActivity(String.Format("Found {0} stored procedures.", lDataSource.StoredProcedures.Count))
 
                 Me._Overall = Me._Overall + lDataSource.Tables.Count + lDataSource.Views.Count + lDataSource.StoredProcedures.Count
