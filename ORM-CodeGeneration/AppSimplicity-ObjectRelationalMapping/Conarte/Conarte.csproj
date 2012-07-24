@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conarte\Aplicacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,7 +47,9 @@
       <Name>AppSimplicity.ActiveRecord</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Conarte\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <Compile Include="CodeGeneration\EntitiesGenerator.tt">
