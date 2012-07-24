@@ -3,7 +3,6 @@
 <#@ Assembly Name="D:\Projects\AppSimplicity-Nhibernate\AppSimplicity-ObjectRelationalMapping\Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.dll" #>
 <#@ Import Namespace="AppSimplicity.SchemaDiscovery" #>
 <#@ Import Namespace="System.IO" #>
-
 <#
 string localSchemaFile = Host.ResolvePath(@"..\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");
 //string outputDirectory = Host.ResolvePath(@"..\Conarte\");
@@ -14,15 +13,46 @@ foreach (AppSimplicity.SchemaDiscovery.Entities.DataSource ds in project.DataSou
 {
     foreach (AppSimplicity.SchemaDiscovery.Entities.Table table in ds.Tables)
     {
+        string scope = "";
+        switch (table.Scope) 
+        {
+			case AppSimplicity.SchemaDiscovery.Entities.AbstractTable.ClassScopes._Friend:
+                scope = "sealed";
+                break;
+            case AppSimplicity.SchemaDiscovery.Entities.AbstractTable.ClassScopes._Protected:
+                scope = "protected";
+                break;
+            case AppSimplicity.SchemaDiscovery.Entities.AbstractTable.ClassScopes._Public:
+                scope = "public";
+                break;				 
+        }
 #>
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Conarte.Conarte
+namespace <#= project.RootNamespace #>.<#= ds.GeneratedNamespace #>
 {
-    public class <#= table.ClassName #>
+    <#= scope #> partial class <#= table.ClassName #>
     {
+	
+<#
+    foreach (AppSimplicity.SchemaDiscovery.Entities.Column column in table.Columns) 
+    { 
+#>
+		private <#= column.CLRTargetType #> _<#= column.PropertyName #>;
+        public <#= column.CLRTargetType #> <#= column.PropertyName #> 
+        {
+            get {
+                return _<#= column.PropertyName #>;
+           
+            set {
+                _<#= column.PropertyName #> = value;
+            }
+        }
+<#
+    }
+#>
     }
 }
 <#             
