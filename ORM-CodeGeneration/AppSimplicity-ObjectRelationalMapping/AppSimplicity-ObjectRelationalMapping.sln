@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActiveRecord", "ActiveRecord", "{082F6129-6CA1-4DC8-9155-7957B79FB734}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSimplicity.ActiveRecord", "AppSimplicity.ActiveRecord\AppSimplicity.ActiveRecord.csproj", "{04194480-CF03-47C8-8989-FD3EAD8AC07C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementation", "Implementation", "{CD21ADBE-14F6-4579-A7FA-A44DD0BAFF01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conarte", "Conarte\Conarte.csproj", "{1642001D-56AD-4BBD-83BE-2A38E62510AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReferencedAssemblies", "ReferencedAssemblies", "{424ECFCA-8F00-46F6-996D-C60BCD2357DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nhibernate", "Nhibernate", "{A0373F88-D402-4680-B28B-9A10DE54BA9F}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\Nhibernate\Antlr3.Runtime.dll = Assemblies\Nhibernate\Antlr3.Runtime.dll
+		Assemblies\Nhibernate\Iesi.Collections.dll = Assemblies\Nhibernate\Iesi.Collections.dll
+		Assemblies\Nhibernate\Iesi.Collections.xml = Assemblies\Nhibernate\Iesi.Collections.xml
+		Assemblies\Nhibernate\log4net.dll = Assemblies\Nhibernate\log4net.dll
+		Assemblies\Nhibernate\log4net.license.txt = Assemblies\Nhibernate\log4net.license.txt
+		Assemblies\Nhibernate\log4net.xml = Assemblies\Nhibernate\log4net.xml
+		Assemblies\Nhibernate\nhibernate-configuration.xsd = Assemblies\Nhibernate\nhibernate-configuration.xsd
+		Assemblies\Nhibernate\nhibernate-mapping.xsd = Assemblies\Nhibernate\nhibernate-mapping.xsd
+		Assemblies\Nhibernate\NHibernate.dll = Assemblies\Nhibernate\NHibernate.dll
+		Assemblies\Nhibernate\NHibernate.xml = Assemblies\Nhibernate\NHibernate.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SchemaDiscovery", "SchemaDiscovery", "{4EE5EC54-9CC3-488C-A6B1-64649BD99244}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.dll = Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.dll
+		Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.pdb = Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.pdb
+		Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.xml = Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04194480-CF03-47C8-8989-FD3EAD8AC07C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04194480-CF03-47C8-8989-FD3EAD8AC07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04194480-CF03-47C8-8989-FD3EAD8AC07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04194480-CF03-47C8-8989-FD3EAD8AC07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1642001D-56AD-4BBD-83BE-2A38E62510AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1642001D-56AD-4BBD-83BE-2A38E62510AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1642001D-56AD-4BBD-83BE-2A38E62510AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1642001D-56AD-4BBD-83BE-2A38E62510AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04194480-CF03-47C8-8989-FD3EAD8AC07C} = {082F6129-6CA1-4DC8-9155-7957B79FB734}
+		{1642001D-56AD-4BBD-83BE-2A38E62510AA} = {CD21ADBE-14F6-4579-A7FA-A44DD0BAFF01}
+		{A0373F88-D402-4680-B28B-9A10DE54BA9F} = {424ECFCA-8F00-46F6-996D-C60BCD2357DB}
+		{4EE5EC54-9CC3-488C-A6B1-64649BD99244} = {424ECFCA-8F00-46F6-996D-C60BCD2357DB}
+	EndGlobalSection
+EndGlobal
