@@ -205,6 +205,8 @@ Public Class SchemaEditor
     Private Sub ToolStripButton4_Click_1(sender As System.Object, e As System.EventArgs) Handles ToolStripButton4.Click
         Me.txtConsoleOutput.Clear()
     End Sub
-
    
+    Private Sub trSchemaTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles trSchemaTree.BeforeLabelEdit
+     
+    End Sub
 End Class
