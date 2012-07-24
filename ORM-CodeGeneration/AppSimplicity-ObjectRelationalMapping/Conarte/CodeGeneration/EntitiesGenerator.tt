@@ -1,0 +1,44 @@
+﻿<#@ template debug="false" hostspecific="True" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ Assembly Name="D:\Projects\AppSimplicity-Nhibernate\AppSimplicity-ObjectRelationalMapping\Assemblies\SchemaDiscovery\AppSimplicity.SchemaDiscovery.dll" #>
+<#@ Import Namespace="AppSimplicity.SchemaDiscovery" #>
+<#@ Import Namespace="System.IO" #>
+
+<#
+string localSchemaFile = Host.ResolvePath(@"..\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");
+//string outputDirectory = Host.ResolvePath(@"..\Conarte\");
+
+AppSimplicity.SchemaDiscovery.Entities.Project project = AppSimplicity.SchemaDiscovery.Entities.Project.LoadFromFile(localSchemaFile);
+
+foreach (AppSimplicity.SchemaDiscovery.Entities.DataSource ds in project.DataSources)
+{
+    foreach (AppSimplicity.SchemaDiscovery.Entities.Table table in ds.Tables)
+    {
+#>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Conarte.Conarte
+{
+    public class <#= table.ClassName #>
+    {
+    }
+}
+<#             
+        
+			SaveOutput(String.Format(@"..\Conarte\{0}.cs", table.ClassName));
+        }
+    
+    }
+#>
+<#+
+  void SaveOutput(string outputFileName)
+  {
+      string templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+      string outputFilePath = Path.Combine(templateDirectory, outputFileName);
+      File.WriteAllText(outputFilePath, this.GenerationEnvironment.ToString()); 
+
+      this.GenerationEnvironment.Remove(0, this.GenerationEnvironment.Length);
+  }
+#>
