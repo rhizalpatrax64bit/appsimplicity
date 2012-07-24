@@ -176,6 +176,7 @@ Partial Class SchemaEditor
         Me.trSchemaTree.Dock = System.Windows.Forms.DockStyle.Fill
         Me.trSchemaTree.ImageIndex = 0
         Me.trSchemaTree.ImageList = Me.IconList
+        Me.trSchemaTree.LabelEdit = True
         Me.trSchemaTree.Location = New System.Drawing.Point(0, 0)
         Me.trSchemaTree.Name = "trSchemaTree"
         Me.trSchemaTree.SelectedImageIndex = 0
