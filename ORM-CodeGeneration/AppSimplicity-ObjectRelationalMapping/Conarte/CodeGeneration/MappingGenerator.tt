@@ -5,7 +5,6 @@
 <#@ Import Namespace="System.IO" #>
 <#
 string localSchemaFile = Host.ResolvePath(@"..\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");
-//string outputDirectory = Host.ResolvePath(@"..\Conarte\");
 
 AppSimplicity.SchemaDiscovery.Entities.Project project = AppSimplicity.SchemaDiscovery.Entities.Project.LoadFromFile(localSchemaFile);
 
@@ -27,15 +26,9 @@ foreach (AppSimplicity.SchemaDiscovery.Entities.DataSource ds in project.DataSou
                 break;				 
         }
 #>
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace <#= project.RootNamespace #>.<#= ds.GeneratedNamespace #>
-{
-    <#= scope #> partial class <#= table.ClassName #>
-    {
-	
+<?xml version="1.0"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="<#= project.RootNamespace #>" namespace="<#= project.RootNamespace #>.<#= ds.GeneratedNamespace #>">
+  <class name="<#= table.ClassName #>" table="<#= table.Name #>" discriminator-value="C">
 <#
     foreach (AppSimplicity.SchemaDiscovery.Entities.Column column in table.Columns) 
     {
@@ -44,26 +37,30 @@ namespace <#= project.RootNamespace #>.<#= ds.GeneratedNamespace #>
         {
             clrTarget = clrTarget + " ?"; 
         }
-#>
-		private <#=clrTarget #> _<#= column.PropertyName #>;
-        public <#=clrTarget #> <#= column.PropertyName #> 
+
+        if (column.IsIdentity)
         {
-            get {
-                return _<#= column.PropertyName #>;
-            }
-            set {
-                _<#= column.PropertyName #> = value;
-            }
+            string generator = "identity";            
+#>
+		<id name="<#= column.PropertyName #>" column="<#= column.ColumnName #>">		
+			<generator class="<#= generator #>" />
+		</id>
+<#
+        }
+        else 
+        { 
+#>
+		<property name="<#= column.PropertyName #>" />		
+<#        
         }
 
-<#
     }
 #>
-    }
-}
+  </class>
+</hibernate-mapping>
 <#             
         
-			SaveOutput(String.Format(@"..\Conarte\Domain\{0}.cs", table.ClassName));
+			SaveOutput(String.Format(@"..\Conarte\Mappings\{0}.hbm.xml", table.ClassName));
         }
     
     }

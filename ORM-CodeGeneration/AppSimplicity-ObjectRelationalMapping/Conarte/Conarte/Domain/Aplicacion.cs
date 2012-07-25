@@ -7,8 +7,8 @@ namespace Conarte.Conarte
     public partial class Aplicacion
     {
 	
-		private int _Id;
-        public int Id 
+		private int ? _Id;
+        public int ? Id 
         {
             get {
                 return _Id;
@@ -29,8 +29,8 @@ namespace Conarte.Conarte
             }
         }
 
-		private int _NumeroMaximoIntentosFallidos;
-        public int NumeroMaximoIntentosFallidos 
+		private int ? _NumeroMaximoIntentosFallidos;
+        public int ? NumeroMaximoIntentosFallidos 
         {
             get {
                 return _NumeroMaximoIntentosFallidos;
@@ -40,8 +40,8 @@ namespace Conarte.Conarte
             }
         }
 
-		private int _TiempoEsperaBloqueo;
-        public int TiempoEsperaBloqueo 
+		private int ? _TiempoEsperaBloqueo;
+        public int ? TiempoEsperaBloqueo 
         {
             get {
                 return _TiempoEsperaBloqueo;
