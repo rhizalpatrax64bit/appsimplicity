@@ -39,7 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conarte\Aplicacion.cs" />
+    <Compile Include="Conarte\Domain\Aplicacion.cs" />
+    <Compile Include="Conarte\Domain\Area.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SomeClass.cs" />
   </ItemGroup>
@@ -56,14 +57,24 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntitiesGenerator.txt</LastGenOutput>
     </Compile>
+    <Compile Include="CodeGeneration\MappingGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MappingGenerator.txt</LastGenOutput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppSimplicity\AppSimplicity.SchemaDiscovery.xml" />
+    <Content Include="CodeGeneration\MappingGenerator.txt">
+      <DependentUpon>MappingGenerator.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
     <Content Include="CodeGeneration\EntitiesGenerator.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntitiesGenerator.tt</DependentUpon>
     </Content>
+    <Content Include="Conarte\Mappings\Aplicacion.xml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
