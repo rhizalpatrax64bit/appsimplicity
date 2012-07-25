@@ -66,6 +66,13 @@
     <Compile Include="Configuration\MetaDataProviderElementCollection.vb" />
     <Compile Include="Configuration\MetaDataProviderSection.vb" />
     <Compile Include="Factory\MetaDataProviderFactory.vb" />
+    <Compile Include="LanguageMappings\AllDB_CLRLanguageMappings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllDB_CLRLanguageMappings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageMappings\CLRMappingInfo.vb" />
+    <Compile Include="LanguageMappings\DBCLRMapper.vb" />
     <Compile Include="MetaDataExtractor.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -83,10 +90,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="NameFixer.vb" />
+    <Compile Include="ProjectFactory.vb" />
+    <Compile Include="SchemaExtractor.vb" />
     <Compile Include="Utilities\XMLSerializer.vb" />
     <Compile Include="VisualStudio\Project.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LanguageMappings\AllDB_CLRLanguageMappings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AllDB_CLRLanguageMappings.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -112,7 +126,10 @@
       <Name>AppSimplicity.SchemaDiscovery</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="LanguageMappings\DbTargets.xml" />
+    <Content Include="LanguageMappings\Languages.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

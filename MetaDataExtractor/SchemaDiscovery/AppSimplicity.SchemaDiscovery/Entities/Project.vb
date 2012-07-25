@@ -5,8 +5,8 @@ Imports AppSimplicity.SchemaDiscovery.ComponentModel
 
 Namespace Entities
     Public Enum TargetLanguages
-        CSharp
-        VisualBasic
+        CSharp = 0
+        VisualBasic = 1
     End Enum
 
     <Serializable()> _
