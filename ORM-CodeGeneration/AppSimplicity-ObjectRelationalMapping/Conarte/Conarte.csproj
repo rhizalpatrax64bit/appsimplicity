@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Conarte</RootNamespace>
     <AssemblyName>Conarte</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,14 +54,14 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
-    <Compile Include="CodeGeneration\EntitiesGenerator.tt">
+    <None Include="CodeGeneration\EntitiesGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntitiesGenerator.txt</LastGenOutput>
-    </Compile>
-    <Compile Include="CodeGeneration\MappingGenerator.tt">
+    </None>
+    <None Include="CodeGeneration\MappingGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MappingGenerator.txt</LastGenOutput>
-    </Compile>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppSimplicity\AppSimplicity.SchemaDiscovery.xml" />
