@@ -339,6 +339,64 @@ Public Class MetaDataExtractor
 
     End Sub
 
+    Private Function FilterTables(ByVal filter As String, ByVal tables As List(Of Entities.Table)) As List(Of Entities.Table)
+        Dim lReturnValue As New List(Of Entities.Table)
+
+        For Each lTable As Entities.Table In tables
+            If (lTable.Name.ToLower().StartsWith(filter.ToLower())) Then
+                lReturnValue.Add(lTable)
+            End If
+        Next
+
+        Return lReturnValue
+    End Function
+
+    Private Function FilterViews(ByVal filter As String, ByVal views As List(Of Entities.View)) As List(Of Entities.View)
+        Dim lReturnValue As New List(Of Entities.View)
+
+        For Each lView As Entities.View In views
+            If (lView.Name.ToLower().StartsWith(filter.ToLower())) Then
+                lReturnValue.Add(lView)
+            End If
+        Next
+
+        Return lReturnValue
+    End Function
+
+    Private Function FilterSPs(ByVal filter As String, ByVal sps As List(Of Entities.StoredProcedure)) As List(Of Entities.StoredProcedure)
+        Dim lReturnValue As New List(Of Entities.StoredProcedure)
+
+        For Each lSP As Entities.StoredProcedure In sps
+            If (lSP.Name.ToLower().StartsWith(filter.ToLower())) Then
+                lReturnValue.Add(lSP)
+            End If
+        Next
+
+        Return lReturnValue
+    End Function
+
+    Private Sub ApplyFilters(ByRef project As Entities.Project)
+        For Each lDS As Entities.DataSource In project.DataSources
+            If (lDS.IncludePrefixes <> String.Empty) Then
+                Dim lAllFilters As String() = lDS.IncludePrefixes.Split(",")
+
+                Dim lAllTables As List(Of Entities.Table) = lDS.Tables
+                Dim lAllViews As List(Of Entities.View) = lDS.Views
+                Dim lAllSps As List(Of Entities.StoredProcedure) = lDS.StoredProcedures
+
+                lDS.Tables = New List(Of Entities.Table)
+                lDS.Views = New List(Of Entities.View)
+                lDS.StoredProcedures = New List(Of Entities.StoredProcedure)
+
+                For Each lFilter As String In lAllFilters
+                    lDS.Tables.AddRange(FilterTables(Trim(lFilter), lAllTables))
+                    lDS.Views.AddRange(FilterViews(Trim(lFilter), lAllViews))
+                    lDS.StoredProcedures.AddRange(FilterSPs(Trim(lFilter), lAllSps))
+                Next
+            End If
+        Next
+    End Sub
+
     Public Sub UpdateProject(ByRef pProject As Entities.Project)
         Dim lNewProject As Entities.Project = Nothing
         Dim lOldProject As Entities.Project = Me.LoadProjectFromFile()
@@ -413,6 +471,7 @@ Public Class MetaDataExtractor
             UpdateParenthood(lNewProject)
             RefreshRelationShips(lNewProject)
             UpdateLanguageMappings(lNewProject)
+            ApplyFilters(lNewProject)
             pProject = lNewProject
         End If
     End Sub
