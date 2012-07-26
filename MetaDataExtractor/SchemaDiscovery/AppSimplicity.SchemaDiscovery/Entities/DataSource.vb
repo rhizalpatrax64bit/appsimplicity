@@ -89,13 +89,24 @@ Namespace Entities
         End Property
 
         Private _UseStoredProceduresForCRUD As Boolean
-        <Category("Code generation"), DisplayName("User stored procedures for CRUD"), Description("Determines if CRUD operations should be performed using Stored Procedures"), PersistAfterRefreshSchema(True)> _
+        <Category("Code generation"), DisplayName("Use stored procedures for CRUD"), Description("Determines if CRUD operations should be performed using Stored Procedures"), PersistAfterRefreshSchema(True)> _
         Public Property UseStoredProceduresForCRUD() As Boolean
             Get
                 Return _UseStoredProceduresForCRUD
             End Get
             Set(ByVal value As Boolean)
                 _UseStoredProceduresForCRUD = value
+            End Set
+        End Property
+
+        Dim _includePrefixes As String
+        <Category("Filter options"), DisplayName("Include tables with these prefixes"), Description("If this is set, only tables with this criteria will be included in schema discovery.  Comma separated values are allowed."), PersistAfterRefreshSchema(True)> _
+        Public Property IncludePrefixes() As String
+            Get
+                Return _includePrefixes
+            End Get
+            Set(ByVal value As String)
+                _includePrefixes = value
             End Set
         End Property
 
