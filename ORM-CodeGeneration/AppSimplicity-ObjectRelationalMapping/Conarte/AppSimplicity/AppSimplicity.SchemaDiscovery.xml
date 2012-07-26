@@ -21867,6 +21867,7 @@
       </StoredProcedures>
       <GeneratedNamespace>Conarte</GeneratedNamespace>
       <UseStoredProceduresForCRUD>false</UseStoredProceduresForCRUD>
+      <IncludePrefixes>fta_</IncludePrefixes>
     </DataSource>
   </DataSources>
   <TargetLanguage>CSharp</TargetLanguage>
