@@ -9,7 +9,7 @@ namespace Conarte.Entities
     {
         public void SomeMethod() 
         {
-            this.Id = 1;
+            this.Autor.Activo = true;
 
            
         }   

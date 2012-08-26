@@ -1214,7 +1214,7 @@
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
           </Columns>
-          <ClassName>Exposicione</ClassName>
+          <ClassName>Exposicion</ClassName>
           <PluralClassName>Exposiciones</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
@@ -3028,7 +3028,7 @@
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
           </Columns>
-          <ClassName>Interventore</ClassName>
+          <ClassName>Interventor</ClassName>
           <PluralClassName>Interventores</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
