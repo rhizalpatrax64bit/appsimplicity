@@ -3,6 +3,7 @@
 <#@ Assembly Name="E:\Projects\AppSimplicity.CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\References\AppSimplicity.SchemaDiscovery.dll" #>
 <#@ Import Namespace="AppSimplicity.SchemaDiscovery.Entities" #>
 using System;
+using System.Collections.Generic;
 <#
 	Project project = Project.LoadFromFile(@"E:\Projects\AppSimplicity.CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\Conarte.Entities\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");    
     foreach (DataSource ds in project.DataSources)
@@ -44,7 +45,12 @@ namespace <#= ds.GeneratedNamespace #> {
 #>
 #region BelongsToRelationShips
 <#
-	            renderBelongsToRelationShip(table);
+	            renderBelongsToRelationShips(table);
+#>
+#endregion
+#region HasManyRelationShips
+<#
+	            renderHasManyRelationShips(table);
 #>
 #endregion
 	} // end class
@@ -60,7 +66,7 @@ namespace <#= ds.GeneratedNamespace #> {
 #>
 <#+
 
-	public void renderBelongsToRelationShip(Table table) 
+	public void renderBelongsToRelationShips(Table table) 
     {
 	    foreach (RelationShip rel in table.BelongsToRelationShips) 
         { 
@@ -73,5 +79,50 @@ namespace <#= ds.GeneratedNamespace #> {
 		}
 <#+			
         }
+    }
+#>
+<#+
+	/// <summary>
+	/// Renders all HasMany relationShips
+	/// </summary>
+	/// <param name="table"></param>
+	public void renderHasManyRelationShips(Table table) 
+    {
+	    foreach (RelationShip rel in table.HasManyRelationships) 
+        {
+	        Table foreignTable = GetTableByEntityName(rel.ForeignEntityName, table.DataSource);
+            if (foreignTable != null) 
+            { 
+#>
+		private List<<#= table.DataSource.GeneratedNamespace #>.<#= foreignTable.ClassName #>> _<#= foreignTable.PluralClassName #>;
+		public List<<#= table.DataSource.GeneratedNamespace #>.<#= foreignTable.ClassName #>> <#= foreignTable.PluralClassName #>
+		{
+			get 
+			{
+				return _<#= foreignTable.PluralClassName #>;
+			}
+			set 
+			{
+				_<#= foreignTable.PluralClassName #> = value;
+			}
+		}
+<#+            
+            }
+				    
+
+        }
+    }
+#>
+<#+
+	public Table GetTableByEntityName(string tableName, DataSource ds) 
+    {
+	    foreach (Table table in ds.Tables) 
+        {
+	        if (table.ClassName == tableName) 
+            {
+	            return table;
+            }
+        }
+        return null;                                                                                                                                                                                                                                                                                     
     }
 #>
