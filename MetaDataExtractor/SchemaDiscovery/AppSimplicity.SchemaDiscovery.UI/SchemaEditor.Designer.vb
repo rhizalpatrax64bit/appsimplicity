@@ -51,6 +51,7 @@ Partial Class SchemaEditor
         Me.lblStatusIndicator = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ctxProjectMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.UpdateLanguageMappingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RefreshRelationshipsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
@@ -300,15 +301,21 @@ Partial Class SchemaEditor
         '
         'ctxProjectMenu
         '
-        Me.ctxProjectMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateLanguageMappingsToolStripMenuItem})
+        Me.ctxProjectMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateLanguageMappingsToolStripMenuItem, Me.RefreshRelationshipsToolStripMenuItem})
         Me.ctxProjectMenu.Name = "ctxProjectMenu"
-        Me.ctxProjectMenu.Size = New System.Drawing.Size(219, 48)
+        Me.ctxProjectMenu.Size = New System.Drawing.Size(219, 70)
         '
         'UpdateLanguageMappingsToolStripMenuItem
         '
         Me.UpdateLanguageMappingsToolStripMenuItem.Name = "UpdateLanguageMappingsToolStripMenuItem"
         Me.UpdateLanguageMappingsToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
         Me.UpdateLanguageMappingsToolStripMenuItem.Text = "Update language mappings"
+        '
+        'RefreshRelationshipsToolStripMenuItem
+        '
+        Me.RefreshRelationshipsToolStripMenuItem.Name = "RefreshRelationshipsToolStripMenuItem"
+        Me.RefreshRelationshipsToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.RefreshRelationshipsToolStripMenuItem.Text = "Refresh relationships"
         '
         'SchemaEditor
         '
@@ -374,4 +381,5 @@ Partial Class SchemaEditor
     Friend WithEvents lblStatusIndicator As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ctxProjectMenu As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents UpdateLanguageMappingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RefreshRelationshipsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

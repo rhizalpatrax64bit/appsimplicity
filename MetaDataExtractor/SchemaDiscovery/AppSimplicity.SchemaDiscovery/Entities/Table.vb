@@ -4,6 +4,10 @@
         Inherits AbstractTable
         Implements IComparable(Of Table)
 
+        Public Overrides Function ToString() As String
+            Return String.Format("{0}.{1}", Me.Schema, Me.Name)
+        End Function
+
         Private _IgnoreForDataScripting As Boolean = False
         <Category("Scripting options"), DisplayName("Include for data scripting"), Description("Determines if this table should be included for data scripting")> _
         Public Property IgnoreForDataScripting() As Boolean

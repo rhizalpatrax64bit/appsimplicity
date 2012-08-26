@@ -214,4 +214,8 @@ Public Class SchemaEditor
     Private Sub UpdateLanguageMappingsToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UpdateLanguageMappingsToolStripMenuItem.Click
         Me._Project.UpdateLanguageMappings()
     End Sub
+
+    Private Sub RefreshRelationshipsToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles RefreshRelationshipsToolStripMenuItem.Click
+        Me._Project.UpdateRelationShips()
+    End Sub
 End Class
