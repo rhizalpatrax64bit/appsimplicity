@@ -49,6 +49,8 @@ Partial Class SchemaEditor
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.pbProgressIndicator = New System.Windows.Forms.ToolStripProgressBar()
         Me.lblStatusIndicator = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ctxProjectMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.UpdateLanguageMappingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
@@ -63,6 +65,7 @@ Partial Class SchemaEditor
         Me.ToolStrip2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.ctxProjectMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -295,6 +298,18 @@ Partial Class SchemaEditor
         Me.lblStatusIndicator.Size = New System.Drawing.Size(38, 18)
         Me.lblStatusIndicator.Text = "Ready"
         '
+        'ctxProjectMenu
+        '
+        Me.ctxProjectMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateLanguageMappingsToolStripMenuItem})
+        Me.ctxProjectMenu.Name = "ctxProjectMenu"
+        Me.ctxProjectMenu.Size = New System.Drawing.Size(219, 48)
+        '
+        'UpdateLanguageMappingsToolStripMenuItem
+        '
+        Me.UpdateLanguageMappingsToolStripMenuItem.Name = "UpdateLanguageMappingsToolStripMenuItem"
+        Me.UpdateLanguageMappingsToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.UpdateLanguageMappingsToolStripMenuItem.Text = "Update language mappings"
+        '
         'SchemaEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
@@ -327,6 +342,7 @@ Partial Class SchemaEditor
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.ctxProjectMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -356,4 +372,6 @@ Partial Class SchemaEditor
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents pbProgressIndicator As System.Windows.Forms.ToolStripProgressBar
     Friend WithEvents lblStatusIndicator As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ctxProjectMenu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents UpdateLanguageMappingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -76,13 +76,13 @@
     <Compile Include="Entities\TableKey.vb" />
     <Compile Include="Entities\View.vb" />
     <Compile Include="Interfaces\IMetaDataProvider.vb" />
-    <Compile Include="LanguageMapping\AllDB_CLRLanguageMappings.Designer.vb">
-      <DependentUpon>AllDB_CLRLanguageMappings.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="LanguageMapping\CLRMappingInfo.vb" />
     <Compile Include="LanguageMapping\DBCLRMapper.vb" />
+    <Compile Include="LanguageMapping\DB_CLRLanguageMappings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_CLRLanguageMappings.resx</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -101,10 +101,10 @@
     <Compile Include="Serialization\XMLSerializer.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LanguageMapping\AllDB_CLRLanguageMappings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AllDB_CLRLanguageMappings.Designer.vb</LastGenOutput>
+    <EmbeddedResource Include="LanguageMapping\DB_CLRLanguageMappings.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DB_CLRLanguageMappings.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
