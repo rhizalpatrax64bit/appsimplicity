@@ -12,9 +12,9 @@ namespace AppSimplicity.ActiveRecord.Interfaces
 
     public interface IPersister <T> where T : IActiveRecord 
     {
-        public bool Create(T entity);
-        public bool Update(T entity);
-        public bool Update(T entity, ConcurrencyMode mode);
-        public bool Delete(T entity);
+        bool Create(T entity);
+        bool Update(T entity);
+        bool Update(T entity, ConcurrencyMode mode);
+        bool Delete(T entity);
     }
 }

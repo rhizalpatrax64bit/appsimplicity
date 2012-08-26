@@ -6,8 +6,8 @@ namespace AppSimplicity.ActiveRecord.Interfaces
 {
     public interface IDataManager<T>
     {        
-        public T GetById(int identity);
-        public List<T> GetAll();
-        public List<T> GetAllActive();
+        T GetById(int identity);
+        List<T> GetAll();
+        List<T> GetAllActive();
     }
 }

@@ -6,7 +6,7 @@ namespace AppSimplicity.ActiveRecord.Interfaces
 {
     public interface IActiveRecord 
     {
-        public int Id
+        int Id
         {
             get;
             set;
