@@ -11,5 +11,11 @@ namespace AppSimplicity.ActiveRecord.Interfaces
             get;
             set;
         }
+
+        bool IsLoadedFromDB
+        {
+            get;
+            set;
+        }
     }
 }
