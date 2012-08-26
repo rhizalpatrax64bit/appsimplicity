@@ -37,6 +37,7 @@ Public Class SchemaEditor
         lProjectNode.Tag = pProject
         lProjectNode.ImageIndex = IconSet.Application
         lProjectNode.SelectedImageIndex = IconSet.Application
+        lProjectNode.ContextMenuStrip = ctxProjectMenu
 
         lDataSourcesNode.ImageIndex = IconSet.Folder
         lDataSourcesNode.SelectedImageIndex = IconSet.Folder
@@ -208,5 +209,9 @@ Public Class SchemaEditor
    
     Private Sub trSchemaTree_BeforeLabelEdit(ByVal sender As System.Object, ByVal e As System.Windows.Forms.NodeLabelEditEventArgs) Handles trSchemaTree.BeforeLabelEdit
      
+    End Sub
+
+    Private Sub UpdateLanguageMappingsToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UpdateLanguageMappingsToolStripMenuItem.Click
+        Me._Project.UpdateLanguageMappings()
     End Sub
 End Class

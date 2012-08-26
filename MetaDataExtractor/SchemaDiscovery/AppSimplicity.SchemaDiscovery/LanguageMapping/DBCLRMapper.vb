@@ -13,7 +13,7 @@
     Private Function LoadLanguageDictionary() As System.Data.DataSet
         Dim lDS As New System.Data.DataSet
 
-        Dim lSReader As New System.IO.StringReader(My.Resources.AllDB_CLRLanguageMappings.Languages)
+        Dim lSReader As New System.IO.StringReader(My.Resources.DB_CLRLanguageMappings.Languages)
         lDS.ReadXml(lSReader)
 
         Return lDS
