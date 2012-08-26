@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Conarte.Entities {
 	
 	public partial class Autor 
@@ -136,6 +137,20 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class Color 
@@ -246,6 +261,20 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -358,6 +387,20 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.IntervencionesDeteriorosMap> _IntervencionesDeteriorosMap;
+		public List<Conarte.Entities.IntervencionesDeteriorosMap> IntervencionesDeteriorosMap
+		{
+			get 
+			{
+				return _IntervencionesDeteriorosMap;
+			}
+			set 
+			{
+				_IntervencionesDeteriorosMap = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class Documento 
@@ -461,6 +504,8 @@ namespace Conarte.Entities {
 			get { return _Fondo; }
 			set { _Fondo = value; }
 		}
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -599,6 +644,20 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class EpocaNL 
@@ -710,6 +769,20 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class Etiqueta 
@@ -808,6 +881,32 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.EtiquetasEtiquetasMap> _EtiquetasEtiquetasMap;
+		public List<Conarte.Entities.EtiquetasEtiquetasMap> EtiquetasEtiquetasMap
+		{
+			get 
+			{
+				return _EtiquetasEtiquetasMap;
+			}
+			set 
+			{
+				_EtiquetasEtiquetasMap = value;
+			}
+		}
+		private List<Conarte.Entities.FotografiasEtiquetasMap> _FotografiasEtiquetasMap;
+		public List<Conarte.Entities.FotografiasEtiquetasMap> FotografiasEtiquetasMap
+		{
+			get 
+			{
+				return _FotografiasEtiquetasMap;
+			}
+			set 
+			{
+				_FotografiasEtiquetasMap = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class EtiquetasEtiquetasMap 
@@ -859,6 +958,8 @@ namespace Conarte.Entities {
 			get { return _Etiqueta; }
 			set { _Etiqueta = value; }
 		}
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -1023,6 +1124,8 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class Exposicione 
@@ -1120,6 +1223,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -1362,6 +1467,32 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.Documento> _Documentos;
+		public List<Conarte.Entities.Documento> Documentos
+		{
+			get 
+			{
+				return _Documentos;
+			}
+			set 
+			{
+				_Documentos = value;
+			}
+		}
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class Formato 
@@ -1472,6 +1603,20 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -2094,6 +2239,92 @@ namespace Conarte.Entities {
 			set { _EpocaNL = value; }
 		}
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.FotografiasEtiquetasMap> _FotografiasEtiquetasMap;
+		public List<Conarte.Entities.FotografiasEtiquetasMap> FotografiasEtiquetasMap
+		{
+			get 
+			{
+				return _FotografiasEtiquetasMap;
+			}
+			set 
+			{
+				_FotografiasEtiquetasMap = value;
+			}
+		}
+		private List<Conarte.Entities.FotografiasEventosDeUsoMap> _FotografiasEventosDeUsoMap;
+		public List<Conarte.Entities.FotografiasEventosDeUsoMap> FotografiasEventosDeUsoMap
+		{
+			get 
+			{
+				return _FotografiasEventosDeUsoMap;
+			}
+			set 
+			{
+				_FotografiasEventosDeUsoMap = value;
+			}
+		}
+		private List<Conarte.Entities.FotografiasImagenesMap> _FotografiasImagenesMap;
+		public List<Conarte.Entities.FotografiasImagenesMap> FotografiasImagenesMap
+		{
+			get 
+			{
+				return _FotografiasImagenesMap;
+			}
+			set 
+			{
+				_FotografiasImagenesMap = value;
+			}
+		}
+		private List<Conarte.Entities.FotografiasPersonajesMap> _FotografiasPersonajesMap;
+		public List<Conarte.Entities.FotografiasPersonajesMap> FotografiasPersonajesMap
+		{
+			get 
+			{
+				return _FotografiasPersonajesMap;
+			}
+			set 
+			{
+				_FotografiasPersonajesMap = value;
+			}
+		}
+		private List<Conarte.Entities.Imagene> _Imagenes;
+		public List<Conarte.Entities.Imagene> Imagenes
+		{
+			get 
+			{
+				return _Imagenes;
+			}
+			set 
+			{
+				_Imagenes = value;
+			}
+		}
+		private List<Conarte.Entities.Intervencione> _Intervenciones;
+		public List<Conarte.Entities.Intervencione> Intervenciones
+		{
+			get 
+			{
+				return _Intervenciones;
+			}
+			set 
+			{
+				_Intervenciones = value;
+			}
+		}
+		private List<Conarte.Entities.Seguro> _Seguros;
+		public List<Conarte.Entities.Seguro> Seguros
+		{
+			get 
+			{
+				return _Seguros;
+			}
+			set 
+			{
+				_Seguros = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class FotografiasEtiquetasMap 
@@ -2152,6 +2383,8 @@ namespace Conarte.Entities {
 			set { _Etiqueta = value; }
 		}
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class FotografiasEventosDeUsoMap 
@@ -2204,6 +2437,8 @@ namespace Conarte.Entities {
 			set { _Fotografia = value; }
 		}
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class FotografiasImagenesMap 
@@ -2255,6 +2490,8 @@ namespace Conarte.Entities {
 			get { return _Fotografia; }
 			set { _Fotografia = value; }
 		}
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -2313,6 +2550,8 @@ namespace Conarte.Entities {
 			get { return _Personaje; }
 			set { _Personaje = value; }
 		}
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -2430,6 +2669,8 @@ namespace Conarte.Entities {
 			get { return _Fotografia; }
 			set { _Fotografia = value; }
 		}
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -2574,6 +2815,8 @@ namespace Conarte.Entities {
 			set { _Fotografia = value; }
 		}
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class IntervencionesDeteriorosMap 
@@ -2626,6 +2869,8 @@ namespace Conarte.Entities {
 			set { _Deterioro = value; }
 		}
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class IntervencionesTiposIntervencionMap 
@@ -2671,6 +2916,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -2783,6 +3030,8 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class Lugare 
@@ -2881,6 +3130,8 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class Personaje 
@@ -2978,6 +3229,20 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.FotografiasPersonajesMap> _FotografiasPersonajesMap;
+		public List<Conarte.Entities.FotografiasPersonajesMap> FotografiasPersonajesMap
+		{
+			get 
+			{
+				return _FotografiasPersonajesMap;
+			}
+			set 
+			{
+				_FotografiasPersonajesMap = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -3089,6 +3354,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -3207,6 +3474,8 @@ namespace Conarte.Entities {
 			set { _Fotografia = value; }
 		}
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class Serie 
@@ -3305,6 +3574,20 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
+#endregion
 	} // end class
 	
 	public partial class SituacionesLegale 
@@ -3402,6 +3685,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -3514,6 +3799,8 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class TiposDeMovimiento 
@@ -3611,6 +3898,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -3710,6 +3999,8 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class TiposDeUso 
@@ -3807,6 +4098,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -3919,6 +4212,8 @@ namespace Conarte.Entities {
 
 #region BelongsToRelationShips
 #endregion
+#region HasManyRelationShips
+#endregion
 	} // end class
 	
 	public partial class TiposMateriale 
@@ -4016,6 +4311,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	
@@ -4205,6 +4502,8 @@ namespace Conarte.Entities {
 			}
 
 #region BelongsToRelationShips
+#endregion
+#region HasManyRelationShips
 #endregion
 	} // end class
 	} // end namespace

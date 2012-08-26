@@ -5,7 +5,11 @@ using System.Text;
 
 namespace Conarte.Entities
 {
-    public class Fotografia
+    public partial class Fotografia
     {
+        public void SomeMethod() 
+        { 
+            
+        }
     }
 }
