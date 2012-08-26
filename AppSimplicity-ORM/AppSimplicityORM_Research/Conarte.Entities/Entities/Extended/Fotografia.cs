@@ -10,6 +10,6 @@ namespace Conarte.Entities
         public void SomeMethod() 
         { 
             
-        }
+        }   
     }
 }
