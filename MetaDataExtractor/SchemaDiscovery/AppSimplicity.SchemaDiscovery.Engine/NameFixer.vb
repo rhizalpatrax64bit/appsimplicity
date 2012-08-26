@@ -1,5 +1,6 @@
 ﻿Public Class NameFixer
 
+    'TODO: Mover esto talvez a un XML para administrar mas fácil.
     Private lInvalidNames As String() = { _
            "alias", "addHandler", "ansi", "as", "assembly", "auto", "binary", "byref", "byval", "case", "catch", "class", _
            "custom", "date", "datetime", "default", "directcast", "each", "else", "elseif", "end", "error", "false", _
