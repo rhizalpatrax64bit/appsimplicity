@@ -76,6 +76,13 @@
     <Compile Include="Entities\TableKey.vb" />
     <Compile Include="Entities\View.vb" />
     <Compile Include="Interfaces\IMetaDataProvider.vb" />
+    <Compile Include="LanguageMapping\AllDB_CLRLanguageMappings.Designer.vb">
+      <DependentUpon>AllDB_CLRLanguageMappings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LanguageMapping\CLRMappingInfo.vb" />
+    <Compile Include="LanguageMapping\DBCLRMapper.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,6 +101,11 @@
     <Compile Include="Serialization\XMLSerializer.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LanguageMapping\AllDB_CLRLanguageMappings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AllDB_CLRLanguageMappings.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -112,7 +124,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="LanguageMapping\DbTargets.xml" />
+    <Content Include="LanguageMapping\Languages.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

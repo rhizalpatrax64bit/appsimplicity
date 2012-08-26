@@ -2,21 +2,6 @@
 
 Public Class MetaDataExtractor
 
-    Private _LanguageMapper As DBCLRMapper
-    Protected ReadOnly Property LanguageMapper As DBCLRMapper
-        Get
-            If _LanguageMapper Is Nothing Then
-                _LanguageMapper = New DBCLRMapper()
-            End If
-            Return _LanguageMapper
-        End Get
-    End Property
-
-    Protected Function GetTargetCLRType(ByVal SourceDB As String, ByVal TargetLanguage As String, ByVal DBType As String) As CLRMappingInfo
-        Return LanguageMapper.GetTargetCLRType(SourceDB, TargetLanguage, DBType)
-    End Function
-
-
     Private _WorkerProcess As System.ComponentModel.BackgroundWorker = Nothing
 
     Private _Overall As Integer = 100
@@ -159,6 +144,7 @@ Public Class MetaDataExtractor
         ReportActivity("Extraction process is now completed.")
         ReportActivity()
 
+        lProject.UpdateLanguageMappings()
         Return lProject
     End Function
 
@@ -298,47 +284,6 @@ Public Class MetaDataExtractor
         Next
     End Sub
 
-    Private Languages As String() = {"C#", "VB.NET"}
-
-    Private Sub UpdateLanguageMappings(ByRef project As Entities.Project)
-
-        For Each lDS As Entities.DataSource In project.DataSources
-            For Each lTable As Entities.Table In lDS.Tables
-                For Each lColumn As Entities.Column In lTable.Columns
-                    Dim CLRMappingInfo As CLRMappingInfo = Me.LanguageMapper.GetTargetCLRType("SQL", Languages(project.TargetLanguage), lColumn.SQLType)
-
-                    If Not (CLRMappingInfo Is Nothing) Then
-                        lColumn.CLRTargetType = CLRMappingInfo.CLRTargetType
-                        lColumn.IsCLRNullable = CLRMappingInfo.IsCLRNullable
-                    End If
-                Next
-            Next
-
-            For Each lView As Entities.View In lDS.Views
-                For Each lColumn As Entities.Column In lView.Columns
-                    Dim CLRMappingInfo As CLRMappingInfo = Me.LanguageMapper.GetTargetCLRType("SQL", Languages(project.TargetLanguage), lColumn.SQLType)
-
-                    If Not (CLRMappingInfo Is Nothing) Then
-                        lColumn.CLRTargetType = CLRMappingInfo.CLRTargetType
-                        lColumn.IsCLRNullable = CLRMappingInfo.IsCLRNullable
-                    End If
-                Next
-            Next
-
-            For Each lSP As Entities.StoredProcedure In lDS.StoredProcedures
-                For Each lParameter As Entities.StoredProcedureParameter In lSP.Parameters
-                    Dim CLRMappingInfo As CLRMappingInfo = Me.LanguageMapper.GetTargetCLRType("SQL", Languages(project.TargetLanguage), lParameter.SQLType)
-
-                    If Not (CLRMappingInfo Is Nothing) Then
-                        lParameter.CLRTargetType = CLRMappingInfo.CLRTargetType
-                        lParameter.IsCLRNullable = CLRMappingInfo.IsCLRNullable
-                    End If
-                Next
-            Next
-        Next
-
-    End Sub
-
     Private Function FilterTables(ByVal filter As String, ByVal tables As List(Of Entities.Table)) As List(Of Entities.Table)
         Dim lReturnValue As New List(Of Entities.Table)
 
@@ -470,9 +415,9 @@ Public Class MetaDataExtractor
 
             UpdateParenthood(lNewProject)
             RefreshRelationShips(lNewProject)
-            UpdateLanguageMappings(lNewProject)
             ApplyFilters(lNewProject)
             pProject = lNewProject
+            pProject.UpdateLanguageMappings()
         End If
     End Sub
 
