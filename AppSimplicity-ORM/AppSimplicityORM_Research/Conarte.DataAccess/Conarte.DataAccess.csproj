@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataManagers\FotografiaDataMgr.cs" />
+    <Compile Include="DataManagers\SqlServer\Base\FotografiaDataManager.cs" />
     <Compile Include="Interfaces\IFotografiaDataMgr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,6 +51,9 @@
       <Project>{7CD6BD15-15EE-48A5-8AF3-472446C49B92}</Project>
       <Name>Conarte.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataManagers\SqlServer\Extended\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

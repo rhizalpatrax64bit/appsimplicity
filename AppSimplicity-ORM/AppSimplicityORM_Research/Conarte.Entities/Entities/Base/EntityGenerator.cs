@@ -6,8 +6,8 @@ namespace Conarte.Entities {
 	public partial class Autor 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -32,8 +32,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -45,8 +45,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -71,8 +71,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -145,8 +145,8 @@ namespace Conarte.Entities {
 	public partial class Color 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -184,8 +184,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -197,8 +197,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -223,8 +223,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -258,8 +258,8 @@ namespace Conarte.Entities {
 	public partial class Deterioro 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -297,8 +297,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -310,8 +310,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -336,8 +336,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -383,8 +383,8 @@ namespace Conarte.Entities {
 	public partial class Documento 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -396,8 +396,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fondo_Id;
-			public int Fondo_Id 
+			private int ? _Fondo_Id;
+			public int ? Fondo_Id 
 			{
 				get 
 				{	
@@ -448,8 +448,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -489,8 +489,8 @@ namespace Conarte.Entities {
 	public partial class Epoca 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -528,8 +528,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaInicial;
-			public DateTime FechaInicial 
+			private DateTime ? _FechaInicial;
+			public DateTime ? FechaInicial 
 			{
 				get 
 				{	
@@ -541,8 +541,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaFinal;
-			public DateTime FechaFinal 
+			private DateTime ? _FechaFinal;
+			public DateTime ? FechaFinal 
 			{
 				get 
 				{	
@@ -554,8 +554,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -567,8 +567,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -593,8 +593,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -606,8 +606,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _ModificadoPor;
-			public DateTime ModificadoPor 
+			private DateTime ? _ModificadoPor;
+			public DateTime ? ModificadoPor 
 			{
 				get 
 				{	
@@ -640,8 +640,8 @@ namespace Conarte.Entities {
 	public partial class EpocaNL 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -679,8 +679,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -705,8 +705,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -731,8 +731,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -753,8 +753,8 @@ namespace Conarte.Entities {
 	public partial class Etiqueta 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -779,8 +779,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -792,8 +792,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -818,8 +818,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -877,8 +877,8 @@ namespace Conarte.Entities {
 	public partial class EtiquetasEtiquetasMap 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -890,8 +890,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Etiqueta_Id;
-			public int Etiqueta_Id 
+			private int ? _Etiqueta_Id;
+			public int ? Etiqueta_Id 
 			{
 				get 
 				{	
@@ -903,8 +903,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _EtiquetaRelacionada_Id;
-			public int EtiquetaRelacionada_Id 
+			private int ? _EtiquetaRelacionada_Id;
+			public int ? EtiquetaRelacionada_Id 
 			{
 				get 
 				{	
@@ -931,8 +931,8 @@ namespace Conarte.Entities {
 	public partial class EventosDeUso 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -944,8 +944,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaUso;
-			public DateTime FechaUso 
+			private DateTime ? _FechaUso;
+			public DateTime ? FechaUso 
 			{
 				get 
 				{	
@@ -957,8 +957,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _TipoDeReproduccion_Id;
-			public int TipoDeReproduccion_Id 
+			private int ? _TipoDeReproduccion_Id;
+			public int ? TipoDeReproduccion_Id 
 			{
 				get 
 				{	
@@ -970,8 +970,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _TipoDeUso_Id;
-			public int TipoDeUso_Id 
+			private int ? _TipoDeUso_Id;
+			public int ? TipoDeUso_Id 
 			{
 				get 
 				{	
@@ -1009,8 +1009,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private decimal _Monto;
-			public decimal Monto 
+			private decimal ? _Monto;
+			public decimal ? Monto 
 			{
 				get 
 				{	
@@ -1022,8 +1022,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Pagado;
-			public bool Pagado 
+			private bool ? _Pagado;
+			public bool ? Pagado 
 			{
 				get 
 				{	
@@ -1096,8 +1096,8 @@ namespace Conarte.Entities {
 	public partial class Exposicione 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -1122,8 +1122,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -1135,8 +1135,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -1161,8 +1161,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -1196,8 +1196,8 @@ namespace Conarte.Entities {
 	public partial class Fondo 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -1235,8 +1235,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -1248,8 +1248,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _TipoDeFondo_Id;
-			public int TipoDeFondo_Id 
+			private int ? _TipoDeFondo_Id;
+			public int ? TipoDeFondo_Id 
 			{
 				get 
 				{	
@@ -1261,8 +1261,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -1287,8 +1287,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -1378,8 +1378,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _SituacionLegal_Id;
-			public int SituacionLegal_Id 
+			private int ? _SituacionLegal_Id;
+			public int ? SituacionLegal_Id 
 			{
 				get 
 				{	
@@ -1391,8 +1391,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaIngreso;
-			public DateTime FechaIngreso 
+			private DateTime ? _FechaIngreso;
+			public DateTime ? FechaIngreso 
 			{
 				get 
 				{	
@@ -1463,8 +1463,8 @@ namespace Conarte.Entities {
 	public partial class Formato 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -1502,8 +1502,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -1515,8 +1515,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -1541,8 +1541,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -1588,8 +1588,8 @@ namespace Conarte.Entities {
 	public partial class Fotografia 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -1601,8 +1601,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private long _NumeroInventario;
-			public long NumeroInventario 
+			private long ? _NumeroInventario;
+			public long ? NumeroInventario 
 			{
 				get 
 				{	
@@ -1653,8 +1653,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Serie_Id;
-			public int Serie_Id 
+			private int ? _Serie_Id;
+			public int ? Serie_Id 
 			{
 				get 
 				{	
@@ -1666,8 +1666,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fondo_Id;
-			public int Fondo_Id 
+			private int ? _Fondo_Id;
+			public int ? Fondo_Id 
 			{
 				get 
 				{	
@@ -1679,8 +1679,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Color_Id;
-			public int Color_Id 
+			private int ? _Color_Id;
+			public int ? Color_Id 
 			{
 				get 
 				{	
@@ -1692,8 +1692,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _TipoMaterial_Id;
-			public int TipoMaterial_Id 
+			private int ? _TipoMaterial_Id;
+			public int ? TipoMaterial_Id 
 			{
 				get 
 				{	
@@ -1705,8 +1705,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _ProcesoFotografico_Id;
-			public int ProcesoFotografico_Id 
+			private int ? _ProcesoFotografico_Id;
+			public int ? ProcesoFotografico_Id 
 			{
 				get 
 				{	
@@ -1718,8 +1718,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _LugarToma_Id;
-			public int LugarToma_Id 
+			private int ? _LugarToma_Id;
+			public int ? LugarToma_Id 
 			{
 				get 
 				{	
@@ -1731,8 +1731,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaTomaInicial;
-			public DateTime FechaTomaInicial 
+			private DateTime ? _FechaTomaInicial;
+			public DateTime ? FechaTomaInicial 
 			{
 				get 
 				{	
@@ -1744,8 +1744,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaTomaFinal;
-			public DateTime FechaTomaFinal 
+			private DateTime ? _FechaTomaFinal;
+			public DateTime ? FechaTomaFinal 
 			{
 				get 
 				{	
@@ -1757,8 +1757,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _LugarAsunto_Id;
-			public int LugarAsunto_Id 
+			private int ? _LugarAsunto_Id;
+			public int ? LugarAsunto_Id 
 			{
 				get 
 				{	
@@ -1770,8 +1770,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaAsuntoInicial;
-			public DateTime FechaAsuntoInicial 
+			private DateTime ? _FechaAsuntoInicial;
+			public DateTime ? FechaAsuntoInicial 
 			{
 				get 
 				{	
@@ -1783,8 +1783,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaAsuntoFinal;
-			public DateTime FechaAsuntoFinal 
+			private DateTime ? _FechaAsuntoFinal;
+			public DateTime ? FechaAsuntoFinal 
 			{
 				get 
 				{	
@@ -1796,8 +1796,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _InformacionTecnica;
-			public bool InformacionTecnica 
+			private bool ? _InformacionTecnica;
+			public bool ? InformacionTecnica 
 			{
 				get 
 				{	
@@ -1809,8 +1809,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaInformacionTecnica;
-			public DateTime FechaInformacionTecnica 
+			private DateTime ? _FechaInformacionTecnica;
+			public DateTime ? FechaInformacionTecnica 
 			{
 				get 
 				{	
@@ -1822,8 +1822,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Autor_Id;
-			public int Autor_Id 
+			private int ? _Autor_Id;
+			public int ? Autor_Id 
 			{
 				get 
 				{	
@@ -1835,8 +1835,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Formato_Id;
-			public int Formato_Id 
+			private int ? _Formato_Id;
+			public int ? Formato_Id 
 			{
 				get 
 				{	
@@ -1848,8 +1848,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _FormatoMontaje_Id;
-			public int FormatoMontaje_Id 
+			private int ? _FormatoMontaje_Id;
+			public int ? FormatoMontaje_Id 
 			{
 				get 
 				{	
@@ -1874,8 +1874,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _InformacionCatalografica;
-			public bool InformacionCatalografica 
+			private bool ? _InformacionCatalografica;
+			public bool ? InformacionCatalografica 
 			{
 				get 
 				{	
@@ -1887,8 +1887,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaInformacionCatalografica;
-			public DateTime FechaInformacionCatalografica 
+			private DateTime ? _FechaInformacionCatalografica;
+			public DateTime ? FechaInformacionCatalografica 
 			{
 				get 
 				{	
@@ -1926,8 +1926,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Digitalizada;
-			public bool Digitalizada 
+			private bool ? _Digitalizada;
+			public bool ? Digitalizada 
 			{
 				get 
 				{	
@@ -1939,8 +1939,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Imagen_Id;
-			public int Imagen_Id 
+			private int ? _Imagen_Id;
+			public int ? Imagen_Id 
 			{
 				get 
 				{	
@@ -1952,8 +1952,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private decimal _Avaluo;
-			public decimal Avaluo 
+			private decimal ? _Avaluo;
+			public decimal ? Avaluo 
 			{
 				get 
 				{	
@@ -1965,8 +1965,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaDigitalizacion;
-			public DateTime FechaDigitalizacion 
+			private DateTime ? _FechaDigitalizacion;
+			public DateTime ? FechaDigitalizacion 
 			{
 				get 
 				{	
@@ -1991,8 +1991,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -2017,8 +2017,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -2056,8 +2056,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _PublicarEnInternet;
-			public bool PublicarEnInternet 
+			private bool ? _PublicarEnInternet;
+			public bool ? PublicarEnInternet 
 			{
 				get 
 				{	
@@ -2069,8 +2069,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Epoca_Id;
-			public int Epoca_Id 
+			private int ? _Epoca_Id;
+			public int ? Epoca_Id 
 			{
 				get 
 				{	
@@ -2082,8 +2082,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _UltimoMovimiento_Id;
-			public int UltimoMovimiento_Id 
+			private int ? _UltimoMovimiento_Id;
+			public int ? UltimoMovimiento_Id 
 			{
 				get 
 				{	
@@ -2095,8 +2095,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Aseguramiento_Id;
-			public int Aseguramiento_Id 
+			private int ? _Aseguramiento_Id;
+			public int ? Aseguramiento_Id 
 			{
 				get 
 				{	
@@ -2108,8 +2108,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _EsPiezaTemporal;
-			public bool EsPiezaTemporal 
+			private bool ? _EsPiezaTemporal;
+			public bool ? EsPiezaTemporal 
 			{
 				get 
 				{	
@@ -2121,8 +2121,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _UltimaIntervencion_Id;
-			public int UltimaIntervencion_Id 
+			private int ? _UltimaIntervencion_Id;
+			public int ? UltimaIntervencion_Id 
 			{
 				get 
 				{	
@@ -2134,8 +2134,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _EpocaNL_Id;
-			public int EpocaNL_Id 
+			private int ? _EpocaNL_Id;
+			public int ? EpocaNL_Id 
 			{
 				get 
 				{	
@@ -2147,8 +2147,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _InformacionPersonajesCompletada;
-			public bool InformacionPersonajesCompletada 
+			private bool ? _InformacionPersonajesCompletada;
+			public bool ? InformacionPersonajesCompletada 
 			{
 				get 
 				{	
@@ -2265,8 +2265,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasEtiquetasMap 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2278,8 +2278,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private int ? _Fotografia_Id;
+			public int ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2291,8 +2291,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Etiqueta_Id;
-			public int Etiqueta_Id 
+			private int ? _Etiqueta_Id;
+			public int ? Etiqueta_Id 
 			{
 				get 
 				{	
@@ -2325,8 +2325,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasEventosDeUsoMap 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2338,8 +2338,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private int ? _Fotografia_Id;
+			public int ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2351,8 +2351,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _EventoDeUso_Id;
-			public int EventoDeUso_Id 
+			private int ? _EventoDeUso_Id;
+			public int ? EventoDeUso_Id 
 			{
 				get 
 				{	
@@ -2379,8 +2379,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasImagenesMap 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2392,8 +2392,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private int ? _Fotografia_Id;
+			public int ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2405,8 +2405,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Imagen_Id;
-			public int Imagen_Id 
+			private int ? _Imagen_Id;
+			public int ? Imagen_Id 
 			{
 				get 
 				{	
@@ -2433,8 +2433,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasPersonajesMap 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2446,8 +2446,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private int ? _Fotografia_Id;
+			public int ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2459,8 +2459,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Personaje_Id;
-			public int Personaje_Id 
+			private int ? _Personaje_Id;
+			public int ? Personaje_Id 
 			{
 				get 
 				{	
@@ -2493,8 +2493,8 @@ namespace Conarte.Entities {
 	public partial class Imagene 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2532,8 +2532,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -2558,8 +2558,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -2584,8 +2584,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private int ? _Fotografia_Id;
+			public int ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2612,8 +2612,8 @@ namespace Conarte.Entities {
 	public partial class Intervencion 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2625,8 +2625,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Tipo;
-			public int Tipo 
+			private int ? _Tipo;
+			public int ? Tipo 
 			{
 				get 
 				{	
@@ -2638,8 +2638,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private int ? _Fotografia_Id;
+			public int ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2651,8 +2651,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaIntervencion;
-			public DateTime FechaIntervencion 
+			private DateTime ? _FechaIntervencion;
+			public DateTime ? FechaIntervencion 
 			{
 				get 
 				{	
@@ -2677,8 +2677,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -2703,8 +2703,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -2757,8 +2757,8 @@ namespace Conarte.Entities {
 	public partial class IntervencionesDeteriorosMap 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2770,8 +2770,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Intervencion_Id;
-			public int Intervencion_Id 
+			private int ? _Intervencion_Id;
+			public int ? Intervencion_Id 
 			{
 				get 
 				{	
@@ -2783,8 +2783,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Deterioro_Id;
-			public int Deterioro_Id 
+			private int ? _Deterioro_Id;
+			public int ? Deterioro_Id 
 			{
 				get 
 				{	
@@ -2811,8 +2811,8 @@ namespace Conarte.Entities {
 	public partial class IntervencionesTiposIntervencionMap 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2824,8 +2824,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Intervencion_Id;
-			public int Intervencion_Id 
+			private int ? _Intervencion_Id;
+			public int ? Intervencion_Id 
 			{
 				get 
 				{	
@@ -2837,8 +2837,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _TipoIntervencion_Id;
-			public int TipoIntervencion_Id 
+			private int ? _TipoIntervencion_Id;
+			public int ? TipoIntervencion_Id 
 			{
 				get 
 				{	
@@ -2859,8 +2859,8 @@ namespace Conarte.Entities {
 	public partial class Interventore 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2898,8 +2898,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -2911,8 +2911,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -2937,8 +2937,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -2972,8 +2972,8 @@ namespace Conarte.Entities {
 	public partial class Lugare 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -2998,8 +2998,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3011,8 +3011,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3037,8 +3037,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3072,8 +3072,8 @@ namespace Conarte.Entities {
 	public partial class Personaje 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3098,8 +3098,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3111,8 +3111,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3137,8 +3137,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3184,8 +3184,8 @@ namespace Conarte.Entities {
 	public partial class ProcesoFotografico 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3223,8 +3223,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3236,8 +3236,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3262,8 +3262,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3297,8 +3297,8 @@ namespace Conarte.Entities {
 	public partial class Seguro 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3310,8 +3310,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private int ? _Fotografia_Id;
+			public int ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -3349,8 +3349,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaInicial;
-			public DateTime FechaInicial 
+			private DateTime ? _FechaInicial;
+			public DateTime ? FechaInicial 
 			{
 				get 
 				{	
@@ -3362,8 +3362,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaFinal;
-			public DateTime FechaFinal 
+			private DateTime ? _FechaFinal;
+			public DateTime ? FechaFinal 
 			{
 				get 
 				{	
@@ -3375,8 +3375,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3416,8 +3416,8 @@ namespace Conarte.Entities {
 	public partial class Serie 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3442,8 +3442,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3455,8 +3455,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3481,8 +3481,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3528,8 +3528,8 @@ namespace Conarte.Entities {
 	public partial class SituacionLegal 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3554,8 +3554,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3567,8 +3567,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3593,8 +3593,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3628,8 +3628,8 @@ namespace Conarte.Entities {
 	public partial class SubUbicacion 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3654,8 +3654,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3667,8 +3667,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Ubicacion_Id;
-			public int Ubicacion_Id 
+			private int ? _Ubicacion_Id;
+			public int ? Ubicacion_Id 
 			{
 				get 
 				{	
@@ -3680,8 +3680,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3706,8 +3706,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3741,8 +3741,8 @@ namespace Conarte.Entities {
 	public partial class TipoDeMovimiento 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3767,8 +3767,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3780,8 +3780,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3806,8 +3806,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3841,8 +3841,8 @@ namespace Conarte.Entities {
 	public partial class TiposDeReproduccion 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3867,8 +3867,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3880,8 +3880,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -3906,8 +3906,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -3941,8 +3941,8 @@ namespace Conarte.Entities {
 	public partial class TiposDeUso 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -3967,8 +3967,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -3980,8 +3980,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -4006,8 +4006,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -4041,8 +4041,8 @@ namespace Conarte.Entities {
 	public partial class TiposIntervencione 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -4080,8 +4080,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -4093,8 +4093,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -4119,8 +4119,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -4154,8 +4154,8 @@ namespace Conarte.Entities {
 	public partial class TipoMaterial 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -4180,8 +4180,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -4193,8 +4193,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaCreacion;
-			public DateTime FechaCreacion 
+			private DateTime ? _FechaCreacion;
+			public DateTime ? FechaCreacion 
 			{
 				get 
 				{	
@@ -4219,8 +4219,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaModificacion;
-			public DateTime FechaModificacion 
+			private DateTime ? _FechaModificacion;
+			public DateTime ? FechaModificacion 
 			{
 				get 
 				{	
@@ -4254,8 +4254,8 @@ namespace Conarte.Entities {
 	public partial class Usuario 
 	{
 		
-			private int _Id;
-			public int Id 
+			private int ? _Id;
+			public int ? Id 
 			{
 				get 
 				{	
@@ -4319,8 +4319,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private bool ? _Activo;
+			public bool ? Activo 
 			{
 				get 
 				{	
@@ -4332,8 +4332,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _BloqueadoEn;
-			public DateTime BloqueadoEn 
+			private DateTime ? _BloqueadoEn;
+			public DateTime ? BloqueadoEn 
 			{
 				get 
 				{	
@@ -4345,8 +4345,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Bloqueado;
-			public bool Bloqueado 
+			private bool ? _Bloqueado;
+			public bool ? Bloqueado 
 			{
 				get 
 				{	
@@ -4358,8 +4358,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _IntentosFallidos;
-			public int IntentosFallidos 
+			private int ? _IntentosFallidos;
+			public int ? IntentosFallidos 
 			{
 				get 
 				{	
@@ -4371,8 +4371,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _UltimaAutenticacion;
-			public DateTime UltimaAutenticacion 
+			private DateTime ? _UltimaAutenticacion;
+			public DateTime ? UltimaAutenticacion 
 			{
 				get 
 				{	
@@ -4384,8 +4384,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaRegistro;
-			public DateTime FechaRegistro 
+			private DateTime ? _FechaRegistro;
+			public DateTime ? FechaRegistro 
 			{
 				get 
 				{	
@@ -4397,8 +4397,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _AccesoConfirmado;
-			public bool AccesoConfirmado 
+			private bool ? _AccesoConfirmado;
+			public bool ? AccesoConfirmado 
 			{
 				get 
 				{	
@@ -4410,8 +4410,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime _FechaConfirmacion;
-			public DateTime FechaConfirmacion 
+			private DateTime ? _FechaConfirmacion;
+			public DateTime ? FechaConfirmacion 
 			{
 				get 
 				{	
@@ -4423,8 +4423,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _DeseaRecibirNotificaciones;
-			public bool DeseaRecibirNotificaciones 
+			private bool ? _DeseaRecibirNotificaciones;
+			public bool ? DeseaRecibirNotificaciones 
 			{
 				get 
 				{	
