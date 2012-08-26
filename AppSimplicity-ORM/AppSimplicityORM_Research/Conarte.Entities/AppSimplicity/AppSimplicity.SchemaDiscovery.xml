@@ -127,7 +127,12 @@
           <PluralClassName>Autores</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
-          <HasManyRelationships />
+          <HasManyRelationships>
+            <RelationShip>
+              <ForeignEntityName>Fotografia</ForeignEntityName>
+              <RelationshipColumn>Autor_Id</RelationshipColumn>
+            </RelationShip>
+          </HasManyRelationships>
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
           <Keys>
@@ -252,7 +257,12 @@
           <PluralClassName>Colores</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
-          <HasManyRelationships />
+          <HasManyRelationships>
+            <RelationShip>
+              <ForeignEntityName>Fotografia</ForeignEntityName>
+              <RelationshipColumn>Color_Id</RelationshipColumn>
+            </RelationShip>
+          </HasManyRelationships>
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
           <Keys>
@@ -738,7 +748,12 @@
           <PluralClassName>EpocasNL</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
-          <HasManyRelationships />
+          <HasManyRelationships>
+            <RelationShip>
+              <ForeignEntityName>Fotografia</ForeignEntityName>
+              <RelationshipColumn>EpocaNL_Id</RelationshipColumn>
+            </RelationShip>
+          </HasManyRelationships>
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
           <Keys>
@@ -1427,7 +1442,12 @@
           <ClassName>Fondo</ClassName>
           <PluralClassName>Fondos</PluralClassName>
           <Scope>_Public</Scope>
-          <BelongsToRelationShips />
+          <BelongsToRelationShips>
+            <RelationShip>
+              <ForeignEntityName>SituacionLegal</ForeignEntityName>
+              <RelationshipColumn>SituacionLegal_Id</RelationshipColumn>
+            </RelationShip>
+          </BelongsToRelationShips>
           <HasManyRelationships>
             <RelationShip>
               <ForeignEntityName>Documento</ForeignEntityName>
@@ -2077,12 +2097,32 @@
               <RelationshipColumn>Fondo_Id</RelationshipColumn>
             </RelationShip>
             <RelationShip>
+              <ForeignEntityName>Color</ForeignEntityName>
+              <RelationshipColumn>Color_Id</RelationshipColumn>
+            </RelationShip>
+            <RelationShip>
+              <ForeignEntityName>TipoMaterial</ForeignEntityName>
+              <RelationshipColumn>TipoMaterial_Id</RelationshipColumn>
+            </RelationShip>
+            <RelationShip>
+              <ForeignEntityName>ProcesoFotografico</ForeignEntityName>
+              <RelationshipColumn>ProcesoFotografico_Id</RelationshipColumn>
+            </RelationShip>
+            <RelationShip>
+              <ForeignEntityName>Autor</ForeignEntityName>
+              <RelationshipColumn>Autor_Id</RelationshipColumn>
+            </RelationShip>
+            <RelationShip>
               <ForeignEntityName>Formato</ForeignEntityName>
               <RelationshipColumn>Formato_Id</RelationshipColumn>
             </RelationShip>
             <RelationShip>
               <ForeignEntityName>Epoca</ForeignEntityName>
               <RelationshipColumn>Epoca_Id</RelationshipColumn>
+            </RelationShip>
+            <RelationShip>
+              <ForeignEntityName>EpocaNL</ForeignEntityName>
+              <RelationshipColumn>EpocaNL_Id</RelationshipColumn>
             </RelationShip>
           </BelongsToRelationShips>
           <HasManyRelationships>
@@ -2107,7 +2147,7 @@
               <RelationshipColumn>Fotografia_Id</RelationshipColumn>
             </RelationShip>
             <RelationShip>
-              <ForeignEntityName>Intervencione</ForeignEntityName>
+              <ForeignEntityName>Intervencion</ForeignEntityName>
               <RelationshipColumn>Fotografia_Id</RelationshipColumn>
             </RelationShip>
             <RelationShip>
@@ -2734,7 +2774,16 @@
               <RelationshipColumn>Fotografia_Id</RelationshipColumn>
             </RelationShip>
           </BelongsToRelationShips>
-          <HasManyRelationships />
+          <HasManyRelationships>
+            <RelationShip>
+              <ForeignEntityName>IntervencionesDeteriorosMap</ForeignEntityName>
+              <RelationshipColumn>Intervencion_Id</RelationshipColumn>
+            </RelationShip>
+            <RelationShip>
+              <ForeignEntityName>IntervencionesTiposIntervencionMap</ForeignEntityName>
+              <RelationshipColumn>Intervencion_Id</RelationshipColumn>
+            </RelationShip>
+          </HasManyRelationships>
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
           <Keys>
@@ -2794,6 +2843,10 @@
           <PluralClassName>IntervencionesDeteriorosMap</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips>
+            <RelationShip>
+              <ForeignEntityName>Intervencion</ForeignEntityName>
+              <RelationshipColumn>Intervencion_Id</RelationshipColumn>
+            </RelationShip>
             <RelationShip>
               <ForeignEntityName>Deterioro</ForeignEntityName>
               <RelationshipColumn>Deterioro_Id</RelationshipColumn>
@@ -2858,7 +2911,12 @@
           <ClassName>IntervencionesTiposIntervencionMap</ClassName>
           <PluralClassName>IntervencionesTiposIntervencionMap</PluralClassName>
           <Scope>_Public</Scope>
-          <BelongsToRelationShips />
+          <BelongsToRelationShips>
+            <RelationShip>
+              <ForeignEntityName>Intervencion</ForeignEntityName>
+              <RelationshipColumn>Intervencion_Id</RelationshipColumn>
+            </RelationShip>
+          </BelongsToRelationShips>
           <HasManyRelationships />
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
@@ -3074,7 +3132,7 @@
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
           </Columns>
-          <ClassName>Lugare</ClassName>
+          <ClassName>Lugar</ClassName>
           <PluralClassName>Lugares</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
@@ -3322,7 +3380,12 @@
           <PluralClassName>ProcesosFotograficos</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
-          <HasManyRelationships />
+          <HasManyRelationships>
+            <RelationShip>
+              <ForeignEntityName>Fotografia</ForeignEntityName>
+              <RelationshipColumn>ProcesoFotografico_Id</RelationshipColumn>
+            </RelationShip>
+          </HasManyRelationships>
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
           <Keys>
@@ -3665,7 +3728,12 @@
           <PluralClassName>SituacionesLegales</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
-          <HasManyRelationships />
+          <HasManyRelationships>
+            <RelationShip>
+              <ForeignEntityName>Fondo</ForeignEntityName>
+              <RelationshipColumn>SituacionLegal_Id</RelationshipColumn>
+            </RelationShip>
+          </HasManyRelationships>
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
           <Keys>
@@ -4311,7 +4379,12 @@
           <PluralClassName>TiposMateriales</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
-          <HasManyRelationships />
+          <HasManyRelationships>
+            <RelationShip>
+              <ForeignEntityName>Fotografia</ForeignEntityName>
+              <RelationshipColumn>TipoMaterial_Id</RelationshipColumn>
+            </RelationShip>
+          </HasManyRelationships>
           <BelongsToAndHasManyRelationships />
           <IgnoreForDataScripting>false</IgnoreForDataScripting>
           <Keys>
