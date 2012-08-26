@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implementation", "Implement
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity.SchemaDiscovery.Providers", "AppSimplicity.SchemaDiscovery.Providers\AppSimplicity.SchemaDiscovery.Providers.vbproj", "{C53C06B6-E27C-48CB-B46A-798B9AD96AFC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shell", "Shell", "{27E61A84-DFC7-4AC1-AD8D-6D055C401702}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{192E517D-57E9-44DC-9A05-773E24A63843}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity.SchemaDiscovery.Engine", "AppSimplicity.SchemaDiscovery.Engine\AppSimplicity.SchemaDiscovery.Engine.vbproj", "{C9E21E94-126C-458B-80F4-C9E5DD4E26E3}"
