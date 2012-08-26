@@ -137,9 +137,33 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -250,9 +274,33 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -363,6 +411,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -475,6 +535,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fondo _Fondo;
 		public Fondo Fondo 
@@ -620,6 +692,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -745,9 +829,33 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -845,6 +953,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -917,6 +1037,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Etiqueta _Etiqueta;
 		public Etiqueta Etiqueta 
@@ -1088,6 +1220,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -1188,6 +1332,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -1431,7 +1587,25 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
+		private Conarte.Entities.SituacionLegal _SituacionLegal;
+		public SituacionLegal SituacionLegal 
+		{
+			get { return _SituacionLegal; }
+			set { _SituacionLegal = value; }
+		}
 #endregion
 #region HasManyRelationShips
 		private List<Conarte.Entities.Documento> _Documentos;
@@ -1568,6 +1742,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -2161,6 +2347,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Serie _Serie;
 		public Serie Serie 
@@ -2174,6 +2372,30 @@ namespace Conarte.Entities {
 			get { return _Fondo; }
 			set { _Fondo = value; }
 		}
+		private Conarte.Entities.Color _Color;
+		public Color Color 
+		{
+			get { return _Color; }
+			set { _Color = value; }
+		}
+		private Conarte.Entities.TipoMaterial _TipoMaterial;
+		public TipoMaterial TipoMaterial 
+		{
+			get { return _TipoMaterial; }
+			set { _TipoMaterial = value; }
+		}
+		private Conarte.Entities.ProcesoFotografico _ProcesoFotografico;
+		public ProcesoFotografico ProcesoFotografico 
+		{
+			get { return _ProcesoFotografico; }
+			set { _ProcesoFotografico = value; }
+		}
+		private Conarte.Entities.Autor _Autor;
+		public Autor Autor 
+		{
+			get { return _Autor; }
+			set { _Autor = value; }
+		}
 		private Conarte.Entities.Formato _Formato;
 		public Formato Formato 
 		{
@@ -2185,6 +2407,12 @@ namespace Conarte.Entities {
 		{
 			get { return _Epoca; }
 			set { _Epoca = value; }
+		}
+		private Conarte.Entities.EpocaNL _EpocaNL;
+		public EpocaNL EpocaNL 
+		{
+			get { return _EpocaNL; }
+			set { _EpocaNL = value; }
 		}
 #endregion
 #region HasManyRelationShips
@@ -2248,6 +2476,18 @@ namespace Conarte.Entities {
 				_Imagenes = value;
 			}
 		}
+		private List<Conarte.Entities.Intervencion> _Intervenciones;
+		public List<Conarte.Entities.Intervencion> Intervenciones
+		{
+			get 
+			{
+				return _Intervenciones;
+			}
+			set 
+			{
+				_Intervenciones = value;
+			}
+		}
 		private List<Conarte.Entities.Seguro> _Seguros;
 		public List<Conarte.Entities.Seguro> Seguros
 		{
@@ -2305,6 +2545,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fotografia _Fotografia;
 		public Fotografia Fotografia 
@@ -2365,6 +2617,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fotografia _Fotografia;
 		public Fotografia Fotografia 
@@ -2419,6 +2683,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fotografia _Fotografia;
 		public Fotografia Fotografia 
@@ -2473,6 +2749,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fotografia _Fotografia;
 		public Fotografia Fotografia 
@@ -2598,6 +2886,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fotografia _Fotografia;
 		public Fotografia Fotografia 
@@ -2743,6 +3043,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fotografia _Fotografia;
 		public Fotografia Fotografia 
@@ -2752,6 +3064,30 @@ namespace Conarte.Entities {
 		}
 #endregion
 #region HasManyRelationShips
+		private List<Conarte.Entities.IntervencionesDeteriorosMap> _IntervencionesDeteriorosMap;
+		public List<Conarte.Entities.IntervencionesDeteriorosMap> IntervencionesDeteriorosMap
+		{
+			get 
+			{
+				return _IntervencionesDeteriorosMap;
+			}
+			set 
+			{
+				_IntervencionesDeteriorosMap = value;
+			}
+		}
+		private List<Conarte.Entities.IntervencionesTiposIntervencionMap> _IntervencionesTiposIntervencionMap;
+		public List<Conarte.Entities.IntervencionesTiposIntervencionMap> IntervencionesTiposIntervencionMap
+		{
+			get 
+			{
+				return _IntervencionesTiposIntervencionMap;
+			}
+			set 
+			{
+				_IntervencionesTiposIntervencionMap = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -2797,7 +3133,25 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
+		private Conarte.Entities.Intervencion _Intervencion;
+		public Intervencion Intervencion 
+		{
+			get { return _Intervencion; }
+			set { _Intervencion = value; }
+		}
 		private Conarte.Entities.Deterioro _Deterioro;
 		public Deterioro Deterioro 
 		{
@@ -2851,7 +3205,25 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
+		private Conarte.Entities.Intervencion _Intervencion;
+		public Intervencion Intervencion 
+		{
+			get { return _Intervencion; }
+			set { _Intervencion = value; }
+		}
 #endregion
 #region HasManyRelationShips
 #endregion
@@ -2964,6 +3336,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -3064,6 +3448,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -3164,6 +3560,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -3289,9 +3697,33 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -3402,6 +3834,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 		private Conarte.Entities.Fotografia _Fotografia;
 		public Fotografia Fotografia 
@@ -3508,6 +3952,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -3620,9 +4076,33 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
+		private List<Conarte.Entities.Fondo> _Fondos;
+		public List<Conarte.Entities.Fondo> Fondos
+		{
+			get 
+			{
+				return _Fondos;
+			}
+			set 
+			{
+				_Fondos = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -3733,6 +4213,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -3833,6 +4325,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -3933,6 +4437,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -4033,6 +4549,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -4146,6 +4674,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
@@ -4246,9 +4786,33 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
+		private List<Conarte.Entities.Fotografia> _Fotografias;
+		public List<Conarte.Entities.Fotografia> Fotografias
+		{
+			get 
+			{
+				return _Fotografias;
+			}
+			set 
+			{
+				_Fotografias = value;
+			}
+		}
 #endregion
 	} // end class
 	
@@ -4437,6 +5001,18 @@ namespace Conarte.Entities {
 				}
 			}
 
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips

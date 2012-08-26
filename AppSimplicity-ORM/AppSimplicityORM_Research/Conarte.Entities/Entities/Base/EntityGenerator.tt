@@ -53,6 +53,18 @@ namespace <#= ds.GeneratedNamespace #> {
 <#			
 				}
 #>
+			private bool _isLoadedFromDB = false;
+            public bool IsLoadedFromDB
+            {
+                get
+                {
+                    return _isLoadedFromDB;
+                }
+                set
+                {
+                    _isLoadedFromDB = value;
+                }
+            }
 #region BelongsToRelationShips
 <#
 	            renderBelongsToRelationShips(table);
