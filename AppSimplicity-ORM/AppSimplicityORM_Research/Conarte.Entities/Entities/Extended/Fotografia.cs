@@ -8,7 +8,7 @@ namespace Conarte.Entities
     public partial class Fotografia
     {
         public void SomeMethod() 
-        { 
+        {
             
         }   
     }

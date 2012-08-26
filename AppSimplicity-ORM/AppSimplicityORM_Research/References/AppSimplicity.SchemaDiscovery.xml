@@ -6,7 +6,51 @@ AppSimplicity.SchemaDiscovery
 </name>
 </assembly>
 <members>
-<member name="P:AppSimplicity.SchemaDiscovery.My.Resources.Resources.ResourceManager">
+<member name="P:AppSimplicity.SchemaDiscovery.My.Resources.DB_CLRLanguageMappings.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppSimplicity.SchemaDiscovery.My.Resources.DB_CLRLanguageMappings.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AppSimplicity.SchemaDiscovery.My.Resources.DB_CLRLanguageMappings.DbTargets">
+	<summary>
+  Looks up a localized string similar to &lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;DbTargets&gt;
+	&lt;DbTarget From="SQL" To="SqlClient"&gt;
+		&lt;Type From="bigint" To="SqlDbType.BigInt" /&gt;
+		&lt;Type From="binary" To="SqlDbType.Binary" /&gt;
+		&lt;Type From="bit" To="SqlDbType.Bit" /&gt;
+		&lt;Type From="char" To="SqlDbType.Char" /&gt;
+		&lt;Type From="datetime" To="SqlDbType.DateTime" /&gt;
+		&lt;Type From="decimal" To="SqlDbType.Decimal" /&gt;
+		&lt;Type From="float" To="SqlDbType.Float" /&gt;
+		&lt;Type From="image" To="SqlDbType.Image" /&gt;
+		&lt;Type From="int" To="SqlDbType.Int" /&gt;
+		 [rest of string was truncated]";.
+</summary>
+</member><member name="P:AppSimplicity.SchemaDiscovery.My.Resources.DB_CLRLanguageMappings.Languages">
+	<summary>
+  Looks up a localized string similar to &lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Languages&gt;
+	&lt;Language From="SQL" To="C#"&gt;
+		&lt;Type From="bigint" To="long" IsCLRNullable="True" /&gt;
+		&lt;Type From="binary" To="object" /&gt;
+		&lt;Type From="bit" To="bool" IsCLRNullable="True" /&gt;
+		&lt;Type From="char" To="string" /&gt;
+		&lt;Type From="datetime" To="DateTime" IsCLRNullable="True" /&gt;
+		&lt;Type From="decimal" To="decimal" IsCLRNullable="True" /&gt;
+		&lt;Type From="float" To="double" IsCLRNullable="True" /&gt;
+		&lt;Type From="image" To="byte[]" /&gt;
+		&lt;Type From="int" To=" [rest of string was truncated]";.
+</summary>
+</member><member name="T:AppSimplicity.SchemaDiscovery.My.Resources.DB_CLRLanguageMappings">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:AppSimplicity.SchemaDiscovery.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
