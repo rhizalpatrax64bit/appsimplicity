@@ -12,7 +12,7 @@ using AppSimplicity.ActiveRecord.Interfaces;
     
     foreach (DataSource ds in project.DataSources)
     {
-	    ds.GeneratedNamespace = "Conarte.Entities"; //TODO: look for rootnamespace in .csproj.	 			 															 
+	    ds.GeneratedNamespace = project.RootNamespace;
 #>
 namespace <#= ds.GeneratedNamespace #> {
 <#

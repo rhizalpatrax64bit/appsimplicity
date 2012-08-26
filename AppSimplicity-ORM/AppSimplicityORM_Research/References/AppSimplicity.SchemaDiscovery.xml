@@ -50,6 +50,11 @@ AppSimplicity.SchemaDiscovery
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="M:AppSimplicity.SchemaDiscovery.Entities.Project.UpdateRelationShips">
+	<summary>
+ Looks for hookups between entities to discover HasMany and BelongsTo relationships
+ </summary>
+	<remarks></remarks>
 </member><member name="P:AppSimplicity.SchemaDiscovery.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
