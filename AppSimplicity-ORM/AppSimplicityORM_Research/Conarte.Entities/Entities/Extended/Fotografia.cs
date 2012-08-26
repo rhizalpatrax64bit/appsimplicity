@@ -9,7 +9,9 @@ namespace Conarte.Entities
     {
         public void SomeMethod() 
         {
-            
+            this.Id = 1;
+
+           
         }   
     }
 }

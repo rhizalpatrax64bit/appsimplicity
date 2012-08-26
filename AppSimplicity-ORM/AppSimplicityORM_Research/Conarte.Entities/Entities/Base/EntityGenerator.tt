@@ -30,7 +30,12 @@ namespace <#= ds.GeneratedNamespace #> {
 <#
                 foreach (Column col in table.Columns)
                 {
-	                string NullableSymbol = col.IsCLRNullable == true ? "? " : "";
+	                string NullableSymbol = "";
+					if (col.IsNullable) 
+                    {
+	                    NullableSymbol = col.IsCLRNullable == true ? "? " : "";
+                    }                    														 
+	                
 #>
 			private <#= col.CLRTargetType #> <#= NullableSymbol #>_<#= col.PropertyName #>;
 			public <#= col.CLRTargetType #> <#= NullableSymbol #><#= col.PropertyName #> 

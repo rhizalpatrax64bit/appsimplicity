@@ -7,8 +7,8 @@ namespace Conarte.Entities {
 	public partial class Autor : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -146,8 +146,8 @@ namespace Conarte.Entities {
 	public partial class Color : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -259,8 +259,8 @@ namespace Conarte.Entities {
 	public partial class Deterioro : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -384,8 +384,8 @@ namespace Conarte.Entities {
 	public partial class Documento : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -397,8 +397,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fondo_Id;
-			public int ? Fondo_Id 
+			private int _Fondo_Id;
+			public int Fondo_Id 
 			{
 				get 
 				{	
@@ -490,8 +490,8 @@ namespace Conarte.Entities {
 	public partial class Epoca : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -641,8 +641,8 @@ namespace Conarte.Entities {
 	public partial class EpocaNL : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -754,8 +754,8 @@ namespace Conarte.Entities {
 	public partial class Etiqueta : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -878,8 +878,8 @@ namespace Conarte.Entities {
 	public partial class EtiquetasEtiquetasMap : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -891,8 +891,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Etiqueta_Id;
-			public int ? Etiqueta_Id 
+			private int _Etiqueta_Id;
+			public int Etiqueta_Id 
 			{
 				get 
 				{	
@@ -904,8 +904,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _EtiquetaRelacionada_Id;
-			public int ? EtiquetaRelacionada_Id 
+			private int _EtiquetaRelacionada_Id;
+			public int EtiquetaRelacionada_Id 
 			{
 				get 
 				{	
@@ -932,8 +932,8 @@ namespace Conarte.Entities {
 	public partial class EventosDeUso : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -1097,8 +1097,8 @@ namespace Conarte.Entities {
 	public partial class Exposicione : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -1197,8 +1197,8 @@ namespace Conarte.Entities {
 	public partial class Fondo : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -1464,8 +1464,8 @@ namespace Conarte.Entities {
 	public partial class Formato : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -1589,8 +1589,8 @@ namespace Conarte.Entities {
 	public partial class Fotografia : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2266,8 +2266,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasEtiquetasMap : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2326,8 +2326,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasEventosDeUsoMap : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2380,8 +2380,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasImagenesMap : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2393,8 +2393,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fotografia_Id;
-			public int ? Fotografia_Id 
+			private int _Fotografia_Id;
+			public int Fotografia_Id 
 			{
 				get 
 				{	
@@ -2406,8 +2406,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Imagen_Id;
-			public int ? Imagen_Id 
+			private int _Imagen_Id;
+			public int Imagen_Id 
 			{
 				get 
 				{	
@@ -2434,8 +2434,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasPersonajesMap : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2447,8 +2447,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fotografia_Id;
-			public int ? Fotografia_Id 
+			private int _Fotografia_Id;
+			public int Fotografia_Id 
 			{
 				get 
 				{	
@@ -2460,8 +2460,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Personaje_Id;
-			public int ? Personaje_Id 
+			private int _Personaje_Id;
+			public int Personaje_Id 
 			{
 				get 
 				{	
@@ -2494,8 +2494,8 @@ namespace Conarte.Entities {
 	public partial class Imagene : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2613,8 +2613,8 @@ namespace Conarte.Entities {
 	public partial class Intervencion : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2639,8 +2639,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fotografia_Id;
-			public int ? Fotografia_Id 
+			private int _Fotografia_Id;
+			public int Fotografia_Id 
 			{
 				get 
 				{	
@@ -2652,8 +2652,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime ? _FechaIntervencion;
-			public DateTime ? FechaIntervencion 
+			private DateTime _FechaIntervencion;
+			public DateTime FechaIntervencion 
 			{
 				get 
 				{	
@@ -2758,8 +2758,8 @@ namespace Conarte.Entities {
 	public partial class IntervencionesDeteriorosMap : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2771,8 +2771,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Intervencion_Id;
-			public int ? Intervencion_Id 
+			private int _Intervencion_Id;
+			public int Intervencion_Id 
 			{
 				get 
 				{	
@@ -2784,8 +2784,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Deterioro_Id;
-			public int ? Deterioro_Id 
+			private int _Deterioro_Id;
+			public int Deterioro_Id 
 			{
 				get 
 				{	
@@ -2812,8 +2812,8 @@ namespace Conarte.Entities {
 	public partial class IntervencionesTiposIntervencionMap : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2825,8 +2825,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Intervencion_Id;
-			public int ? Intervencion_Id 
+			private int _Intervencion_Id;
+			public int Intervencion_Id 
 			{
 				get 
 				{	
@@ -2838,8 +2838,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _TipoIntervencion_Id;
-			public int ? TipoIntervencion_Id 
+			private int _TipoIntervencion_Id;
+			public int TipoIntervencion_Id 
 			{
 				get 
 				{	
@@ -2860,8 +2860,8 @@ namespace Conarte.Entities {
 	public partial class Interventore : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -2973,8 +2973,8 @@ namespace Conarte.Entities {
 	public partial class Lugare : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3073,8 +3073,8 @@ namespace Conarte.Entities {
 	public partial class Personaje : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3185,8 +3185,8 @@ namespace Conarte.Entities {
 	public partial class ProcesoFotografico : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3298,8 +3298,8 @@ namespace Conarte.Entities {
 	public partial class Seguro : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3311,8 +3311,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fotografia_Id;
-			public int ? Fotografia_Id 
+			private int _Fotografia_Id;
+			public int Fotografia_Id 
 			{
 				get 
 				{	
@@ -3350,8 +3350,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime ? _FechaInicial;
-			public DateTime ? FechaInicial 
+			private DateTime _FechaInicial;
+			public DateTime FechaInicial 
 			{
 				get 
 				{	
@@ -3363,8 +3363,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private DateTime ? _FechaFinal;
-			public DateTime ? FechaFinal 
+			private DateTime _FechaFinal;
+			public DateTime FechaFinal 
 			{
 				get 
 				{	
@@ -3417,8 +3417,8 @@ namespace Conarte.Entities {
 	public partial class Serie : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3529,8 +3529,8 @@ namespace Conarte.Entities {
 	public partial class SituacionLegal : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3629,8 +3629,8 @@ namespace Conarte.Entities {
 	public partial class SubUbicacion : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3655,8 +3655,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private bool _Activo;
+			public bool Activo 
 			{
 				get 
 				{	
@@ -3742,8 +3742,8 @@ namespace Conarte.Entities {
 	public partial class TipoDeMovimiento : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3768,8 +3768,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private bool _Activo;
+			public bool Activo 
 			{
 				get 
 				{	
@@ -3842,8 +3842,8 @@ namespace Conarte.Entities {
 	public partial class TiposDeReproduccion : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -3942,8 +3942,8 @@ namespace Conarte.Entities {
 	public partial class TiposDeUso : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -4042,8 +4042,8 @@ namespace Conarte.Entities {
 	public partial class TiposIntervencione : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -4155,8 +4155,8 @@ namespace Conarte.Entities {
 	public partial class TipoMaterial : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	
@@ -4255,8 +4255,8 @@ namespace Conarte.Entities {
 	public partial class Usuario : IActiveRecord
 	{
 		
-			private int ? _Id;
-			public int ? Id 
+			private int _Id;
+			public int Id 
 			{
 				get 
 				{	

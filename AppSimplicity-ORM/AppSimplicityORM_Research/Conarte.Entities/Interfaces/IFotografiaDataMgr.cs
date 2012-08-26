@@ -9,7 +9,7 @@ namespace Conarte.Entities.Interfaces
 {
     public interface IFotografiaDataMgr : IDataManager<Fotografia>, IPersister<Fotografia>
     {
-        public List<Fotografia> GetByFondo(int Fondo_Id);
-        public List<Fotografia> GetByProcesoFotografico(int ProcesoFotografico_Id);
+        List<Fotografia> GetByFondo(int Fondo_Id);
+        List<Fotografia> GetByProcesoFotografico(int ProcesoFotografico_Id);
     }
 }
