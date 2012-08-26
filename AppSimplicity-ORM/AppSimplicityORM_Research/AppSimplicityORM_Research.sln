@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{0CE1D719-C4ED-4255-90AF-B48C9C5AB2C1}"
+	ProjectSection(SolutionItems) = preProject
+		References\AppSimplicity.SchemaDiscovery.dll = References\AppSimplicity.SchemaDiscovery.dll
+		References\AppSimplicity.SchemaDiscovery.pdb = References\AppSimplicity.SchemaDiscovery.pdb
+		References\AppSimplicity.SchemaDiscovery.xml = References\AppSimplicity.SchemaDiscovery.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ActiveRecord", "ActiveRecord", "{5F21FE10-7B1A-478C-AD4A-3F507A3CADFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Conarte", "Conarte", "{819D972E-5FC8-48D7-AA71-2672086D498F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{9BB7E328-A000-4F5D-907D-2186FFFB982E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{6198D5B2-6DE8-4700-8978-C34A76587DFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{834CEBDB-2906-4AB5-B5F9-39DEA1614D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conarte.Entities", "Conarte.Entities\Conarte.Entities.csproj", "{7CD6BD15-15EE-48A5-8AF3-472446C49B92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CD6BD15-15EE-48A5-8AF3-472446C49B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD6BD15-15EE-48A5-8AF3-472446C49B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD6BD15-15EE-48A5-8AF3-472446C49B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD6BD15-15EE-48A5-8AF3-472446C49B92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9BB7E328-A000-4F5D-907D-2186FFFB982E} = {819D972E-5FC8-48D7-AA71-2672086D498F}
+		{6198D5B2-6DE8-4700-8978-C34A76587DFB} = {819D972E-5FC8-48D7-AA71-2672086D498F}
+		{834CEBDB-2906-4AB5-B5F9-39DEA1614D2C} = {819D972E-5FC8-48D7-AA71-2672086D498F}
+		{7CD6BD15-15EE-48A5-8AF3-472446C49B92} = {9BB7E328-A000-4F5D-907D-2186FFFB982E}
+	EndGlobalSection
+EndGlobal

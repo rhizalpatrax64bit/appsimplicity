@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AppSimplicity.SchemaDiscovery
+</name>
+</assembly>
+<members>
+<member name="P:AppSimplicity.SchemaDiscovery.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppSimplicity.SchemaDiscovery.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:AppSimplicity.SchemaDiscovery.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:AppSimplicity.SchemaDiscovery.Entities.AbstractTable.GetColumnInstanceByName(System.String)">
+	<summary>
+ Looks for the instance of a column by name
+ </summary>
+	<param name="pColumnName">The name of the column</param>
+	<returns>If column is not found returns Nothing</returns>
+</member><member name="M:AppSimplicity.SchemaDiscovery.Serialization.XMLSerializer`1.SerializeToString(`0)">
+	<summary>
+ Serializes an object to a string in xml format.
+ </summary>
+	<param name="pObject">The instance</param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

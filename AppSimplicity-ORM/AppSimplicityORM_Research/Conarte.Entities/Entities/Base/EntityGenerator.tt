@@ -1,0 +1,77 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="E:\Projects\AppSimplicity.CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\References\AppSimplicity.SchemaDiscovery.dll" #>
+<#@ Import Namespace="AppSimplicity.SchemaDiscovery.Entities" #>
+using System;
+<#
+	Project project = Project.LoadFromFile(@"E:\Projects\AppSimplicity.CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\Conarte.Entities\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");    
+    foreach (DataSource ds in project.DataSources)
+    {
+	    ds.GeneratedNamespace = "Conarte.Entities"; //TODO: look for rootnamespace in .csproj.	 			 															 
+#>
+namespace <#= ds.GeneratedNamespace #> {
+<#
+	 	  
+		foreach (Table table in ds.Tables)
+		{	      
+	        if (true) // determine if we should skip creating class
+            {
+	            table.SetDataSource(ds);
+
+#>	
+	public partial class <#= table.ClassName #> 
+	{
+		
+<#
+                foreach (Column col in table.Columns)
+                { 
+#>
+			private <#= col.CLRTargetType #> _<#= col.PropertyName #>;
+			public <#= col.CLRTargetType #> <#= col.PropertyName #> 
+			{
+				get 
+				{	
+					return _<#= col.PropertyName #>;
+				}
+				set 
+				{
+					_<#= col.PropertyName #> = value;
+				}
+			}
+
+<#			
+				}
+#>
+#region BelongsToRelationShips
+<#
+	            renderBelongsToRelationShip(table);
+#>
+#endregion
+	} // end class
+<#   
+
+			} // end if (table.IncludeInCodeGeneration)
+		}
+        
+#>
+	} // end namespace
+<#        
+	}
+#>
+<#+
+
+	public void renderBelongsToRelationShip(Table table) 
+    {
+	    foreach (RelationShip rel in table.BelongsToRelationShips) 
+        { 
+#>
+		private <#= table.DataSource.GeneratedNamespace #>.<#= rel.ForeignEntityName #> _<#= rel.ForeignEntityName #>;
+		public <#= rel.ForeignEntityName #> <#= rel.ForeignEntityName #> 
+		{
+			get { return _<#= rel.ForeignEntityName #>; }
+			set { _<#= rel.ForeignEntityName #> = value; }
+		}
+<#+			
+        }
+    }
+#>
