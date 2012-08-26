@@ -4,6 +4,7 @@
 <#@ Import Namespace="AppSimplicity.SchemaDiscovery.Entities" #>
 using System;
 using System.Collections.Generic;
+using AppSimplicity.ActiveRecord.Interfaces;
 
 <#
 	//TODO: Hacer que el proyecto se cargue de una ruta relativa:
@@ -23,7 +24,7 @@ namespace <#= ds.GeneratedNamespace #> {
 	            table.SetDataSource(ds);
 
 #>	
-	public partial class <#= table.ClassName #> 
+	public partial class <#= table.ClassName #> : IActiveRecord
 	{
 		
 <#

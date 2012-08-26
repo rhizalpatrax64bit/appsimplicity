@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using AppSimplicity.ActiveRecord.Interfaces;
 
 namespace Conarte.Entities {
 	
-	public partial class Autor 
+	public partial class Autor : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -142,7 +143,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Color 
+	public partial class Color : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -255,7 +256,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Deterioro 
+	public partial class Deterioro : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -380,7 +381,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Documento 
+	public partial class Documento : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -486,7 +487,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Epoca 
+	public partial class Epoca : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -637,7 +638,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class EpocaNL 
+	public partial class EpocaNL : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -750,7 +751,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Etiqueta 
+	public partial class Etiqueta : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -874,7 +875,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class EtiquetasEtiquetasMap 
+	public partial class EtiquetasEtiquetasMap : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -928,7 +929,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class EventosDeUso 
+	public partial class EventosDeUso : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -1093,7 +1094,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Exposicione 
+	public partial class Exposicione : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -1193,7 +1194,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Fondo 
+	public partial class Fondo : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -1460,7 +1461,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Formato 
+	public partial class Formato : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -1585,7 +1586,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Fotografia 
+	public partial class Fotografia : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2262,7 +2263,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class FotografiasEtiquetasMap 
+	public partial class FotografiasEtiquetasMap : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2322,7 +2323,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class FotografiasEventosDeUsoMap 
+	public partial class FotografiasEventosDeUsoMap : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2376,7 +2377,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class FotografiasImagenesMap 
+	public partial class FotografiasImagenesMap : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2430,7 +2431,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class FotografiasPersonajesMap 
+	public partial class FotografiasPersonajesMap : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2490,7 +2491,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Imagene 
+	public partial class Imagene : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2609,7 +2610,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Intervencion 
+	public partial class Intervencion : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2754,7 +2755,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class IntervencionesDeteriorosMap 
+	public partial class IntervencionesDeteriorosMap : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2808,7 +2809,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class IntervencionesTiposIntervencionMap 
+	public partial class IntervencionesTiposIntervencionMap : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2856,7 +2857,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Interventore 
+	public partial class Interventore : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -2969,7 +2970,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Lugare 
+	public partial class Lugare : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3069,7 +3070,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Personaje 
+	public partial class Personaje : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3181,7 +3182,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class ProcesoFotografico 
+	public partial class ProcesoFotografico : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3294,7 +3295,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Seguro 
+	public partial class Seguro : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3413,7 +3414,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Serie 
+	public partial class Serie : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3525,7 +3526,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class SituacionLegal 
+	public partial class SituacionLegal : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3625,7 +3626,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class SubUbicacion 
+	public partial class SubUbicacion : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3738,7 +3739,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class TipoDeMovimiento 
+	public partial class TipoDeMovimiento : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3838,7 +3839,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class TiposDeReproduccion 
+	public partial class TiposDeReproduccion : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -3938,7 +3939,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class TiposDeUso 
+	public partial class TiposDeUso : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -4038,7 +4039,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class TiposIntervencione 
+	public partial class TiposIntervencione : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -4151,7 +4152,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class TipoMaterial 
+	public partial class TipoMaterial : IActiveRecord
 	{
 		
 			private int ? _Id;
@@ -4251,7 +4252,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Usuario 
+	public partial class Usuario : IActiveRecord
 	{
 		
 			private int ? _Id;

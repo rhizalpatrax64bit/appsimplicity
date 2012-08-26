@@ -7,7 +7,7 @@ using Conarte.Entities;
 
 namespace Conarte.Entities.Interfaces
 {
-    public interface IFotografiaDataMgr : IDataManager<Fotografia>
+    public interface IFotografiaDataMgr : IDataManager<Fotografia>, IPersister<Fotografia>
     {
         public List<Fotografia> GetByFondo(int Fondo_Id);
         public List<Fotografia> GetByProcesoFotografico(int ProcesoFotografico_Id);
