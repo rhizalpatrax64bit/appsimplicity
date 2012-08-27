@@ -1238,7 +1238,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Exposicione : IActiveRecord
+	public partial class Exposicion : IActiveRecord
 	{
 		
 			private int _Id;
@@ -3229,7 +3229,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Interventore : IActiveRecord
+	public partial class Interventor : IActiveRecord
 	{
 		
 			private int _Id;
@@ -3354,7 +3354,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Lugare : IActiveRecord
+	public partial class Lugar : IActiveRecord
 	{
 		
 			private int _Id;
