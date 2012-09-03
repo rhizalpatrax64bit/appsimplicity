@@ -60,9 +60,6 @@
     <Folder Include="CodeGeneration\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppSimplicity\AppSimplicity.SchemaDiscovery.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +67,9 @@
       <Project>{20BE09CF-C0E9-47BF-84F7-D4786D91E20A}</Project>
       <Name>AppSimplicity.ActiveRecord</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppSimplicity\AppSimplicity.SchemaDiscovery.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,8 +7,8 @@ namespace Conarte.Entities {
 	public partial class Autor : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -20,8 +20,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -33,8 +33,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -59,8 +59,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -85,8 +85,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -98,8 +98,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Observaciones;
-			public string Observaciones 
+			private String _Observaciones;
+			public String Observaciones 
 			{
 				get 
 				{	
@@ -111,8 +111,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _InformacionAdicional;
-			public string InformacionAdicional 
+			private String _InformacionAdicional;
+			public String InformacionAdicional 
 			{
 				get 
 				{	
@@ -124,8 +124,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Direccion;
-			public string Direccion 
+			private String _Direccion;
+			public String Direccion 
 			{
 				get 
 				{	
@@ -167,11 +167,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Color : IActiveRecord
+	public partial class Colore : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -183,8 +183,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -196,8 +196,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -209,8 +209,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -235,8 +235,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -261,8 +261,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -289,26 +289,14 @@ namespace Conarte.Entities {
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
-		private List<Conarte.Entities.Fotografia> _Fotografias;
-		public List<Conarte.Entities.Fotografia> Fotografias
-		{
-			get 
-			{
-				return _Fotografias;
-			}
-			set 
-			{
-				_Fotografias = value;
-			}
-		}
 #endregion
 	} // end class
 	
 	public partial class Deterioro : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -320,8 +308,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -333,8 +321,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -346,8 +334,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -372,8 +360,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -398,8 +386,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -444,8 +432,8 @@ namespace Conarte.Entities {
 	public partial class Documento : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -457,8 +445,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fondo_Id;
-			public int Fondo_Id 
+			private Integer _Fondo_Id;
+			public Integer Fondo_Id 
 			{
 				get 
 				{	
@@ -470,8 +458,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _NombreArchivo;
-			public string NombreArchivo 
+			private String _NombreArchivo;
+			public String NombreArchivo 
 			{
 				get 
 				{	
@@ -483,8 +471,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Directorio;
-			public string Directorio 
+			private String _Directorio;
+			public String Directorio 
 			{
 				get 
 				{	
@@ -496,8 +484,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _NombreFisico;
-			public string NombreFisico 
+			private String _NombreFisico;
+			public String NombreFisico 
 			{
 				get 
 				{	
@@ -522,8 +510,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -562,8 +550,8 @@ namespace Conarte.Entities {
 	public partial class Epoca : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -575,8 +563,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -588,8 +576,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -627,8 +615,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -653,8 +641,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -722,11 +710,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class EpocaNL : IActiveRecord
+	public partial class EpocasNL : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -738,8 +726,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -751,8 +739,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -777,8 +765,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -803,8 +791,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -816,8 +804,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -844,26 +832,14 @@ namespace Conarte.Entities {
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
-		private List<Conarte.Entities.Fotografia> _Fotografias;
-		public List<Conarte.Entities.Fotografia> Fotografias
-		{
-			get 
-			{
-				return _Fotografias;
-			}
-			set 
-			{
-				_Fotografias = value;
-			}
-		}
 #endregion
 	} // end class
 	
 	public partial class Etiqueta : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -875,8 +851,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -888,8 +864,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -914,8 +890,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -940,8 +916,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -998,8 +974,8 @@ namespace Conarte.Entities {
 	public partial class EtiquetasEtiquetasMap : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -1011,8 +987,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Etiqueta_Id;
-			public int Etiqueta_Id 
+			private Integer _Etiqueta_Id;
+			public Integer Etiqueta_Id 
 			{
 				get 
 				{	
@@ -1024,8 +1000,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _EtiquetaRelacionada_Id;
-			public int EtiquetaRelacionada_Id 
+			private Integer _EtiquetaRelacionada_Id;
+			public Integer EtiquetaRelacionada_Id 
 			{
 				get 
 				{	
@@ -1064,8 +1040,8 @@ namespace Conarte.Entities {
 	public partial class EventosDeUso : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -1090,8 +1066,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _TipoDeReproduccion_Id;
-			public int ? TipoDeReproduccion_Id 
+			private Integer ? _TipoDeReproduccion_Id;
+			public Integer ? TipoDeReproduccion_Id 
 			{
 				get 
 				{	
@@ -1103,8 +1079,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _TipoDeUso_Id;
-			public int ? TipoDeUso_Id 
+			private Integer ? _TipoDeUso_Id;
+			public Integer ? TipoDeUso_Id 
 			{
 				get 
 				{	
@@ -1116,8 +1092,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Institucion;
-			public string Institucion 
+			private String _Institucion;
+			public String Institucion 
 			{
 				get 
 				{	
@@ -1129,8 +1105,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ResponsableDeUso;
-			public string ResponsableDeUso 
+			private String _ResponsableDeUso;
+			public String ResponsableDeUso 
 			{
 				get 
 				{	
@@ -1142,8 +1118,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private decimal ? _Monto;
-			public decimal ? Monto 
+			private Decimal ? _Monto;
+			public Decimal ? Monto 
 			{
 				get 
 				{	
@@ -1155,8 +1131,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Pagado;
-			public bool ? Pagado 
+			private Boolean ? _Pagado;
+			public Boolean ? Pagado 
 			{
 				get 
 				{	
@@ -1168,8 +1144,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Telefono;
-			public string Telefono 
+			private String _Telefono;
+			public String Telefono 
 			{
 				get 
 				{	
@@ -1181,8 +1157,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CorreoElectronico;
-			public string CorreoElectronico 
+			private String _CorreoElectronico;
+			public String CorreoElectronico 
 			{
 				get 
 				{	
@@ -1194,8 +1170,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -1207,8 +1183,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Observaciones;
-			public string Observaciones 
+			private String _Observaciones;
+			public String Observaciones 
 			{
 				get 
 				{	
@@ -1238,11 +1214,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Exposicion : IActiveRecord
+	public partial class Exposicione : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -1254,8 +1230,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -1267,8 +1243,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -1293,8 +1269,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -1319,8 +1295,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -1353,8 +1329,8 @@ namespace Conarte.Entities {
 	public partial class Fondo : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -1366,8 +1342,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -1379,8 +1355,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -1392,8 +1368,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -1405,8 +1381,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _TipoDeFondo_Id;
-			public int ? TipoDeFondo_Id 
+			private Integer ? _TipoDeFondo_Id;
+			public Integer ? TipoDeFondo_Id 
 			{
 				get 
 				{	
@@ -1431,8 +1407,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -1457,8 +1433,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -1470,8 +1446,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Donante;
-			public string Donante 
+			private String _Donante;
+			public String Donante 
 			{
 				get 
 				{	
@@ -1483,8 +1459,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Contacto;
-			public string Contacto 
+			private String _Contacto;
+			public String Contacto 
 			{
 				get 
 				{	
@@ -1496,8 +1472,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Direccion;
-			public string Direccion 
+			private String _Direccion;
+			public String Direccion 
 			{
 				get 
 				{	
@@ -1509,8 +1485,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Telefono;
-			public string Telefono 
+			private String _Telefono;
+			public String Telefono 
 			{
 				get 
 				{	
@@ -1522,8 +1498,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Procedencia;
-			public string Procedencia 
+			private String _Procedencia;
+			public String Procedencia 
 			{
 				get 
 				{	
@@ -1535,8 +1511,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _SituacionLegal_Id;
-			public int ? SituacionLegal_Id 
+			private Integer ? _SituacionLegal_Id;
+			public Integer ? SituacionLegal_Id 
 			{
 				get 
 				{	
@@ -1561,8 +1537,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Observaciones;
-			public string Observaciones 
+			private String _Observaciones;
+			public String Observaciones 
 			{
 				get 
 				{	
@@ -1574,8 +1550,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CorreoElectronico;
-			public string CorreoElectronico 
+			private String _CorreoElectronico;
+			public String CorreoElectronico 
 			{
 				get 
 				{	
@@ -1600,12 +1576,6 @@ namespace Conarte.Entities {
                 }
             }
 #region BelongsToRelationShips
-		private Conarte.Entities.SituacionLegal _SituacionLegal;
-		public SituacionLegal SituacionLegal 
-		{
-			get { return _SituacionLegal; }
-			set { _SituacionLegal = value; }
-		}
 #endregion
 #region HasManyRelationShips
 		private List<Conarte.Entities.Documento> _Documentos;
@@ -1638,8 +1608,8 @@ namespace Conarte.Entities {
 	public partial class Formato : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -1651,8 +1621,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -1664,8 +1634,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -1677,8 +1647,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -1703,8 +1673,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -1729,8 +1699,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -1775,8 +1745,8 @@ namespace Conarte.Entities {
 	public partial class Fotografia : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -1788,8 +1758,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private long ? _NumeroInventario;
-			public long ? NumeroInventario 
+			private Long ? _NumeroInventario;
+			public Long ? NumeroInventario 
 			{
 				get 
 				{	
@@ -1801,8 +1771,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _NumeroInventarioProvisional;
-			public string NumeroInventarioProvisional 
+			private String _NumeroInventarioProvisional;
+			public String NumeroInventarioProvisional 
 			{
 				get 
 				{	
@@ -1814,8 +1784,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _NumeroActivoFijo;
-			public string NumeroActivoFijo 
+			private String _NumeroActivoFijo;
+			public String NumeroActivoFijo 
 			{
 				get 
 				{	
@@ -1827,8 +1797,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Titulo;
-			public string Titulo 
+			private String _Titulo;
+			public String Titulo 
 			{
 				get 
 				{	
@@ -1840,8 +1810,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Serie_Id;
-			public int ? Serie_Id 
+			private Integer ? _Serie_Id;
+			public Integer ? Serie_Id 
 			{
 				get 
 				{	
@@ -1853,8 +1823,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fondo_Id;
-			public int ? Fondo_Id 
+			private Integer ? _Fondo_Id;
+			public Integer ? Fondo_Id 
 			{
 				get 
 				{	
@@ -1866,8 +1836,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Color_Id;
-			public int ? Color_Id 
+			private Integer ? _Color_Id;
+			public Integer ? Color_Id 
 			{
 				get 
 				{	
@@ -1879,8 +1849,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _TipoMaterial_Id;
-			public int ? TipoMaterial_Id 
+			private Integer ? _TipoMaterial_Id;
+			public Integer ? TipoMaterial_Id 
 			{
 				get 
 				{	
@@ -1892,8 +1862,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _ProcesoFotografico_Id;
-			public int ? ProcesoFotografico_Id 
+			private Integer ? _ProcesoFotografico_Id;
+			public Integer ? ProcesoFotografico_Id 
 			{
 				get 
 				{	
@@ -1905,8 +1875,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _LugarToma_Id;
-			public int ? LugarToma_Id 
+			private Integer ? _LugarToma_Id;
+			public Integer ? LugarToma_Id 
 			{
 				get 
 				{	
@@ -1944,8 +1914,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _LugarAsunto_Id;
-			public int ? LugarAsunto_Id 
+			private Integer ? _LugarAsunto_Id;
+			public Integer ? LugarAsunto_Id 
 			{
 				get 
 				{	
@@ -1983,8 +1953,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _InformacionTecnica;
-			public bool ? InformacionTecnica 
+			private Boolean ? _InformacionTecnica;
+			public Boolean ? InformacionTecnica 
 			{
 				get 
 				{	
@@ -2009,8 +1979,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Autor_Id;
-			public int ? Autor_Id 
+			private Integer ? _Autor_Id;
+			public Integer ? Autor_Id 
 			{
 				get 
 				{	
@@ -2022,8 +1992,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Formato_Id;
-			public int ? Formato_Id 
+			private Integer ? _Formato_Id;
+			public Integer ? Formato_Id 
 			{
 				get 
 				{	
@@ -2035,8 +2005,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _FormatoMontaje_Id;
-			public int ? FormatoMontaje_Id 
+			private Integer ? _FormatoMontaje_Id;
+			public Integer ? FormatoMontaje_Id 
 			{
 				get 
 				{	
@@ -2048,8 +2018,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _InformacionTecnicaPor;
-			public string InformacionTecnicaPor 
+			private String _InformacionTecnicaPor;
+			public String InformacionTecnicaPor 
 			{
 				get 
 				{	
@@ -2061,8 +2031,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _InformacionCatalografica;
-			public bool ? InformacionCatalografica 
+			private Boolean ? _InformacionCatalografica;
+			public Boolean ? InformacionCatalografica 
 			{
 				get 
 				{	
@@ -2087,8 +2057,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CatalogadaPor;
-			public string CatalogadaPor 
+			private String _CatalogadaPor;
+			public String CatalogadaPor 
 			{
 				get 
 				{	
@@ -2100,8 +2070,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Agencia;
-			public string Agencia 
+			private String _Agencia;
+			public String Agencia 
 			{
 				get 
 				{	
@@ -2113,8 +2083,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Digitalizada;
-			public bool ? Digitalizada 
+			private Boolean ? _Digitalizada;
+			public Boolean ? Digitalizada 
 			{
 				get 
 				{	
@@ -2126,8 +2096,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Imagen_Id;
-			public int ? Imagen_Id 
+			private Integer ? _Imagen_Id;
+			public Integer ? Imagen_Id 
 			{
 				get 
 				{	
@@ -2139,8 +2109,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private decimal ? _Avaluo;
-			public decimal ? Avaluo 
+			private Decimal ? _Avaluo;
+			public Decimal ? Avaluo 
 			{
 				get 
 				{	
@@ -2165,8 +2135,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _DigitalizadaPor;
-			public string DigitalizadaPor 
+			private String _DigitalizadaPor;
+			public String DigitalizadaPor 
 			{
 				get 
 				{	
@@ -2191,8 +2161,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -2217,8 +2187,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -2230,8 +2200,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Observaciones;
-			public string Observaciones 
+			private String _Observaciones;
+			public String Observaciones 
 			{
 				get 
 				{	
@@ -2243,8 +2213,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _PublicarEnInternet;
-			public bool ? PublicarEnInternet 
+			private Boolean ? _PublicarEnInternet;
+			public Boolean ? PublicarEnInternet 
 			{
 				get 
 				{	
@@ -2256,8 +2226,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Epoca_Id;
-			public int ? Epoca_Id 
+			private Integer ? _Epoca_Id;
+			public Integer ? Epoca_Id 
 			{
 				get 
 				{	
@@ -2269,8 +2239,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _UltimoMovimiento_Id;
-			public int ? UltimoMovimiento_Id 
+			private Integer ? _UltimoMovimiento_Id;
+			public Integer ? UltimoMovimiento_Id 
 			{
 				get 
 				{	
@@ -2282,8 +2252,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Aseguramiento_Id;
-			public int ? Aseguramiento_Id 
+			private Integer ? _Aseguramiento_Id;
+			public Integer ? Aseguramiento_Id 
 			{
 				get 
 				{	
@@ -2295,8 +2265,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _EsPiezaTemporal;
-			public bool ? EsPiezaTemporal 
+			private Boolean ? _EsPiezaTemporal;
+			public Boolean ? EsPiezaTemporal 
 			{
 				get 
 				{	
@@ -2308,8 +2278,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _UltimaIntervencion_Id;
-			public int ? UltimaIntervencion_Id 
+			private Integer ? _UltimaIntervencion_Id;
+			public Integer ? UltimaIntervencion_Id 
 			{
 				get 
 				{	
@@ -2321,8 +2291,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _EpocaNL_Id;
-			public int ? EpocaNL_Id 
+			private Integer ? _EpocaNL_Id;
+			public Integer ? EpocaNL_Id 
 			{
 				get 
 				{	
@@ -2334,8 +2304,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _InformacionPersonajesCompletada;
-			public bool ? InformacionPersonajesCompletada 
+			private Boolean ? _InformacionPersonajesCompletada;
+			public Boolean ? InformacionPersonajesCompletada 
 			{
 				get 
 				{	
@@ -2372,24 +2342,6 @@ namespace Conarte.Entities {
 			get { return _Fondo; }
 			set { _Fondo = value; }
 		}
-		private Conarte.Entities.Color _Color;
-		public Color Color 
-		{
-			get { return _Color; }
-			set { _Color = value; }
-		}
-		private Conarte.Entities.TipoMaterial _TipoMaterial;
-		public TipoMaterial TipoMaterial 
-		{
-			get { return _TipoMaterial; }
-			set { _TipoMaterial = value; }
-		}
-		private Conarte.Entities.ProcesoFotografico _ProcesoFotografico;
-		public ProcesoFotografico ProcesoFotografico 
-		{
-			get { return _ProcesoFotografico; }
-			set { _ProcesoFotografico = value; }
-		}
 		private Conarte.Entities.Autor _Autor;
 		public Autor Autor 
 		{
@@ -2407,12 +2359,6 @@ namespace Conarte.Entities {
 		{
 			get { return _Epoca; }
 			set { _Epoca = value; }
-		}
-		private Conarte.Entities.EpocaNL _EpocaNL;
-		public EpocaNL EpocaNL 
-		{
-			get { return _EpocaNL; }
-			set { _EpocaNL = value; }
 		}
 #endregion
 #region HasManyRelationShips
@@ -2476,8 +2422,8 @@ namespace Conarte.Entities {
 				_Imagenes = value;
 			}
 		}
-		private List<Conarte.Entities.Intervencion> _Intervenciones;
-		public List<Conarte.Entities.Intervencion> Intervenciones
+		private List<Conarte.Entities.Intervencione> _Intervenciones;
+		public List<Conarte.Entities.Intervencione> Intervenciones
 		{
 			get 
 			{
@@ -2506,8 +2452,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasEtiquetasMap : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -2519,8 +2465,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fotografia_Id;
-			public int ? Fotografia_Id 
+			private Integer ? _Fotografia_Id;
+			public Integer ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2532,8 +2478,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Etiqueta_Id;
-			public int ? Etiqueta_Id 
+			private Integer ? _Etiqueta_Id;
+			public Integer ? Etiqueta_Id 
 			{
 				get 
 				{	
@@ -2578,8 +2524,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasEventosDeUsoMap : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -2591,8 +2537,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fotografia_Id;
-			public int ? Fotografia_Id 
+			private Integer ? _Fotografia_Id;
+			public Integer ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2604,8 +2550,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _EventoDeUso_Id;
-			public int ? EventoDeUso_Id 
+			private Integer ? _EventoDeUso_Id;
+			public Integer ? EventoDeUso_Id 
 			{
 				get 
 				{	
@@ -2644,8 +2590,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasImagenesMap : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -2657,8 +2603,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private Integer _Fotografia_Id;
+			public Integer Fotografia_Id 
 			{
 				get 
 				{	
@@ -2670,8 +2616,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Imagen_Id;
-			public int Imagen_Id 
+			private Integer _Imagen_Id;
+			public Integer Imagen_Id 
 			{
 				get 
 				{	
@@ -2710,8 +2656,8 @@ namespace Conarte.Entities {
 	public partial class FotografiasPersonajesMap : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -2723,8 +2669,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private Integer _Fotografia_Id;
+			public Integer Fotografia_Id 
 			{
 				get 
 				{	
@@ -2736,8 +2682,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Personaje_Id;
-			public int Personaje_Id 
+			private Integer _Personaje_Id;
+			public Integer Personaje_Id 
 			{
 				get 
 				{	
@@ -2782,8 +2728,8 @@ namespace Conarte.Entities {
 	public partial class Imagene : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -2795,8 +2741,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _NombreOriginal;
-			public string NombreOriginal 
+			private String _NombreOriginal;
+			public String NombreOriginal 
 			{
 				get 
 				{	
@@ -2808,8 +2754,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Directorio;
-			public string Directorio 
+			private String _Directorio;
+			public String Directorio 
 			{
 				get 
 				{	
@@ -2834,8 +2780,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -2860,8 +2806,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -2873,8 +2819,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Fotografia_Id;
-			public int ? Fotografia_Id 
+			private Integer ? _Fotografia_Id;
+			public Integer ? Fotografia_Id 
 			{
 				get 
 				{	
@@ -2910,11 +2856,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Intervencion : IActiveRecord
+	public partial class Intervencione : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -2926,8 +2872,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Tipo;
-			public int ? Tipo 
+			private Integer ? _Tipo;
+			public Integer ? Tipo 
 			{
 				get 
 				{	
@@ -2939,8 +2885,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private Integer _Fotografia_Id;
+			public Integer Fotografia_Id 
 			{
 				get 
 				{	
@@ -2965,8 +2911,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _IntervencionPor;
-			public string IntervencionPor 
+			private String _IntervencionPor;
+			public String IntervencionPor 
 			{
 				get 
 				{	
@@ -2991,8 +2937,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -3017,8 +2963,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -3030,8 +2976,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Observaciones;
-			public string Observaciones 
+			private String _Observaciones;
+			public String Observaciones 
 			{
 				get 
 				{	
@@ -3064,38 +3010,14 @@ namespace Conarte.Entities {
 		}
 #endregion
 #region HasManyRelationShips
-		private List<Conarte.Entities.IntervencionesDeteriorosMap> _IntervencionesDeteriorosMap;
-		public List<Conarte.Entities.IntervencionesDeteriorosMap> IntervencionesDeteriorosMap
-		{
-			get 
-			{
-				return _IntervencionesDeteriorosMap;
-			}
-			set 
-			{
-				_IntervencionesDeteriorosMap = value;
-			}
-		}
-		private List<Conarte.Entities.IntervencionesTiposIntervencionMap> _IntervencionesTiposIntervencionMap;
-		public List<Conarte.Entities.IntervencionesTiposIntervencionMap> IntervencionesTiposIntervencionMap
-		{
-			get 
-			{
-				return _IntervencionesTiposIntervencionMap;
-			}
-			set 
-			{
-				_IntervencionesTiposIntervencionMap = value;
-			}
-		}
 #endregion
 	} // end class
 	
 	public partial class IntervencionesDeteriorosMap : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3107,8 +3029,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Intervencion_Id;
-			public int Intervencion_Id 
+			private Integer _Intervencion_Id;
+			public Integer Intervencion_Id 
 			{
 				get 
 				{	
@@ -3120,8 +3042,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Deterioro_Id;
-			public int Deterioro_Id 
+			private Integer _Deterioro_Id;
+			public Integer Deterioro_Id 
 			{
 				get 
 				{	
@@ -3146,12 +3068,6 @@ namespace Conarte.Entities {
                 }
             }
 #region BelongsToRelationShips
-		private Conarte.Entities.Intervencion _Intervencion;
-		public Intervencion Intervencion 
-		{
-			get { return _Intervencion; }
-			set { _Intervencion = value; }
-		}
 		private Conarte.Entities.Deterioro _Deterioro;
 		public Deterioro Deterioro 
 		{
@@ -3166,8 +3082,8 @@ namespace Conarte.Entities {
 	public partial class IntervencionesTiposIntervencionMap : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3179,8 +3095,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Intervencion_Id;
-			public int Intervencion_Id 
+			private Integer _Intervencion_Id;
+			public Integer Intervencion_Id 
 			{
 				get 
 				{	
@@ -3192,8 +3108,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _TipoIntervencion_Id;
-			public int TipoIntervencion_Id 
+			private Integer _TipoIntervencion_Id;
+			public Integer TipoIntervencion_Id 
 			{
 				get 
 				{	
@@ -3218,22 +3134,16 @@ namespace Conarte.Entities {
                 }
             }
 #region BelongsToRelationShips
-		private Conarte.Entities.Intervencion _Intervencion;
-		public Intervencion Intervencion 
-		{
-			get { return _Intervencion; }
-			set { _Intervencion = value; }
-		}
 #endregion
 #region HasManyRelationShips
 #endregion
 	} // end class
 	
-	public partial class Interventor : IActiveRecord
+	public partial class Interventore : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3245,8 +3155,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Iniciales;
-			public string Iniciales 
+			private String _Iniciales;
+			public String Iniciales 
 			{
 				get 
 				{	
@@ -3258,8 +3168,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Nombre;
-			public string Nombre 
+			private String _Nombre;
+			public String Nombre 
 			{
 				get 
 				{	
@@ -3271,8 +3181,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -3297,8 +3207,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -3323,8 +3233,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -3354,11 +3264,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Lugar : IActiveRecord
+	public partial class Lugare : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3370,8 +3280,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -3383,8 +3293,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -3409,8 +3319,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -3435,8 +3345,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -3469,8 +3379,8 @@ namespace Conarte.Entities {
 	public partial class Personaje : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3482,8 +3392,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -3495,8 +3405,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -3521,8 +3431,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -3547,8 +3457,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -3590,11 +3500,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class ProcesoFotografico : IActiveRecord
+	public partial class ProcesosFotografico : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3606,8 +3516,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -3619,8 +3529,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -3632,8 +3542,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -3658,8 +3568,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -3684,8 +3594,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -3712,26 +3622,14 @@ namespace Conarte.Entities {
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
-		private List<Conarte.Entities.Fotografia> _Fotografias;
-		public List<Conarte.Entities.Fotografia> Fotografias
-		{
-			get 
-			{
-				return _Fotografias;
-			}
-			set 
-			{
-				_Fotografias = value;
-			}
-		}
 #endregion
 	} // end class
 	
 	public partial class Seguro : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3743,8 +3641,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int _Fotografia_Id;
-			public int Fotografia_Id 
+			private Integer _Fotografia_Id;
+			public Integer Fotografia_Id 
 			{
 				get 
 				{	
@@ -3756,8 +3654,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _EmpresaAseguradora;
-			public string EmpresaAseguradora 
+			private String _EmpresaAseguradora;
+			public String EmpresaAseguradora 
 			{
 				get 
 				{	
@@ -3769,8 +3667,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _NumeroPoliza;
-			public string NumeroPoliza 
+			private String _NumeroPoliza;
+			public String NumeroPoliza 
 			{
 				get 
 				{	
@@ -3821,8 +3719,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -3861,8 +3759,8 @@ namespace Conarte.Entities {
 	public partial class Serie : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3874,8 +3772,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -3887,8 +3785,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -3913,8 +3811,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -3939,8 +3837,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -3982,11 +3880,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class SituacionLegal : IActiveRecord
+	public partial class SituacionesLegale : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -3998,8 +3896,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -4011,8 +3909,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -4037,8 +3935,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -4063,8 +3961,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -4091,26 +3989,14 @@ namespace Conarte.Entities {
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
-		private List<Conarte.Entities.Fondo> _Fondos;
-		public List<Conarte.Entities.Fondo> Fondos
-		{
-			get 
-			{
-				return _Fondos;
-			}
-			set 
-			{
-				_Fondos = value;
-			}
-		}
 #endregion
 	} // end class
 	
-	public partial class SubUbicacion : IActiveRecord
+	public partial class SubUbicacione : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -4122,8 +4008,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -4135,8 +4021,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private Boolean _Activo;
+			public Boolean Activo 
 			{
 				get 
 				{	
@@ -4148,8 +4034,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _Ubicacion_Id;
-			public int ? Ubicacion_Id 
+			private Integer ? _Ubicacion_Id;
+			public Integer ? Ubicacion_Id 
 			{
 				get 
 				{	
@@ -4174,8 +4060,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -4200,8 +4086,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -4231,11 +4117,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class TipoDeMovimiento : IActiveRecord
+	public partial class TiposDeMovimiento : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -4247,8 +4133,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -4260,8 +4146,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool _Activo;
-			public bool Activo 
+			private Boolean _Activo;
+			public Boolean Activo 
 			{
 				get 
 				{	
@@ -4286,8 +4172,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -4312,8 +4198,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -4346,8 +4232,8 @@ namespace Conarte.Entities {
 	public partial class TiposDeReproduccion : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -4359,8 +4245,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -4372,8 +4258,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -4398,8 +4284,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -4424,8 +4310,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -4458,8 +4344,8 @@ namespace Conarte.Entities {
 	public partial class TiposDeUso : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -4471,8 +4357,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -4484,8 +4370,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -4510,8 +4396,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -4536,8 +4422,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -4570,8 +4456,8 @@ namespace Conarte.Entities {
 	public partial class TiposIntervencione : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -4583,8 +4469,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -4596,8 +4482,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Clave;
-			public string Clave 
+			private String _Clave;
+			public String Clave 
 			{
 				get 
 				{	
@@ -4609,8 +4495,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -4635,8 +4521,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -4661,8 +4547,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -4692,11 +4578,11 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class TipoMaterial : IActiveRecord
+	public partial class TiposMateriale : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -4708,8 +4594,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Descripcion;
-			public string Descripcion 
+			private String _Descripcion;
+			public String Descripcion 
 			{
 				get 
 				{	
@@ -4721,8 +4607,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -4747,8 +4633,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CreadoPor;
-			public string CreadoPor 
+			private String _CreadoPor;
+			public String CreadoPor 
 			{
 				get 
 				{	
@@ -4773,8 +4659,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _ModificadoPor;
-			public string ModificadoPor 
+			private String _ModificadoPor;
+			public String ModificadoPor 
 			{
 				get 
 				{	
@@ -4801,26 +4687,14 @@ namespace Conarte.Entities {
 #region BelongsToRelationShips
 #endregion
 #region HasManyRelationShips
-		private List<Conarte.Entities.Fotografia> _Fotografias;
-		public List<Conarte.Entities.Fotografia> Fotografias
-		{
-			get 
-			{
-				return _Fotografias;
-			}
-			set 
-			{
-				_Fotografias = value;
-			}
-		}
 #endregion
 	} // end class
 	
 	public partial class Usuario : IActiveRecord
 	{
 		
-			private int _Id;
-			public int Id 
+			private Integer _Id;
+			public Integer Id 
 			{
 				get 
 				{	
@@ -4832,8 +4706,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Login;
-			public string Login 
+			private String _Login;
+			public String Login 
 			{
 				get 
 				{	
@@ -4845,8 +4719,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _Password;
-			public string Password 
+			private String _Password;
+			public String Password 
 			{
 				get 
 				{	
@@ -4858,8 +4732,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _NombreCompleto;
-			public string NombreCompleto 
+			private String _NombreCompleto;
+			public String NombreCompleto 
 			{
 				get 
 				{	
@@ -4871,8 +4745,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private string _CorreoElectronico;
-			public string CorreoElectronico 
+			private String _CorreoElectronico;
+			public String CorreoElectronico 
 			{
 				get 
 				{	
@@ -4884,8 +4758,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Activo;
-			public bool ? Activo 
+			private Boolean ? _Activo;
+			public Boolean ? Activo 
 			{
 				get 
 				{	
@@ -4910,8 +4784,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _Bloqueado;
-			public bool ? Bloqueado 
+			private Boolean ? _Bloqueado;
+			public Boolean ? Bloqueado 
 			{
 				get 
 				{	
@@ -4923,8 +4797,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private int ? _IntentosFallidos;
-			public int ? IntentosFallidos 
+			private Integer ? _IntentosFallidos;
+			public Integer ? IntentosFallidos 
 			{
 				get 
 				{	
@@ -4962,8 +4836,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _AccesoConfirmado;
-			public bool ? AccesoConfirmado 
+			private Boolean ? _AccesoConfirmado;
+			public Boolean ? AccesoConfirmado 
 			{
 				get 
 				{	
@@ -4988,8 +4862,8 @@ namespace Conarte.Entities {
 				}
 			}
 
-			private bool ? _DeseaRecibirNotificaciones;
-			public bool ? DeseaRecibirNotificaciones 
+			private Boolean ? _DeseaRecibirNotificaciones;
+			public Boolean ? DeseaRecibirNotificaciones 
 			{
 				get 
 				{	
