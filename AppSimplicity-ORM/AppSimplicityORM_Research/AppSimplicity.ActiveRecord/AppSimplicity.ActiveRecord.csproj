@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\EntityMapper.cs" />
+    <Compile Include="DataAccess\SqlServer\EntityMapper.cs" />
     <Compile Include="Interfaces\IActiveRecord.cs" />
     <Compile Include="Interfaces\IDataManager.cs" />
     <Compile Include="Interfaces\IPersister.cs" />
