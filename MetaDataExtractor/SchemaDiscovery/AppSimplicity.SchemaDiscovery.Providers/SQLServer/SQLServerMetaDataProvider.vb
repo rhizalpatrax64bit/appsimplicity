@@ -8,12 +8,11 @@ Namespace SqlServer
         Inherits BaseProvider
         Implements IMetaDataProvider
 
-        Private _ConnectionString As String
 
         Public Function GetTables() As System.Collections.Generic.List(Of Entities.Table) Implements IMetaDataProvider.GetTables
             Dim lReturnValue As New List(Of SchemaDiscovery.Entities.Table)
 
-            Dim lDS As DataSet = SqlHelper.ExecuteDataset(_ConnectionString, commandType:=CommandType.Text, commandText:=My.Resources.SQLServerExtractionScripts.GET_TABLES)
+            Dim lDS As DataSet = SqlHelper.ExecuteDataset(ConnectionString, commandType:=CommandType.Text, commandText:=My.Resources.SQLServerExtractionScripts.GET_TABLES)
             For Each lDR As DataRow In lDS.Tables(0).Rows
                 Dim lTable As New SchemaDiscovery.Entities.Table
 
@@ -34,7 +33,7 @@ Namespace SqlServer
             lParameters.Add(New SqlParameter("@TABLE_SCHEMA", pTable.Schema))
             lParameters.Add(New SqlParameter("@TABLE_NAME", pTable.Name))
 
-            Dim lDS As DataSet = SqlHelper.ExecuteDataset(_ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_TABLE_COLUMNS, lParameters.ToArray())
+            Dim lDS As DataSet = SqlHelper.ExecuteDataset(ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_TABLE_COLUMNS, lParameters.ToArray())
 
             For Each lDR As DataRow In lDS.Tables(0).Rows
                 Dim lColumn As New SchemaDiscovery.Entities.Column
@@ -43,7 +42,7 @@ Namespace SqlServer
                 lColumn.SQLType = lDR.Item("DATA_TYPE").ToString()
                 lColumn.CharMaxLength = IIf(lDR.IsNull("CHARACTER_MAXIMUM_LENGTH"), 0, lDR.Item("CHARACTER_MAXIMUM_LENGTH"))
                 lColumn.IsIdentity = IIf(lDR.Item("IS_IDENTITY") = "YES", True, False)
-                
+
                 lReturnValue.Add(lColumn)
             Next
 
@@ -65,7 +64,7 @@ Namespace SqlServer
             lParameters.Add(New SqlParameter("@SPECIFIC_SCHEMA", storedProcedure.Schema))
             lParameters.Add(New SqlParameter("@SPECIFIC_NAME", storedProcedure.Name))
 
-            Dim lDS As DataSet = SqlHelper.ExecuteDataset(_ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_STOREDPROCEDURE_PARAMETERS, lParameters.ToArray())
+            Dim lDS As DataSet = SqlHelper.ExecuteDataset(ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_STOREDPROCEDURE_PARAMETERS, lParameters.ToArray())
 
             For Each lDR As DataRow In lDS.Tables(0).Rows
                 Dim lParameter As New Entities.StoredProcedureParameter
@@ -84,7 +83,7 @@ Namespace SqlServer
         Public Function GetStoredProcedures() As System.Collections.Generic.List(Of Entities.StoredProcedure) Implements IMetaDataProvider.GetStoredProcedures
             Dim lReturnValue As New List(Of SchemaDiscovery.Entities.StoredProcedure)
 
-            Dim lDS As DataSet = SqlHelper.ExecuteDataset(_ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_STORED_PROCEDURES)
+            Dim lDS As DataSet = SqlHelper.ExecuteDataset(ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_STORED_PROCEDURES)
 
             For Each lDR As DataRow In lDS.Tables(0).Rows
                 Dim lProc As New SchemaDiscovery.Entities.StoredProcedure
@@ -101,7 +100,7 @@ Namespace SqlServer
         Public Function GetViews() As System.Collections.Generic.List(Of Entities.View) Implements IMetaDataProvider.GetViews
             Dim lReturnValue As New List(Of SchemaDiscovery.Entities.View)
 
-            Dim lDS As DataSet = SqlHelper.ExecuteDataset(_ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_VIEWS)
+            Dim lDS As DataSet = SqlHelper.ExecuteDataset(ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_VIEWS)
 
             For Each lDR As DataRow In lDS.Tables(0).Rows
                 Dim lView As New SchemaDiscovery.Entities.View
@@ -117,7 +116,7 @@ Namespace SqlServer
         End Function
 
         Public Sub ScriptData(ByVal table As Entities.Table, ByRef OutputStream As System.IO.Stream) Implements IMetaDataProvider.ScriptData
-            Dim lScripter As New SQLServerDataScripter(_ConnectionString)
+            Dim lScripter As New SQLServerDataScripter(ConnectionString)
             Dim lStreamWriter As New System.IO.StreamWriter(OutputStream, System.Text.Encoding.Unicode)
             lScripter.ScriptData(table, lStreamWriter)
         End Sub
@@ -129,7 +128,7 @@ Namespace SqlServer
             lParameters.Add(New SqlParameter("@SCHEMA_NAME", table.Schema))
             lParameters.Add(New SqlParameter("@TABLE_NAME", table.Name))
 
-            Dim lDS As DataSet = SqlHelper.ExecuteDataset(_ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_TABLE_KEYS, lParameters.ToArray())
+            Dim lDS As DataSet = SqlHelper.ExecuteDataset(ConnectionString, CommandType.Text, My.Resources.SQLServerExtractionScripts.GET_TABLE_KEYS, lParameters.ToArray())
 
             If (lDS.Tables.Count > 1) Then
                 If (lDS.Tables.Count > 1) Then
@@ -162,9 +161,19 @@ Namespace SqlServer
             Return lReturnValue
         End Function
 
-        Public Sub SetConnectionString(ByVal ConnectionString As String) Implements IMetaDataProvider.SetConnectionString
-            _ConnectionString = ConnectionString
+        Public Sub SetConnectionString(ByVal connectionString As String) Implements IMetaDataProvider.SetConnectionString
+            _connectionString = connectionString
         End Sub
+
+        Private _connectionString As String
+        Public Property ConnectionString As String Implements IMetaDataProvider.ConnectionString
+            Get
+                Return _connectionString
+            End Get
+            Set(value As String)
+                _connectionString = value
+            End Set
+        End Property
     End Class
 End Namespace
 

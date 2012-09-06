@@ -34,7 +34,7 @@ Public Class SQLServerDataScripter
             lData.Day, _
             lData.Hour, _
             lData.Minute, _
-            lData.Millisecond)
+            lData.Second)
 
         Return lReturnValue
     End Function
