@@ -50,7 +50,6 @@ Partial Class SchemaEditor
         Me.pbProgressIndicator = New System.Windows.Forms.ToolStripProgressBar()
         Me.lblStatusIndicator = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ctxProjectMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.UpdateLanguageMappingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RefreshRelationshipsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
@@ -82,38 +81,38 @@ Partial Class SchemaEditor
         '
         Me.SchemaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveSettingsToolStripMenuItem, Me.UpdateSchemaToolStripMenuItem, Me.ToolStripMenuItem1, Me.ExitToolStripMenuItem})
         Me.SchemaToolStripMenuItem.Name = "SchemaToolStripMenuItem"
-        Me.SchemaToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
+        Me.SchemaToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.SchemaToolStripMenuItem.Text = "Schema"
         '
         'SaveSettingsToolStripMenuItem
         '
         Me.SaveSettingsToolStripMenuItem.Name = "SaveSettingsToolStripMenuItem"
-        Me.SaveSettingsToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.SaveSettingsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.SaveSettingsToolStripMenuItem.Text = "Save settings"
         '
         'UpdateSchemaToolStripMenuItem
         '
         Me.UpdateSchemaToolStripMenuItem.Name = "UpdateSchemaToolStripMenuItem"
-        Me.UpdateSchemaToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.UpdateSchemaToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.UpdateSchemaToolStripMenuItem.Text = "Update schema"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(150, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(145, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutThisToolToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutThisToolToolStripMenuItem
@@ -247,7 +246,7 @@ Partial Class SchemaEditor
         Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(92, 22)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(87, 22)
         Me.ToolStripButton4.Text = "Clear output"
         '
         'ToolStrip1
@@ -256,7 +255,7 @@ Partial Class SchemaEditor
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(256, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(245, 25)
         Me.ToolStrip1.TabIndex = 0
         '
         'ToolStripButton1
@@ -264,7 +263,7 @@ Partial Class SchemaEditor
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(133, 22)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(129, 22)
         Me.ToolStripButton1.Text = "Save project settings"
         '
         'ToolStripButton2
@@ -272,7 +271,7 @@ Partial Class SchemaEditor
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(111, 22)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(106, 22)
         Me.ToolStripButton2.Text = "Update schemas"
         '
         'bgWorker
@@ -301,20 +300,14 @@ Partial Class SchemaEditor
         '
         'ctxProjectMenu
         '
-        Me.ctxProjectMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateLanguageMappingsToolStripMenuItem, Me.RefreshRelationshipsToolStripMenuItem})
+        Me.ctxProjectMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RefreshRelationshipsToolStripMenuItem})
         Me.ctxProjectMenu.Name = "ctxProjectMenu"
-        Me.ctxProjectMenu.Size = New System.Drawing.Size(219, 70)
-        '
-        'UpdateLanguageMappingsToolStripMenuItem
-        '
-        Me.UpdateLanguageMappingsToolStripMenuItem.Name = "UpdateLanguageMappingsToolStripMenuItem"
-        Me.UpdateLanguageMappingsToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
-        Me.UpdateLanguageMappingsToolStripMenuItem.Text = "Update language mappings"
+        Me.ctxProjectMenu.Size = New System.Drawing.Size(176, 26)
         '
         'RefreshRelationshipsToolStripMenuItem
         '
         Me.RefreshRelationshipsToolStripMenuItem.Name = "RefreshRelationshipsToolStripMenuItem"
-        Me.RefreshRelationshipsToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.RefreshRelationshipsToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.RefreshRelationshipsToolStripMenuItem.Text = "Refresh relationships"
         '
         'SchemaEditor
@@ -380,6 +373,5 @@ Partial Class SchemaEditor
     Friend WithEvents pbProgressIndicator As System.Windows.Forms.ToolStripProgressBar
     Friend WithEvents lblStatusIndicator As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ctxProjectMenu As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents UpdateLanguageMappingsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RefreshRelationshipsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

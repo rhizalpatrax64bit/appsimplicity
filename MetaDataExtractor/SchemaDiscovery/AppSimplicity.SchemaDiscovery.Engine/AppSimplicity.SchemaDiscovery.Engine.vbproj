@@ -85,6 +85,7 @@
     <Compile Include="NameFixer.vb" />
     <Compile Include="ProjectFactory.vb" />
     <Compile Include="SchemaExtractor.vb" />
+    <Compile Include="ThreadableDB.vb" />
     <Compile Include="Utilities\XMLSerializer.vb" />
     <Compile Include="VisualStudio\Project.vb" />
   </ItemGroup>

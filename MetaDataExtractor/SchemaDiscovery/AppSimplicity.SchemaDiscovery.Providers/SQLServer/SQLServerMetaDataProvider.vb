@@ -10,9 +10,12 @@ Namespace SqlServer
 
 
         Public Function GetTables() As System.Collections.Generic.List(Of Entities.Table) Implements IMetaDataProvider.GetTables
+            Dim time As New Stopwatch
+            time.Start()
             Dim lReturnValue As New List(Of SchemaDiscovery.Entities.Table)
 
             Dim lDS As DataSet = SqlHelper.ExecuteDataset(ConnectionString, commandType:=CommandType.Text, commandText:=My.Resources.SQLServerExtractionScripts.GET_TABLES)
+            
             For Each lDR As DataRow In lDS.Tables(0).Rows
                 Dim lTable As New SchemaDiscovery.Entities.Table
 
@@ -22,7 +25,7 @@ Namespace SqlServer
 
                 lReturnValue.Add(lTable)
             Next
-
+            time.Stop()
             Return lReturnValue
         End Function
 
