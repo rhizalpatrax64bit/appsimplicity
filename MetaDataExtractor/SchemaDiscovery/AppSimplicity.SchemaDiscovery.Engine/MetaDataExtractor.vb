@@ -1,4 +1,5 @@
 ﻿Imports System.Configuration
+Imports System.Threading
 
 Public Class MetaDataExtractor
 
@@ -29,41 +30,180 @@ Public Class MetaDataExtractor
         _WorkerProcess = Nothing
     End Sub
 
+    Private Sub GetTableData(state As Object)
+        Dim _state As ThreadableDB = state
+        Try
+            _state.table.Columns = _state.metaProvider.GetColumns(_state.table)
+            _state.table.Keys = _state.metaProvider.GetKeys(_state.table)
+
+            ReportActivity(_state.table.QualifiedName)
+        Finally
+            If (_state.resetEvent IsNot Nothing) Then
+                _state.resetEvent.Set()
+            End If
+        End Try
+    End Sub
+
+    Private Sub GetViewData(state As Object)
+        Dim _state As ThreadableDB = state
+        Try
+            _state.view.Columns = _state.metaProvider.GetColumns(_state.view)
+
+            ReportActivity(_state.view.QualifiedName)
+        Finally
+            If (_state.resetEvent IsNot Nothing) Then
+                _state.resetEvent.Set()
+            End If
+        End Try
+    End Sub
+
+    Private Sub GetSprocData(state As Object)
+        Dim _state As ThreadableDB = state
+        Try
+            _state.sproc.Parameters = _state.metaProvider.GetStoredProcedureParameters(_state.sproc)
+
+            ReportActivity(_state.sproc.QualifiedName)
+        Finally
+            If (_state.resetEvent IsNot Nothing) Then
+                _state.resetEvent.Set()
+            End If
+        End Try
+    End Sub
+
+    Private Sub FixTableNames(state As Object)
+        Dim _state As ThreadableDB = state
+        Try
+            _state.table.ClassName = NameFixer.GetSingularClassName(_state.table.Name)
+            _state.table.PluralClassName = NameFixer.GetPluralClassName(_state.table.Name)
+
+        Finally
+            If (_state.resetEvent IsNot Nothing) Then
+                _state.resetEvent.Set()
+            End If
+        End Try
+    End Sub
+
+    Private Sub FixViewNames(state As Object)
+        Dim _state As ThreadableDB = state
+        Try
+            _state.view.ClassName = NameFixer.GetSingularClassName(_state.view.Name)
+            _state.view.PluralClassName = NameFixer.GetPluralClassName(_state.view.Name)
+
+        Finally
+            If (_state.resetEvent IsNot Nothing) Then
+                _state.resetEvent.Set()
+            End If
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' This will populate all the objects that we found in a database.
+    ''' Since this can have a big overload has been prepared to use multiple threads which improves the performance.
+    ''' </summary>
+    ''' <param name="project">Project that contains the information of DB</param>
+    ''' <param name="metaProviders">Provider that specify which database to connect</param>
+    ''' <remarks></remarks>
     Private Sub PopulateDBObjects(ByRef project As Entities.Project, metaProviders As Dictionary(Of String, IMetaDataProvider))
         For Each lDatasource As Entities.DataSource In project.DataSources
             Dim lMetaDataProvider As IMetaDataProvider = metaProviders(lDatasource.DataSourceName)
+
+            Dim i As Integer = 0
+
             If (lDatasource.Tables.Count > 0) Then
+
+
+                Dim resetEvents(lDatasource.Tables.Count - 1) As ManualResetEvent
+                Dim state As ThreadableDB
+                i = 0
+
                 ReportActivity()
                 ReportActivity("Now fetching tables metadata...")
+
                 For Each lTable As Entities.Table In lDatasource.Tables
-                    lTable.Columns = lMetaDataProvider.GetColumns(lTable)
-                    lTable.Keys = lMetaDataProvider.GetKeys(lTable)
-                    ReportActivity(lTable.QualifiedName)
+                    'Creating the manualResetEvent to know when this thread completes
+                    resetEvents(i) = New ManualResetEvent(False)
+                    'Pass this custom class as a parameter to the new thread
+                    state = New ThreadableDB(lTable, lMetaDataProvider, resetEvents(i))
+                    'Adding to the ThreadPool and specifying the method to be executed
+                    ThreadPool.QueueUserWorkItem(AddressOf GetTableData, state)
+                    ''lTable.Columns = lMetaDataProvider.GetColumns(lTable)
+                    ''lTable.Keys = lMetaDataProvider.GetKeys(lTable)
+                    ''ReportActivity(lTable.QualifiedName)
+                    ''Me.ReportActivity()
                     _CurrentProgress += 1
-                    Me.ReportActivity()
+                    i += 1
                 Next
+
+                'Since this is a STA (Single Thread App) we need to wait one for one all the threads created
+                For Each manual As ManualResetEvent In resetEvents
+                    manual.WaitOne()
+                Next
+
+                resetEvents = Nothing
+                state = Nothing
             End If
 
+
             If (lDatasource.Views.Count > 0) Then
+
+                Dim resetEvents(lDatasource.Views.Count - 1) As ManualResetEvent
+                Dim state As ThreadableDB
+                i = 0
+
                 ReportActivity()
                 ReportActivity("Now fetching views metadata...")
                 For Each lView As Entities.View In lDatasource.Views
-                    lView.Columns = lMetaDataProvider.GetColumns(lView)
-                    ReportActivity(lView.QualifiedName)
+                    'Creating the manualResetEvent to know when this thread completes
+                    resetEvents(i) = New ManualResetEvent(False)
+                    'Pass this custom class as a parameter to the new thread
+                    state = New ThreadableDB(lView, lMetaDataProvider, resetEvents(i))
+                    'Adding to the ThreadPool and specifying the method to be executed
+                    ThreadPool.QueueUserWorkItem(AddressOf GetViewData, state)
+                    ''lView.Columns = lMetaDataProvider.GetColumns(lView)
+                    ''ReportActivity(lView.QualifiedName)
+                    ''ReportActivity()
                     _CurrentProgress += 1
-                    ReportActivity()
+                    i += 1
                 Next
+
+                'Since this is a STA (Single Thread App) we need to wait one for one all the threads created
+                For Each manual As ManualResetEvent In resetEvents
+                    manual.WaitOne()
+                Next
+
+                resetEvents = Nothing
+                state = Nothing
             End If
 
             If (lDatasource.StoredProcedures.Count > 0) Then
+
+                Dim resetEvents(lDatasource.StoredProcedures.Count - 1) As ManualResetEvent
+                Dim state As ThreadableDB
+                i = 0
+
                 ReportActivity()
                 ReportActivity("Now fetching stored procedures metadata...")
                 For Each lSp As Entities.StoredProcedure In lDatasource.StoredProcedures
-                    lSp.Parameters = lMetaDataProvider.GetStoredProcedureParameters(lSp)
-                    ReportActivity(lSp.QualifiedName)
+                    'Creating the manualResetEvent to know when this thread completes
+                    resetEvents(i) = New ManualResetEvent(False)
+                    'Pass this custom class as a parameter to the new thread
+                    state = New ThreadableDB(lSp, lMetaDataProvider, resetEvents(i))
+                    'Adding to the ThreadPool and specifying the method to be executed
+                    ThreadPool.QueueUserWorkItem(AddressOf GetSprocData, state)
+                    ''lSp.Parameters = lMetaDataProvider.GetStoredProcedureParameters(lSp)
+                    ''ReportActivity(lSp.QualifiedName)
+                    ''Me.ReportActivity()
                     _CurrentProgress += 1
-                    Me.ReportActivity()
+                    i += 1
                 Next
+
+                'Since this is a STA (Single Thread App) we need to wait one for one all the threads created
+                For Each manual As ManualResetEvent In resetEvents
+                    manual.WaitOne()
+                Next
+
+                resetEvents = Nothing
+                state = Nothing
             End If
 
             lDatasource.SetProject(project)
@@ -111,18 +251,56 @@ Public Class MetaDataExtractor
                 lMetaProviders.Add(lDataSource.DataSourceName, lMetaDataProvider)
 
                 lDataSource.Tables = lMetaDataProvider.GetTables()
+
+                Dim resetEvents(lDataSource.Tables.Count - 1) As ManualResetEvent
+                Dim i As Integer
+                i = 0
+                Dim state As ThreadableDB
+
                 For Each lTable As Entities.Table In lDataSource.Tables
-                    lTable.ClassName = NameFixer.GetSingularClassName(lTable.Name)
-                    lTable.PluralClassName = NameFixer.GetPluralClassName(lTable.Name)
+                    'Creating the manualResetEvent to know when this thread completes
+                    resetEvents(i) = New ManualResetEvent(False)
+                    'Pass this custom class as a parameter to the new thread
+                    state = New ThreadableDB(lTable, Nothing, resetEvents(i))
+                    'Adding to the ThreadPool and specifying the method to be executed
+                    ThreadPool.QueueUserWorkItem(AddressOf FixTableNames, state)
+                    i += 1
+                    'lTable.ClassName = NameFixer.GetSingularClassName(lTable.Name)
+                    'lTable.PluralClassName = NameFixer.GetPluralClassName(lTable.Name)
                 Next
+
+                For Each manualEvents As ManualResetEvent In resetEvents
+                    manualEvents.WaitOne()
+                Next
+                resetEvents = Nothing
+                state = Nothing
+
                 lDataSource.Tables.Sort()
                 ReportActivity(String.Format("Found {0} tables.", lDataSource.Tables.Count))
 
                 lDataSource.Views = lMetaDataProvider.GetViews()
+
+                Dim resetEventsView(lDataSource.Views.Count - 1) As ManualResetEvent
+                i = 0
+
                 For Each lView As Entities.View In lDataSource.Views
-                    lView.ClassName = NameFixer.GetSingularClassName(lView.Name)
-                    lView.PluralClassName = NameFixer.GetPluralClassName(lView.Name)
+                    'Creating the manualResetEvent to know when this thread completes
+                    resetEventsView(i) = New ManualResetEvent(False)
+                    'Pass this custom class as a parameter to the new thread
+                    state = New ThreadableDB(lView, Nothing, resetEventsView(i))
+                    'Adding to the ThreadPool and specifying the method to be executed
+                    ThreadPool.QueueUserWorkItem(AddressOf FixViewNames, state)
+                    i += 1
+                    'lView.ClassName = NameFixer.GetSingularClassName(lView.Name)
+                    'lView.PluralClassName = NameFixer.GetPluralClassName(lView.Name)
                 Next
+
+                For Each manualEvents As ManualResetEvent In resetEventsView
+                    manualEvents.WaitOne()
+                Next
+                resetEventsView = Nothing
+                state = Nothing
+
                 lDataSource.Views.Sort()
                 ReportActivity(String.Format("Found {0} views.", lDataSource.Views.Count))
 
@@ -188,7 +366,7 @@ Public Class MetaDataExtractor
         End If
     End Sub
 
-    
+
 
     Private Function FilterTables(ByVal filter As String, ByVal tables As List(Of Entities.Table)) As List(Of Entities.Table)
         Dim lReturnValue As New List(Of Entities.Table)

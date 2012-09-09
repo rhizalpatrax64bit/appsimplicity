@@ -23,6 +23,7 @@ Public Class SchemaEditor
     Public Sub Initialize(ByVal project As Entities.Project)
         _Project = project
         Me.InitializeTree(_Project)
+        Me._Project.UpdateRelationShips()
 
         Dim lConsoleTextWriter As New ConsoleToTextboxWriter(Me.txtConsoleOutput)
         Console.SetOut(lConsoleTextWriter)
@@ -147,6 +148,7 @@ Public Class SchemaEditor
 
     Private Sub PersistProject()
         Me.EnableControls(False)
+        Me._Project.UpdateLanguageMappings()
         Me.Extractor.SaveProjectToFile(_Project)
         Me.EnableControls(True)
     End Sub
@@ -211,11 +213,12 @@ Public Class SchemaEditor
      
     End Sub
 
-    Private Sub UpdateLanguageMappingsToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UpdateLanguageMappingsToolStripMenuItem.Click
-        Me._Project.UpdateLanguageMappings()
-    End Sub
-
     Private Sub RefreshRelationshipsToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles RefreshRelationshipsToolStripMenuItem.Click
         Me._Project.UpdateRelationShips()
+    End Sub
+
+    Private Sub AboutThisToolToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AboutThisToolToolStripMenuItem.Click
+        Dim about As New AboutBox
+        about.ShowDialog()
     End Sub
 End Class

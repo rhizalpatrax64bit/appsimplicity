@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("AppSimplicity.SchemaDiscovery.Shell")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Microsoft")> 
-<Assembly: AssemblyProduct("AppSimplicity.SchemaDiscovery.Shell")> 
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2012")> 
+<Assembly: AssemblyTitle("AppSimplicity")> 
+<Assembly: AssemblyDescription("This application intents to improve the rapid development, creating the classes and framwork to connect with your database based on your database model.")> 
+<Assembly: AssemblyCompany("Javier Pitalua")> 
+<Assembly: AssemblyProduct("AppSimplicity")> 
+<Assembly: AssemblyCopyright("Copyright © AppSimplicity 2012")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
