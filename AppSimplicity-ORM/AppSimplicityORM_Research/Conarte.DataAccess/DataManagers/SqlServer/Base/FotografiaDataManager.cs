@@ -10,11 +10,10 @@ namespace Conarte.DataAccess.DataManagers.SqlServer
     {
 
         public List<Entities.Fotografia> GetByFondo(int Fondo_Id)
-        {
-            throw new NotImplementedException();
+        {            
+            throw new NotImplementedException ();
             //FotografiaMapper mapper = new FotografiaMapper();
-
-            //return mapper.GetSingle("", System.Data.CommandType.Text);
+         //   return mapper.ExecuteList (        
         }
 
         public List<Entities.Fotografia> GetByProcesoFotografico(int ProcesoFotografico_Id)
@@ -58,17 +57,14 @@ namespace Conarte.DataAccess.DataManagers.SqlServer
         }
     }
 
-    public class FotografiaMapper : AppSimplicity.ActiveRecord.DataAccess.SqlServer.EntityMapper<Conarte.Entities.Fotografia> 
+    public class FotografiaMapper : AppSimplicity.ActiveRecord.DataAccess.EntityDataAccess<Entities.Fotografia>
     {
-        public override Entities.Fotografia MapToEntity(System.Data.SqlClient.SqlDataReader reader)
+        public override Entities.Fotografia MapToEntity(System.Data.SqlClient.SqlDataReader reader) 
         {
-            Conarte.Entities.Fotografia entity = new Entities.Fotografia();
-
-            //entity.Id = reader["id"];
-            //entity.Agencia = (string)reader["data"];
-            //entity.Autor_Id = (int)reader["data"];
+            Entities.Fotografia entity = new Entities.Fotografia();
+            //entity.Id = reader["Id"]
 
             return entity;
-        }
+        }       
     }
 }
