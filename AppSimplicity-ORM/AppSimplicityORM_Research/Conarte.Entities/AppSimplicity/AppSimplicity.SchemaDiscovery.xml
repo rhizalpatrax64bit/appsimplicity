@@ -19,7 +19,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -30,7 +30,7 @@
               <CharMaxLength>500</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -41,7 +41,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -63,7 +63,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -85,7 +85,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -96,7 +96,7 @@
               <CharMaxLength>-1</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Observaciones</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -107,7 +107,7 @@
               <CharMaxLength>-1</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>InformacionAdicional</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -118,7 +118,7 @@
               <CharMaxLength>-1</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Direccion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -171,7 +171,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -182,7 +182,7 @@
               <CharMaxLength>10</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -193,7 +193,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -204,7 +204,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -226,7 +226,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -248,12 +248,12 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
           </Columns>
-          <ClassName>Colore</ClassName>
+          <ClassName>Color</ClassName>
           <PluralClassName>Colores</PluralClassName>
           <Scope>_Public</Scope>
           <BelongsToRelationShips />
@@ -286,7 +286,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -297,7 +297,7 @@
               <CharMaxLength>10</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -308,7 +308,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -319,7 +319,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -341,7 +341,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -363,7 +363,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -406,7 +406,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -417,7 +417,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fondo_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -428,7 +428,7 @@
               <CharMaxLength>255</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>NombreArchivo</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -439,7 +439,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Directorio</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -450,7 +450,7 @@
               <CharMaxLength>255</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>NombreFisico</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -472,7 +472,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -515,7 +515,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -526,7 +526,7 @@
               <CharMaxLength>255</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -537,7 +537,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -570,7 +570,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -592,7 +592,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -657,7 +657,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -668,7 +668,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -679,7 +679,7 @@
               <CharMaxLength>255</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -701,7 +701,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -723,7 +723,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -734,7 +734,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -772,7 +772,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -783,7 +783,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -794,7 +794,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -816,7 +816,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -838,7 +838,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -895,7 +895,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -906,7 +906,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Etiqueta_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -917,7 +917,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>EtiquetaRelacionada_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -974,7 +974,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -996,7 +996,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>TipoDeReproduccion_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1007,7 +1007,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>TipoDeUso_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1018,7 +1018,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Institucion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1029,7 +1029,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ResponsableDeUso</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1040,7 +1040,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Decimal</CLRTargetType>
+              <CLRTargetType>decimal</CLRTargetType>
               <Summary>Monto</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1051,7 +1051,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Pagado</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1062,7 +1062,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Telefono</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1073,7 +1073,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CorreoElectronico</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1084,7 +1084,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1095,7 +1095,7 @@
               <CharMaxLength>2147483647</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Observaciones</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1133,7 +1133,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1144,7 +1144,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1155,7 +1155,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1177,7 +1177,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1199,7 +1199,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1237,7 +1237,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1248,7 +1248,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1259,7 +1259,7 @@
               <CharMaxLength>3</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1270,7 +1270,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1281,7 +1281,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>TipoDeFondo_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1303,7 +1303,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1325,7 +1325,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1336,7 +1336,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Donante</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1347,7 +1347,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Contacto</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1358,7 +1358,7 @@
               <CharMaxLength>255</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Direccion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1369,7 +1369,7 @@
               <CharMaxLength>60</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Telefono</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1380,7 +1380,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Procedencia</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1391,7 +1391,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>SituacionLegal_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1413,7 +1413,7 @@
               <CharMaxLength>2147483647</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Observaciones</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1424,7 +1424,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CorreoElectronico</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1471,7 +1471,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1482,7 +1482,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1493,7 +1493,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1504,7 +1504,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1526,7 +1526,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1548,7 +1548,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1591,7 +1591,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1602,7 +1602,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Long</CLRTargetType>
+              <CLRTargetType>long</CLRTargetType>
               <Summary>NumeroInventario</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1613,7 +1613,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>NumeroInventarioProvisional</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1624,7 +1624,7 @@
               <CharMaxLength>20</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>NumeroActivoFijo</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1635,7 +1635,7 @@
               <CharMaxLength>500</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Titulo</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1646,7 +1646,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Serie_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1657,7 +1657,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fondo_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1668,7 +1668,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Color_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1679,7 +1679,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>TipoMaterial_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1690,7 +1690,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>ProcesoFotografico_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1701,7 +1701,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>LugarToma_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1734,7 +1734,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>LugarAsunto_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1767,7 +1767,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>InformacionTecnica</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1789,7 +1789,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Autor_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1800,7 +1800,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Formato_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1811,7 +1811,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>FormatoMontaje_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1822,7 +1822,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>InformacionTecnicaPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1833,7 +1833,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>InformacionCatalografica</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1855,7 +1855,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CatalogadaPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1866,7 +1866,7 @@
               <CharMaxLength>255</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Agencia</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1877,7 +1877,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Digitalizada</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1888,7 +1888,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Imagen_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1899,7 +1899,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Decimal</CLRTargetType>
+              <CLRTargetType>decimal</CLRTargetType>
               <Summary>Avaluo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1921,7 +1921,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>DigitalizadaPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1943,7 +1943,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1965,7 +1965,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1976,7 +1976,7 @@
               <CharMaxLength>-1</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Observaciones</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -1987,7 +1987,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>PublicarEnInternet</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -1998,7 +1998,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Epoca_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2009,7 +2009,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>UltimoMovimiento_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2020,7 +2020,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Aseguramiento_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2031,7 +2031,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>EsPiezaTemporal</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2042,7 +2042,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>UltimaIntervencion_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2053,7 +2053,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>EpocaNL_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2064,7 +2064,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>InformacionPersonajesCompletada</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2222,7 +2222,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2233,7 +2233,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fotografia_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2244,7 +2244,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Etiqueta_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2301,7 +2301,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2312,7 +2312,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fotografia_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2323,7 +2323,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>EventoDeUso_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2366,7 +2366,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2377,7 +2377,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fotografia_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2388,7 +2388,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Imagen_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2431,7 +2431,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2442,7 +2442,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fotografia_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2453,7 +2453,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Personaje_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2510,7 +2510,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2521,7 +2521,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>NombreOriginal</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2532,7 +2532,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Directorio</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2554,7 +2554,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2576,7 +2576,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2587,7 +2587,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fotografia_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2630,7 +2630,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2641,7 +2641,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Tipo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2652,7 +2652,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fotografia_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2674,7 +2674,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>IntervencionPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2696,7 +2696,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2718,7 +2718,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2729,7 +2729,7 @@
               <CharMaxLength>2147483647</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Observaciones</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2772,7 +2772,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2783,7 +2783,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Intervencion_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2794,7 +2794,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Deterioro_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2837,7 +2837,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2848,7 +2848,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Intervencion_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2859,7 +2859,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>TipoIntervencion_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2897,7 +2897,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2908,7 +2908,7 @@
               <CharMaxLength>10</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Iniciales</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2919,7 +2919,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Nombre</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2930,7 +2930,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -2952,7 +2952,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -2974,7 +2974,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3012,7 +3012,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3023,7 +3023,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3034,7 +3034,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3056,7 +3056,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3078,7 +3078,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3126,7 +3126,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3137,7 +3137,7 @@
               <CharMaxLength>500</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3148,7 +3148,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3170,7 +3170,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3192,7 +3192,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3245,7 +3245,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3256,7 +3256,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3267,7 +3267,7 @@
               <CharMaxLength>10</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3278,7 +3278,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3300,7 +3300,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3322,7 +3322,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3360,7 +3360,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3371,7 +3371,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Fotografia_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3382,7 +3382,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>EmpresaAseguradora</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3393,7 +3393,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>NumeroPoliza</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3437,7 +3437,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3480,7 +3480,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3491,7 +3491,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3502,7 +3502,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3524,7 +3524,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3546,7 +3546,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3599,7 +3599,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3610,7 +3610,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3621,7 +3621,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3643,7 +3643,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3665,7 +3665,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3703,7 +3703,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3714,7 +3714,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3725,7 +3725,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3736,7 +3736,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Ubicacion_Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3758,7 +3758,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3780,7 +3780,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3818,7 +3818,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3829,7 +3829,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3840,7 +3840,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3862,7 +3862,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3884,7 +3884,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3922,7 +3922,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3933,7 +3933,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3944,7 +3944,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -3966,7 +3966,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -3988,7 +3988,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4026,7 +4026,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4037,7 +4037,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4048,7 +4048,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4070,7 +4070,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4092,7 +4092,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4130,7 +4130,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4141,7 +4141,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4152,7 +4152,7 @@
               <CharMaxLength>10</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Clave</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4163,7 +4163,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4185,7 +4185,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4207,7 +4207,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4245,7 +4245,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4256,7 +4256,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Descripcion</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4267,7 +4267,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4289,7 +4289,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CreadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4311,7 +4311,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>ModificadoPor</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4349,7 +4349,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>true</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>Id</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4360,7 +4360,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Login</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4371,7 +4371,7 @@
               <CharMaxLength>50</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>Password</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4382,7 +4382,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>NombreCompleto</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4393,7 +4393,7 @@
               <CharMaxLength>100</CharMaxLength>
               <IsNullable>false</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <Summary>CorreoElectronico</Summary>
               <IsCLRNullable>false</IsCLRNullable>
             </Column>
@@ -4404,7 +4404,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Activo</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4426,7 +4426,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>Bloqueado</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4437,7 +4437,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <Summary>IntentosFallidos</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4470,7 +4470,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>AccesoConfirmado</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4492,7 +4492,7 @@
               <CharMaxLength>0</CharMaxLength>
               <IsNullable>true</IsNullable>
               <IsIdentity>false</IsIdentity>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <Summary>DeseaRecibirNotificaciones</Summary>
               <IsCLRNullable>true</IsCLRNullable>
             </Column>
@@ -4540,7 +4540,7 @@
               <ParameterName>@TextToFind</ParameterName>
               <SQLType>varchar</SQLType>
               <CharMaxLength>100</CharMaxLength>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>false</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4548,7 +4548,7 @@
               <ParameterName>@PorTitulos</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4556,7 +4556,7 @@
               <ParameterName>@PorAutores</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4564,7 +4564,7 @@
               <ParameterName>@PorSeries</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4572,7 +4572,7 @@
               <ParameterName>@PorDescriptores</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4580,7 +4580,7 @@
               <ParameterName>@PorPersonajes</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4588,7 +4588,7 @@
               <ParameterName>@PorLugarAsunto</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4596,7 +4596,7 @@
               <ParameterName>@PorLugarToma</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4604,7 +4604,7 @@
               <ParameterName>@PorAnotaciones</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4628,7 +4628,7 @@
               <ParameterName>@NoIncluirBajasDefinitivas</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4636,7 +4636,7 @@
               <ParameterName>@BuscarEnFondoTemporales</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4644,7 +4644,7 @@
               <ParameterName>@Fondo_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4652,7 +4652,7 @@
               <ParameterName>@ProcesoFotografico_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4660,7 +4660,7 @@
               <ParameterName>@Autor_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4668,7 +4668,7 @@
               <ParameterName>@Material_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4676,7 +4676,7 @@
               <ParameterName>@Formato_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4684,7 +4684,7 @@
               <ParameterName>@Serie_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4692,7 +4692,7 @@
               <ParameterName>@Color_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4700,7 +4700,7 @@
               <ParameterName>@Lugar_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4716,7 +4716,7 @@
               <ParameterName>@NumeroInventario</ParameterName>
               <SQLType>bigint</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Long</CLRTargetType>
+              <CLRTargetType>long</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4732,7 +4732,7 @@
               <ParameterName>@TextToFind</ParameterName>
               <SQLType>varchar</SQLType>
               <CharMaxLength>100</CharMaxLength>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>false</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4740,7 +4740,7 @@
               <ParameterName>@PorTitulos</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4748,7 +4748,7 @@
               <ParameterName>@PorAutores</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4756,7 +4756,7 @@
               <ParameterName>@PorSeries</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4764,7 +4764,7 @@
               <ParameterName>@PorDescriptores</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4772,7 +4772,7 @@
               <ParameterName>@PorPersonajes</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4780,7 +4780,7 @@
               <ParameterName>@PorLugarAsunto</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4788,7 +4788,7 @@
               <ParameterName>@PorLugarToma</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4796,7 +4796,7 @@
               <ParameterName>@PorAnotaciones</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4820,7 +4820,7 @@
               <ParameterName>@NoIncluirBajasDefinitivas</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4828,7 +4828,7 @@
               <ParameterName>@BuscarEnFondoTemporales</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4844,7 +4844,7 @@
               <ParameterName>@Fondo_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4852,7 +4852,7 @@
               <ParameterName>@ProcesoFotografico_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4860,7 +4860,7 @@
               <ParameterName>@Formato_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4868,7 +4868,7 @@
               <ParameterName>@Autor_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4876,7 +4876,7 @@
               <ParameterName>@Color_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4884,7 +4884,7 @@
               <ParameterName>@Serie_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4892,7 +4892,7 @@
               <ParameterName>@Material_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4908,7 +4908,7 @@
               <ParameterName>@Fotografia_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4924,7 +4924,7 @@
               <ParameterName>@Etiqueta_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4940,7 +4940,7 @@
               <ParameterName>@Fotografia_Id</ParameterName>
               <SQLType>int</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Integer</CLRTargetType>
+              <CLRTargetType>int</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4956,7 +4956,7 @@
               <ParameterName>@Login</ParameterName>
               <SQLType>varchar</SQLType>
               <CharMaxLength>50</CharMaxLength>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>false</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4972,7 +4972,7 @@
               <ParameterName>@TextoBusqueda</ParameterName>
               <SQLType>varchar</SQLType>
               <CharMaxLength>100</CharMaxLength>
-              <CLRTargetType>String</CLRTargetType>
+              <CLRTargetType>string</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>false</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4980,7 +4980,7 @@
               <ParameterName>@BuscarPorLogin</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4988,7 +4988,7 @@
               <ParameterName>@BuscarPorNombreUsuario</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
@@ -4996,7 +4996,7 @@
               <ParameterName>@BuscarPorCorreoElectronico</ParameterName>
               <SQLType>bit</SQLType>
               <CharMaxLength>0</CharMaxLength>
-              <CLRTargetType>Boolean</CLRTargetType>
+              <CLRTargetType>bool</CLRTargetType>
               <ParameterDirection>Input</ParameterDirection>
               <IsCLRNullable>true</IsCLRNullable>
             </StoredProcedureParameter>
