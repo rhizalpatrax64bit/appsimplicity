@@ -1,6 +1,6 @@
 ﻿<#@ template debug="false" hostspecific="false" language="C#" #>
 <#@ output extension=".cs" #>
-<#@ Assembly Name="D:\CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\References\AppSimplicity.SchemaDiscovery.dll" #>
+<#@ Assembly Name="E:\Projects\AppSimplicity.CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\References\AppSimplicity.SchemaDiscovery.dll" #>
 <#@ Import Namespace="AppSimplicity.SchemaDiscovery.Entities" #>
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using AppSimplicity.ActiveRecord.Interfaces;
 
 <#
 	//TODO: Hacer que el proyecto se cargue de una ruta relativa:
-    Project project = Project.LoadFromFile(@"D:\CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\Conarte.Entities\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");    
+	Project project = Project.LoadFromFile(@"E:\Projects\AppSimplicity.CodeGoogle\AppSimplicity-ORM\AppSimplicityORM_Research\Conarte.Entities\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");    
     
     foreach (DataSource ds in project.DataSources)
     {
