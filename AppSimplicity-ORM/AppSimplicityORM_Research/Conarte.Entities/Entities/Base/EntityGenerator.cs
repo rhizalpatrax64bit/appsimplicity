@@ -167,7 +167,7 @@ namespace Conarte.Entities {
 #endregion
 	} // end class
 	
-	public partial class Colore : IActiveRecord
+	public partial class Color : IActiveRecord
 	{
 		
 			private int _Id;
