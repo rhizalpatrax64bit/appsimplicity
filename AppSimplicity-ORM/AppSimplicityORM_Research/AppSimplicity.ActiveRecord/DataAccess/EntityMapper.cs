@@ -8,14 +8,7 @@ namespace AppSimplicity.ActiveRecord.DataAccess
 {
     public abstract class EntityDataAccess<T> where T : Interfaces.IActiveRecord 
     {
-        private string _dataSourceName;
-
-        public EntityDataAccess(string dataSourceName)
-	    {
-            _dataSourceName = dataSourceName;
-	    }
-
-        T MapToEntity(System.Data.SqlClient.SqlDataReader reader);
+        protected string _dataSourceName;  
 
         #region ExecuteSingle
         public T ExecuteSingle(string sqlCommand) 
@@ -105,11 +98,81 @@ namespace AppSimplicity.ActiveRecord.DataAccess
         }
         #endregion        
 
-        System.Data.SqlClient.SqlCommand GetInsertCommand(T entity);         
 
-        System.Data.SqlClient.SqlCommand GetDeleteCommand(T entity);        
+        public bool Insert(ref T entity)         
+        {
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings[_dataSourceName].ConnectionString)) 
+            {                
+                SqlCommand command = GetInsertCommand(entity);
+                command.Connection = connection;
+                connection.Open();
+                entity.Id = (int)command.ExecuteScalar();
+                return true;
+            }            
+        }
 
-        System.Data.SqlClient.SqlCommand GetUpdateCommand(T entity);
-        
+        public bool Delete(ref T entity) 
+        {
+            if (entity.IsLoadedFromDB == false)
+            {
+                throw new Exception("Entity must be loaded from db first.");
+            }
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings[_dataSourceName].ConnectionString))
+            {
+                SqlCommand command = GetDeleteCommand(entity);
+                command.Connection = connection;
+                connection.Open();
+                int affectedRows = (int)command.ExecuteNonQuery();
+
+                if (affectedRows > 0)
+                {
+                    entity.IsLoadedFromDB = false;
+                    return true;
+                }
+                else 
+                {
+                    return false;
+                }                
+            }            
+        }
+
+        public bool Update(T entity) 
+        {
+            if (entity.IsLoadedFromDB == false)
+            {
+                throw new Exception("Entity must be loaded from db first.");
+            }
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings[_dataSourceName].ConnectionString))
+            {
+                SqlCommand command = GetUpdateCommand(entity);
+                command.Connection = connection;
+                connection.Open();
+                int affectedRows = (int)command.ExecuteNonQuery();
+
+                if (affectedRows > 0)
+                {                    
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        #region abstract methods
+
+        protected abstract T MapToEntity(System.Data.SqlClient.SqlDataReader reader);
+
+        protected abstract System.Data.SqlClient.SqlCommand GetInsertCommand(T entity);
+
+        protected abstract System.Data.SqlClient.SqlCommand GetDeleteCommand(T entity);
+
+        protected abstract System.Data.SqlClient.SqlCommand GetUpdateCommand(T entity);
+
+        #endregion
     }
+
 }
