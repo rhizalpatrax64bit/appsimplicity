@@ -39,6 +39,11 @@
   <ItemGroup>
     <Compile Include="DataManagers\FotografiaDataMgr.cs" />
     <Compile Include="DataManagers\SqlServer\Base\FotografiaDataManager.cs" />
+    <Compile Include="DataManagers\SqlServer\Base\SQLDataAccessStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SQLDataAccessStrings.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +59,15 @@
   <ItemGroup>
     <Folder Include="DataManagers\SqlServer\Extended\" />
     <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataManagers\SqlServer\Base\SQLDataAccessStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SQLDataAccessStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataManagers\SqlServer\Base\Fotografia_INSERT.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
