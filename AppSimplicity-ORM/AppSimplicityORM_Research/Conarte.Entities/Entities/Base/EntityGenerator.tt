@@ -6,8 +6,7 @@ using System;
 using System.Collections.Generic;
 using AppSimplicity.ActiveRecord.Interfaces;
 
-<#
-	//TODO: Hacer que el proyecto se cargue de una ruta relativa:
+<#	
 	string projectFile = Host.ResolvePath(@"..\..\AppSimplicity\AppSimplicity.SchemaDiscovery.xml");
 	Project project = Project.LoadFromFile(projectFile);    
     
