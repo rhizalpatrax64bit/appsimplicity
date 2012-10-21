@@ -113,6 +113,11 @@ namespace AppSimplicity.ActiveRecord.DataAccess
 
         public bool Delete(ref T entity) 
         {
+            if (entity == null) 
+            {
+                throw new Exception("Instance of the object is null.  Make sure you instantiate an entity from database prior to deletion.");
+            }
+
             if (entity.IsLoadedFromDB == false)
             {
                 throw new Exception("Entity must be loaded from db first.");
