@@ -1,9 +1,50 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLL", "DLL", "{83B73480-7DFC-4B9B-BDD3-C66733E10BEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RemoteProvider", "RemoteProvider", "{18CCD1E6-2455-4F5D-8755-F7AB928DAD75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{D7022D65-7B88-4686-B8B8-55A3F13F85B9}"
+	ProjectSection(SolutionItems) = preProject
+		References\Ionic.Zip.dll = References\Ionic.Zip.dll
+		References\Ionic.Zip.Reduced.dll = References\Ionic.Zip.Reduced.dll
+		References\MySql.Data.dll = References\MySql.Data.dll
+		References\nunit.framework.dll = References\nunit.framework.dll
+		References\Readme.txt = References\Readme.txt
+		References\System.Data.SQLite.dll = References\System.Data.SQLite.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{9D9ADCAF-BA8C-4E60-BD65-83E90DC05444}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeGenerator", "CodeGenerator", "{9CFF2F87-4C8A-4F8D-B040-B954795ED76D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Program", "Program", "{36D26C33-0AA4-4D9F-98F4-7713E8D9AA4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{F406BA4C-D89B-47F9-94DF-C17622FFC606}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpitCode", "SpitCode", "{6F088458-78E2-437F-BDB3-D9D5FC7A81A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{88821999-A8A1-4537-914E-7A762A4817B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpitCodeEngine", "SpitCodeEngine", "{47A02A61-50F0-421A-890B-45C4156B3F6B}"
+	ProjectSection(SolutionItems) = preProject
+		References\SpitCodeEngine\ComponentFactory.Krypton.Toolkit.DLL = References\SpitCodeEngine\ComponentFactory.Krypton.Toolkit.DLL
+		References\SpitCodeEngine\FirebirdSql.Data.Firebird.dll = References\SpitCodeEngine\FirebirdSql.Data.Firebird.dll
+		References\SpitCodeEngine\Interop.ADOX.dll = References\SpitCodeEngine\Interop.ADOX.dll
+		References\SpitCodeEngine\Mono.Security.dll = References\SpitCodeEngine\Mono.Security.dll
+		References\SpitCodeEngine\MyMeta.dll = References\SpitCodeEngine\MyMeta.dll
+		References\SpitCodeEngine\MySql.Data.dll = References\SpitCodeEngine\MySql.Data.dll
+		References\SpitCodeEngine\Npgsql.dll = References\SpitCodeEngine\Npgsql.dll
+		References\SpitCodeEngine\SpitCodeEngine.dll = References\SpitCodeEngine\SpitCodeEngine.dll
+		References\SpitCodeEngine\SpitCodeEngine.pdb = References\SpitCodeEngine\SpitCodeEngine.pdb
+		References\SpitCodeEngine\SpitCodeEngine.xml = References\SpitCodeEngine\SpitCodeEngine.xml
+		References\SpitCodeEngine\System.Data.SQLite.dll = References\SpitCodeEngine\System.Data.SQLite.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneratedWebSite", "GeneratedWebSite", "{D2A8A998-F896-4ABF-8ACC-A336F5AB28CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnterpriseLibrary3.1", "EnterpriseLibrary3.1", "{9DDA4E7E-05E0-46A0-A6CF-9C7565E424C4}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity", "DLL\AppSimplicity\AppSimplicity.vbproj", "{74DA0659-AD47-4E13-B645-F027267D9C6B}"
 EndProject
@@ -13,7 +54,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RemoteDataProvider", "Web\R
 		SccAuxPath = "Svn"
 		SccLocalPath = "Svn"
 		SccProvider = "SubversionScc"
-		TargetFramework = "2.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
 		ProjectReferences = "{74DA0659-AD47-4E13-B645-F027267D9C6B}|AppSimplicity.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/RemoteDataProvider"
 		Debug.AspNetCompiler.PhysicalPath = "Web\RemoteDataProvider\"
@@ -31,55 +72,19 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RemoteDataProvider", "Web\R
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "2397"
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{D7022D65-7B88-4686-B8B8-55A3F13F85B9}"
-	ProjectSection(SolutionItems) = preProject
-		References\Ionic.Zip.dll = References\Ionic.Zip.dll
-		References\Ionic.Zip.Reduced.dll = References\Ionic.Zip.Reduced.dll
-		References\MySql.Data.dll = References\MySql.Data.dll
-		References\nunit.framework.dll = References\nunit.framework.dll
-		References\Readme.txt = References\Readme.txt
-		References\System.Data.SQLite.dll = References\System.Data.SQLite.dll
+	ProjectSection(SvnOrigin) = preProject
+		@Keys = Enlist,Svn.Uri
+		Enlist = Required
+		Svn.Uri = Web/RemoteDataProvider/
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{9D9ADCAF-BA8C-4E60-BD65-83E90DC05444}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity.UnitTesting", "DLL\UnitTests\AppSimplicity.UnitTesting\AppSimplicity.UnitTesting.vbproj", "{5A832DF4-1040-403C-B5B0-877391DDA10E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeGenerator", "CodeGenerator", "{9CFF2F87-4C8A-4F8D-B040-B954795ED76D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Program", "Program", "{36D26C33-0AA4-4D9F-98F4-7713E8D9AA4B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{F406BA4C-D89B-47F9-94DF-C17622FFC606}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpitCode", "SpitCode", "{6F088458-78E2-437F-BDB3-D9D5FC7A81A5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{88821999-A8A1-4537-914E-7A762A4817B9}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpitCodeEngine", "SpitCode\SpitCodeEngine\SpitCodeEngine.vbproj", "{2850DDBE-7FD2-45D1-874E-09B4CA86209E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpitCodeEngine", "SpitCodeEngine", "{47A02A61-50F0-421A-890B-45C4156B3F6B}"
-	ProjectSection(SolutionItems) = preProject
-		References\SpitCodeEngine\ComponentFactory.Krypton.Toolkit.DLL = References\SpitCodeEngine\ComponentFactory.Krypton.Toolkit.DLL
-		References\SpitCodeEngine\FirebirdSql.Data.Firebird.dll = References\SpitCodeEngine\FirebirdSql.Data.Firebird.dll
-		References\SpitCodeEngine\Interop.ADOX.dll = References\SpitCodeEngine\Interop.ADOX.dll
-		References\SpitCodeEngine\Mono.Security.dll = References\SpitCodeEngine\Mono.Security.dll
-		References\SpitCodeEngine\MyMeta.dll = References\SpitCodeEngine\MyMeta.dll
-		References\SpitCodeEngine\MySql.Data.dll = References\SpitCodeEngine\MySql.Data.dll
-		References\SpitCodeEngine\Npgsql.dll = References\SpitCodeEngine\Npgsql.dll
-		References\SpitCodeEngine\SpitCodeEngine.dll = References\SpitCodeEngine\SpitCodeEngine.dll
-		References\SpitCodeEngine\SpitCodeEngine.pdb = References\SpitCodeEngine\SpitCodeEngine.pdb
-		References\SpitCodeEngine\SpitCodeEngine.xml = References\SpitCodeEngine\SpitCodeEngine.xml
-		References\SpitCodeEngine\System.Data.SQLite.dll = References\SpitCodeEngine\System.Data.SQLite.dll
-	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SpitCode2", "SpitCode\Console\SpitCode2.vbproj", "{B10C4046-FD32-4842-9319-ECA217AACD0E}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSimplicity.CodeTemplates", "SpitCode\Templates\AppSimplicity.CodeTemplates\AppSimplicity.CodeTemplates.vbproj", "{981E94C5-A6F5-4101-9D8C-4E24D4FB4493}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneratedWebSite", "GeneratedWebSite", "{D2A8A998-F896-4ABF-8ACC-A336F5AB28CC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnterpriseLibrary3.1", "EnterpriseLibrary3.1", "{9DDA4E7E-05E0-46A0-A6CF-9C7565E424C4}"
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
@@ -105,8 +110,7 @@ Global
 		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{74DA0659-AD47-4E13-B645-F027267D9C6B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|.NET.ActiveCfg = Debug|.NET
-		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|.NET.Build.0 = Debug|.NET
+		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|.NET.ActiveCfg = Debug|Any CPU
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1943524B-7D27-4A77-B9DB-5C0D4805F937}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
